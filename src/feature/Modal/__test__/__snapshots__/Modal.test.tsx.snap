@@ -1,0 +1,721 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal -> Custom Component modal snapshot ile eşleşmeli 1`] = `
+[
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    statusBarTranslucent={true}
+    style={
+      {
+        "height": 844,
+      }
+    }
+    testID="modal-test-id"
+    transparent={false}
+    visible={true}
+  >
+    <View
+      backgroundColor="rgba(34,63,70, 0.9)"
+      style={
+        {
+          "alignItems": undefined,
+          "backgroundColor": "rgba(34,63,70, 0.9)",
+          "bottom": undefined,
+          "flex": undefined,
+          "flexDirection": "row",
+          "flexGrow": undefined,
+          "gap": undefined,
+          "height": undefined,
+          "justifyContent": undefined,
+          "left": undefined,
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "maxHeight": undefined,
+          "maxWidth": undefined,
+          "overflow": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
+          "paddingLeft": undefined,
+          "paddingRight": undefined,
+          "paddingTop": undefined,
+          "paddingVertical": undefined,
+          "position": undefined,
+          "right": undefined,
+          "top": undefined,
+          "width": undefined,
+          "zIndex": undefined,
+        }
+      }
+    >
+      <View
+        collapsable={false}
+        style={
+          {
+            "elevation": 5,
+            "flex": 1,
+            "flexDirection": "row",
+            "shadowColor": "rgba(6, 14, 16, 0.30)",
+            "shadowOffset": {
+              "height": -8,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 35,
+            "transform": [
+              {
+                "translateY": 0,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          animated={false}
+          backgroundColor="rgba(34, 63, 70, 1)"
+          borderTopEndRadius={24}
+          borderTopStartRadius={24}
+          collapsable={false}
+          focusable={true}
+          height={844}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": undefined,
+              "backgroundColor": "rgba(34, 63, 70, 1)",
+              "bottom": undefined,
+              "flex": 1,
+              "flexDirection": "column",
+              "flexGrow": undefined,
+              "gap": undefined,
+              "height": 1623,
+              "justifyContent": undefined,
+              "left": undefined,
+              "marginBottom": undefined,
+              "marginLeft": undefined,
+              "marginRight": undefined,
+              "marginTop": undefined,
+              "maxHeight": 1623,
+              "maxWidth": undefined,
+              "overflow": undefined,
+              "paddingBottom": undefined,
+              "paddingHorizontal": undefined,
+              "paddingLeft": undefined,
+              "paddingRight": undefined,
+              "paddingTop": undefined,
+              "paddingVertical": undefined,
+              "position": undefined,
+              "right": undefined,
+              "top": undefined,
+              "width": undefined,
+              "zIndex": undefined,
+            }
+          }
+          testID="pressable-test-id"
+        >
+          <RCTScrollView
+            contentContainerStyle={
+              {
+                "alignItems": undefined,
+                "flex": 1,
+                "justifyContent": undefined,
+              }
+            }
+            keyboardShouldPersistTaps="handled"
+            scrollEnabled={false}
+            showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
+          >
+            <View>
+              <View
+                alignItemsCenter={true}
+                backgroundColor="rgba(61, 88, 94, 1)"
+                borderTopEndRadius={0}
+                borderTopStartRadius={0}
+                justifyContentCenter={true}
+                paddingTop={5}
+                style={
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "rgba(61, 88, 94, 1)",
+                    "bottom": undefined,
+                    "flex": undefined,
+                    "flexDirection": "column",
+                    "flexGrow": undefined,
+                    "gap": undefined,
+                    "height": undefined,
+                    "justifyContent": "center",
+                    "left": undefined,
+                    "marginBottom": undefined,
+                    "marginLeft": undefined,
+                    "marginRight": undefined,
+                    "marginTop": undefined,
+                    "maxHeight": undefined,
+                    "maxWidth": undefined,
+                    "overflow": undefined,
+                    "paddingBottom": undefined,
+                    "paddingHorizontal": undefined,
+                    "paddingLeft": undefined,
+                    "paddingRight": undefined,
+                    "paddingTop": 10,
+                    "paddingVertical": undefined,
+                    "position": undefined,
+                    "right": undefined,
+                    "top": undefined,
+                    "width": "100%",
+                    "zIndex": undefined,
+                  }
+                }
+                testID="modal-header-test-id"
+              >
+                <View
+                  height={56}
+                  paddingVertical={0}
+                  style={
+                    {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderBottomEndRadius": undefined,
+                      "borderBottomStartRadius": undefined,
+                      "borderRadius": undefined,
+                      "borderTopEndRadius": undefined,
+                      "borderTopStartRadius": undefined,
+                      "bottom": undefined,
+                      "flex": undefined,
+                      "flexDirection": "row",
+                      "flexGrow": undefined,
+                      "gap": undefined,
+                      "height": 108,
+                      "justifyContent": undefined,
+                      "left": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "maxHeight": 108,
+                      "maxWidth": undefined,
+                      "overflow": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": 0,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "paddingVertical": 0,
+                      "position": undefined,
+                      "right": undefined,
+                      "top": undefined,
+                      "width": undefined,
+                      "zIndex": undefined,
+                    }
+                  }
+                  testID="header-test-id"
+                >
+                  <View
+                    justifyContentCenter={true}
+                    style={
+                      {
+                        "alignItems": undefined,
+                        "backgroundColor": undefined,
+                        "bottom": undefined,
+                        "flex": undefined,
+                        "flexDirection": "column",
+                        "flexGrow": undefined,
+                        "gap": undefined,
+                        "height": undefined,
+                        "justifyContent": "center",
+                        "left": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": undefined,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "maxHeight": undefined,
+                        "maxWidth": undefined,
+                        "overflow": undefined,
+                        "paddingBottom": undefined,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": undefined,
+                        "paddingTop": undefined,
+                        "paddingVertical": undefined,
+                        "position": undefined,
+                        "right": undefined,
+                        "top": undefined,
+                        "width": "25%",
+                        "zIndex": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      accessibilityState={
+                        {
+                          "busy": undefined,
+                          "checked": undefined,
+                          "disabled": undefined,
+                          "expanded": undefined,
+                          "selected": undefined,
+                        }
+                      }
+                      accessibilityValue={
+                        {
+                          "max": undefined,
+                          "min": undefined,
+                          "now": undefined,
+                          "text": undefined,
+                        }
+                      }
+                      accessible={true}
+                      alignItemsFlexStart={true}
+                      animated={false}
+                      collapsable={false}
+                      focusable={true}
+                      height={40}
+                      justifyContentCenter={true}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        {
+                          "alignItems": "flex-start",
+                          "backgroundColor": undefined,
+                          "bottom": undefined,
+                          "flex": 1,
+                          "flexDirection": "column",
+                          "flexGrow": undefined,
+                          "gap": undefined,
+                          "height": 77,
+                          "justifyContent": "center",
+                          "left": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "maxHeight": 77,
+                          "maxWidth": undefined,
+                          "overflow": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "paddingVertical": undefined,
+                          "position": undefined,
+                          "right": undefined,
+                          "top": undefined,
+                          "width": 77,
+                          "zIndex": undefined,
+                        }
+                      }
+                      testID="pressable-test-id"
+                      width={40}
+                    />
+                  </View>
+                  <View
+                    alignItemsCenter={true}
+                    paddingTop={16}
+                    style={
+                      {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "bottom": undefined,
+                        "flex": undefined,
+                        "flexDirection": "column",
+                        "flexGrow": undefined,
+                        "gap": undefined,
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "left": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": undefined,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "maxHeight": undefined,
+                        "maxWidth": undefined,
+                        "overflow": undefined,
+                        "paddingBottom": undefined,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": undefined,
+                        "paddingTop": 31,
+                        "paddingVertical": undefined,
+                        "position": undefined,
+                        "right": undefined,
+                        "top": undefined,
+                        "width": "50%",
+                        "zIndex": undefined,
+                      }
+                    }
+                  >
+                    <Image
+                      height={24}
+                      source={
+                        {
+                          "testUri": "../../../src/assets/images/logo/pttbank-BlackColored.png",
+                        }
+                      }
+                      style={
+                        {
+                          "backgroundColor": undefined,
+                          "bottom": undefined,
+                          "flexGrow": undefined,
+                          "gap": undefined,
+                          "height": 46,
+                          "left": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "maxHeight": 46,
+                          "maxWidth": undefined,
+                          "overflow": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "paddingVertical": undefined,
+                          "position": undefined,
+                          "resizeMode": "contain",
+                          "right": undefined,
+                          "top": undefined,
+                          "width": 244,
+                          "zIndex": undefined,
+                        }
+                      }
+                      testID="header-logo-test-id"
+                      width={127}
+                    />
+                  </View>
+                  <View
+                    alignItemsFlexEnd={true}
+                    justifyContentCenter={true}
+                    style={
+                      {
+                        "alignItems": "flex-end",
+                        "backgroundColor": undefined,
+                        "bottom": undefined,
+                        "flex": undefined,
+                        "flexDirection": "column",
+                        "flexGrow": undefined,
+                        "gap": undefined,
+                        "height": undefined,
+                        "justifyContent": "center",
+                        "left": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": undefined,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "maxHeight": undefined,
+                        "maxWidth": undefined,
+                        "overflow": undefined,
+                        "paddingBottom": undefined,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": undefined,
+                        "paddingTop": undefined,
+                        "paddingVertical": undefined,
+                        "position": undefined,
+                        "right": undefined,
+                        "top": undefined,
+                        "width": "25%",
+                        "zIndex": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      accessibilityState={
+                        {
+                          "busy": undefined,
+                          "checked": undefined,
+                          "disabled": undefined,
+                          "expanded": undefined,
+                          "selected": undefined,
+                        }
+                      }
+                      accessibilityValue={
+                        {
+                          "max": undefined,
+                          "min": undefined,
+                          "now": undefined,
+                          "text": undefined,
+                        }
+                      }
+                      accessible={true}
+                      alignItemsCenter={true}
+                      animated={false}
+                      collapsable={false}
+                      focusable={true}
+                      height={40}
+                      justifyContentCenter={true}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "bottom": undefined,
+                          "flex": 1,
+                          "flexDirection": "column",
+                          "flexGrow": undefined,
+                          "gap": undefined,
+                          "height": 77,
+                          "justifyContent": "center",
+                          "left": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "maxHeight": 77,
+                          "maxWidth": undefined,
+                          "overflow": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "paddingVertical": undefined,
+                          "position": undefined,
+                          "right": undefined,
+                          "top": undefined,
+                          "width": 77,
+                          "zIndex": undefined,
+                        }
+                      }
+                      testID="header-right-pressable-test-id"
+                      width={40}
+                    >
+                      <View
+                        style={
+                          {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "bottom": undefined,
+                            "flex": undefined,
+                            "flexDirection": "column",
+                            "flexGrow": undefined,
+                            "gap": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "left": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": undefined,
+                            "marginRight": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "overflow": undefined,
+                            "paddingBottom": undefined,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": undefined,
+                            "paddingVertical": undefined,
+                            "position": undefined,
+                            "right": undefined,
+                            "top": undefined,
+                            "width": undefined,
+                            "zIndex": undefined,
+                          }
+                        }
+                        testID="header-right-icon-test-id"
+                      >
+                        <SvgMock
+                          fill="transparent"
+                          height={46}
+                          stroke="rgba(255, 255, 255, 1)"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          width={46}
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  {
+                    "alignItems": undefined,
+                    "backgroundColor": undefined,
+                    "bottom": undefined,
+                    "flex": undefined,
+                    "flexDirection": "column",
+                    "flexGrow": undefined,
+                    "gap": undefined,
+                    "height": undefined,
+                    "justifyContent": undefined,
+                    "left": undefined,
+                    "marginBottom": undefined,
+                    "marginLeft": undefined,
+                    "marginRight": undefined,
+                    "marginTop": undefined,
+                    "maxHeight": undefined,
+                    "maxWidth": undefined,
+                    "overflow": undefined,
+                    "paddingBottom": undefined,
+                    "paddingHorizontal": undefined,
+                    "paddingLeft": undefined,
+                    "paddingRight": undefined,
+                    "paddingTop": undefined,
+                    "paddingVertical": undefined,
+                    "position": undefined,
+                    "right": undefined,
+                    "top": undefined,
+                    "width": undefined,
+                    "zIndex": undefined,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    {
+                      "backgroundColor": undefined,
+                      "bottom": undefined,
+                      "color": "rgba(17, 17, 17, 1)",
+                      "flexGrow": undefined,
+                      "fontFamily": "Markpro-Medium",
+                      "fontSize": 22,
+                      "fontWeight": undefined,
+                      "gap": undefined,
+                      "height": undefined,
+                      "left": undefined,
+                      "letterSpacing": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "maxHeight": undefined,
+                      "maxWidth": undefined,
+                      "overflow": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "paddingVertical": undefined,
+                      "position": undefined,
+                      "right": undefined,
+                      "textAlign": "auto",
+                      "top": undefined,
+                      "width": undefined,
+                      "zIndex": undefined,
+                    }
+                  }
+                >
+                  TEST
+                </Text>
+              </View>
+            </View>
+          </RCTScrollView>
+        </View>
+      </View>
+    </View>
+  </Modal>,
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "elevation": 999999,
+          "flex": 0,
+          "maxWidth": "100%",
+          "position": "absolute",
+          "zIndex": 999999,
+        },
+        {
+          "flexDirection": "column-reverse",
+          "justifyContent": "flex-start",
+          "top": 30,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "bottom": 0,
+        }
+      }
+    >
+      <RCTSafeAreaView />
+    </View>
+  </View>,
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "elevation": 999999,
+          "flex": 0,
+          "maxWidth": "100%",
+          "position": "absolute",
+          "zIndex": 999999,
+        },
+        {
+          "bottom": 40,
+          "flexDirection": "column",
+          "justifyContent": "flex-end",
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "bottom": 0,
+        }
+      }
+    >
+      <RCTSafeAreaView />
+    </View>
+  </View>,
+]
+`;

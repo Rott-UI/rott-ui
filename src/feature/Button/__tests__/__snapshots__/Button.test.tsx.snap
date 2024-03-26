@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button -> Custom Component butonun snapshotı ile eşleşmeli 1`] = `
+[
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "rgba(63, 182, 210, 1)",
+        "borderColor": "white",
+        "borderRadius": 8,
+        "borderWidth": undefined,
+        "bottom": undefined,
+        "color": undefined,
+        "flex": 1,
+        "flexDirection": "row",
+        "flexGrow": undefined,
+        "gap": undefined,
+        "height": 108,
+        "justifyContent": "center",
+        "left": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "maxHeight": undefined,
+        "maxWidth": undefined,
+        "opacity": 1,
+        "overflow": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "paddingVertical": undefined,
+        "position": "relative",
+        "right": undefined,
+        "top": undefined,
+        "width": 658,
+        "zIndex": undefined,
+      }
+    }
+    testID="button-test-id"
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        {
+          "backgroundColor": undefined,
+          "bottom": undefined,
+          "color": "rgba(255, 255, 255, 1)",
+          "flexGrow": undefined,
+          "flexShrink": 1,
+          "fontFamily": "Markpro-Bold",
+          "fontSize": 41,
+          "fontWeight": undefined,
+          "gap": undefined,
+          "height": undefined,
+          "left": undefined,
+          "letterSpacing": undefined,
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "maxHeight": undefined,
+          "maxWidth": undefined,
+          "overflow": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
+          "paddingLeft": undefined,
+          "paddingRight": undefined,
+          "paddingTop": undefined,
+          "paddingVertical": undefined,
+          "position": undefined,
+          "right": undefined,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+          "top": undefined,
+          "width": undefined,
+          "zIndex": undefined,
+        }
+      }
+    >
+      Test Button
+    </Text>
+  </View>,
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "elevation": 999999,
+          "flex": 0,
+          "maxWidth": "100%",
+          "position": "absolute",
+          "zIndex": 999999,
+        },
+        {
+          "flexDirection": "column-reverse",
+          "justifyContent": "flex-start",
+          "top": 30,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "bottom": 0,
+        }
+      }
+    >
+      <RCTSafeAreaView />
+    </View>
+  </View>,
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "elevation": 999999,
+          "flex": 0,
+          "maxWidth": "100%",
+          "position": "absolute",
+          "zIndex": 999999,
+        },
+        {
+          "bottom": 40,
+          "flexDirection": "column",
+          "justifyContent": "flex-end",
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "bottom": 0,
+        }
+      }
+    >
+      <RCTSafeAreaView />
+    </View>
+  </View>,
+]
+`;

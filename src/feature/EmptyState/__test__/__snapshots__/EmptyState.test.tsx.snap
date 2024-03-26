@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyState -> Custom Component ilk render anında snapshot ile eşleşmeli 1`] = `
+[
+  <View
+    flex={1}
+    style={
+      {
+        "alignItems": undefined,
+        "backgroundColor": undefined,
+        "borderBottomEndRadius": undefined,
+        "borderBottomStartRadius": undefined,
+        "borderRadius": undefined,
+        "borderTopEndRadius": undefined,
+        "borderTopStartRadius": undefined,
+        "bottom": undefined,
+        "flex": 1,
+        "flexDirection": "column",
+        "flexGrow": undefined,
+        "gap": undefined,
+        "height": undefined,
+        "justifyContent": undefined,
+        "left": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "maxHeight": undefined,
+        "maxWidth": undefined,
+        "overflow": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": 46,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "paddingVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "top": undefined,
+        "width": "100%",
+        "zIndex": undefined,
+      }
+    }
+  >
+    <View
+      alignItemsCenter={true}
+      height={364}
+      justifyContentCenter={true}
+      marginTop={50}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": undefined,
+          "bottom": undefined,
+          "flex": undefined,
+          "flexDirection": "column",
+          "flexGrow": undefined,
+          "gap": undefined,
+          "height": 700,
+          "justifyContent": "center",
+          "left": undefined,
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": 96,
+          "maxHeight": 700,
+          "maxWidth": undefined,
+          "overflow": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
+          "paddingLeft": undefined,
+          "paddingRight": undefined,
+          "paddingTop": undefined,
+          "paddingVertical": undefined,
+          "position": undefined,
+          "right": undefined,
+          "top": undefined,
+          "width": undefined,
+          "zIndex": undefined,
+        }
+      }
+    >
+      <Image
+        height={152}
+        marginBottom={32}
+        resizeMode="contain"
+        source={
+          {
+            "testUri": "../../../src/assets/images/empty-state/phone.png",
+          }
+        }
+        style={
+          {
+            "backgroundColor": undefined,
+            "bottom": undefined,
+            "flexGrow": undefined,
+            "gap": undefined,
+            "height": 293,
+            "left": undefined,
+            "marginBottom": 62,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginTop": undefined,
+            "maxHeight": 293,
+            "maxWidth": undefined,
+            "overflow": undefined,
+            "paddingBottom": undefined,
+            "paddingHorizontal": undefined,
+            "paddingLeft": undefined,
+            "paddingRight": undefined,
+            "paddingTop": undefined,
+            "paddingVertical": undefined,
+            "position": undefined,
+            "resizeMode": "contain",
+            "right": undefined,
+            "top": undefined,
+            "width": 293,
+            "zIndex": undefined,
+          }
+        }
+        testID="empty-state-image-test-id"
+        width={152}
+      />
+      <View
+        style={
+          {
+            "alignItems": undefined,
+            "backgroundColor": undefined,
+            "bottom": undefined,
+            "flex": undefined,
+            "flexDirection": "column",
+            "flexGrow": undefined,
+            "gap": undefined,
+            "height": undefined,
+            "justifyContent": undefined,
+            "left": undefined,
+            "marginBottom": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginTop": undefined,
+            "maxHeight": undefined,
+            "maxWidth": undefined,
+            "overflow": undefined,
+            "paddingBottom": undefined,
+            "paddingHorizontal": undefined,
+            "paddingLeft": undefined,
+            "paddingRight": undefined,
+            "paddingTop": undefined,
+            "paddingVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "top": undefined,
+            "width": undefined,
+            "zIndex": undefined,
+          }
+        }
+      >
+        <Text
+          marginBottom={8}
+          style={
+            {
+              "backgroundColor": undefined,
+              "bottom": undefined,
+              "color": "rgba(255, 255, 255, 1)",
+              "flexGrow": undefined,
+              "fontFamily": "Markpro-Medium",
+              "fontSize": 26,
+              "fontWeight": undefined,
+              "gap": undefined,
+              "height": undefined,
+              "left": undefined,
+              "letterSpacing": undefined,
+              "marginBottom": 16,
+              "marginLeft": undefined,
+              "marginRight": undefined,
+              "marginTop": undefined,
+              "maxHeight": undefined,
+              "maxWidth": undefined,
+              "overflow": undefined,
+              "paddingBottom": undefined,
+              "paddingHorizontal": undefined,
+              "paddingLeft": undefined,
+              "paddingRight": undefined,
+              "paddingTop": undefined,
+              "paddingVertical": undefined,
+              "position": undefined,
+              "right": undefined,
+              "textAlign": "center",
+              "top": undefined,
+              "width": undefined,
+              "zIndex": undefined,
+            }
+          }
+          testID="empty-state-desc-test-id"
+        >
+          TEST
+        </Text>
+      </View>
+    </View>
+  </View>,
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "elevation": 999999,
+          "flex": 0,
+          "maxWidth": "100%",
+          "position": "absolute",
+          "zIndex": 999999,
+        },
+        {
+          "flexDirection": "column-reverse",
+          "justifyContent": "flex-start",
+          "top": 30,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "bottom": 0,
+        }
+      }
+    >
+      <RCTSafeAreaView />
+    </View>
+  </View>,
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "elevation": 999999,
+          "flex": 0,
+          "maxWidth": "100%",
+          "position": "absolute",
+          "zIndex": 999999,
+        },
+        {
+          "bottom": 40,
+          "flexDirection": "column",
+          "justifyContent": "flex-end",
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "bottom": 0,
+        }
+      }
+    >
+      <RCTSafeAreaView />
+    </View>
+  </View>,
+]
+`;

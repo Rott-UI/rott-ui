@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IBAN Input -> Custom Input ilk render anında snapshot ile eşleşmeli 1`] = `
+[
+  <View
+    style={
+      {
+        "alignItems": undefined,
+        "backgroundColor": undefined,
+        "bottom": undefined,
+        "flex": undefined,
+        "flexDirection": "row",
+        "flexGrow": undefined,
+        "gap": undefined,
+        "height": undefined,
+        "justifyContent": undefined,
+        "left": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "maxHeight": undefined,
+        "maxWidth": undefined,
+        "overflow": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "paddingVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "top": undefined,
+        "width": undefined,
+        "zIndex": undefined,
+      }
+    }
+  >
+    <TextInput
+      autoCapitalize="sentences"
+      keyboardType="number-pad"
+      maxLength={32}
+      numberOfLines={1}
+      onChangeText={[Function]}
+      placeholder="TR00 0000 0000 0000 0000 0000 00"
+      style={
+        [
+          {
+            "fontStyle": undefined,
+            "fontWeight": undefined,
+            "textDecorationLine": undefined,
+          },
+          {
+            "backgroundColor": undefined,
+            "bottom": undefined,
+            "color": "rgba(255, 255, 255, 1)",
+            "flexGrow": undefined,
+            "fontFamily": "Markpro-Medium",
+            "fontSize": 46,
+            "gap": undefined,
+            "height": 89,
+            "left": undefined,
+            "letterSpacing": 2,
+            "marginBottom": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginTop": undefined,
+            "maxHeight": undefined,
+            "maxWidth": undefined,
+            "overflow": undefined,
+            "paddingBottom": undefined,
+            "paddingHorizontal": undefined,
+            "paddingLeft": undefined,
+            "paddingRight": undefined,
+            "paddingTop": undefined,
+            "paddingVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "top": undefined,
+            "width": "100%",
+            "zIndex": undefined,
+          },
+        ]
+      }
+      testID="iban-input-test-id"
+      value=""
+    />
+  </View>,
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "elevation": 999999,
+          "flex": 0,
+          "maxWidth": "100%",
+          "position": "absolute",
+          "zIndex": 999999,
+        },
+        {
+          "flexDirection": "column-reverse",
+          "justifyContent": "flex-start",
+          "top": 30,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "bottom": 0,
+        }
+      }
+    >
+      <RCTSafeAreaView />
+    </View>
+  </View>,
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      [
+        {
+          "alignSelf": "center",
+          "elevation": 999999,
+          "flex": 0,
+          "maxWidth": "100%",
+          "position": "absolute",
+          "zIndex": 999999,
+        },
+        {
+          "bottom": 40,
+          "flexDirection": "column",
+          "justifyContent": "flex-end",
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "bottom": 0,
+        }
+      }
+    >
+      <RCTSafeAreaView />
+    </View>
+  </View>,
+]
+`;
