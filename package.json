@@ -1,12 +1,35 @@
 {
-  "name": "RottUI",
+  "name": "@rott-ui/react-native",
   "version": "0.0.1",
-  "private": true,
+  "description": "A React Native UI library",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rott-UI/rott-ui.git"
+  },
+  "keywords": [
+    "react-native",
+    "responsive-ui",
+    "responsive-view",
+    "responsive-screen",
+    "responsive",
+    "rott-ui"
+  ],
+  "author": "Dogukan Tansuk <dogukantansuk@gmail.com> (https://github.com/DogukanTansuk)",
+  "contributors": [
+    "Dogukan Tansuk <dogukantansuk@gmail.com> (https://github.com/DogukanTansuk)",
+    "Mert Kivrak <mert@setcode.com.tr> (https://github.com/Setcodeio)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rott-UI/rott-ui/issues"
+  },
+  "homepage": "https://github.com/Rott-UI/rott-ui#readme",
+  "peerDependencies": {
+    "react-native": ">=0.35"
+  },
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
     "lint": "eslint .",
-    "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {

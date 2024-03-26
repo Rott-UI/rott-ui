@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "types": ["react-native", "jest", "node", "@testing-library/jest-native"],
+    "typeRoots": ["./node_modules/@types/", "./src/@types/"]
+  },
+  "exclude": [
+    "**/__mocks__/*",
+    "../../node_modules",
+    "build",
+    "src/**/*.test.ts",
+    "src/**/*.tests.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.tests.tsx"
+  ]
+}
