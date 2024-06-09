@@ -1,8 +1,10 @@
 // Util and Lib Imports
+import {Notification} from '..'
 import {formatMessage, render, fireEvent, act} from '../../../utils'
 
 // Component Imports
 import {NotificationComponent} from '../components'
+import {NotificationProvider} from '../providers'
 
 const mockProps = {
   title: formatMessage('TEST.WITH.PARAM', {testText: 'Test Title'}),
@@ -16,6 +18,7 @@ describe('Notification -> Custom Component', () => {
     closeIconTestId: 'close-icon-test-id',
     descriptionTestId: 'notification-desc-test-id',
     titleTestId: 'notification-title-test-id',
+    blurTestId: 'notification-blur-test-id',
   }
 
   it('notification ilk render anında snapshot ile eşleşmeli', () => {
@@ -24,6 +27,26 @@ describe('Notification -> Custom Component', () => {
     )
 
     expect(renderedNotification).toMatchSnapshot()
+  })
+
+  it('notification açıldığında ekranda blur gözükmeli', () => {
+    const {blurTestId} = testId
+    const {getByTestId} = render(<NotificationProvider />)
+
+    Notification.success('Test Title', 'Test Description')
+
+    const blurElement = getByTestId(blurTestId)
+
+    expect(blurElement).toBeOnTheScreen()
+  })
+
+  it('notification yokken ekranda blur gözükmemeli', () => {
+    const {blurTestId} = testId
+    const {queryByTestId} = render(<NotificationProvider />)
+
+    const blurElement = queryByTestId(blurTestId)
+
+    expect(blurElement).not.toBeOnTheScreen()
   })
 
   it('kapatma butonuna tıklandığında onClose fonksiyonları çağırılmalı', async () => {

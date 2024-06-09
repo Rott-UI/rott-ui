@@ -8,6 +8,7 @@ export const ImageStyles = (props?: any) =>
   StyleSheet.create({
     defaultImageStyle: {
       ...commonUiStyleProperties(props),
+      borderRadius: 50,
 
       resizeMode: 'contain',
     } as any,

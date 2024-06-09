@@ -22,9 +22,7 @@ const jestConfiguration: JestConfigWithTsJest = {
       },
     ],
   },
-  transformIgnorePatterns: [
-    'node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation|react-native-reanimated|@twotalltotems/react-native-otp-input)',
-  ],
+  transformIgnorePatterns: ['node_modules/(?!(jest-)?@?react-native|@react-native-community)'],
   // setupFiles: ['./jest.setup.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   setupFilesAfterEnv: ['./jest.setup.ts', '@testing-library/jest-native/extend-expect'],

@@ -1,5 +1,3 @@
-declare module 'react-native-device-info/jest/react-native-device-info-mock'
-
 type Nullable<T> = null | T
 
 interface String {
@@ -21,5 +19,4 @@ interface String {
  */
 type Keyof<T> = keyof T
 
-import('./../node_modules/react-native-reanimated/src/reanimated2/globals')
 typeof globalThis

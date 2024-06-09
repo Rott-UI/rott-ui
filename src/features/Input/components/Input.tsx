@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import {FC} from 'react'
 
 // Component Imports
@@ -17,7 +16,7 @@ import {CreditCardInput} from './CreditCardInput'
 import {PinPasswordInput} from './PinPasswordInput'
 import {ExpireDateInput} from './ExpireDateInput'
 import {PlateNumberInput} from './PlateNumberInput'
-import {DateInput} from './DateInput'
+import {DateInput} from './DateInput/components/DateInput'
 import {CheckBoxInput} from './CheckBoxInput'
 import {SelectInput} from './SelectInput/components/SelectInput'
 import {InputValidation} from './InputValidation'
@@ -26,6 +25,8 @@ import {Icon} from '../../Icon'
 import {Pressable} from '../../Pressable'
 import {colourFromVariant} from '../../../utils'
 import {InputStyleNormalizer} from '../utils/inputNormalizer'
+import {ToggleInput} from './ToggleInput'
+import {InputStyles} from '../styles'
 
 export const Input: FC<InputProps> = ({
   label,
@@ -34,13 +35,17 @@ export const Input: FC<InputProps> = ({
   fontSize,
   size = 'md',
   errorMessage,
+  disabled,
   theme = 'light',
   placeholderTextColor = theme === 'light' ? COLOURS.GREY200 : COLOURS.WHITE,
+  data,
 
   border,
-
+  touched = null,
   onDateChange,
   onCheckChange,
+  onToggle,
+  inputLabel,
   ...props
 }) => {
   const inputTypes = {
@@ -50,6 +55,7 @@ export const Input: FC<InputProps> = ({
         placeholderTextColor={placeholderTextColor}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         {...props}
       />
@@ -59,6 +65,7 @@ export const Input: FC<InputProps> = ({
         placeholderTextColor={placeholderTextColor}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         {...props}
       />
@@ -69,6 +76,7 @@ export const Input: FC<InputProps> = ({
         {...props}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
       />
     ),
@@ -78,6 +86,7 @@ export const Input: FC<InputProps> = ({
         label={label}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         {...props}
       />
@@ -87,6 +96,7 @@ export const Input: FC<InputProps> = ({
         placeholderTextColor={placeholderTextColor}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         {...props}
       />
@@ -96,6 +106,7 @@ export const Input: FC<InputProps> = ({
         placeholderTextColor={placeholderTextColor}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         {...props}
       />
@@ -105,6 +116,7 @@ export const Input: FC<InputProps> = ({
         {...props}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         placeholderTextColor={placeholderTextColor}
       />
@@ -114,6 +126,7 @@ export const Input: FC<InputProps> = ({
         {...props}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         placeholderTextColor={placeholderTextColor}
       />
@@ -123,6 +136,7 @@ export const Input: FC<InputProps> = ({
         {...props}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         placeholderTextColor={placeholderTextColor}
       />
@@ -132,6 +146,7 @@ export const Input: FC<InputProps> = ({
         {...props}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         placeholderTextColor={placeholderTextColor}
       />
@@ -140,6 +155,7 @@ export const Input: FC<InputProps> = ({
       <AmountInput
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
         placeholderTextColor={placeholderTextColor}
         {...props}
@@ -150,6 +166,8 @@ export const Input: FC<InputProps> = ({
         placeholderTextColor={placeholderTextColor}
         onDateChange={onDateChange}
         theme={theme}
+        data={data}
+        disabled={disabled}
         size={size}
         {...props}
       />
@@ -159,6 +177,7 @@ export const Input: FC<InputProps> = ({
         placeholderTextColor={placeholderTextColor}
         onCheckChange={onCheckChange}
         theme={theme}
+        disabled={disabled}
         size={size}
         fontSize={fontSize}
         {...props}
@@ -170,39 +189,62 @@ export const Input: FC<InputProps> = ({
         label={label}
         fontSize={fontSize}
         theme={theme}
+        disabled={disabled}
         size={size}
+        {...props}
+      />
+    ),
+    toggle: (
+      <ToggleInput
+        placeholderTextColor={placeholderTextColor}
+        label={label}
+        fontSize={fontSize}
+        theme={theme}
+        disabled={disabled}
+        size={size}
+        onToggle={(checked) => !!onToggle && onToggle!(checked)}
+        inputLabel={inputLabel!}
         {...props}
       />
     ),
   }
   const {name} = props
+  const isLabelObject = typeof label === 'object'
+  const variantCalculation = () => {
+    if (isLabelObject && label?.icon?.variant) return label?.icon?.variant
+    else if (
+      (isLabelObject && label.theme && label.theme === 'dark') ||
+      (theme && theme === 'dark')
+    )
+      return 'grey-900'
+    else if (disabled) return 'grey-900'
+    else return 'grey-200'
+  }
+  const variant = variantCalculation()
 
   return (
-    <Item marginTop={8}>
-      <Item>
-        {label && (
+    <Item>
+      <Item paddingTop={16} style={InputStyles({disabled}).textInputContainer}>
+        {label && type !== 'toggle' && (
           <Item
             row
             paddingHorizontal={InputStyleNormalizer({size: size}).paddingHorizontal}
-            paddingVertical={2.5}
             alignItemsCenter>
             <Label
               testID='input-label-test-id'
-              fontSize={typeof label === 'object' && label.size ? label.size : 'md'}
-              fontFamily={
-                typeof label === 'object' && label.fontFamily ? label.fontFamily : 'Markpro-Medium'
-              }
+              fontSize={isLabelObject && label.size ? label.size : 'md'}
+              fontFamily={isLabelObject && label.fontFamily ? label.fontFamily : 'Markpro-Medium'}
               variant={
-                typeof label === 'object'
+                isLabelObject
                   ? label.variant ?? (label.theme === 'dark' ? 'grey-900' : 'grey-200')
                   : theme === 'dark'
-                  ? 'grey-900'
-                  : 'grey-200'
+                    ? 'grey-200'
+                    : 'grey-900'
               }>
               {typeof label === 'string' ? label?.toUpperCase() : label.text?.toUpperCase()}
             </Label>
 
-            {typeof label === 'object' && label.description && (
+            {isLabelObject && label.description && (
               <Label
                 testID='input-label-description-test-id'
                 fontSize={label.descriptionSize ?? 'xs'}
@@ -213,27 +255,24 @@ export const Input: FC<InputProps> = ({
               </Label>
             )}
 
-            {typeof label === 'object' && label.icon && (
+            {((isLabelObject && label.icon) || disabled) && (
               <Pressable
                 testID='input-label-description-icon-test-id'
                 flex={0}
-                width={(label.icon.width && label.icon.width + 4) ?? 22}
-                height={(label.icon.height && label.icon.height + 4) ?? 22}
+                disabled={disabled}
+                width={isLabelObject ? label?.icon?.width && label.icon.width + 4 : 22}
+                height={isLabelObject ? label?.icon?.height && label.icon.height + 4 : 22}
                 justifyContentCenter
                 alignItemsCenter
-                onPress={label.icon.onPress}>
+                onPress={isLabelObject ? label?.icon?.onPress : null}>
                 <Icon
-                  name={label.icon.name}
-                  width={label.icon.width ?? 18}
-                  height={label.icon.height ?? 18}
-                  variant={
-                    label.icon.variant ??
-                    (label.theme && label.theme === 'dark' ? 'grey-900' : 'grey-200') ??
-                    (theme && theme === 'dark' ? 'grey-900' : 'grey-200')
-                  }
-                  mode={label.icon.mode}
-                  strokeWidth={label.icon.strokeWidth}
-                  noStroke={label.icon.noStroke}
+                  name={isLabelObject ? (label?.icon?.name as any) : ('LOCK' as any)}
+                  width={isLabelObject ? label?.icon?.width : 18}
+                  height={isLabelObject ? label?.icon?.height : 18}
+                  variant={variant}
+                  mode={isLabelObject ? label?.icon?.mode : 'stroke'}
+                  strokeWidth={isLabelObject ? label?.icon?.strokeWidth : 2}
+                  noStroke={isLabelObject ? label?.icon?.noStroke : false}
                 />
               </Pressable>
             )}
@@ -241,8 +280,7 @@ export const Input: FC<InputProps> = ({
         )}
 
         <Item
-          marginBottom={8}
-          paddingHorizontal={16}
+          paddingHorizontal={type !== 'toggle' ? 16 : 0}
           borderWidth={border?.width}
           borderRadius={border?.radius}
           borderColor={colourFromVariant(border?.variant)}
@@ -251,7 +289,8 @@ export const Input: FC<InputProps> = ({
         </Item>
       </Item>
 
-      {errorMessage && <InputValidation name={name} message={errorMessage} />}
+      {((!!props?.onBlur && !!touched) || (!props?.onBlur && touched === null)) &&
+        !!errorMessage && <InputValidation name={name} message={errorMessage} />}
 
       {renderSeparator && (
         <Separator size='full' orientation='horizontal' variant='neutral-alpha-200' />

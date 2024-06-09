@@ -1,1 +1,1 @@
-export * from './NotificationMessage.style'
+export * from './NotificationStyle'

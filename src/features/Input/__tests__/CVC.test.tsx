@@ -1,7 +1,8 @@
-// Util and Lib Imports
-import {Keyboard} from 'react-native'
-import {render, fireEvent, act, waitFor} from '../../../utils'
+// Component Imports
 import {CVCInput} from '../components'
+
+// Util and Lib Imports
+import {render, fireEvent} from '../../../utils'
 
 describe('CVC Input -> Custom Input', () => {
   const inputTestId = 'input-test-id'

@@ -4,6 +4,7 @@ exports[`CreditCard Input -> Custom Input ilk render anında snapshot ile eşle�
 [
   <TextInput
     autoCapitalize="sentences"
+    editable={true}
     keyboardType="number-pad"
     maxLength={19}
     onChangeText={[Function]}
@@ -21,17 +22,19 @@ exports[`CreditCard Input -> Custom Input ilk render anında snapshot ile eşle�
           "color": "rgba(255, 255, 255, 1)",
           "flexGrow": undefined,
           "fontFamily": "Markpro-Medium",
-          "fontSize": 46,
+          "fontSize": 18,
           "gap": undefined,
           "height": 89,
           "left": undefined,
-          "letterSpacing": 2,
+          "letterSpacing": 0.5,
           "marginBottom": undefined,
           "marginLeft": undefined,
           "marginRight": undefined,
           "marginTop": undefined,
           "maxHeight": undefined,
           "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
           "paddingHorizontal": undefined,

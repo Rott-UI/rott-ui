@@ -30,6 +30,7 @@ export const CVCInput: FC<Omit<InputProps, 'label' | 'placeholder' | 'name'>> = 
   return (
     <Item row>
       <TextInput
+        editable={!props.disabled}
         placeholder='***'
         style={StyleSheet.flatten([InputStyles({fontSize, theme, size}).defaultTextInputStyle])}
         keyboardType='number-pad'

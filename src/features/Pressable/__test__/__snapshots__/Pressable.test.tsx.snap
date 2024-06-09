@@ -51,6 +51,8 @@ exports[`Pressable -> Custom Component pressable component render olmalı ve sna
         "marginTop": undefined,
         "maxHeight": undefined,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
         "paddingHorizontal": undefined,

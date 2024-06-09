@@ -6,7 +6,7 @@ import {TimerComponent} from '../components'
 import {Timer} from '..'
 
 //Util and Lib Imports
-import {render, act} from '../../../utils'
+import {render, act} from './../../../utils'
 
 describe('Timer -> Custom Component', () => {
   const timerInitialTime = 180

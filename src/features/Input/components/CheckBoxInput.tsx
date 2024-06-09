@@ -26,10 +26,14 @@ export const CheckBoxInput: FC<CheckBoxProps> = ({
   fontSize,
   theme,
   size,
+  disabled,
   onCheckChange,
 }) => {
   return (
-    <Pressable flex={0} testID='checkbox-input-test-id' onPress={() => onCheckChange!(!checked)}>
+    <Pressable
+      flex={0}
+      testID='checkbox-input-test-id'
+      onPress={() => !disabled && onCheckChange!(!checked)}>
       <Item
         row
         alignItemsCenter

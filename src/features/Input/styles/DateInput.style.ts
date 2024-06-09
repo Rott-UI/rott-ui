@@ -2,17 +2,17 @@
 import {StyleSheet} from 'react-native'
 
 // Constant Imports
-import {COLOURS, Fonts} from '../../../constants'
+import {Fonts} from '../../../constants'
 
-export const DateInputStyles = (props?: any) =>
+export const DateInputStyles = () =>
   StyleSheet.create({
     pressableTextStyle: {
       letterSpacing: 2,
       fontFamily: Fonts.MARKPRO_BOLD,
     },
     dateInputHeaderStyle: {
-      borderTopStartRadius: 15,
-      borderTopEndRadius: 15,
+      borderTopStartRadius: 24,
+      borderTopEndRadius: 24,
     },
     confirmButtonStyle: {
       position: 'absolute',

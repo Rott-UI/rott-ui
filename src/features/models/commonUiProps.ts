@@ -1,4 +1,4 @@
-import {FontFamily} from '../Label/models'
+import {FontFamily, FontWeight} from '../Label/models'
 import {Size} from './sizePropType'
 import {Variant} from './variantPropType'
 
@@ -10,9 +10,12 @@ export interface CommonUiProps {
   height?: number | string
   maxWidth?: number | string
   maxHeight?: number | string
+  minWidth?: number | string
+  minHeight?: number | string
 
   fontSize?: Omit<Size, 'full'> | 'xxxl' | number
   fontFamily?: FontFamily
+  fontWeight?: FontWeight
   color?: string
   variant?: Variant
   flex?: number

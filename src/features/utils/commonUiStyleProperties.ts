@@ -13,8 +13,8 @@ export const commonUiStyleProperties = (props?: any) => {
       typeof props?.width === 'number'
         ? display.normalize(props?.width)
         : props?.size
-        ? sizeToPercentage(props?.size)
-        : undefined,
+          ? sizeToPercentage(props?.size)
+          : undefined,
     height:
       typeof props?.height === 'number'
         ? display.normalize(props?.height, props.heightNormalizeBased ? 'height' : 'width')
@@ -22,8 +22,16 @@ export const commonUiStyleProperties = (props?: any) => {
 
     maxWidth: typeof props?.maxWidth === 'number' ? display.normalize(props?.maxWidth) : undefined,
     maxHeight:
-      typeof props?.height === 'number'
-        ? display.normalize(props?.height, props.heightNormalizeBased ? 'height' : 'width')
+      typeof props?.height === 'number' || props?.maxHeight === 'number'
+        ? display.normalize(
+            props?.maxHeight ?? props?.height,
+            props.heightNormalizeBased ? 'height' : 'width'
+          )
+        : undefined,
+    minWidth: typeof props?.minWidth === 'number' ? display.normalize(props?.minWidth) : undefined,
+    minHeight:
+      typeof props?.minHeight === 'number'
+        ? display.normalize(props?.minHeight, props.heightNormalizeBased ? 'height' : 'width')
         : undefined,
 
     backgroundColor: props?.backgroundColor,
@@ -62,10 +70,10 @@ export const commonUiStyleProperties = (props?: any) => {
     position: props?.position
       ? props?.position
       : props?.absolute
-      ? 'absolute'
-      : props?.relative
-      ? 'relative'
-      : undefined,
+        ? 'absolute'
+        : props?.relative
+          ? 'relative'
+          : undefined,
     zIndex: props?.zIndex,
     left: Number(props?.left)
       ? display.normalize(props?.left, props.heightNormalizeBased ? 'height' : 'width')

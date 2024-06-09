@@ -19,6 +19,7 @@ export type Variant =
   | 'mint'
 
   // NEUTRAL/ALPHA
+  | 'neutral-alpha-900'
   | 'neutral-alpha-700'
   | 'neutral-alpha-400'
   | 'neutral-alpha-300'

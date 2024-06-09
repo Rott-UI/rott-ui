@@ -2,29 +2,30 @@
 import {FC, useEffect, useRef, useState} from 'react'
 
 // React Native Imports
-import {ColorValue, StyleSheet, TextInput} from 'react-native'
+import {StyleSheet, TextInput} from 'react-native'
 
 // Component Imports
 import {InputProps} from '../models'
 import {InputStyles} from '../styles'
 import {Item} from '../../Item'
 import {Label} from '../../Label'
-import {Pressable} from '../../Pressable'
+import {Icon} from '../../Icon'
+
+// Constant Imports
+import {COLOURS} from '../../../constants'
 
 // Package Imports
-import {MaskedTextInput, MaskedTextProps} from 'react-native-mask-text'
+import {MaskedTextInput} from 'react-native-mask-text'
 import {AmountInputStyles} from '../styles/AmountInput.style'
-import {Icon} from '../../Icon'
 import {InputStyleNormalizer} from '../utils/inputNormalizer'
-import {COLOURS} from '../../../constants'
 
 export const AmountInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>> = ({
   fontSize,
   onChangeText,
   value,
   theme,
+  disabled,
   size,
-  placeholderTextColor,
   ...props
 }) => {
   const amountRef = useRef<TextInput>(null)
@@ -73,6 +74,7 @@ export const AmountInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>>
           ref={amountRef}
           nativeID='amount-native-id'
           testID='amount-test-id'
+          editable={!disabled}
           type={
             !amount || (amount === '0' && (!currency || currency === '' || currency === '00'))
               ? undefined
@@ -139,7 +141,7 @@ export const AmountInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>>
           name='TL'
           width={InputStyleNormalizer({size}).icon.width}
           height={InputStyleNormalizer({size}).icon.height}
-          color={placeholderColorNormalizer}
+          color={COLOURS.GREY200}
           mode='fill'
           noStroke
         />

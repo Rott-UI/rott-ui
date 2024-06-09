@@ -32,9 +32,11 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
         "marginTop": undefined,
         "maxHeight": 123,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
-        "paddingHorizontal": 0,
+        "paddingHorizontal": 16,
         "paddingLeft": undefined,
         "paddingRight": undefined,
         "paddingTop": 21,
@@ -98,6 +100,8 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
           "marginTop": undefined,
           "maxHeight": undefined,
           "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
           "paddingHorizontal": undefined,
@@ -108,12 +112,12 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
           "position": undefined,
           "right": undefined,
           "top": undefined,
-          "width": 150,
+          "width": 108,
           "zIndex": undefined,
         }
       }
       testID="pressable-test-id"
-      width={78}
+      width={56}
     >
       <View
         marginBottom={8}
@@ -135,6 +139,8 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
             "marginTop": undefined,
             "maxHeight": undefined,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
@@ -166,10 +172,10 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
           {
             "backgroundColor": undefined,
             "bottom": undefined,
-            "color": "rgba(17, 17, 17, 1)",
+            "color": "rgba(34, 63, 70, 1)",
             "flexGrow": undefined,
             "fontFamily": "Markpro-Bold",
-            "fontSize": 16,
+            "fontSize": 10,
             "fontWeight": "bold",
             "gap": undefined,
             "height": undefined,
@@ -181,6 +187,8 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
             "marginTop": undefined,
             "maxHeight": undefined,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
@@ -250,6 +258,8 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
           "marginTop": undefined,
           "maxHeight": undefined,
           "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
           "paddingHorizontal": undefined,
@@ -260,12 +270,12 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
           "position": undefined,
           "right": undefined,
           "top": undefined,
-          "width": 150,
+          "width": 108,
           "zIndex": undefined,
         }
       }
       testID="pressable-test-id"
-      width={78}
+      width={56}
     >
       <View
         marginBottom={8}
@@ -287,6 +297,8 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
             "marginTop": undefined,
             "maxHeight": undefined,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
@@ -318,10 +330,10 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
           {
             "backgroundColor": undefined,
             "bottom": undefined,
-            "color": "rgba(17, 17, 17, 1)",
+            "color": "rgba(34, 63, 70, 1)",
             "flexGrow": undefined,
             "fontFamily": "Markpro-Bold",
-            "fontSize": 16,
+            "fontSize": 10,
             "fontWeight": "bold",
             "gap": undefined,
             "height": undefined,
@@ -333,6 +345,8 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
             "marginTop": undefined,
             "maxHeight": undefined,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,

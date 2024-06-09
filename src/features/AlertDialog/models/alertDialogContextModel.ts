@@ -2,6 +2,7 @@
 import {AlertDialogModel} from './alertDialogModel'
 
 export interface AlertDialogContextModel {
-  showAlertDialog: (alertDialogToRender: AlertDialogModel) => void
-  hideAlertDialog: () => void
+  show: (alertDialogToRender: AlertDialogModel) => void
+  hide: (id?: number) => void
+  test: () => void
 }

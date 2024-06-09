@@ -7,6 +7,9 @@ import {COLOURS} from '../../../constants'
 // Component Imports
 import {Modal} from '../../Modal'
 
+// Feature Imports
+import {getHasDynamicIslandState, getHasNotchState} from '../../../features/app'
+
 // Action Menu Imports
 import {ActionMenuProps} from '../models'
 import {useActionMenu} from '../hooks'
@@ -17,7 +20,13 @@ import {modalHeightNormalizer} from '../utils'
 // Util and Lib Imports
 import {display} from '../../../utils'
 
+// Hook Imports
+import {useAppSelector} from '../../../hooks'
+
 export const ActionMenuProvider: FC<PropsWithChildren> = ({children}) => {
+  const hasDynamicIsland = useAppSelector(getHasDynamicIslandState)
+  const hasNotch = useAppSelector(getHasNotchState)
+
   const showActionMenu = (actionMenuProps: ActionMenuProps) => {
     const ITEM_HEIGHT = actionMenuProps.itemHeight === undefined ? 56 : actionMenuProps.itemHeight
     const MAX_ITEM = actionMenuProps.maxItem === undefined ? 4 : actionMenuProps.maxItem
@@ -27,17 +36,22 @@ export const ActionMenuProvider: FC<PropsWithChildren> = ({children}) => {
         ? MAX_ITEM * display.px(1)
         : (actionMenuProps.data?.length ?? 0) * display.px(1)
 
-    Modal.showModal({
-      testID: 'action-menu-modal-test-id',
-      visible: true,
-      height: modalHeightNormalizer(
+    const modalHeightPercentage =
+      modalHeightNormalizer(
         actionMenuProps.data?.length ?? 0,
         !!actionMenuProps.title,
         !!actionMenuProps.subTitle,
         SEPARATOR_TOTAL_HEIGHT,
         MAX_ITEM,
         ITEM_HEIGHT
-      ),
+      ) +
+      (hasDynamicIsland ? 0 : -4) +
+      (hasNotch ? 0 : -4)
+
+    Modal.showModal({
+      testID: 'action-menu-modal-test-id',
+      visible: true,
+      height: modalHeightPercentage,
       statusBarTranslucent: true,
       onClose: () => Modal.hideModal(),
       headerBackgroundColor: 'transparent',

@@ -6,18 +6,23 @@ import {Platform, StyleSheet} from 'react-native'
 
 // Component Imports
 import {InputProps} from '../models'
-import {InputStyles, IbanInputStyles} from '../styles'
+import {InputStyles} from '../styles'
 import {Item} from '../../Item'
 import {Icon} from '../../Icon'
 import {Pressable} from '../../Pressable'
 
+// Constant Imports
+import {COLOURS} from '../../../constants'
+
 //Package Imports
 import {MaskedTextInput} from 'react-native-mask-text'
+import {InputStyleNormalizer} from '../utils/inputNormalizer'
 
 export const IbanInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>> = ({
   fontSize,
   onChangeText,
   theme,
+  disabled,
   size,
   ...props
 }) => {
@@ -32,6 +37,7 @@ export const IbanInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>> =
   return (
     <Item row>
       <MaskedTextInput
+        editable={!disabled}
         testID='iban-input-test-id'
         mask='TR99 9999 9999 9999 9999 9999 99'
         placeholder='TR00 0000 0000 0000 0000 0000 00'
@@ -52,14 +58,29 @@ export const IbanInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>> =
       />
 
       {closeIconVisible && (
-        <Pressable
-          testID='clear-iban-icon-test-id'
-          style={IbanInputStyles().closeIcon}
-          justifyContentCenter
-          alignItemsCenter
-          onPress={() => handleTextChange('')}>
-          <Icon name='REMOVE_CIRCLE' height={24} width={24} mode='fill' variant='grey-200' />
-        </Pressable>
+        <Item absolute right={0} bottom={InputStyleNormalizer({size}).icon.paddingBottom}>
+          <Pressable testID='clear-iban-icon-test-id' onPress={() => handleTextChange('')}>
+            <Icon
+              name='REMOVE_CIRCLE'
+              mode='fill'
+              variant='grey-200'
+              width={InputStyleNormalizer({size}).icon.width}
+              height={InputStyleNormalizer({size}).icon.height}
+            />
+          </Pressable>
+        </Item>
+      )}
+
+      {!closeIconVisible && (
+        <Item absolute right={0} bottom={InputStyleNormalizer({size}).icon.paddingBottom}>
+          <Icon
+            name='QR_TRANSFER'
+            width={InputStyleNormalizer({size}).icon.width}
+            height={InputStyleNormalizer({size}).icon.height}
+            color={COLOURS.GREY200}
+            mode='stroke'
+          />
+        </Item>
       )}
     </Item>
   )

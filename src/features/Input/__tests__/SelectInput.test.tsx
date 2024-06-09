@@ -59,7 +59,7 @@ describe('Select Input -> Custom Input', () => {
 
     // Select Modal Acilir
     const selectInputValueContainer = getByTestId(selectSelectionTestId)
-    waitFor(() => {
+    act(() => {
       fireEvent.press(selectInputValueContainer)
     })
 
@@ -97,6 +97,7 @@ describe('Select Input -> Custom Input', () => {
         list={mockData}
         defaultValue='apple'
         label={defaultLabel}
+        value='apple'
         onSelectChange={onSelectChangeMock}
       />
     )

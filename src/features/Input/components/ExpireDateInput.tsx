@@ -18,6 +18,7 @@ export const ExpireDateInput: FC<Omit<InputProps, 'label' | 'placeholder' | 'nam
   fontSize,
   onChangeText,
   theme,
+  disabled,
   size,
   ...props
 }) => {
@@ -48,6 +49,7 @@ export const ExpireDateInput: FC<Omit<InputProps, 'label' | 'placeholder' | 'nam
 
   return (
     <MaskedTextInput
+      editable={!disabled}
       mask='99/99'
       placeholder={formatMessage('EXPIRE.DATE.PLACEHOLDER')}
       keyboardType='number-pad'

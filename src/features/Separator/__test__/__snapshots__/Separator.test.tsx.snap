@@ -17,6 +17,8 @@ exports[`Separator -> Custom Component separator component render olmalı ve sna
         "marginTop": undefined,
         "maxHeight": 2,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "opacity": 1,
         "overflow": undefined,
         "paddingBottom": undefined,

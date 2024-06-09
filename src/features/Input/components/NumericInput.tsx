@@ -15,6 +15,7 @@ export const NumericInput: FC<Omit<InputProps, 'name'>> = ({
   fontSize,
   onChangeText,
   theme,
+  disabled,
   size,
   ...props
 }) => {
@@ -25,6 +26,7 @@ export const NumericInput: FC<Omit<InputProps, 'name'>> = ({
   return (
     <Item row>
       <TextInput
+        editable={!disabled}
         placeholder={placeholder ?? (typeof label === 'string' ? label : undefined)}
         style={StyleSheet.flatten([InputStyles({fontSize, theme, size}).defaultTextInputStyle])}
         keyboardType='number-pad'

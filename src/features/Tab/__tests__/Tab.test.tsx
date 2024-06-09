@@ -2,7 +2,7 @@
 import {Label, Tab} from '../../../components'
 
 // Util and Lib Imports
-import {act, fireEvent, render, waitFor} from '../../../utils'
+import {act, fireEvent, render} from '../../../utils'
 import {commonUiTestExtension} from '../../utils'
 
 const testId = {

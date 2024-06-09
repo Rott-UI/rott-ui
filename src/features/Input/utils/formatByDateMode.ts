@@ -1,5 +1,4 @@
 /* eslint-disable indent */
-
 // Util and Lib Imports
 import {
   TranslationLanguageTypes,
@@ -9,7 +8,10 @@ import {
   formatTime,
 } from '../../../utils'
 
-export const formatByDateMode = (mode: 'date' | 'time' | 'datetime', date: string) => {
+export const formatByDateMode = (
+  mode: 'date' | 'time' | 'datetime' | 'modal-date' | 'modal-time' | 'modal-datetime',
+  date: string
+) => {
   switch (mode) {
     case 'time':
       return formatTime(date)
@@ -45,4 +47,24 @@ export const dateFormatSlicer = (date: string, mode: 'DD MM YYYY' | 'DD MMMM YYY
   }
 
   return null
+}
+
+export const dateYearFormatter = (date: string) => {
+  const transferDate = new Date(date)
+
+  const formattedDate = `${transferDate.getDate().toString().padStart(2, '0')}.${(transferDate.getMonth() + 1).toString().padStart(2, '0')}.${transferDate.getFullYear()}`
+
+  return formattedDate
+}
+
+/**
+ * @param date DD / MM / YYYY formatinda tarih
+ * @returns
+ */
+export const dateYearConfirmationFormatter = (date: string) => {
+  const transferDate = new Date(date)
+
+  const formattedDate = `${transferDate.getDate().toString().padStart(2, '0')} / ${(transferDate.getMonth() + 1).toString().padStart(2, '0')} / ${transferDate.getFullYear()}`
+
+  return formattedDate
 }

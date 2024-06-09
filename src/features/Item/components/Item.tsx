@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unstable-nested-components */
 // React Imports
 import {FC} from 'react'
 
@@ -19,6 +18,8 @@ interface ItemProps extends ViewProps, CommonUiProps {
   skeletonStyle?: SkeletonStyleProps
   skeletonTestID?: string
   skeletonNoAnimation?: boolean
+  skeletonColors?: (string | number)[]
+  skeletonBackgroundColor?: string
 }
 
 // TODO: Animated View sonra incelenecek
@@ -32,6 +33,8 @@ export const Item: FC<ItemProps> = ({
   skeletonStyle,
   skeletonTestID,
   skeletonNoAnimation = false,
+  skeletonColors,
+  skeletonBackgroundColor,
   ...props
 }) => {
   return (
@@ -56,6 +59,8 @@ export const Item: FC<ItemProps> = ({
           height={skeletonStyle.height}
           radius={skeletonStyle?.radius}
           noAnimation={skeletonNoAnimation}
+          colors={skeletonColors}
+          backgroundColor={skeletonBackgroundColor}
         />
       ) : (
         children

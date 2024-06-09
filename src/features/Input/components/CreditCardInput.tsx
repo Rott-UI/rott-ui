@@ -15,6 +15,7 @@ export const CreditCardInput: FC<Omit<InputProps, 'label' | 'name'>> = ({
   fontSize,
   onChangeText,
   theme,
+  disabled,
   size,
   ...props
 }) => {
@@ -25,6 +26,7 @@ export const CreditCardInput: FC<Omit<InputProps, 'label' | 'name'>> = ({
 
   return (
     <MaskedTextInput
+      editable={!disabled}
       mask='9999-9999-9999-9999'
       placeholder='**** **** **** ****'
       keyboardType='number-pad'

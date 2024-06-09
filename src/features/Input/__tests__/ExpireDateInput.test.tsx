@@ -1,11 +1,8 @@
-// React Native Import
-import {Keyboard} from 'react-native'
-
 // Component Imports
 import {ExpireDateInput} from '../components'
 
 // Util and Lib Imports
-import {render, fireEvent, act, waitFor} from '../../../utils'
+import {render, fireEvent, waitFor} from '../../../utils'
 
 describe('ExpireDate Input -> Custom Input', () => {
   const inputTestId = 'input-test-id'

@@ -1,9 +1,8 @@
-// Util and Lib Imports
-import {Keyboard} from 'react-native'
-import {render, fireEvent, act, waitFor} from '../../../utils'
-
 // Compenent Imports
 import {PinPasswordInput} from '../components'
+
+// Util and Lib Imports
+import {render, fireEvent, waitFor} from '../../../utils'
 
 describe('Pin Password Input -> Custom Input', () => {
   const pinPasswordInputTestId = 'input-test-id'

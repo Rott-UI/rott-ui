@@ -3,7 +3,7 @@ import {BottomMenu} from '../components'
 import {bottomMenuListItemMock, menuItems} from '../__mocks__'
 
 // Util and Lib Imports
-import {TranslationLanguageTypes, render} from '../../../utils'
+import {render} from '../../../utils'
 
 describe('Component -> BottomMenu', () => {
   const bottomMenuTestId = {

@@ -2,7 +2,7 @@
 import {FC, PropsWithChildren} from 'react'
 
 // React Native Imports
-import {ViewProps, StyleSheet, StatusBar, ScrollView} from 'react-native'
+import {ViewProps, StyleSheet, StatusBar, ScrollView, SafeAreaView} from 'react-native'
 
 // Constant Imports
 import {COLOURS} from '../../../constants'
@@ -21,21 +21,20 @@ import {useAppSelector} from '../../../hooks'
 // Util and Lib Imports
 import {goBack} from '../../../utils'
 
-// Package Imports
-import {SafeAreaView} from 'react-native-safe-area-context'
-
 interface ContainerProps extends ViewProps, CommonUiProps, PropsWithChildren {
   center?: boolean
   noPadding?: boolean
   showStatusBar?: boolean
   closeOnClick?: boolean
   disableSafeAreaView?: boolean
+  safeAreaViewColor?: string
   isModalScreen?: boolean
   fullScreen?: boolean
 }
 
 export const Container: FC<ContainerProps> = ({
   disableSafeAreaView,
+  safeAreaViewColor,
   center,
   noPadding,
   showStatusBar,
@@ -78,12 +77,12 @@ export const Container: FC<ContainerProps> = ({
 
       {/* TODO: SafeareaView özelliği ImageBackground içindede kullanıldığı için buranın daha sonra gözden geçirilmesi gerekmektedir. */}
       {!disableSafeAreaView && (hasDynamicIsland || hasNotch) && (
-        <SafeAreaView style={{backgroundColor: COLOURS.GREY800}} edges={['top']} />
+        <SafeAreaView style={{backgroundColor: safeAreaViewColor ?? COLOURS.GREY800}} />
       )}
 
       {closeOnClick && (
         <Pressable
-          backgroundColor='rgba(51, 51, 51, 0.9)'
+          backgroundColor={COLOURS.NEUTRAL_ALPHA900}
           style={[StyleSheet.absoluteFill]}
           onPress={goBack}
         />

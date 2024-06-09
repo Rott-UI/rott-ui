@@ -2,7 +2,7 @@
 import {StyleSheet} from 'react-native'
 
 // Constant Imports
-import {COLOURS, Fonts} from '../../../../../constants'
+import {COLOURS} from '../../../../../constants'
 
 // Util and Lib Imports
 import {display, fontSizeNormalizer} from '../../../../../utils'
@@ -13,7 +13,8 @@ export const SelectInputStyles = (props?: any) =>
       height: display.setHeight(65),
     },
     pressableTextStyle: {
-      letterSpacing: 2,
+      // TODO: Android sorunu çözüldükten sonra bakılması gerekiyor.
+      letterSpacing: 0.5,
       width: '90%',
     },
     itemPressableStyle: {

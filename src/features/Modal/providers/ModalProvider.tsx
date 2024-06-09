@@ -49,8 +49,9 @@ export const ModalProvider: FC<PropsWithChildren> = ({children}) => {
 
   const hideModal = useCallback(
     (id?: number) => {
+      // TODO: Bir modal açılırken 999 olarak verilirse ve daha sonra id verilmeden kapatılmak istenirse modalların childrenlerında click problemi oluşuyor.
       const modalsAfterDelete = modals?.filter((modal): any =>
-        id ? modal.id !== id : modal.id !== modals.length
+        id ? modal.id !== id : modals?.length === 1 ? false : modal.id !== modals.length
       )
 
       setModals(modalsAfterDelete)
@@ -60,6 +61,8 @@ export const ModalProvider: FC<PropsWithChildren> = ({children}) => {
 
   const hasModalById = (id: number) => modals.some((modal) => modal.id === id)
 
+  const hideAllModal = useCallback(() => setModals([]), [modals])
+
   const contextValues = useMemo(() => {
     return {
       modals,
@@ -67,7 +70,7 @@ export const ModalProvider: FC<PropsWithChildren> = ({children}) => {
       updateModal,
       hideModal,
       hasModalById,
-      hideAllModal: () => {},
+      hideAllModal,
     }
   }, [modals, showModal, updateModal, hideModal, hasModalById])
 

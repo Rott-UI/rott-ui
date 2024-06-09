@@ -12,6 +12,7 @@ export const PlateNumberInput: FC<Omit<InputProps, 'label' | 'placeholder' | 'na
   fontSize,
   onChangeText,
   theme,
+  disabled,
   size,
   ...props
 }) => {
@@ -22,6 +23,7 @@ export const PlateNumberInput: FC<Omit<InputProps, 'label' | 'placeholder' | 'na
 
   return (
     <TextInput
+      editable={!disabled}
       placeholder='_________'
       style={StyleSheet.flatten([InputStyles({fontSize, theme, size}).defaultTextInputStyle])}
       keyboardType='default'

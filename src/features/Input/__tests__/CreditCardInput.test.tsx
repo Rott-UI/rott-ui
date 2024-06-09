@@ -1,6 +1,3 @@
-// React Native Imports
-import {Keyboard} from 'react-native'
-
 // Component Imports
 import {CreditCardInput} from '../components'
 

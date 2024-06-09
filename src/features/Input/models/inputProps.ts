@@ -11,13 +11,14 @@ import {SelectProps} from './selectProps'
 import {InputLabelProps} from './inputLabelProps'
 import {Theme} from '../../../models'
 import {IconProps} from '../../Icon'
+import {DataModel} from './dataModel'
 
 // Package Imports
 import {DatePickerProps} from 'react-native-date-picker'
 
 export interface InputProps
   extends TextInputProps,
-    Omit<DatePickerProps, 'style' | 'date'>,
+    Omit<DatePickerProps, 'style' | 'date' | 'mode'>,
     CommonUiProps {
   label: string | InputLabelProps
   name: string
@@ -26,14 +27,18 @@ export interface InputProps
   /**
    * Kullanıldığı zaman tarih seçimi sırasında çıkan **"Temizle"** butonu renderlanamyacaktır.
    */
+  mode?: 'date' | 'time' | 'datetime' | 'modal-date' | 'modal-time' | 'modal-datetime'
+  data?: DataModel[]
   allowClear?: boolean
   date?: Date
   errorMessage?: string
+  disabled?: boolean
 
   /**
    * Checkbox gereksinimleri
    */
   onCheckChange?: (checked: boolean) => void
+  disabledInput?: boolean
   checked?: boolean
   /**
    * DropDown gereksinimleri
@@ -43,6 +48,7 @@ export interface InputProps
   showDescription?: boolean
   showSelected?: boolean
   onSelectChange?: (value: string) => void
+  onTouched?: () => void
 
   /**
    * Description verilirse Checkbox Input'da yanında açıklama yazısı yer alır.
@@ -61,4 +67,16 @@ export interface InputProps
     variant?: Variant
     radius?: number
   }
+
+  touched?: Nullable<boolean>
+
+  /**
+   * Toggle gereksinimleri
+   */
+  onToggle?: (checked: boolean) => void
+  inputLabel?: string | InputLabelProps
+  inputType?: InputType
+  topSeparator?: boolean
+  middleSeparator?: boolean
+  bottomSeparator?: boolean
 }

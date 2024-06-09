@@ -3,7 +3,6 @@
 exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli 1`] = `
 [
   <View
-    marginTop={8}
     style={
       {
         "alignItems": undefined,
@@ -19,9 +18,11 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
         "marginBottom": undefined,
         "marginLeft": undefined,
         "marginRight": undefined,
-        "marginTop": 16,
+        "marginTop": undefined,
         "maxHeight": undefined,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
         "paddingHorizontal": undefined,
@@ -38,6 +39,7 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
     }
   >
     <View
+      paddingTop={16}
       style={
         {
           "alignItems": undefined,
@@ -56,12 +58,15 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
           "marginTop": undefined,
           "maxHeight": undefined,
           "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
+          "opacity": 1,
           "overflow": undefined,
           "paddingBottom": undefined,
           "paddingHorizontal": undefined,
           "paddingLeft": undefined,
           "paddingRight": undefined,
-          "paddingTop": undefined,
+          "paddingTop": 31,
           "paddingVertical": undefined,
           "position": undefined,
           "right": undefined,
@@ -74,7 +79,6 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
       <View
         alignItemsCenter={true}
         paddingHorizontal={26}
-        paddingVertical={2.5}
         style={
           {
             "alignItems": "center",
@@ -93,13 +97,15 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
             "marginTop": undefined,
             "maxHeight": undefined,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": 50,
             "paddingLeft": undefined,
             "paddingRight": undefined,
             "paddingTop": undefined,
-            "paddingVertical": 5,
+            "paddingVertical": undefined,
             "position": undefined,
             "right": undefined,
             "top": undefined,
@@ -113,10 +119,10 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
             {
               "backgroundColor": undefined,
               "bottom": undefined,
-              "color": "rgba(161, 173, 175, 1)",
+              "color": "rgba(34, 63, 70, 1)",
               "flexGrow": undefined,
               "fontFamily": "Markpro-Medium",
-              "fontSize": 22,
+              "fontSize": 14,
               "fontWeight": undefined,
               "gap": undefined,
               "height": undefined,
@@ -128,6 +134,8 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
               "marginTop": undefined,
               "maxHeight": undefined,
               "maxWidth": undefined,
+              "minHeight": undefined,
+              "minWidth": undefined,
               "overflow": undefined,
               "paddingBottom": undefined,
               "paddingHorizontal": undefined,
@@ -151,7 +159,6 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
       <View
         backgroundColor="rgba(255, 255, 255, 1)"
         borderColor="rgba(63, 182, 210, 1)"
-        marginBottom={8}
         paddingHorizontal={16}
         style={
           {
@@ -165,12 +172,14 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
             "height": undefined,
             "justifyContent": undefined,
             "left": undefined,
-            "marginBottom": 16,
+            "marginBottom": undefined,
             "marginLeft": undefined,
             "marginRight": undefined,
             "marginTop": undefined,
             "maxHeight": undefined,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": 31,
@@ -188,6 +197,7 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
       >
         <TextInput
           autoCapitalize="none"
+          editable={true}
           keyboardType="default"
           name="input"
           placeholder="Test Label"
@@ -199,17 +209,19 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
               "color": "rgba(34, 63, 70, 1)",
               "flexGrow": undefined,
               "fontFamily": "Markpro-Medium",
-              "fontSize": 41,
+              "fontSize": 16,
               "gap": undefined,
               "height": 76,
               "left": undefined,
-              "letterSpacing": 2,
+              "letterSpacing": 0.5,
               "marginBottom": undefined,
               "marginLeft": undefined,
               "marginRight": undefined,
               "marginTop": undefined,
               "maxHeight": undefined,
               "maxWidth": undefined,
+              "minHeight": undefined,
+              "minWidth": undefined,
               "overflow": undefined,
               "paddingBottom": undefined,
               "paddingHorizontal": undefined,
@@ -243,6 +255,8 @@ exports[`Input -> Custom Input input ilk render anında snapshot ile eşleşmeli
           "marginTop": undefined,
           "maxHeight": 2,
           "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
           "opacity": 1,
           "overflow": undefined,
           "paddingBottom": undefined,

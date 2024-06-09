@@ -1,6 +1,3 @@
-// React Native Imports
-import {Keyboard} from 'react-native'
-
 // Compenent Imports
 import {PlateNumberInput} from '../components'
 

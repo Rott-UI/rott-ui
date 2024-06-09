@@ -7,10 +7,8 @@ import {ActionMenuStyles} from '../styles'
 import {ActionMenuProps, ActionModel} from '../models'
 
 // Constant Imports
-import {COLOURS} from '../../../constants'
 
 // Util and Lib Imports
-import {display, translator} from '../../../utils'
 
 /**
  * Action Menu
@@ -64,11 +62,7 @@ export const ActionMenuComponent: FC<ActionMenuProps> = ({
           testID='action-menu-test-id'
           style={{minHeight: 2}}
           width={342}
-          height={
-            display.normalize(itemHeight!, 'height') * itemCount +
-            separatorTotalHeight! -
-            display.normalize(itemCount * 5, 'height')
-          }
+          height={itemHeight! * itemCount + separatorTotalHeight!}
           data={data}
           renderItem={({item}) => renderItem(item)}
           horizontal={false}

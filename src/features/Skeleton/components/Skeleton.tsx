@@ -23,6 +23,8 @@ interface SkeletonProps extends SkeletonStyleProps {
   show: boolean
   noAnimation?: boolean
   testID?: string
+  colors?: (string | number)[]
+  backgroundColor?: string
 }
 
 /**
@@ -40,6 +42,8 @@ export const Skeleton: FC<SkeletonProps> = ({
   radius = 4,
   noAnimation = false,
   show = false,
+  colors = [COLOURS.GREY100, COLOURS.WHITE, COLOURS.GREY100],
+  backgroundColor = COLOURS.GREY100,
 }) => {
   const animatedValueRef = useRef(new Animated.Value(0)).current
 
@@ -52,7 +56,7 @@ export const Skeleton: FC<SkeletonProps> = ({
           toValue: 1,
           duration: 1400,
           easing: Easing.ease,
-          useNativeDriver: false,
+          useNativeDriver: true,
         })
       )
       loop.start()
@@ -93,7 +97,7 @@ export const Skeleton: FC<SkeletonProps> = ({
       height={height}
       borderRadius={radius}
       overflowHidden
-      backgroundColor={COLOURS.GREY100}>
+      backgroundColor={backgroundColor}>
       <Animated.View style={animatedGradientStyle}>
         <LinearGradient
           {...getGradientProps(width!)}
@@ -101,7 +105,7 @@ export const Skeleton: FC<SkeletonProps> = ({
             width: width ? display.px(width) : undefined,
             height: height ? display.px(height) : undefined,
           }}
-          colors={[COLOURS.GREY100, COLOURS.WHITE, COLOURS.GREY100]}
+          colors={colors}
         />
       </Animated.View>
     </Item>

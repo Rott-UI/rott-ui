@@ -21,6 +21,8 @@ exports[`List -> Custom Component list ilk render anında snapshot ile eşleşme
         "marginTop": undefined,
         "maxHeight": undefined,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
         "paddingHorizontal": undefined,
@@ -46,6 +48,7 @@ exports[`List -> Custom Component list ilk render anında snapshot ile eşleşme
     >
       <RCTScrollView
         ItemSeparatorComponent={[Function]}
+        ListEmptyComponent={[Function]}
         applyWindowCorrection={[Function]}
         canChangeSize={true}
         contentContainerStyle={
@@ -781,6 +784,7 @@ exports[`List -> Custom Component list ilk render anında snapshot ile eşleşme
             },
             "props": {
               "ItemSeparatorComponent": [Function],
+              "ListEmptyComponent": [Function],
               "ListFooterComponent": undefined,
               "ListHeaderComponent": undefined,
               "data": [
@@ -944,6 +948,8 @@ exports[`List -> Custom Component list ilk render anında snapshot ile eşleşme
                       "marginTop": undefined,
                       "maxHeight": 39,
                       "maxWidth": undefined,
+                      "minHeight": undefined,
+                      "minWidth": undefined,
                       "opacity": 1,
                       "overflow": undefined,
                       "paddingBottom": undefined,
@@ -998,6 +1004,8 @@ exports[`List -> Custom Component list ilk render anında snapshot ile eşleşme
                       "marginTop": undefined,
                       "maxHeight": 39,
                       "maxWidth": undefined,
+                      "minHeight": undefined,
+                      "minWidth": undefined,
                       "opacity": 1,
                       "overflow": undefined,
                       "paddingBottom": undefined,

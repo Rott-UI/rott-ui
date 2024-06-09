@@ -2,19 +2,26 @@
 import {FC, PropsWithChildren} from 'react'
 
 // React Native Imports
-import {View, ViewProps, StyleSheet} from 'react-native'
+import {View, ViewProps, StyleSheet, KeyboardAvoidingView, Platform, ScrollView} from 'react-native'
 
-// UI Imports
+// Component Imports
 import {CommonUiProps} from '../../models'
-
-// Style Imports
 import {ContentStyles} from '../styles'
+
+// Constants Imports
 import {COLOURS} from '../../../constants'
+
+// Util and Lib Imports
+import {display} from '../../../utils'
 
 interface ContentProps extends PropsWithChildren, CommonUiProps, ViewProps {
   row?: boolean
   noPadding?: boolean
   defaultBackgroundColor?: boolean
+  keyboardAvoidingView?: boolean
+  keyboardVerticalOffset?: number
+  keyboardAvoidingViewContainerPaddingBottom?: number
+  scrollEnabled?: boolean
 }
 
 export const Content: FC<ContentProps> = ({
@@ -30,6 +37,10 @@ export const Content: FC<ContentProps> = ({
   defaultBackgroundColor,
   backgroundColor,
   style,
+  keyboardAvoidingView = false,
+  keyboardVerticalOffset = 100,
+  keyboardAvoidingViewContainerPaddingBottom = 20,
+  scrollEnabled = true,
   ...props
 }) => {
   return (
@@ -52,7 +63,27 @@ export const Content: FC<ContentProps> = ({
         style,
       ])}
       {...props}>
-      {children}
+      {!keyboardAvoidingView && children}
+
+      {keyboardAvoidingView && (
+        <KeyboardAvoidingView
+          testID='keyboard-avoiding-view-test-id'
+          behavior='padding'
+          keyboardVerticalOffset={
+            Platform.OS === 'ios' ? display.normalize(keyboardVerticalOffset, 'height') : 0
+          }
+          enabled>
+          <ScrollView
+            showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{
+              paddingBottom: display.px(keyboardAvoidingViewContainerPaddingBottom),
+            }}
+            scrollEnabled={scrollEnabled}>
+            {children}
+          </ScrollView>
+        </KeyboardAvoidingView>
+      )}
     </View>
   )
 }

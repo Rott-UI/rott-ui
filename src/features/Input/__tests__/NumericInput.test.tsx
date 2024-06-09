@@ -1,7 +1,8 @@
-// Util and Lib Imports
-import {Keyboard} from 'react-native'
-import {render, fireEvent, act, waitFor} from '../../../utils'
+// Component Imports
 import {NumericInput} from '../components'
+
+// Util and Lib Imports
+import {render, fireEvent, waitFor} from '../../../utils'
 
 describe('Numeric Input -> Custom Input', () => {
   const inputTestId = 'input-test-id'

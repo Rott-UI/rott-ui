@@ -1,6 +1,8 @@
-// Util and Lib Imports
-import {render, fireEvent, waitFor} from '../../../utils'
+// Component Imports
 import {IbanInput} from '../components'
+
+// Util and Lib Imports
+import {render, fireEvent} from '../../../utils'
 
 describe('IBAN Input -> Custom Input', () => {
   const inputTestId = 'iban-input-test-id'

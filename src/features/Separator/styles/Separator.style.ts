@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import {StyleSheet} from 'react-native'
 
 // Util and Lib Imports

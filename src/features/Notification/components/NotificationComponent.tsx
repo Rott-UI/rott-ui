@@ -1,26 +1,28 @@
 // React Imports
 import {FC} from 'react'
 
-//React Native Imports
-import {Pressable} from 'react-native'
-
 // Component Imports
 import {Item} from '../../Item'
 import {Label} from '../../Label'
 import {Icon} from '../../Icon'
+import {Pressable} from '../../Pressable'
+
+// Notification Imports
+import {NotificationStyle} from '../styles'
 
 // Constant Imports
 import {COLOURS} from '../../../constants'
-import {NotificationMessageStyle} from '../styles'
-
-// Util and Lib Imports
-import {display} from '../../../utils'
-
-// Notification Imports
-import {NotificationMessageProps} from '../models'
 
 // Package Imports
 import LinearGradient from 'react-native-linear-gradient'
+
+interface NotificationMessageProps {
+  title?: string
+  description?: string | JSX.Element
+  iconElement: React.ReactElement | React.ReactNode
+  onClose?: (() => void) | null | undefined
+  variantColor: string
+}
 
 export const NotificationComponent: FC<NotificationMessageProps> = ({
   title,
@@ -31,20 +33,7 @@ export const NotificationComponent: FC<NotificationMessageProps> = ({
 }) => (
   <LinearGradient
     colors={[variantColor, COLOURS.GREY900]}
-    // eslint-disable-next-line react-native/no-inline-styles
-    style={{
-      backgroundColor: COLOURS.GREY900,
-      width: display.px(343),
-      borderBottomEndRadius: display.px(12),
-      borderBottomStartRadius: display.px(12),
-      borderEndEndRadius: display.px(12),
-      borderEndStartRadius: display.px(12),
-      borderRadius: display.px(12),
-      marginBottom: display.px(16),
-      borderWidth: display.px(1),
-      borderStyle: 'solid',
-      borderColor: variantColor.replace('0.6', '0.3'),
-    }}
+    style={NotificationStyle({variantColor}).linearGradient}
     start={{x: 0, y: 1}}
     end={{x: 0, y: 1}}
     useAngle
@@ -92,10 +81,7 @@ export const NotificationComponent: FC<NotificationMessageProps> = ({
         )}
       </Item>
 
-      <Pressable
-        onPress={onClose}
-        style={NotificationMessageStyle().closePressable}
-        testID='close-icon-test-id'>
+      <Pressable onPress={onClose} testID='close-icon-test-id' absolute right={10} top={10}>
         <Icon name='REMOVE' width={24} height={24} variant='grey-200' />
       </Pressable>
     </Item>

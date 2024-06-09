@@ -1,9 +1,12 @@
-//Component Imports
-import {EmptyState} from '../components/EmptyState'
-import {formatMessage, render} from '../../../utils'
-import {Item} from '../../Item'
-import {Label} from '../../Label'
+// React Imports
 import React from 'react'
+
+// Component Imports
+import {EmptyState} from '../components'
+import {Label} from '../../Label'
+
+// Util and Lib Imports
+import {formatMessage, render} from '../../../utils'
 
 describe('EmptyState -> Custom Component', () => {
   const testId = {
@@ -28,7 +31,7 @@ describe('EmptyState -> Custom Component', () => {
 
     const imageElement = getByTestId(emptyStateImageTestId)
 
-    expect(imageElement.props.source['testUri']).toMatch(/empty-state/gim)
+    expect(imageElement.props.source.testUri).toMatch(/empty-state/gim)
   })
 
   it('description verilen değerler ile ekranda gözükmeli', () => {

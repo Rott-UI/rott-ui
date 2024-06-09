@@ -1,6 +1,5 @@
-/* eslint-disable indent */
 // React Imports
-import {FC, useCallback} from 'react'
+import React, {FC, isValidElement, useCallback} from 'react'
 
 // React Native Imports
 import {Animated, Modal as RNModal} from 'react-native'
@@ -10,12 +9,14 @@ import {COLOURS} from '../../../constants'
 
 // Component Imports
 import {Pressable} from '../../Pressable'
-import {Header} from '../../Header'
+import {Header, HeaderProps} from '../../Header'
 import {Icon} from '../../Icon'
 import {Item} from '../../Item'
 import {ModalStyles} from '../style'
 import {ModalProps} from '../models'
 import {ModalContentContainer} from './ModalContainer'
+import {Modal} from '../../Modal'
+import {PanResponderAnimation} from '../utils'
 
 // Feature Imports
 import {getHasDynamicIslandState, getHasNotchState} from '../../../features/app'
@@ -25,8 +26,6 @@ import {useAppSelector} from '../../../hooks'
 
 // Util and Lib Imports
 import {colourFromVariant, display} from '../../../utils'
-import {PanResponderAnimation} from '../utils'
-import {Modal} from '..'
 
 export const ModalComponent: FC<ModalProps> = ({
   id,
@@ -35,8 +34,6 @@ export const ModalComponent: FC<ModalProps> = ({
   visible = false,
 
   header,
-  headerTitle,
-  headerLogo,
   closeButton,
   onClose,
   disableOutsideClick,
@@ -81,7 +78,7 @@ export const ModalComponent: FC<ModalProps> = ({
       PanResponderAnimation(
         modalHeightByPercentage,
         translateY,
-        !!onClose ? () => onClose() : () => Modal.hideModal(id)
+        onClose ? () => onClose() : () => Modal.hideModal(id)
       ),
     [translateY]
   )
@@ -91,7 +88,7 @@ export const ModalComponent: FC<ModalProps> = ({
       Animated.timing(translateY, {
         toValue: modalHeightByPercentage,
         duration: 250,
-        useNativeDriver: false,
+        useNativeDriver: true,
       }).start(() => {
         !!onClose && onClose()
         Modal.hideModal(id)
@@ -121,91 +118,76 @@ export const ModalComponent: FC<ModalProps> = ({
         />
       )}
 
-      <Item backgroundColor='rgba(34,63,70, 0.9)' row>
+      <Item backgroundColor={COLOURS.NEUTRAL_ALPHA700} row>
         <Animated.View style={ModalStyles({translateY}).animatedViewStyles}>
           <ModalContentContainer
-            // TODO: Children Container Hesaplaması yapılıp burası düzeltilecek.
             height={modalHeightByPercentage}
             backgroundColor={transparent ? 'transparent' : backgroundColor}
             justifyContentCenter={justifyContentCenter}
             alignItemsCenter={alignItemsCenter}
             modalContainerMarginBottom={modalContainerMarginBottom}>
-            {/* TODO: Bu kod bloğunun 92-142 arası refactor edilecek. */}
-            {!fullScreen && slideToClose && !headerTitle && !headerLogo && (
+            {header && (
               <Item
                 size='full'
-                alignItemsCenter
-                justifyContentCenter
-                backgroundColor={
-                  panResponderBackgroundColor
-                    ? colourFromVariant(panResponderBackgroundColor)
-                    : undefined
-                }
-                borderTopStartRadius={fullScreen ? 0 : 24}
-                borderTopEndRadius={fullScreen ? 0 : 24}
-                {...(slideToClose ? {...panResponder().panHandlers} : undefined)}>
-                <Icon
-                  testID={slideToCloseTestId}
-                  variant='neutral-grey-alpha-200'
-                  width={40}
-                  height={40}
-                  name='LINE'
-                />
-              </Item>
-            )}
-
-            {!header && (headerTitle || headerLogo) && (
-              <Item
-                testID={headerTestId}
-                size='full'
-                paddingTop={hasNotch || hasDynamicIsland ? (fullScreen ? 50 : 10) : 5}
+                paddingTop={hasNotch || hasDynamicIsland ? (fullScreen ? 54 : 0) : 8}
                 backgroundColor={
                   headerBackgroundColor
                     ? colourFromVariant(headerBackgroundColor)
                     : fullScreen
-                    ? COLOURS.GREY800
-                    : COLOURS.GREY900
+                      ? COLOURS.GREY800
+                      : COLOURS.GREY900
                 }
-                borderTopStartRadius={fullScreen ? 0 : 15}
-                borderTopEndRadius={fullScreen ? 0 : 15}
-                justifyContentCenter
-                alignItemsCenter
+                borderTopStartRadius={fullScreen ? 0 : 24}
+                borderTopEndRadius={fullScreen ? 0 : 24}
+                justifyContentCenter={!isValidElement(header)}
+                alignItemsCenter={!isValidElement(header)}
                 {...(!fullScreen && slideToClose ? {...panResponder().panHandlers} : undefined)}>
                 {!fullScreen && slideToClose && (
-                  <Icon
-                    testID={slideToCloseTestId}
-                    name='LINE'
-                    variant='neutral-grey-alpha-200'
-                    height={100}
-                    width={100}
-                    marginTop={16}
-                    marginBottom={8}
-                  />
+                  <Item
+                    size='full'
+                    alignItemsCenter
+                    justifyContentCenter
+                    backgroundColor={
+                      panResponderBackgroundColor
+                        ? colourFromVariant(panResponderBackgroundColor)
+                        : undefined
+                    }
+                    borderTopStartRadius={fullScreen ? 0 : 24}
+                    borderTopEndRadius={fullScreen ? 0 : 24}
+                    {...(slideToClose ? {...panResponder().panHandlers} : undefined)}>
+                    <Icon
+                      testID={slideToCloseTestId}
+                      variant='neutral-grey-alpha-200'
+                      width={40}
+                      height={40}
+                      name='LINE'
+                    />
+                  </Item>
                 )}
 
-                <Header
-                  title={headerTitle}
-                  logo={headerLogo}
-                  paddingHorizontal={0}
-                  rightIcon={
-                    closeButton
-                      ? {name: 'REMOVE_BIG', onPress: () => closeModalAnimation!()}
-                      : undefined
-                  }
-                />
+                {isValidElement(header) && header}
+                {!isValidElement(header) && (
+                  <Header
+                    testID={headerTestId}
+                    title={(header as HeaderProps)?.title}
+                    logo={(header as HeaderProps)?.logo}
+                    paddingHorizontal={
+                      (header as HeaderProps) ? (header as HeaderProps).paddingHorizontal : 0
+                    }
+                    rightIcon={
+                      closeButton
+                        ? {name: 'REMOVE_BIG', onPress: () => closeModalAnimation!()}
+                        : (header as HeaderProps)?.rightIcon
+                          ? (header as HeaderProps)?.rightIcon
+                          : undefined
+                    }
+                    leftIcon={(header as HeaderProps)?.leftIcon}
+                    {...(header as HeaderProps)}
+                  />
+                )}
               </Item>
             )}
 
-            {header && (
-              <Item
-                backgroundColor={colourFromVariant(headerBackgroundColor)}
-                paddingTop={hasNotch || hasDynamicIsland ? (fullScreen ? 54 : 0) : 8}
-                size='full'
-                borderTopStartRadius={slideToClose ? 0 : 24}
-                borderTopEndRadius={slideToClose ? 0 : 24}>
-                {header}
-              </Item>
-            )}
             {children}
 
             {hasChildModal && <ModalComponent {...modals![id!]} modals={modals} />}

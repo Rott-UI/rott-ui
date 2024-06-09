@@ -125,8 +125,7 @@ const resultData: ResultActionsProps[] = [
 ```ts
 addMatcherWait(
   () =>
-    redirect('ResultScreen', {
-      resultInfo: {
+    redirect<ResultScreenParamModel>('ResultScreen', {
         headerTitle: formatMessage('TRANSACTION.RESULT.SUCCESS.TITLE'),
         description: formatMessage('TRANSACTION.RESULT.SUCCESS.DESCRIPTION.MOBILE.TRANSFER', {
           phone: phoneNumber,
@@ -144,7 +143,7 @@ addMatcherWait(
             title: formatMessage('TRANSACTION.RESULT.ACTION.RETRANSFER'),
             variant: 'white-outline',
             action: () => {
-              console.warn('new transfer')
+              routeGoBack(4)
             },
           },
           {
@@ -154,8 +153,8 @@ addMatcherWait(
             },
           },
         ] as ResultActionModel[],
-      } as ResultScreenParamModel,
-    })
+      }
+    )
 
   // TODO: state reset edilmeli
 )

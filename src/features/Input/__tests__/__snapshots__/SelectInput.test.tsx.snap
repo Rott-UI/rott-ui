@@ -21,6 +21,8 @@ exports[`Select Input -> Custom Input ilk render anında snapshot ile eşleşmel
         "marginTop": undefined,
         "maxHeight": undefined,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
         "paddingHorizontal": undefined,
@@ -61,7 +63,6 @@ exports[`Select Input -> Custom Input ilk render anında snapshot ile eşleşmel
       collapsable={false}
       flex={0}
       focusable={true}
-      height={89}
       justifyContentCenter={true}
       onBlur={[Function]}
       onClick={[Function]}
@@ -82,15 +83,17 @@ exports[`Select Input -> Custom Input ilk render anında snapshot ile eşleşmel
           "flexDirection": "column",
           "flexGrow": undefined,
           "gap": undefined,
-          "height": 171,
+          "height": undefined,
           "justifyContent": "center",
           "left": undefined,
           "marginBottom": undefined,
           "marginLeft": undefined,
           "marginRight": undefined,
           "marginTop": undefined,
-          "maxHeight": 171,
+          "maxHeight": undefined,
           "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
           "paddingHorizontal": undefined,
@@ -109,7 +112,7 @@ exports[`Select Input -> Custom Input ilk render anında snapshot ile eşleşmel
     >
       <View
         alignItemsCenter={true}
-        height={42}
+        height={89}
         style={
           {
             "alignItems": "center",
@@ -119,15 +122,17 @@ exports[`Select Input -> Custom Input ilk render anında snapshot ile eşleşmel
             "flexDirection": "row",
             "flexGrow": undefined,
             "gap": undefined,
-            "height": 81,
+            "height": 171,
             "justifyContent": undefined,
             "left": undefined,
             "marginBottom": undefined,
             "marginLeft": undefined,
             "marginRight": undefined,
             "marginTop": undefined,
-            "maxHeight": 81,
+            "maxHeight": 171,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
@@ -144,6 +149,7 @@ exports[`Select Input -> Custom Input ilk render anında snapshot ile eşleşmel
         }
       >
         <Text
+          numberOfLines={1}
           style={
             {
               "backgroundColor": undefined,
@@ -151,18 +157,20 @@ exports[`Select Input -> Custom Input ilk render anında snapshot ile eşleşmel
               "color": "rgba(161, 173, 175, 1)",
               "flexGrow": undefined,
               "fontFamily": "Markpro-Medium",
-              "fontSize": 46,
+              "fontSize": 18,
               "fontWeight": undefined,
               "gap": undefined,
               "height": undefined,
               "left": undefined,
-              "letterSpacing": 2,
+              "letterSpacing": 0.5,
               "marginBottom": undefined,
               "marginLeft": undefined,
               "marginRight": undefined,
               "marginTop": undefined,
               "maxHeight": undefined,
               "maxWidth": undefined,
+              "minHeight": undefined,
+              "minWidth": undefined,
               "overflow": undefined,
               "paddingBottom": undefined,
               "paddingHorizontal": undefined,
@@ -201,6 +209,8 @@ exports[`Select Input -> Custom Input ilk render anında snapshot ile eşleşmel
               "marginTop": undefined,
               "maxHeight": undefined,
               "maxWidth": undefined,
+              "minHeight": undefined,
+              "minWidth": undefined,
               "overflow": undefined,
               "paddingBottom": undefined,
               "paddingHorizontal": undefined,

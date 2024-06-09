@@ -1,10 +1,11 @@
 // React Native Imports
 import {StyleSheet} from 'react-native'
+import {COLOURS} from '../../../constants'
 
 export const ModalStyles = (props?: any) =>
   StyleSheet.create({
     fadedBackgroundStyles: {
-      backgroundColor: 'rgba(34,63,70, 0.9)',
+      backgroundColor: COLOURS.NEUTRAL_ALPHA700,
       justifyContent: 'center',
       alignContent: 'center',
     },
@@ -14,7 +15,7 @@ export const ModalStyles = (props?: any) =>
       transform: [{translateY: props?.translateY}],
 
       elevation: 5,
-      shadowColor: 'rgba(6, 14, 16, 0.30)',
+      shadowColor: COLOURS.NEUTRAL_SHADOW300,
       shadowOffset: {width: 0, height: -8},
       shadowOpacity: 1,
       shadowRadius: 35,

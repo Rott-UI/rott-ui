@@ -8,7 +8,7 @@ import {Toggle} from '../components'
 import {COLOURS} from '../../../constants'
 
 // Util and Lib Imports
-import {act, fireEvent, render, waitFor} from '../../../utils'
+import {act, fireEvent, render, waitFor} from './../../../utils'
 
 describe('Toggle -> Custom Component', () => {
   const toggleContainerTestId = 'toggle-container-test-id'

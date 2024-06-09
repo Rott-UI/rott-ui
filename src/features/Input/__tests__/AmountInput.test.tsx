@@ -1,8 +1,5 @@
-// React Native Imports
-import {Keyboard} from 'react-native'
-
 // Util and Lib Imports
-import {render, fireEvent, act, waitFor} from '../../../utils'
+import {render, fireEvent, waitFor} from '../../../utils'
 
 // Component Imports
 import {AmountInput} from '../components'

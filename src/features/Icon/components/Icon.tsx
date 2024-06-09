@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 // React Imports
 import React, {FC} from 'react'
 

@@ -7,23 +7,23 @@ import {Content} from '../../Content'
 import {Label} from '../../Label'
 import {List} from '../../List'
 import {Button} from '../../Button'
-
+import {EmptyState} from '../../EmptyState'
 import {ResultStyles} from '../styles'
 import {ResultActionModel, ResultScreenParamModel} from '../models'
+import {Header} from '../../Header'
+import {Container} from '../../Container'
 
 // Constant Imports
 import {COLOURS} from '../../../constants'
 
 // Util and Lib Imports
 import {display} from '../../../utils'
-import {Container} from '../../Container'
-import {Header} from '../../Header'
-import {Image} from '../../Image'
 
 /**
  * Result - Islem Sonucu Ekrani
  *
  * @param title Başlık alanı
+ * @param screensToRemove Sonuç ekranı açıldığında kapatılacak ekranlar
  * @param subTitle Alt başlık alanı
  * @param actions ResultDataProps[] formatında veri listesi
  * @param isShow Result komponentin bulunduğu yerdeki Show state i
@@ -36,35 +36,25 @@ import {Image} from '../../Image'
  */
 
 interface ResultScreenProps {
-  route: any
+  route: {
+    [key: string]: any
+    params: ResultScreenParamModel
+  }
 }
 
-export const ResultScreen: FC<ResultScreenProps> = ({route: {params: parameterList}}) => {
-  const {
-    headerTitle,
-    status,
-    title,
-    description,
-    actions,
-    fontSize = 'xl',
-  } = parameterList?.resultInfo as ResultScreenParamModel
-
+export const ResultScreen: FC<ResultScreenProps> = ({route: {params}}) => {
+  const {header, state, title, description, actions} = params
   const itemHeight = display.heightPixel(60)
 
   // Listede renderlanacak Item
-  const renderItem = ({
-    title: renderItemTitle,
-    name: renderItemName,
-    action: onAction,
-    variant: renderVariant,
-  }: ResultActionModel) => (
+  const renderItem = ({title: renderItemTitle, action, variant, testID}: ResultActionModel) => (
     <Button
-      testID={`result-data-${renderItemName}-test-id`}
+      testID={testID}
       size='full'
-      variant={renderVariant ?? 'primary'}
+      variant={variant ?? 'primary'}
       marginBottom={15}
       paddingHorizontal={15}
-      onPress={() => onAction()}>
+      onPress={() => action && action()}>
       <Label fontSize='xl' color={COLOURS.WHITE} fontWeight={600}>
         {renderItemTitle}
       </Label>
@@ -72,51 +62,40 @@ export const ResultScreen: FC<ResultScreenProps> = ({route: {params: parameterLi
   )
 
   return (
-    <Container noPadding testID='transfer-to-ptt-account-screen-container-test-id'>
-      <Header defaultBackgroundColor title={headerTitle} back />
+    <Container noPadding testID='result-container-test-id'>
+      <Header defaultBackgroundColor title={header} />
+
       <Content flex={1} size='full' backgroundColor={COLOURS.GREY900}>
         <Item
           flex={1}
           alignItemsCenter
           justifyContentCenter
-          paddingBottom={itemHeight * (actions?.length ?? 0) + (actions?.length ?? 0) * 15 + 30}>
-          <Image
-            name={status === 'success' ? 'EMPTY_MONEY_TRANSFER' : 'EMPTY_CARD_ERROR'}
-            width={152}
-            height={152}
-            marginBottom={24}
-            resizeMode='contain'
+          paddingBottom={itemHeight * (actions?.length ?? 0)}>
+          <EmptyState
+            name={state}
+            description={
+              description && typeof description === 'string' ? (
+                description
+              ) : (
+                <Item alignItemsCenter marginBottom={30}>
+                  {description && typeof description !== 'string' && <>{description}</>}
+                </Item>
+              )
+            }
+            title={
+              title && typeof title === 'string' ? (
+                title
+              ) : (
+                <Item>{title && typeof title !== 'string' && <>{title}</>}</Item>
+              )
+            }
           />
-
-          <Item>
-            {title && typeof title === 'string' && (
-              <Label
-                fontSize={fontSize}
-                variant='white'
-                fontWeight='bold'
-                textCenter
-                marginBottom={24}>
-                {title}
-              </Label>
-            )}
-            {title && typeof title !== 'string' && <>{title}</>}
-          </Item>
-          <Item alignItemsCenter marginBottom={30}>
-            {description && typeof description === 'string' && (
-              <Label fontSize={fontSize} variant='white' textCenter>
-                {description}
-              </Label>
-            )}
-
-            {description && typeof description !== 'string' && <>{description}</>}
-          </Item>
         </Item>
 
-        <Item width={display.setWidth(100)} style={ResultStyles().bottomContainer}>
-          {actions && actions.length > 0 && (
+        {actions && actions.length > 0 && (
+          <Item width={display.setWidth(100)} style={ResultStyles().bottomContainer}>
             <List
-              testID='result-test-id'
-              style={ResultStyles().list}
+              testID='result-action-list-test-id'
               width={display.setWidth(90)}
               marginLeft={display.setWidth(2.5)}
               data={actions}
@@ -126,8 +105,8 @@ export const ResultScreen: FC<ResultScreenProps> = ({route: {params: parameterLi
               showsVerticalScrollIndicator={false}
               scrollEnabled={false}
             />
-          )}
-        </Item>
+          </Item>
+        )}
       </Content>
     </Container>
   )

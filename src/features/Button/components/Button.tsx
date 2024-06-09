@@ -5,8 +5,9 @@ import {FC, PropsWithChildren} from 'react'
 import {TouchableOpacity, TouchableOpacityProps, StyleSheet, ActivityIndicator} from 'react-native'
 
 // Component Imports
-import {CommonUiProps, Size} from '../../models'
+import {Image} from '../../Image'
 import {Label} from '../../Label'
+import {CommonUiProps, Size} from '../../models'
 import {Icon, IconTypes} from '../../Icon'
 
 // Constant Imports
@@ -19,9 +20,7 @@ import {ButtonIconProps, ButtonImageProps} from '../models'
 import {ButtonStyles} from '../styles/Button.style'
 
 // Util and Lib Imports
-import {buttonSizeNormalizer} from '../../../utils/buttonSizeNormalizer'
-import {display} from '../../../utils'
-import {Image} from '../../Image'
+import {buttonSizeNormalizer, display} from '../../../utils'
 
 interface ButtonProps
   extends TouchableOpacityProps,
@@ -55,6 +54,8 @@ export const Button: FC<ButtonProps> = ({
   variant = 'primary',
   color,
   size = {height: 'lg'},
+  fontWeight,
+  fontFamily,
   isLoading,
   loadingText,
   flex = (typeof size === 'object' && size?.width) || typeof size === 'string' ? 0 : 1,
@@ -72,6 +73,16 @@ export const Button: FC<ButtonProps> = ({
 
   height = 'full',
   width = 'full',
+  justifyContentFlexEnd,
+  justifyContentFlexStart,
+  justifyContentSpaceAround,
+  justifyContentSpaceBetween,
+  justifyContentCenter = justifyContentFlexEnd ||
+  justifyContentFlexStart ||
+  justifyContentSpaceAround ||
+  justifyContentSpaceBetween
+    ? false
+    : true,
 
   children,
   style,
@@ -92,6 +103,12 @@ export const Button: FC<ButtonProps> = ({
           circle,
           width,
           height,
+          includeJustifyContent: true,
+          justifyContentCenter,
+          justifyContentFlexEnd,
+          justifyContentFlexStart,
+          justifyContentSpaceAround,
+          justifyContentSpaceBetween,
           ...props,
         }).defaultButtonStyle,
         style,
@@ -141,12 +158,13 @@ export const Button: FC<ButtonProps> = ({
         <Label
           numberOfLines={1}
           textCenter
-          fontFamily='Markpro'
+          fontFamily={fontFamily ?? 'Markpro-Bold'}
           fontSize={
             typeof size === 'object'
               ? buttonSizeNormalizer(size.height as Size).fontSize
               : buttonSizeNormalizer(size).fontSize
           }
+          fontWeight={fontWeight}
           style={ButtonStyles({variant}).buttonTextStyle}>
           {children}
         </Label>

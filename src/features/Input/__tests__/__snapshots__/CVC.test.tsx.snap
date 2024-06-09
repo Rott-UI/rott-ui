@@ -21,6 +21,8 @@ exports[`CVC Input -> Custom Input ilk render anında snapshot ile eşleşmeli 1
         "marginTop": undefined,
         "maxHeight": undefined,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
         "paddingHorizontal": undefined,
@@ -37,6 +39,7 @@ exports[`CVC Input -> Custom Input ilk render anında snapshot ile eşleşmeli 1
     }
   >
     <TextInput
+      editable={true}
       keyboardType="number-pad"
       maxLength={3}
       onChangeText={[Function]}
@@ -48,17 +51,19 @@ exports[`CVC Input -> Custom Input ilk render anında snapshot ile eşleşmeli 1
           "color": "rgba(255, 255, 255, 1)",
           "flexGrow": undefined,
           "fontFamily": "Markpro-Medium",
-          "fontSize": 46,
+          "fontSize": 18,
           "gap": undefined,
           "height": 89,
           "left": undefined,
-          "letterSpacing": 2,
+          "letterSpacing": 0.5,
           "marginBottom": undefined,
           "marginLeft": undefined,
           "marginRight": undefined,
           "marginTop": undefined,
           "maxHeight": undefined,
           "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
           "paddingHorizontal": undefined,
@@ -126,6 +131,8 @@ exports[`CVC Input -> Custom Input ilk render anında snapshot ile eşleşmeli 1
           "marginTop": undefined,
           "maxHeight": undefined,
           "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
           "paddingHorizontal": undefined,
@@ -161,6 +168,8 @@ exports[`CVC Input -> Custom Input ilk render anında snapshot ile eşleşmeli 1
             "marginTop": undefined,
             "maxHeight": undefined,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,

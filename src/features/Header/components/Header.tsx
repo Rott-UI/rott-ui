@@ -1,38 +1,20 @@
 // React Imports
 import {FC} from 'react'
 
-//React Native Imports
-import {ViewProps} from 'react-native'
-
 // Constant Imports
 import {COLOURS} from '../../../constants'
 
 // Component Imports
-import {Content} from '../../Content'
 import {Item} from '../../Item'
-import {Icon, IconTypes} from '../../Icon'
+import {Icon} from '../../Icon'
 import {Label} from '../../Label'
-import {CommonUiProps} from '../../models'
+import {Image} from '../../Image'
+import {HeaderProps} from '../models'
+import {Content} from '../../Content'
 import {Pressable} from '../../Pressable'
 
 // Util and Lib Imports
 import {goBack} from '../../../utils'
-import {Image, ImageTypes} from '../../Image'
-import {HeaderIconProps} from '../models'
-
-interface HeaderProps extends ViewProps, CommonUiProps {
-  back?: boolean
-  title?: string
-  subTitle?: string
-  logo?: ImageTypes | IconTypes
-  leftElement?: React.ReactElement | React.ReactNode
-  leftIcon?: HeaderIconProps
-  rightElement?: React.ReactElement | React.ReactNode
-  rightIcon?: HeaderIconProps
-  defaultBackgroundColor?: boolean
-  paddingHorizontal?: number
-  paddingVertical?: number
-}
 
 /**
  *
@@ -64,96 +46,111 @@ export const Header: FC<HeaderProps> = ({
   backgroundColor,
   paddingHorizontal,
   paddingVertical,
+  goBackFunction,
+  children,
+  ...props
 }) => {
   return (
     <Content
       testID='header-test-id'
-      row
       noPadding
-      height={56}
+      minHeight={56}
       paddingHorizontal={paddingHorizontal ?? 24}
       paddingVertical={paddingVertical ?? 0}
-      backgroundColor={defaultBackgroundColor ? COLOURS.GREY800 : backgroundColor}>
-      <Item justifyContentCenter size='sm'>
-        <Pressable
-          width={40}
-          height={40}
-          justifyContentCenter
-          alignItemsFlexStart
-          onPress={(event) => {
-            !!leftIcon?.onPress && leftIcon?.onPress(event)
-            back && goBack()
-          }}>
-          {!leftElement && (leftIcon || back) && (
-            <Icon
-              mode={leftIcon?.mode}
-              name={back ? 'CHEVRON_LEFT' : leftIcon?.name!}
-              width={24}
-              height={24}
-              noStroke={leftIcon?.noStroke}
-              strokeWidth={back ? 2 : leftIcon?.strokeWidth}
-            />
-          )}
-
-          {leftElement}
-        </Pressable>
-      </Item>
-
-      <Item alignItemsCenter size='md' paddingTop={16}>
-        {logo && <Image testID='header-logo-test-id' width={127} height={24} name={logo} />}
-
-        {!logo && title && (
-          <Label
-            testID='header-title-test-id'
-            textCenter
-            fontSize='xl'
-            fontFamily='Markpro-Bold'
-            justifyContentCenter
-            variant='white'
-            numberOfLines={1}
-            marginTop={subTitle && -15}>
-            {title}
-          </Label>
-        )}
-
-        {!logo && subTitle && (
-          <Label
-            textCenter
-            fontSize='lg'
-            justifyContentCenter
-            fontFamily='Markpro-Light'
-            variant='white'
-            numberOfLines={1}
-            marginTop={10}
-            testID='header-subtitle-test-id'>
-            {subTitle}
-          </Label>
-        )}
-      </Item>
-
-      <Item alignItemsFlexEnd justifyContentCenter size='sm'>
-        {!rightElement && rightIcon && (
+      backgroundColor={defaultBackgroundColor ? COLOURS.GREY800 : backgroundColor}
+      {...props}>
+      <Item row size='full' minHeight={56}>
+        <Item justifyContentCenter size='sm'>
           <Pressable
-            testID='header-right-pressable-test-id'
+            testID='header-left-pressable-test-id'
             width={40}
             height={40}
             justifyContentCenter
-            alignItemsCenter
-            onPress={(event) => !!rightIcon?.onPress && rightIcon.onPress(event)}>
-            <Icon
-              mode={rightIcon.mode}
-              testID='header-right-icon-test-id'
-              name={rightIcon?.name}
-              width={24}
-              height={24}
-              strokeWidth={1.5}
-              variant='white'
-            />
-          </Pressable>
-        )}
+            alignItemsFlexStart={!leftIcon?.alignItemsCenter}
+            alignItemsCenter={!!leftIcon?.alignItemsCenter}
+            backgroundColor={leftIcon?.backgroundColor}
+            borderRadius={leftIcon?.borderRadius}
+            onPress={(event) => {
+              !!leftIcon?.onPress && leftIcon?.onPress(event)
+              goBackFunction && goBackFunction()
+              back && goBack()
+            }}>
+            {!leftElement && (leftIcon || back) && (
+              <Icon
+                testID={leftIcon?.testID ?? 'header-left-icon-test-id'}
+                mode={leftIcon?.mode}
+                name={back ? 'CHEVRON_LEFT' : leftIcon?.name!}
+                width={24}
+                height={24}
+                noStroke={leftIcon?.noStroke}
+                strokeWidth={back ? 2 : leftIcon?.strokeWidth}
+              />
+            )}
 
-        {rightElement}
+            {leftElement}
+          </Pressable>
+        </Item>
+
+        <Item alignItemsCenter size='md' paddingTop={16}>
+          {logo && <Image testID='header-logo-test-id' width={127} height={24} name={logo} />}
+
+          {!logo && title && (
+            <Label
+              testID='header-title-test-id'
+              textCenter
+              fontSize='xl'
+              fontFamily='Markpro-Bold'
+              justifyContentCenter
+              variant='white'
+              numberOfLines={1}
+              marginTop={subTitle && -15}>
+              {title}
+            </Label>
+          )}
+
+          {!logo && subTitle && (
+            <Label
+              textCenter
+              fontSize='lg'
+              justifyContentCenter
+              fontFamily='Markpro-Light'
+              variant='white'
+              numberOfLines={1}
+              marginTop={10}
+              testID='header-subtitle-test-id'>
+              {subTitle}
+            </Label>
+          )}
+        </Item>
+
+        <Item alignItemsFlexEnd justifyContentCenter size='sm'>
+          {!rightElement && rightIcon && (
+            <Pressable
+              testID='header-right-pressable-test-id'
+              width={40}
+              height={40}
+              justifyContentCenter
+              alignItemsCenter
+              backgroundColor={leftIcon?.backgroundColor}
+              borderRadius={leftIcon?.borderRadius}
+              onPress={(event) => !!rightIcon?.onPress && rightIcon.onPress(event)}>
+              <Icon
+                mode={rightIcon.mode}
+                testID={rightIcon?.testID ?? 'header-right-icon-test-id'}
+                name={rightIcon?.name}
+                width={24}
+                height={24}
+                strokeWidth={rightIcon?.strokeWidth ?? 2}
+                variant='white'
+              />
+            </Pressable>
+          )}
+
+          {rightElement}
+        </Item>
       </Item>
+
+      {children}
     </Content>
   )
 }

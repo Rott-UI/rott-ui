@@ -1,8 +1,12 @@
-//
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// React Imports
 import {createContext} from 'react'
+
+// Alert Dialog Imports
 import {AlertDialogContextModel} from '../models'
 
 export const AlertDialogContext = createContext<AlertDialogContextModel>({
-  showAlertDialog: () => {},
-  hideAlertDialog: () => {},
+  show: () => {},
+  hide: (id?: number) => {},
+  test: () => {},
 })

@@ -10,12 +10,14 @@ import {AlertDialogContext} from '../contexts'
 import {AlertDialogModel} from '../models'
 import {useAlertDialog} from '../hooks'
 import {alertDialogRef} from '..'
+import {ModalIdEnum} from '../../models/modalIdEnum'
 
 export const AlertDialogProvider: FC<PropsWithChildren> = ({children}) => {
   const {showModal} = useModal({}, [])
 
   const showAlertDialog = (alertDialogToRender: AlertDialogModel) =>
     showModal({
+      id: alertDialogToRender?.id,
       height: 100,
       animationType: 'none',
       transparent: true,
@@ -26,14 +28,35 @@ export const AlertDialogProvider: FC<PropsWithChildren> = ({children}) => {
       children: <AlertDialogComponent {...alertDialogToRender} />,
     })
 
-  const hideAlertDialog = () => Modal.hideModal()
+  const hideAlertDialog = (id?: number) => Modal.hideModal(id)
+
+  const testAlertDialog = () => {
+    const testAlertDialogProps: AlertDialogModel = {
+      title: 'Test Alanı',
+      text: 'Bu bir test alanıdır. Henüz geliştirme aşaması tamamlanmamıştır.',
+      id: ModalIdEnum.TestAlertDialog,
+    }
+
+    showModal({
+      id: ModalIdEnum.TestAlertDialog,
+      height: 100,
+      animationType: 'none',
+      transparent: true,
+      visible: true,
+      disableOutsideClick: true,
+      justifyContentCenter: true,
+      alignItemsCenter: true,
+      children: <AlertDialogComponent {...testAlertDialogProps} />,
+    })
+  }
 
   const contextValue = useMemo(() => {
     return {
-      showAlertDialog,
-      hideAlertDialog,
+      show: showAlertDialog,
+      hide: hideAlertDialog,
+      test: testAlertDialog,
     }
-  }, [showAlertDialog, hideAlertDialog])
+  }, [showAlertDialog, hideAlertDialog, testAlertDialog])
 
   return (
     <AlertDialogContext.Provider value={contextValue}>

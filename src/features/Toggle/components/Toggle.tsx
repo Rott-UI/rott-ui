@@ -16,9 +16,10 @@ interface ToggleProps {
   testID?: string
   isOn?: boolean
   onToggleChange?: (checked: boolean) => void
+  disabled?: boolean
 }
 
-export const Toggle: FC<ToggleProps> = ({testID, isOn, onToggleChange}) => {
+export const Toggle: FC<ToggleProps> = ({testID, isOn, onToggleChange, disabled}) => {
   const animatedValue = new Animated.Value(isOn === true ? 1 : 0)
   const moveToggle = animatedValue.interpolate({
     inputRange: [0, 1],
@@ -42,7 +43,9 @@ export const Toggle: FC<ToggleProps> = ({testID, isOn, onToggleChange}) => {
 
   return (
     <Item testID={testID} row alignItemsCenter width={64} height={32} maxWidth={64} maxHeight={32}>
-      <Pressable onPress={() => handleToggle!(!isOn)} testID='toggle-container-test-id'>
+      <Pressable
+        onPress={() => !disabled && handleToggle!(!isOn)}
+        testID='toggle-container-test-id'>
         <Animated.View
           testID='toggle-test-id'
           style={StyleSheet.flatten([

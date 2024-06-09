@@ -65,6 +65,8 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
           "marginTop": 8,
           "maxHeight": undefined,
           "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
           "paddingHorizontal": 31,
@@ -105,6 +107,8 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
             "marginTop": undefined,
             "maxHeight": 77,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
@@ -143,6 +147,8 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
             "marginTop": undefined,
             "maxHeight": undefined,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
@@ -169,7 +175,7 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
               "color": "rgba(234, 239, 240, 1)",
               "flexGrow": undefined,
               "fontFamily": "Markpro-Bold",
-              "fontSize": 29,
+              "fontSize": 18,
               "fontWeight": 700,
               "gap": undefined,
               "height": undefined,
@@ -181,6 +187,8 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
               "marginTop": undefined,
               "maxHeight": undefined,
               "maxWidth": undefined,
+              "minHeight": undefined,
+              "minWidth": undefined,
               "overflow": undefined,
               "paddingBottom": undefined,
               "paddingHorizontal": undefined,
@@ -208,7 +216,7 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
               "color": "rgba(234, 239, 240, 1)",
               "flexGrow": undefined,
               "fontFamily": "Markpro-Book",
-              "fontSize": 19,
+              "fontSize": 12,
               "fontWeight": 500,
               "gap": undefined,
               "height": undefined,
@@ -220,6 +228,8 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
               "marginTop": undefined,
               "maxHeight": undefined,
               "maxWidth": undefined,
+              "minHeight": undefined,
+              "minWidth": undefined,
               "overflow": undefined,
               "paddingBottom": undefined,
               "paddingHorizontal": undefined,
@@ -241,6 +251,7 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
         </Text>
       </View>
       <View
+        absolute={true}
         accessibilityState={
           {
             "busy": undefined,
@@ -259,6 +270,7 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
           }
         }
         accessible={true}
+        animated={false}
         collapsable={false}
         focusable={true}
         onBlur={[Function]}
@@ -270,14 +282,43 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
+        right={10}
         style={
           {
+            "alignItems": undefined,
+            "backgroundColor": undefined,
+            "bottom": undefined,
+            "flex": 1,
+            "flexDirection": "column",
+            "flexGrow": undefined,
+            "gap": undefined,
+            "height": undefined,
+            "justifyContent": undefined,
+            "left": undefined,
+            "marginBottom": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginTop": undefined,
+            "maxHeight": undefined,
+            "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
+            "overflow": undefined,
+            "paddingBottom": undefined,
+            "paddingHorizontal": undefined,
+            "paddingLeft": undefined,
+            "paddingRight": undefined,
+            "paddingTop": undefined,
+            "paddingVertical": undefined,
             "position": "absolute",
-            "right": 10,
-            "top": 10,
+            "right": 19,
+            "top": 19,
+            "width": undefined,
+            "zIndex": undefined,
           }
         }
         testID="close-icon-test-id"
+        top={10}
       >
         <View
           style={
@@ -298,6 +339,8 @@ exports[`Notification -> Custom Component notification ilk render anında snapsh
               "marginTop": undefined,
               "maxHeight": undefined,
               "maxWidth": undefined,
+              "minHeight": undefined,
+              "minWidth": undefined,
               "overflow": undefined,
               "paddingBottom": undefined,
               "paddingHorizontal": undefined,

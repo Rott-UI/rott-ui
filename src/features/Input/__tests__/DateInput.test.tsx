@@ -45,8 +45,9 @@ describe('Date Input -> Custom Input', () => {
     const {getByTestId, queryByTestId} = render(
       <DateInput
         testID={dateInputTestId}
-        value={currentDate.toISOString()}
+        value={new Date() as any} // Fix: Pass a valid date value in the format 'YYYY-MM-DD'.
         date={currentDate}
+        mode='date'
         allowClear
         onDateChange={onDateChangeMock}
       />

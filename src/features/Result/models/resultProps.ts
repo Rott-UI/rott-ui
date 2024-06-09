@@ -6,6 +6,7 @@ import {IconTypes} from '../../Icon'
 import {Size, Variant} from '../../models'
 import {ModalProps} from '../../Modal'
 import {ResultActionModel} from './resultActionModel'
+import {ImageTypes} from '../../Image'
 
 /**
  * Result Data Tipi
@@ -58,9 +59,10 @@ export interface ResultProps extends Omit<ModalProps, 'fullScreen'> {
 }
 
 export interface ResultScreenParamModel {
-  headerTitle?: string
-  status: 'success' | 'warning' | 'danger' | 'info' | 'none'
+  header?: string
+  state: ImageTypes
   title?: string
+  screensToRemove?: string[]
   description?: string
   actions?: ResultActionModel[]
   fontSize?: Size

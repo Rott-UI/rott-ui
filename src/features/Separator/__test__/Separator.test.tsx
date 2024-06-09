@@ -3,7 +3,7 @@ import {commonUiTestExtension} from '../../utils'
 import {Separator} from '../components'
 
 // Util and Lib Imports
-import {act, render} from '../../../utils'
+import {act, render} from './../../../utils'
 
 const testId = {
   separatorTestId: 'separator-test-id',

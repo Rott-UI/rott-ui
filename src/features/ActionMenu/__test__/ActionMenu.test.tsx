@@ -1,9 +1,6 @@
 // React Imports
 import React from 'react'
 
-// // React Native Imports
-// import {Text} from 'react-native'
-
 // Component Imports
 import {ActionMenuComponent, ActionMenuHeaderComponent} from '../components'
 

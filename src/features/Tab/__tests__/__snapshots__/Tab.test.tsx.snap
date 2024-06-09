@@ -47,6 +47,8 @@ exports[`Tab -> Custom Component Tab snapshotı ile eşleşmeli 1`] = `
         "marginTop": undefined,
         "maxHeight": undefined,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "opacity": 1,
         "overflow": undefined,
         "paddingBottom": undefined,
@@ -58,7 +60,7 @@ exports[`Tab -> Custom Component Tab snapshotı ile eşleşmeli 1`] = `
         "position": undefined,
         "right": undefined,
         "top": undefined,
-        "width": "50%",
+        "width": 307,
         "zIndex": undefined,
       }
     }
@@ -69,7 +71,7 @@ exports[`Tab -> Custom Component Tab snapshotı ile eşleşmeli 1`] = `
         {
           "color": "rgba(234, 239, 240, 1)",
           "fontFamily": "Markpro-Bold",
-          "fontSize": 22,
+          "fontSize": 14,
         }
       }
     />

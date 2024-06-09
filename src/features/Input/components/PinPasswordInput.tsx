@@ -13,16 +13,18 @@ export const PinPasswordInput: FC<Omit<InputProps, 'label' | 'placeholder' | 'na
   fontSize,
   onChangeText,
   theme,
+  disabled,
   size,
   ...props
 }) => {
   const handleTextChange = (inputText: string) => {
-    if (!!onChangeText) onChangeText(inputText.replace(/[^0-9]/g, ''))
+    if (onChangeText) onChangeText(inputText.replace(/[^0-9]/g, ''))
   }
 
   return (
     <Item row>
       <TextInput
+        editable={!disabled}
         placeholder='____'
         style={StyleSheet.flatten([InputStyles({fontSize, theme, size}).defaultTextInputStyle])}
         keyboardType='number-pad'

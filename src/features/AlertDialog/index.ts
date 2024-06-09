@@ -15,7 +15,7 @@ export const alertDialogRef =
   createRef<AlertDialogService>() as MutableRefObject<AlertDialogService>
 
 export const AlertDialog: AlertDialogService = {
-  showAlertDialog: (alertDialog: AlertDialogModel) =>
-    alertDialogRef.current?.showAlertDialog(alertDialog),
-  hideAlertDialog: () => alertDialogRef.current?.hideAlertDialog(),
+  show: (alertDialog: AlertDialogModel) => alertDialogRef.current?.show(alertDialog),
+  hide: (id?: number) => alertDialogRef.current?.hide(id),
+  test: () => alertDialogRef.current?.test(),
 }

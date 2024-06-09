@@ -16,6 +16,7 @@ export const PasswordInput: FC<Omit<InputProps, 'label' | 'placeholder' | 'name'
   onChangeText,
   secureTextEntry = true,
   theme,
+  disabled,
   size,
   value,
   ...props
@@ -28,6 +29,7 @@ export const PasswordInput: FC<Omit<InputProps, 'label' | 'placeholder' | 'name'
   return (
     <Item row>
       <TextInput
+        editable={!disabled}
         placeholder='*******'
         style={StyleSheet.flatten([InputStyles({fontSize, theme, size}).defaultTextInputStyle])}
         keyboardType='number-pad'

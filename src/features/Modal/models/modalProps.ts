@@ -6,7 +6,7 @@ import {ModalProps as RNModalProps} from 'react-native'
 
 // Component Imports
 import {Variant} from '../../models'
-import {ImageTypes} from '../../Image'
+import {HeaderProps} from '../../Header'
 
 export interface ModalProps
   extends PropsWithChildren,
@@ -14,9 +14,7 @@ export interface ModalProps
   id?: number
   fullScreen?: boolean
 
-  header?: ReactNode
-  headerTitle?: string
-  headerLogo?: ImageTypes
+  header?: ReactNode | HeaderProps
   closeButton?: boolean
   onClose?: () => void
   disableOutsideClick?: boolean

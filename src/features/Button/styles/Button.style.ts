@@ -3,9 +3,6 @@
 // React Imports
 import {StyleSheet} from 'react-native'
 
-// Constant Imports
-import {Fonts} from '../../../constants'
-
 // Util and Lib Imports
 import {commonUiStyleProperties} from '../../utils'
 import {colourFromVariant, display, textColourFromVariant} from '../../../utils'
@@ -41,14 +38,14 @@ export const ButtonStyles = (props?: any) => {
                 : props.height
             )
           : props.size
-          ? buttonSizeNormalizer(
-              props?.size
-                ? props?.size.height !== undefined
-                  ? props?.size.height
-                  : props?.size
-                : props?.height
-            ).height
-          : undefined,
+            ? buttonSizeNormalizer(
+                props?.size
+                  ? props?.size.height !== undefined
+                    ? props?.size.height
+                    : props?.size
+                  : props?.height
+              ).height
+            : undefined,
 
       width:
         typeof props?.width === 'number' ||
@@ -62,22 +59,20 @@ export const ButtonStyles = (props?: any) => {
                 : props.width
             )
           : props.size
-          ? buttonSizeNormalizer(
-              props?.size
-                ? props?.size.width !== undefined
-                  ? props?.size.width
-                  : props?.size
-                : props?.width
-            ).width
-          : undefined,
+            ? buttonSizeNormalizer(
+                props?.size
+                  ? props?.size.width !== undefined
+                    ? props?.size.width
+                    : props?.size
+                  : props?.width
+              ).width
+            : undefined,
 
-      justifyContent: 'center',
       opacity: props?.disabled ? 0.6 : 1,
       backgroundColor: colourFromVariant(props?.variant),
     },
     buttonTextStyle: {
       color: textColourFromVariant(props?.variant),
-      fontFamily: Fonts.MARKPRO_BOLD,
       textAlignVertical: 'center',
       flexShrink: 1,
     },

@@ -6,9 +6,7 @@
 import {defaultThemeContext} from '../contexts/themeContext'
 import {Variant} from '../models/variant'
 
-export const colourFromVariant = (variant: Variant = 'primary') => {
-  switch (variant) {
-    case 'primary':
-      return defaultThemeContext.colors.primary
-  }
+export const colourFromVariant = (variant: Variant = 'Consumer') => {
+  const defaultThemeContextValue = defaultThemeContext
+  return defaultThemeContextValue.colors[variant]
 }

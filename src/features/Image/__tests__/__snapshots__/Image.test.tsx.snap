@@ -7,6 +7,7 @@ exports[`Image -> Custom Component image elementi snapshot ile eşleşmeli 1`] =
     style={
       {
         "backgroundColor": undefined,
+        "borderRadius": 50,
         "bottom": undefined,
         "flexGrow": undefined,
         "gap": undefined,
@@ -18,6 +19,8 @@ exports[`Image -> Custom Component image elementi snapshot ile eşleşmeli 1`] =
         "marginTop": undefined,
         "maxHeight": 96,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
         "paddingHorizontal": undefined,

@@ -112,7 +112,7 @@ const cardRenderItem = (
   }: ListItemProps,
   _index: number
 ) => (
-  <ListItem
+  <CommonItem
     icon={renderIcon}
     title={renderTitle}
     rightIcon={renderRightIcon}

@@ -13,11 +13,13 @@ export const DefaultInput: FC<Omit<InputProps, 'name'>> = ({
   placeholder,
   fontSize,
   theme,
+  disabled,
   size,
   ...props
 }) => {
   return (
     <TextInput
+      editable={!disabled}
       keyboardType='default'
       autoCapitalize='none'
       placeholder={placeholder ?? (typeof label === 'string' ? label : undefined)}

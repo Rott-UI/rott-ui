@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // React Imports
 import {createContext} from 'react'
-import {ModalContextModel, ModalProps} from '../models'
 
 // Modal Imports
+import {ModalContextModel, ModalProps} from '../models'
 
-// modals: [],
 export const ModalContext = createContext<ModalContextModel>({
   modals: [],
   showModal: (modalToRender: ModalProps) => {},

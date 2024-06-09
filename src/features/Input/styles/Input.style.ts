@@ -5,14 +5,14 @@ import {StyleSheet} from 'react-native'
 import {COLOURS, Fonts} from '../../../constants'
 
 // Util Imports
-import {fontSizeNormalizer, sizeToPercentage} from '../../../utils'
+import {fontSizeNormalizer} from '../../../utils'
 import {commonUiStyleProperties} from '../../utils'
 import {InputStyleNormalizer} from '../utils/inputNormalizer'
 
 export const InputStyles = (props?: any) =>
   StyleSheet.create({
     textInputContainer: {
-      width: sizeToPercentage(props?.size),
+      opacity: props?.disabled ? 0.3 : 1,
     },
     defaultTextInputStyle: {
       ...commonUiStyleProperties(props),
@@ -24,7 +24,8 @@ export const InputStyles = (props?: any) =>
         : fontSizeNormalizer(InputStyleNormalizer({size: props?.size}).placeholderSize),
       color: props?.theme === 'light' ? COLOURS.GREY900 : COLOURS.WHITE,
 
-      letterSpacing: props?.letterSpacing ?? 2,
+      // TODO: Android sorunu çözüldükten sonra bakılması gerekiyor.
+      letterSpacing: props?.letterSpacing ?? 0.5,
       fontFamily: Fonts.MARKPRO_MEDIUM,
     } as any,
   })

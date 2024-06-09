@@ -29,6 +29,7 @@ export const BottomMenu: FC<BottomMenuProps> = ({menuItems}) => {
       bottom={0}
       noPadding
       paddingTop={11}
+      paddingHorizontal={8}
       size='full'
       borderTopStartRadius={24}
       borderTopEndRadius={24}

@@ -13,3 +13,4 @@ export type InputType =
   | 'amount'
   | 'checkbox'
   | 'select'
+  | 'toggle'

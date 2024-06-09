@@ -13,13 +13,13 @@ export const TabStyle = (props?: any) =>
     container: {
       ...(commonUiStyleProperties(props) as any),
 
-      width: '50%',
+      width: display.px(159.5),
       alignItems: 'center',
       justifyContent: 'center',
     },
     textStyle: {
       fontFamily: Fonts.MARKPRO_BOLD,
-      fontSize: display.fontPixel(14),
+      fontSize: 14,
       color: props?.isSelected ? COLOURS.GREY900 : COLOURS.GREY100,
     },
   })

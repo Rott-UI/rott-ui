@@ -1,4 +1,7 @@
+// React Imports
 import {MutableRefObject, createRef} from 'react'
+
+// Model Imports
 import {useModal} from './hooks'
 import {ModalProps} from './models'
 

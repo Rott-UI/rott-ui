@@ -11,6 +11,7 @@ import {COLOURS} from '../../../constants'
 
 // Util and Lib Imports
 import {display, formatMessage} from '../../../utils'
+import {ActivityIndicator} from 'react-native'
 
 interface AlertDialogProps
   extends Omit<
@@ -26,15 +27,18 @@ interface AlertDialogProps
     | 'headerBackgroundColor'
     | 'slideToClose'
   > {
+  id?: number
   title: string
   text?: string
   buttons?: {
     cancelButton?: AlertDialogButtonProps
     confirmButton?: AlertDialogButtonProps
   }
+  showActivityIndicator?: boolean
 }
 
 export const AlertDialogComponent: FC<AlertDialogProps> = ({
+  id,
   title,
   text,
   buttons = {
@@ -45,6 +49,7 @@ export const AlertDialogComponent: FC<AlertDialogProps> = ({
     },
     confirmButton: undefined,
   },
+  showActivityIndicator,
   ...props
 }) => {
   return (
@@ -56,6 +61,12 @@ export const AlertDialogComponent: FC<AlertDialogProps> = ({
       borderRadius={16}
       backgroundColor={COLOURS.GREY100}
       style={AlertDialogStyles(props).InformationModalView}>
+      {showActivityIndicator && (
+        <Item marginTop={24}>
+          <ActivityIndicator size='large' color={COLOURS.PRIMARY} />
+        </Item>
+      )}
+
       <Item justifyContentCenter alignItemsCenter paddingHorizontal={16} paddingTop={24}>
         <Label variant='grey-900' textCenter fontSize='xl' fontWeight={600}>
           {title}
@@ -89,7 +100,7 @@ export const AlertDialogComponent: FC<AlertDialogProps> = ({
             alignItemsCenter
             onPress={() => {
               !!buttons?.cancelButton?.onPress && buttons.cancelButton.onPress()
-              AlertDialog.hideAlertDialog()
+              AlertDialog.hide(id)
             }}>
             <Item>
               <Label

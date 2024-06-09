@@ -27,14 +27,14 @@ export const BottomMenuItem: FC<BottomMenuItemModel> = ({
   return (
     <Pressable
       alignItemsCenter
-      width={!options?.containerStyle ? 78 : undefined}
+      width={!options?.containerStyle ? 56 : undefined}
       style={options?.containerStyle}
       onPress={async (event) => {
         if (!!url || !!phone) {
           ;(await Linking.canOpenURL(url ? url! : phone!))
             ? Linking.openURL(url ? url : `tel:${phone}`)
             : null
-        } else if (!!onPress) onPress(event)
+        } else if (onPress) onPress(event)
       }}>
       {iconName && !imageName && (
         <Icon
@@ -62,6 +62,7 @@ export const BottomMenuItem: FC<BottomMenuItemModel> = ({
       {title && (
         <Label
           style={BottomMenuStyles().textStyle}
+          variant='grey-900'
           fontSize='xs'
           fontWeight='bold'
           numberOfLines={1}>

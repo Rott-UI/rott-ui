@@ -6,12 +6,14 @@ import {Content} from '../../Content'
 import {Item} from '../../Item'
 import {Label} from '../../Label'
 import {ModalComponent} from '../components'
+import {ModalProps} from '../models'
 
 // Util and Lib Imports
 import {act, fireEvent, render, translator, waitFor} from '../../../utils'
 
 describe('Modal -> Custom Component', () => {
   const onCloseMock = jest.fn()
+
   const testId = {
     modalTestId: 'modal-test-id',
     headerTestId: 'modal-header-test-id',
@@ -21,6 +23,33 @@ describe('Modal -> Custom Component', () => {
     slideToCloseTestId: 'slide-to-close-button-test-id',
   }
 
+  const dummyDataFullScreen: ModalProps = {
+    testID: testId.modalTestId,
+    header: {
+      title: translator('TEST'),
+      logo: 'PTTBANK_BLACK_COLORED',
+    },
+    slideToClose: true,
+    visible: true,
+    fullScreen: true,
+    closeButton: true,
+    onClose: onCloseMock,
+  }
+
+  const dummyData: ModalProps = {
+    testID: testId.modalTestId,
+    header: {
+      title: translator('TEST'),
+      logo: 'PTTBANK_BLACK_COLORED',
+    },
+    visible: true,
+    height: 50,
+    fullScreen: false,
+    slideToClose: true,
+    closeButton: true,
+    onClose: onCloseMock,
+  }
+
   beforeAll(() => {
     // TODO: useState mock example
     const setStateMock = jest.fn()
@@ -28,18 +57,9 @@ describe('Modal -> Custom Component', () => {
     jest.spyOn(React, 'useState').mockImplementation(useStateMock)
   })
 
-  it('modal snapshot ile eşleşmeli', () => {
-    const {modalTestId} = testId
-
+  it('modal ilk renderlandiginda snapshot ile eşleşmeli', () => {
     const renderedModal = render(
-      <ModalComponent
-        testID={modalTestId}
-        fullScreen
-        visible
-        headerTitle={translator('TEST')}
-        headerLogo='PTTBANK_BLACK_COLORED'
-        closeButton
-        onClose={onCloseMock}>
+      <ModalComponent {...dummyData}>
         <Item>
           <Label>{translator('TEST')}</Label>
         </Item>
@@ -50,15 +70,8 @@ describe('Modal -> Custom Component', () => {
   })
 
   it('modal visible değilken ekranda gözükmemeli', async () => {
-    const {modalTestId} = testId
     const {queryByText} = render(
-      <ModalComponent
-        testID={modalTestId}
-        fullScreen
-        headerTitle={translator('TEST')}
-        headerLogo='PTTBANK_BLACK_COLORED'
-        closeButton
-        onClose={onCloseMock}>
+      <ModalComponent {...dummyData} visible={false}>
         <Item>
           <Label>{translator('TEST.WITH.PARAM', {testText: 'test'})}</Label>
         </Item>
@@ -73,16 +86,11 @@ describe('Modal -> Custom Component', () => {
   })
 
   it('custom header verildiğinde ekranda custom header olmalı', async () => {
-    const {modalTestId, headerTestId} = testId
+    const {headerTestId} = testId
+
     const {getByTestId} = render(
       <ModalComponent
-        testID={modalTestId}
-        fullScreen
-        headerTitle={translator('TEST')}
-        headerLogo='PTTBANK_BLACK_COLORED'
-        closeButton
-        visible
-        onClose={onCloseMock}
+        {...dummyData}
         header={
           <Content testID={headerTestId}>
             <Label>{translator('TEST')}</Label>
@@ -103,9 +111,7 @@ describe('Modal -> Custom Component', () => {
 
   it('modal kapatma butonu headerda olmalı', async () => {
     const {headerCloseIconTestId} = testId
-    const {getByTestId} = render(
-      <ModalComponent headerTitle={translator('TEST')} visible closeButton onClose={onCloseMock} />
-    )
+    const {getByTestId} = render(<ModalComponent {...dummyData} />)
 
     await act(() => {
       const headerCloseButton = getByTestId(headerCloseIconTestId)
@@ -114,17 +120,32 @@ describe('Modal -> Custom Component', () => {
     })
   })
 
+  it('modal header child elementi ekranda olmalı', async () => {
+    const {getByTestId} = render(
+      <ModalComponent
+        {...dummyData}
+        header={{
+          title: translator('TEST'),
+          logo: 'PTTBANK_BLACK_COLORED',
+          children: <Label testID={'header-children-test-id'}>{translator('TEST')}</Label>,
+        }}>
+        <Item>
+          <Label>{translator('TEST.WITH.PARAM', {testText: 'test'})}</Label>
+        </Item>
+      </ModalComponent>
+    )
+
+    await act(() => {
+      const headerChildren = getByTestId('header-children-test-id')
+
+      expect(headerChildren).toBeOnTheScreen()
+    })
+  })
+
   it('modal kapatma butonuna tıklandığında modal kapanmalı', async () => {
     const onClosePressableMock = jest.fn()
     const {headerCloseButtonTestId} = testId
-    const {getByTestId} = render(
-      <ModalComponent
-        headerTitle={translator('TEST')}
-        visible
-        closeButton
-        onClose={onClosePressableMock}
-      />
-    )
+    const {getByTestId} = render(<ModalComponent {...dummyData} onClose={onClosePressableMock} />)
 
     await act(() => {
       const headerCloseButton = getByTestId(headerCloseButtonTestId)
@@ -137,15 +158,7 @@ describe('Modal -> Custom Component', () => {
   it('modal tam ekran değilken container dışına tıklanırsa modal kapanmalı', async () => {
     const onClosePressableMock = jest.fn()
     const {outsideTapAreaTestId} = testId
-    const {getByTestId} = render(
-      <ModalComponent
-        height={50}
-        headerTitle={translator('TEST')}
-        visible
-        closeButton
-        onClose={onClosePressableMock}
-      />
-    )
+    const {getByTestId} = render(<ModalComponent {...dummyData} onClose={onClosePressableMock} />)
 
     await act(() => {
       const outsideContainer = getByTestId(outsideTapAreaTestId)
@@ -156,22 +169,30 @@ describe('Modal -> Custom Component', () => {
   })
 
   it('panResponder headerda olmalı', async () => {
-    const {slideToCloseTestId, headerTestId} = testId
-    const {getByTestId} = render(
-      <ModalComponent headerTitle={translator('TEST')} visible slideToClose onClose={onCloseMock} />
-    )
+    const {slideToCloseTestId} = testId
+    const {getByTestId} = render(<ModalComponent {...dummyData} />)
 
     await act(() => {
       const panResponder = getByTestId(slideToCloseTestId)
 
-      // TODO: İç elementleri de bir katman olarak çağırıyor.
-      expect(panResponder.parent?.parent?.parent?.parent).toHaveProp('testID', headerTestId)
+      expect(panResponder).toBeOnTheScreen()
+    })
+  })
+
+  it('panResponder headerda olmamalı', async () => {
+    const {slideToCloseTestId} = testId
+    const {queryByTestId} = render(<ModalComponent {...dummyData} slideToClose={false} />)
+
+    await act(() => {
+      const panResponder = queryByTestId(slideToCloseTestId)
+
+      expect(panResponder).toBeNull()
     })
   })
 
   it('panResponder header dışında olmalı', async () => {
     const {slideToCloseTestId, headerTestId} = testId
-    const {getByTestId} = render(<ModalComponent visible slideToClose />)
+    const {getByTestId} = render(<ModalComponent {...dummyData} />)
 
     await act(() => {
       const panResponder = getByTestId(slideToCloseTestId)
@@ -181,9 +202,9 @@ describe('Modal -> Custom Component', () => {
     })
   })
 
-  it('modal fullscreenken panResponder ekranda olmamalı', async () => {
+  it('modal fullscreen modunda panResponder ekranda olmamalı', async () => {
     const {slideToCloseTestId} = testId
-    const {queryByTestId} = render(<ModalComponent fullScreen visible slideToClose />)
+    const {queryByTestId} = render(<ModalComponent {...dummyDataFullScreen} />)
 
     await act(() => {
       const panResponder = queryByTestId(slideToCloseTestId)

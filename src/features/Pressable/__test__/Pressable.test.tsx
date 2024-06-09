@@ -3,7 +3,7 @@ import {commonUiTestExtension} from '../../utils'
 import {Pressable} from '../components/Pressable'
 
 // Util and Lib Imports
-import {render, fireEvent, act} from '../../../utils'
+import {render, fireEvent, act} from './../../../utils'
 
 const testId = {
   pressableTestId: 'pressable-test-id',

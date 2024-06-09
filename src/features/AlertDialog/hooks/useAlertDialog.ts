@@ -5,14 +5,15 @@ import {useContext, useMemo} from 'react'
 import {AlertDialogContext} from '../contexts'
 
 export const useAlertDialog = () => {
-  const {showAlertDialog, hideAlertDialog} = useContext(AlertDialogContext)
+  const {show, hide, test} = useContext(AlertDialogContext)
 
   const alertDialogHook = useMemo(
     () => ({
-      showAlertDialog,
-      hideAlertDialog,
+      show,
+      hide,
+      test,
     }),
-    [showAlertDialog, hideAlertDialog]
+    [show, hide, test]
   )
 
   return alertDialogHook

@@ -21,6 +21,8 @@ exports[`IBAN Input -> Custom Input ilk render anında snapshot ile eşleşmeli 
         "marginTop": undefined,
         "maxHeight": undefined,
         "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
         "paddingHorizontal": undefined,
@@ -38,6 +40,7 @@ exports[`IBAN Input -> Custom Input ilk render anında snapshot ile eşleşmeli 
   >
     <TextInput
       autoCapitalize="sentences"
+      editable={true}
       keyboardType="number-pad"
       maxLength={32}
       numberOfLines={1}
@@ -56,17 +59,19 @@ exports[`IBAN Input -> Custom Input ilk render anında snapshot ile eşleşmeli 
             "color": "rgba(255, 255, 255, 1)",
             "flexGrow": undefined,
             "fontFamily": "Markpro-Medium",
-            "fontSize": 46,
+            "fontSize": 18,
             "gap": undefined,
             "height": 89,
             "left": undefined,
-            "letterSpacing": 2,
+            "letterSpacing": 0.5,
             "marginBottom": undefined,
             "marginLeft": undefined,
             "marginRight": undefined,
             "marginTop": undefined,
             "maxHeight": undefined,
             "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
@@ -85,6 +90,92 @@ exports[`IBAN Input -> Custom Input ilk render anında snapshot ile eşleşmeli 
       testID="iban-input-test-id"
       value=""
     />
+    <View
+      absolute={true}
+      bottom={16}
+      right={0}
+      style={
+        {
+          "alignItems": undefined,
+          "backgroundColor": undefined,
+          "bottom": 31,
+          "flex": undefined,
+          "flexDirection": "column",
+          "flexGrow": undefined,
+          "gap": undefined,
+          "height": undefined,
+          "justifyContent": undefined,
+          "left": undefined,
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "maxHeight": undefined,
+          "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
+          "overflow": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
+          "paddingLeft": undefined,
+          "paddingRight": undefined,
+          "paddingTop": undefined,
+          "paddingVertical": undefined,
+          "position": "absolute",
+          "right": 0,
+          "top": undefined,
+          "width": undefined,
+          "zIndex": undefined,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": undefined,
+            "backgroundColor": undefined,
+            "bottom": undefined,
+            "flex": undefined,
+            "flexDirection": "column",
+            "flexGrow": undefined,
+            "gap": undefined,
+            "height": undefined,
+            "justifyContent": undefined,
+            "left": undefined,
+            "marginBottom": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginTop": undefined,
+            "maxHeight": undefined,
+            "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
+            "overflow": undefined,
+            "paddingBottom": undefined,
+            "paddingHorizontal": undefined,
+            "paddingLeft": undefined,
+            "paddingRight": undefined,
+            "paddingTop": undefined,
+            "paddingVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "top": undefined,
+            "width": undefined,
+            "zIndex": undefined,
+          }
+        }
+      >
+        <SvgMock
+          fill="transparent"
+          height={46}
+          stroke="rgba(161, 173, 175, 1)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1}
+          width={46}
+        />
+      </View>
+    </View>
   </View>,
   <View
     onLayout={[Function]}
