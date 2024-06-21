@@ -1,6 +1,5 @@
+// React Imports
 import {useContext} from 'react'
+import {themeConfig} from '../providers'
 
-import {defaultThemeContext} from '../contexts/themeContext'
-
-const defaultThemeContextValue = useContext(defaultThemeContext)
-export type Variant = Keyof<typeof defaultThemeContextValue.colors>
+export type Variant = Keyof<typeof themeConfig.colors>

@@ -1,6 +1,6 @@
 import {FontFamily} from '../features/Label/models'
 import {Size} from './sizePropType'
-import {Variant} from './variantPropType'
+import {Variant} from './variant'
 
 export interface CommonUiProps {
   heightNormalizeBased?: boolean

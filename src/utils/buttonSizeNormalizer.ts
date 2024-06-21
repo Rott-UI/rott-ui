@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 
-// Model Imports
-import {Size} from '../models'
+// Feature Imports
+import {Size} from '../features'
 
 // Util and Lib Imports
 import display from './display'
