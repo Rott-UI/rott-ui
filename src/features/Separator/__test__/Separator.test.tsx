@@ -1,9 +1,9 @@
-// Component Imports
-import {commonUiTestExtension} from '../../utils'
+// Feature Imports
 import {Separator} from '../components'
 
 // Util and Lib Imports
 import {act, render} from './../../../utils'
+import {commonUiTestExtension} from '../../utils'
 
 const testId = {
   separatorTestId: 'separator-test-id',

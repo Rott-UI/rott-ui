@@ -9,6 +9,8 @@ import {ActionMenuProps, ActionModel} from '../models'
 // Constant Imports
 
 // Util and Lib Imports
+import display from '../../../utils/display'
+import {themeConfig} from '../../../providers'
 
 /**
  * Action Menu
@@ -52,7 +54,7 @@ export const ActionMenuComponent: FC<ActionMenuProps> = ({
     <Item size='full' style={ActionMenuStyles().actionMenuContainer} alignItemsCenter>
       <Item
         width={342}
-        backgroundColor={COLOURS.GREY100}
+        backgroundColor={themeConfig.colors['grey-100']}
         borderTopStartRadius={!(title || subTitle) ? 12 : 0}
         borderTopEndRadius={!(title || subTitle) ? 12 : 0}
         borderBottomStartRadius={12}
@@ -83,7 +85,7 @@ export const ActionMenuComponent: FC<ActionMenuProps> = ({
         size='full'
         testID='action-menu-cancel-test-id'
         marginBottom={21}>
-        {translator('COMMON.CANCEL')}
+        Cancel
       </Button>
     </Item>
   )

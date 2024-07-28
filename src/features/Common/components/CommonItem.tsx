@@ -12,7 +12,7 @@ import {Icon} from '../../Icon/components'
 import {Label, LabelProps} from '../../Label'
 
 // Util and Lib Imports
-import {colourFromVariant} from '../../../utils'
+import {colorFromVariant} from '../../../utils'
 
 // Package Imports
 import Swipeable from 'react-native-gesture-handler/Swipeable'
@@ -68,7 +68,7 @@ export const CommonItem: FC<CommonItemProps> = memo(
     const listItemContent = (
       <Pressable
         testID={testID}
-        backgroundColor={colourFromVariant(backgroundColor)}
+        backgroundColor={colorFromVariant(backgroundColor)}
         onPress={() => onPress && onPress!(value)}
         paddingVertical={paddingVertical ?? 16}
         paddingHorizontal={paddingHorizontal ?? 24}

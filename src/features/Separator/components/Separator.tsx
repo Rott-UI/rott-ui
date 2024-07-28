@@ -4,7 +4,9 @@ import {View, StyleSheet, ViewProps} from 'react-native'
 
 // Component Imports
 import {SeparatorStyles} from '../styles'
-import {CommonUiProps} from '../../models'
+
+// Model Imports
+import {CommonUiProps} from '../../../models'
 
 interface SeparatorProps extends ViewProps, CommonUiProps {
   height?: number | string

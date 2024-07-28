@@ -12,9 +12,12 @@ import {
   View,
   Animated,
 } from 'react-native'
-import {CommonUiProps, Size, Variant} from '../../models'
+
 import {Label} from '../../Label'
 import {PressableStyles} from '../styles'
+
+// Model Imports
+import {CommonUiProps, Size, Variant} from '../../../models'
 
 interface PressableProps extends CommonUiProps, RNPressableProps {
   ref?: LegacyRef<View> | Ref<View | LegacyRef<View>> | any

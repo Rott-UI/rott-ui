@@ -4,10 +4,12 @@ import {PropsWithChildren} from 'react'
 // React Native Imports
 import {TextProps} from 'react-native'
 
-// Component Imports
+// Feature Imports
 import {FontFamily} from './fontFamily'
 import {FontWeight} from './fontWeight'
-import {CommonUiProps} from '../../models'
+
+// Model Imports
+import {CommonUiProps} from '../../../models'
 
 export interface LabelProps extends TextProps, CommonUiProps, PropsWithChildren {
   text?: string

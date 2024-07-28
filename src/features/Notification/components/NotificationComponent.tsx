@@ -11,10 +11,10 @@ import {Pressable} from '../../Pressable'
 import {NotificationStyle} from '../styles'
 
 // Constant Imports
-import {COLOURS} from '../../../constants'
 
 // Package Imports
 import LinearGradient from 'react-native-linear-gradient'
+import {themeConfig} from '../../../providers'
 
 interface NotificationMessageProps {
   title?: string
@@ -32,7 +32,7 @@ export const NotificationComponent: FC<NotificationMessageProps> = ({
   onClose,
 }) => (
   <LinearGradient
-    colors={[variantColor, COLOURS.GREY900]}
+    colors={[variantColor, themeConfig.colors['grey-900']]}
     style={NotificationStyle({variantColor}).linearGradient}
     start={{x: 0, y: 1}}
     end={{x: 0, y: 1}}
@@ -50,7 +50,7 @@ export const NotificationComponent: FC<NotificationMessageProps> = ({
       <Item
         width={40}
         height={40}
-        backgroundColor={COLOURS.NEUTRAL_ALPHA200}
+        backgroundColor={themeConfig.colors['neutral-alpha-200']}
         justifyContentCenter
         alignItemsCenter
         borderRadius={12}>

@@ -25,7 +25,7 @@ import {getHasDynamicIslandState, getHasNotchState} from '../../../features/app'
 import {useAppSelector} from '../../../hooks'
 
 // Util and Lib Imports
-import {colourFromVariant, display} from '../../../utils'
+import {colorFromVariant, display} from '../../../utils'
 
 export const ModalComponent: FC<ModalProps> = ({
   id,
@@ -132,7 +132,7 @@ export const ModalComponent: FC<ModalProps> = ({
                 paddingTop={hasNotch || hasDynamicIsland ? (fullScreen ? 54 : 0) : 8}
                 backgroundColor={
                   headerBackgroundColor
-                    ? colourFromVariant(headerBackgroundColor)
+                    ? colorFromVariant(headerBackgroundColor)
                     : fullScreen
                       ? COLOURS.GREY800
                       : COLOURS.GREY900
@@ -149,7 +149,7 @@ export const ModalComponent: FC<ModalProps> = ({
                     justifyContentCenter
                     backgroundColor={
                       panResponderBackgroundColor
-                        ? colourFromVariant(panResponderBackgroundColor)
+                        ? colorFromVariant(panResponderBackgroundColor)
                         : undefined
                     }
                     borderTopStartRadius={fullScreen ? 0 : 24}

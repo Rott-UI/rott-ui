@@ -4,11 +4,14 @@ import React, {FC, useEffect} from 'react'
 // React Native Imports
 import {StyleSheet, ViewProps} from 'react-native'
 
-// Component Imports
-import {Item, Label} from '../../../components'
-import {CommonUiProps} from '../../models'
+// Feature Imports
+import {Item} from '../../Item'
+import {Label} from '../../Label'
 import {useTimer} from '../hooks'
 import {TimerStyles} from '../style'
+
+// Model Imports
+import {CommonUiProps} from '../../../models'
 
 interface TimerProps extends ViewProps, CommonUiProps {
   initialTime: number

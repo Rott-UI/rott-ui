@@ -1,14 +1,14 @@
 // React Imports
 import React, {FC} from 'react'
 
-// Component Imports
+// Feature Imports
 import {Icon} from '../../Icon'
 import {Item} from '../../Item'
 import {Label} from '../../Label'
 import {AlertModel} from '../models'
 
 // Util and Lib Imports
-import {colourFromVariant} from '../../../utils'
+import {colorFromVariant} from '../../../utils'
 
 export const Alert: FC<AlertModel> = ({text, size, variant, leftIcon, rightIcon}) => {
   return (
@@ -16,7 +16,7 @@ export const Alert: FC<AlertModel> = ({text, size, variant, leftIcon, rightIcon}
       testID='alert-test-id'
       row
       size={size}
-      backgroundColor={colourFromVariant(variant)}
+      backgroundColor={colorFromVariant(variant)}
       paddingHorizontal={16}
       paddingVertical={8}
       alignItemsCenter>

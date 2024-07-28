@@ -3,7 +3,9 @@ import {ReactElement, cloneElement} from 'react'
 
 // Package Imports
 import {render} from '@testing-library/react-native'
-import {display} from '../../utils'
+
+// Util and Lib Imports
+import display from '../../utils/display'
 
 /*
  Dışarıdan element alınacağı için verilen elementi istenilen property ile klonlayıp öyle test etmektedir.

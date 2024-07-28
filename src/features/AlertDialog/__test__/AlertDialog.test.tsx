@@ -6,12 +6,12 @@ import {AlertDialogComponent} from '../components'
 import {AlertDialogButtonProps} from '../models'
 
 //Util and Lib Imports
-import {fireEvent, formatMessage, render} from '../../../utils'
+import {fireEvent, render} from '../../../utils'
 
 // Mock the required props
 const mockProps = {
-  title: formatMessage('TEST.WITH.PARAM', {testText: 'Test Title'}),
-  text: formatMessage('TEST.WITH.PARAM', {testText: 'Test Text'}),
+  title: 'Title',
+  text: 'Text',
   buttons: {
     confirmButton: {
       text: 'COMMON.OK',
@@ -44,10 +44,10 @@ describe('AlertDialog -> Component', () => {
     const {getByText} = render(
       <AlertDialogComponent visible testID={alertDialogTestId} {...mockProps} />
     )
-    const title = getByText(formatMessage('TEST.WITH.PARAM', {testText: 'Test Title'}))
-    const text = getByText(formatMessage('TEST.WITH.PARAM', {testText: 'Test Text'}))
-    const confirmButton = getByText(formatMessage('COMMON.OK'))
-    const cancelButton = getByText(formatMessage('COMMON.CANCEL'))
+    const title = getByText('Title')
+    const text = getByText('Text')
+    const confirmButton = getByText('Ok')
+    const cancelButton = getByText('Cancel')
 
     expect(title).toBeOnTheScreen()
     expect(text).toBeOnTheScreen()
@@ -62,7 +62,7 @@ describe('AlertDialog -> Component', () => {
       <AlertDialogComponent visible testID={alertDialogTestId} title={title} text={text} />
     )
 
-    const cancelButton = getByText(formatMessage('COMMON.CANCEL'))
+    const cancelButton = getByText('Cancel')
 
     expect(cancelButton).toBeOnTheScreen()
   })
@@ -78,7 +78,7 @@ describe('AlertDialog -> Component', () => {
       <AlertDialogComponent visible testID={alertDialogTestId} {...mockProps} />
     )
 
-    const confirmButton = getByText(formatMessage('COMMON.OK'))
+    const confirmButton = getByText('Ok')
     fireEvent.press(confirmButton)
 
     expect(onPress).toHaveBeenCalled()

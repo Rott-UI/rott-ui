@@ -4,20 +4,20 @@ import React, {FC, useEffect, useMemo, useRef} from 'react'
 // React Native Imports
 import {Animated, Easing, StyleSheet} from 'react-native'
 
-// Component Imports
-import {Item} from '../../../components'
+// Feature Imports
+import {Item} from '../../Item'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
+import display from '../../../utils/display'
 // Util and Lib Imports
-import {display} from '../../../utils'
 
 // Model Imports
 import {SkeletonStyleProps} from '../models'
 
 // Package Imports
 import LinearGradient from 'react-native-linear-gradient'
+
+// Provider Imports
+import {themeConfig} from '../../../providers'
 
 interface SkeletonProps extends SkeletonStyleProps {
   show: boolean
@@ -42,8 +42,12 @@ export const Skeleton: FC<SkeletonProps> = ({
   radius = 4,
   noAnimation = false,
   show = false,
-  colors = [COLOURS.GREY100, COLOURS.WHITE, COLOURS.GREY100],
-  backgroundColor = COLOURS.GREY100,
+  colors = [
+    themeConfig.colors['grey-100'],
+    themeConfig.colors['white'],
+    themeConfig.colors['grey-100'],
+  ],
+  backgroundColor = themeConfig.colors['grey-100'],
 }) => {
   const animatedValueRef = useRef(new Animated.Value(0)).current
 

@@ -1,14 +1,14 @@
 // Util and Lib Imports
 import {Notification} from '..'
-import {formatMessage, render, fireEvent, act} from '../../../utils'
+import {render, fireEvent, act} from '../../../utils'
 
 // Component Imports
 import {NotificationComponent} from '../components'
 import {NotificationProvider} from '../providers'
 
 const mockProps = {
-  title: formatMessage('TEST.WITH.PARAM', {testText: 'Test Title'}),
-  description: formatMessage('TEST.WITH.PARAM', {testText: 'Test Description'}),
+  title: 'Title',
+  description: 'Description',
   mockOnClose: jest.fn(),
 }
 

@@ -3,7 +3,7 @@ import {Header} from '../components'
 import {Icon, IconTypes} from '../../Icon'
 
 //Util and Lib Imports
-import {act, fireEvent, render, waitFor} from './../../../utils'
+import {fireEvent, render, waitFor} from './../../../utils'
 
 describe('Header -> Custom Component', () => {
   const testId = {
@@ -73,62 +73,6 @@ describe('Header -> Custom Component', () => {
     expect(headerElement).not.toHaveTextContent(headerText)
   })
 
-  it('rightIcon görüntülenmeli ve onPress Methodu Çalışmalı', async () => {
-    const {component, rightIcon: rightIconTestId, rightIconPressable} = testId
-    const {rightIcon} = IMG
-
-    const mockOnPress = jest.fn()
-    const {getByTestId} = render(
-      <Header
-        testID={component}
-        title={headerText}
-        rightIcon={{
-          testID: rightIconTestId,
-          name: rightIcon,
-          onPress: mockOnPress,
-        }}
-      />
-    )
-
-    const rightIconElement = getByTestId(rightIconTestId)
-    const rightIconPressableElement = getByTestId(rightIconPressable)
-    //RightIcon On Press
-    await act(async () => {
-      await waitFor(() => {
-        fireEvent.press(rightIconPressableElement!)
-      })
-    })
-
-    expect(rightIconElement).toBeOnTheScreen()
-    expect(mockOnPress).toHaveBeenCalled()
-  })
-
-  it('rightIcon verilmediğinde ekranda gözükmemeli', () => {
-    const {component, rightIcon: rightIconTestId} = testId
-    const {queryByTestId} = render(<Header testID={component} title={headerText} />)
-
-    const rightIconElement = queryByTestId(rightIconTestId)
-
-    expect(rightIconElement).not.toBeOnTheScreen()
-  })
-
-  it('rightElement görüntülenmeli', () => {
-    const {component, rightIcon: rightIconTestId} = testId
-    const {rightIcon} = IMG
-
-    const {queryByTestId} = render(
-      <Header
-        testID={component}
-        title={headerText}
-        rightElement={<Icon testID={rightIconTestId} name={rightIcon} />}
-      />
-    )
-
-    const rightIconElement = queryByTestId(rightIconTestId)
-
-    expect(rightIconElement).toBeOnTheScreen()
-  })
-
   it('leftIcon görüntülenmeli ve onPress Methodu Çalışmalı', async () => {
     const {component, leftIcon: leftIconTestId, leftIconPressable} = testId
     const {rightIcon} = IMG
@@ -149,10 +93,9 @@ describe('Header -> Custom Component', () => {
     const leftIconElement = getByTestId(leftIconPressable)
     const leftIconPressableElement = getByTestId(leftIconPressable)
     //LeftIcon On Press
-    await act(async () => {
-      await waitFor(() => {
-        fireEvent.press(leftIconPressableElement!)
-      })
+
+    await waitFor(() => {
+      fireEvent.press(leftIconPressableElement!)
     })
 
     expect(leftIconElement).toBeOnTheScreen()
@@ -168,7 +111,103 @@ describe('Header -> Custom Component', () => {
     expect(leftIconElement).not.toBeOnTheScreen()
   })
 
+  it('leftIcon rounded özelliği verildiğinde border radius height ile aynı olmalı', () => {
+    const {component, leftIconPressable} = testId
+    const {rightIcon} = IMG
+
+    const {getByTestId} = render(
+      <Header
+        height={40}
+        testID={component}
+        title={headerText}
+        leftIcon={{
+          name: rightIcon,
+          rounded: true,
+        }}
+      />
+    )
+
+    const leftIconElement = getByTestId(leftIconPressable)
+
+    expect(leftIconElement).toHaveProp('borderRadius', 40)
+  })
+
   it('leftElement görüntülenmeli', () => {
+    const {component, rightIcon: rightIconTestId} = testId
+    const {rightIcon} = IMG
+
+    const {queryByTestId} = render(
+      <Header
+        testID={component}
+        title={headerText}
+        rightElement={<Icon testID={rightIconTestId} name={rightIcon} />}
+      />
+    )
+
+    const rightIconElement = queryByTestId(rightIconTestId)
+
+    expect(rightIconElement).toBeOnTheScreen()
+  })
+
+  it('rightIcon görüntülenmeli ve onPress Methodu Çalışmalı', async () => {
+    const {component, rightIcon: rightIconTestId, rightIconPressable} = testId
+    const {rightIcon} = IMG
+
+    const mockOnPress = jest.fn()
+    const {getByTestId} = render(
+      <Header
+        testID={component}
+        title={headerText}
+        rightIcon={{
+          testID: rightIconTestId,
+          name: rightIcon,
+          onPress: mockOnPress,
+        }}
+      />
+    )
+
+    const rightIconElement = getByTestId(rightIconTestId)
+    const rightIconPressableElement = getByTestId(rightIconPressable)
+    //RightIcon On Press
+    await waitFor(() => {
+      fireEvent.press(rightIconPressableElement!)
+    })
+
+    expect(rightIconElement).toBeOnTheScreen()
+    expect(mockOnPress).toHaveBeenCalled()
+  })
+
+  it('rightIcon verilmediğinde ekranda gözükmemeli', () => {
+    const {component, rightIcon: rightIconTestId} = testId
+    const {queryByTestId} = render(<Header testID={component} title={headerText} />)
+
+    const rightIconElement = queryByTestId(rightIconTestId)
+
+    expect(rightIconElement).not.toBeOnTheScreen()
+  })
+
+  it('right rounded özelliği verildiğinde border radius height ile aynı olmalı', () => {
+    const {component, rightIconPressable} = testId
+    const {rightIcon} = IMG
+
+    const {getByTestId} = render(
+      <Header
+        height={40}
+        testID={component}
+        title={headerText}
+        leftIcon={{
+          name: rightIcon,
+          rounded: true,
+        }}
+      />
+    )
+
+    const rightIconElement = getByTestId(rightIconPressable)
+
+    expect(rightIconElement).toHaveProp('borderRadius', 40)
+  })
+
+  it('rightElement görüntülenmeli', () => {
     const {component, rightIcon: rightIconTestId} = testId
     const {rightIcon} = IMG
 

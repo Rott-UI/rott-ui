@@ -1,3 +1,4 @@
+// React Imports
 import {FC} from 'react'
 
 // Component Imports
@@ -20,13 +21,17 @@ import {DateInput} from './DateInput/components/DateInput'
 import {CheckBoxInput} from './CheckBoxInput'
 import {SelectInput} from './SelectInput/components/SelectInput'
 import {InputValidation} from './InputValidation'
-import {COLOURS} from '../../../constants'
 import {Icon} from '../../Icon'
 import {Pressable} from '../../Pressable'
-import {colourFromVariant} from '../../../utils'
 import {InputStyleNormalizer} from '../utils/inputNormalizer'
 import {ToggleInput} from './ToggleInput'
 import {InputStyles} from '../styles'
+
+// Util and Lib Imports
+import {colorFromVariant} from '../../../utils'
+
+// Provider Imports
+import {themeConfig} from '../../../providers'
 
 export const Input: FC<InputProps> = ({
   label,
@@ -37,7 +42,9 @@ export const Input: FC<InputProps> = ({
   errorMessage,
   disabled,
   theme = 'light',
-  placeholderTextColor = theme === 'light' ? COLOURS.GREY200 : COLOURS.WHITE,
+  placeholderTextColor = theme === 'light'
+    ? themeConfig.colors['grey-200']
+    : themeConfig.colors['white'],
   data,
 
   border,
@@ -238,8 +245,8 @@ export const Input: FC<InputProps> = ({
                 isLabelObject
                   ? label.variant ?? (label.theme === 'dark' ? 'grey-900' : 'grey-200')
                   : theme === 'dark'
-                    ? 'grey-200'
-                    : 'grey-900'
+                  ? 'grey-200'
+                  : 'grey-900'
               }>
               {typeof label === 'string' ? label?.toUpperCase() : label.text?.toUpperCase()}
             </Label>
@@ -283,8 +290,10 @@ export const Input: FC<InputProps> = ({
           paddingHorizontal={type !== 'toggle' ? 16 : 0}
           borderWidth={border?.width}
           borderRadius={border?.radius}
-          borderColor={colourFromVariant(border?.variant)}
-          backgroundColor={theme === 'light' ? COLOURS.WHITE : COLOURS.GREY800}>
+          borderColor={colorFromVariant(border?.variant)}
+          backgroundColor={
+            theme === 'light' ? themeConfig.colors['white'] : themeConfig.colors['grey-800']
+          }>
           {inputTypes[type]}
         </Item>
       </Item>

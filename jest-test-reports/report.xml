@@ -1,3 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="0" failures="0" errors="0" time="6.546">
+<testsuites name="jest tests" tests="18" failures="0" errors="0" time="5.376">
+  <testsuite name="Separator -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-07-28T20:54:54" time="3.279" tests="15">
+    <testcase classname="Separator -&gt; Custom Component separator component render olmalı ve snapshot eşleşmeli" name="Separator -&gt; Custom Component separator component render olmalı ve snapshot eşleşmeli" time="0.304">
+    </testcase>
+    <testcase classname="Separator -&gt; Custom Component separator component default style ile render olmalı" name="Separator -&gt; Custom Component separator component default style ile render olmalı" time="0.03">
+    </testcase>
+    <testcase classname="Separator -&gt; Custom Component separator component horizontal render olmalı" name="Separator -&gt; Custom Component separator component horizontal render olmalı" time="0.002">
+    </testcase>
+    <testcase classname="Separator -&gt; Custom Component separator component vertical render olmalı" name="Separator -&gt; Custom Component separator component vertical render olmalı" time="0.003">
+    </testcase>
+    <testcase classname="Separator -&gt; Custom Component seperator verilen opacity ile render olmali" name="Separator -&gt; Custom Component seperator verilen opacity ile render olmali" time="0.002">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" time="0.002">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" time="0.002">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" time="0.002">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator paddingTop propertysi aldığında styleları arasında paddingTop ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingTop propertysi aldığında styleları arasında paddingTop ve verilen değer olmalıdır" time="0">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator paddingBottom propertysi aldığında styleları arasında paddingBottom ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingBottom propertysi aldığında styleları arasında paddingBottom ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator paddingLeft propertysi aldığında styleları arasında paddingLeft ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingLeft propertysi aldığında styleları arasında paddingLeft ve verilen değer olmalıdır" time="0">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator paddingHorizontal propertysi aldığında styleları arasında paddingHorizontal ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingHorizontal propertysi aldığında styleları arasında paddingHorizontal ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Content -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-07-28T20:54:54" time="3.377" tests="3">
+    <testcase classname="Content -&gt; Custom Component ilk render anında snapshot ile eşleşmeli" name="Content -&gt; Custom Component ilk render anında snapshot ile eşleşmeli" time="0.303">
+    </testcase>
+    <testcase classname="Content -&gt; Custom Component keyboard avoiding view varsayilan ekranda olmamali" name="Content -&gt; Custom Component keyboard avoiding view varsayilan ekranda olmamali" time="0.004">
+    </testcase>
+    <testcase classname="Content -&gt; Custom Component keyboardAvoidingView verildiginde renderlanmali" name="Content -&gt; Custom Component keyboardAvoidingView verildiginde renderlanmali" time="0.006">
+    </testcase>
+  </testsuite>
 </testsuites>

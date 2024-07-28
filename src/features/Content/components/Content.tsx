@@ -4,15 +4,17 @@ import {FC, PropsWithChildren} from 'react'
 // React Native Imports
 import {View, ViewProps, StyleSheet, KeyboardAvoidingView, Platform, ScrollView} from 'react-native'
 
-// Component Imports
-import {CommonUiProps} from '../../models'
+// Feature Imports
 import {ContentStyles} from '../styles'
 
-// Constants Imports
-import {COLOURS} from '../../../constants'
+// Model Imports
+import {CommonUiProps} from '../../../models'
+
+// Provider Imports
+import {themeConfig} from '../../../providers'
 
 // Util and Lib Imports
-import {display} from '../../../utils'
+import display from '../../../utils/display'
 
 interface ContentProps extends PropsWithChildren, CommonUiProps, ViewProps {
   row?: boolean
@@ -56,7 +58,9 @@ export const Content: FC<ContentProps> = ({
           includeAlignItems: true,
           includeJustifyContent: true,
           paddingHorizontal,
-          backgroundColor: defaultBackgroundColor ? COLOURS.GREY900 : backgroundColor,
+          backgroundColor: defaultBackgroundColor
+            ? themeConfig.colors['grey-900']
+            : backgroundColor,
           includeBorderRadius: true,
           ...props,
         }).defaultContentStyle,

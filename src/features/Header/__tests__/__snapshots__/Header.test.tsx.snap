@@ -1,13 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot eşleşmeli 1`] = `
-[
+<View
+  flex={1}
+  pointerEvents="box-none"
+  style={
+    {
+      "alignItems": undefined,
+      "backgroundColor": undefined,
+      "bottom": undefined,
+      "flex": 1,
+      "flexDirection": "column",
+      "flexGrow": undefined,
+      "flexShrink": undefined,
+      "gap": undefined,
+      "height": undefined,
+      "justifyContent": undefined,
+      "left": undefined,
+      "marginBottom": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginTop": undefined,
+      "maxHeight": undefined,
+      "maxWidth": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
+      "overflow": undefined,
+      "paddingBottom": undefined,
+      "paddingHorizontal": undefined,
+      "paddingLeft": undefined,
+      "paddingRight": undefined,
+      "paddingTop": undefined,
+      "paddingVertical": undefined,
+      "position": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": undefined,
+      "zIndex": undefined,
+    }
+  }
+>
   <View
     minHeight={56}
     paddingVertical={0}
     style={
       {
-        "alignItems": undefined,
+        "alignItems": "center",
         "backgroundColor": undefined,
         "borderBottomEndRadius": undefined,
         "borderBottomStartRadius": undefined,
@@ -18,9 +56,10 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
         "flex": undefined,
         "flexDirection": "column",
         "flexGrow": undefined,
+        "flexShrink": undefined,
         "gap": undefined,
         "height": undefined,
-        "justifyContent": undefined,
+        "justifyContent": "center",
         "left": undefined,
         "marginBottom": undefined,
         "marginLeft": undefined,
@@ -47,7 +86,7 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
     testID="header-test-id"
   >
     <View
-      minHeight={56}
+      height={56}
       style={
         {
           "alignItems": undefined,
@@ -56,17 +95,18 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
           "flex": undefined,
           "flexDirection": "row",
           "flexGrow": undefined,
+          "flexShrink": undefined,
           "gap": undefined,
-          "height": undefined,
+          "height": 108,
           "justifyContent": undefined,
           "left": undefined,
           "marginBottom": undefined,
           "marginLeft": undefined,
           "marginRight": undefined,
           "marginTop": undefined,
-          "maxHeight": undefined,
+          "maxHeight": 108,
           "maxWidth": undefined,
-          "minHeight": 108,
+          "minHeight": undefined,
           "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
@@ -78,13 +118,17 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
           "position": undefined,
           "right": undefined,
           "top": undefined,
-          "width": "100%",
+          "width": undefined,
           "zIndex": undefined,
         }
       }
     >
       <View
+        flexShrink={1}
+        height={56}
         justifyContentCenter={true}
+        minWidth={56}
+        relative={true}
         style={
           {
             "alignItems": undefined,
@@ -93,18 +137,19 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
             "flex": undefined,
             "flexDirection": "column",
             "flexGrow": undefined,
+            "flexShrink": 1,
             "gap": undefined,
-            "height": undefined,
+            "height": 108,
             "justifyContent": "center",
             "left": undefined,
             "marginBottom": undefined,
             "marginLeft": undefined,
             "marginRight": undefined,
             "marginTop": undefined,
-            "maxHeight": undefined,
+            "maxHeight": 108,
             "maxWidth": undefined,
             "minHeight": undefined,
-            "minWidth": undefined,
+            "minWidth": 108,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
@@ -112,10 +157,10 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
             "paddingRight": undefined,
             "paddingTop": undefined,
             "paddingVertical": undefined,
-            "position": undefined,
+            "position": "relative",
             "right": undefined,
             "top": undefined,
-            "width": "25%",
+            "width": undefined,
             "zIndex": undefined,
           }
         }
@@ -144,8 +189,9 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
           animated={false}
           collapsable={false}
           focusable={true}
-          height={40}
+          height={56}
           justifyContentCenter={true}
+          minWidth={56}
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -163,18 +209,19 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
               "flex": 1,
               "flexDirection": "column",
               "flexGrow": undefined,
+              "flexShrink": undefined,
               "gap": undefined,
-              "height": 77,
+              "height": 108,
               "justifyContent": "center",
               "left": undefined,
               "marginBottom": undefined,
               "marginLeft": undefined,
               "marginRight": undefined,
               "marginTop": undefined,
-              "maxHeight": 77,
+              "maxHeight": 108,
               "maxWidth": undefined,
               "minHeight": undefined,
-              "minWidth": undefined,
+              "minWidth": 108,
               "overflow": undefined,
               "paddingBottom": undefined,
               "paddingHorizontal": undefined,
@@ -185,48 +232,53 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
               "position": undefined,
               "right": undefined,
               "top": undefined,
-              "width": 77,
+              "width": 108,
               "zIndex": undefined,
             }
           }
           testID="header-left-pressable-test-id"
-          width={40}
+          width={56}
         />
       </View>
       <View
         alignItemsCenter={true}
-        paddingTop={16}
+        flex={1}
+        height={56}
+        justifyContentCenter={true}
+        minWidth={56}
+        relative={true}
         style={
           {
             "alignItems": "center",
             "backgroundColor": undefined,
             "bottom": undefined,
-            "flex": undefined,
+            "flex": 1,
             "flexDirection": "column",
             "flexGrow": undefined,
+            "flexShrink": undefined,
             "gap": undefined,
-            "height": undefined,
-            "justifyContent": undefined,
+            "height": 108,
+            "justifyContent": "center",
             "left": undefined,
             "marginBottom": undefined,
             "marginLeft": undefined,
             "marginRight": undefined,
             "marginTop": undefined,
-            "maxHeight": undefined,
+            "maxHeight": 108,
             "maxWidth": undefined,
             "minHeight": undefined,
-            "minWidth": undefined,
+            "minWidth": 108,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
             "paddingLeft": undefined,
             "paddingRight": undefined,
-            "paddingTop": 31,
+            "paddingTop": undefined,
             "paddingVertical": undefined,
-            "position": undefined,
+            "position": "relative",
             "right": undefined,
             "top": undefined,
-            "width": "50%",
+            "width": undefined,
             "zIndex": undefined,
           }
         }
@@ -240,8 +292,9 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
               "bottom": undefined,
               "color": "rgba(255, 255, 255, 1)",
               "flexGrow": undefined,
+              "flexShrink": undefined,
               "fontFamily": "Markpro-Bold",
-              "fontSize": 18,
+              "fontSize": 16,
               "fontWeight": undefined,
               "gap": undefined,
               "height": undefined,
@@ -277,7 +330,11 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
       </View>
       <View
         alignItemsFlexEnd={true}
+        flexShrink={1}
+        height={56}
         justifyContentCenter={true}
+        minWidth={56}
+        relative={true}
         style={
           {
             "alignItems": "flex-end",
@@ -286,18 +343,19 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
             "flex": undefined,
             "flexDirection": "column",
             "flexGrow": undefined,
+            "flexShrink": 1,
             "gap": undefined,
-            "height": undefined,
+            "height": 108,
             "justifyContent": "center",
             "left": undefined,
             "marginBottom": undefined,
             "marginLeft": undefined,
             "marginRight": undefined,
             "marginTop": undefined,
-            "maxHeight": undefined,
+            "maxHeight": 108,
             "maxWidth": undefined,
             "minHeight": undefined,
-            "minWidth": undefined,
+            "minWidth": 108,
             "overflow": undefined,
             "paddingBottom": undefined,
             "paddingHorizontal": undefined,
@@ -305,16 +363,91 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
             "paddingRight": undefined,
             "paddingTop": undefined,
             "paddingVertical": undefined,
-            "position": undefined,
+            "position": "relative",
             "right": undefined,
             "top": undefined,
-            "width": "25%",
+            "width": undefined,
             "zIndex": undefined,
           }
         }
-      />
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          alignItemsCenter={false}
+          alignItemsFlexEnd={true}
+          alignItemsFlexStart={true}
+          animated={false}
+          collapsable={false}
+          focusable={true}
+          height={56}
+          justifyContentCenter={true}
+          minWidth={56}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "flex-end",
+              "backgroundColor": undefined,
+              "bottom": undefined,
+              "flex": 1,
+              "flexDirection": "column",
+              "flexGrow": undefined,
+              "flexShrink": undefined,
+              "gap": undefined,
+              "height": 108,
+              "justifyContent": "center",
+              "left": undefined,
+              "marginBottom": undefined,
+              "marginLeft": undefined,
+              "marginRight": undefined,
+              "marginTop": undefined,
+              "maxHeight": 108,
+              "maxWidth": undefined,
+              "minHeight": undefined,
+              "minWidth": 108,
+              "overflow": undefined,
+              "paddingBottom": undefined,
+              "paddingHorizontal": undefined,
+              "paddingLeft": undefined,
+              "paddingRight": undefined,
+              "paddingTop": undefined,
+              "paddingVertical": undefined,
+              "position": undefined,
+              "right": undefined,
+              "top": undefined,
+              "width": undefined,
+              "zIndex": undefined,
+            }
+          }
+          testID="header-right-pressable-test-id"
+        />
+      </View>
     </View>
-  </View>,
+  </View>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -346,7 +479,7 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
     >
       <RCTSafeAreaView />
     </View>
-  </View>,
+  </View>
   <View
     onLayout={[Function]}
     pointerEvents="box-none"
@@ -378,6 +511,6 @@ exports[`Header -> Custom Component yalnızca başlık çalışmalı ve snapshot
     >
       <RCTSafeAreaView />
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;

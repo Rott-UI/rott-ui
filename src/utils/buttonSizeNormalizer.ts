@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 
-// Feature Imports
-import {Size} from '../features'
+// Model Imports
+import {Size} from '../models'
 
 // Util and Lib Imports
 import display from './display'
@@ -37,7 +37,8 @@ export const buttonSizeNormalizer = (buttonSize: Size | {width: string; height: 
         icon: display.px(24),
       }
     case 'xl':
-    case 'xxl':
+    case '2xl':
+    case '3xl':
     case 'full':
     default:
       return {

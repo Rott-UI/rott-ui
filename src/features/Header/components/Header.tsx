@@ -1,20 +1,17 @@
 // React Imports
-import {FC} from 'react'
+import {FC, isValidElement} from 'react'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
-// Component Imports
+// Feature Imports
 import {Item} from '../../Item'
-import {Icon} from '../../Icon'
+import {Icon, IconProps} from '../../Icon'
 import {Label} from '../../Label'
 import {Image} from '../../Image'
 import {HeaderProps} from '../models'
 import {Content} from '../../Content'
 import {Pressable} from '../../Pressable'
+import {themeConfig} from '../../../providers'
 
-// Util and Lib Imports
-import {goBack} from '../../../utils'
+// Provider Imports
 
 /**
  *
@@ -48,106 +45,139 @@ export const Header: FC<HeaderProps> = ({
   paddingVertical,
   goBackFunction,
   children,
+  height = 56,
   ...props
 }) => {
   return (
     <Content
       testID='header-test-id'
+      minHeight={height}
       noPadding
-      minHeight={56}
       paddingHorizontal={paddingHorizontal ?? 24}
       paddingVertical={paddingVertical ?? 0}
-      backgroundColor={defaultBackgroundColor ? COLOURS.GREY800 : backgroundColor}
+      backgroundColor={defaultBackgroundColor ? themeConfig.colors['grey-800'] : backgroundColor}
+      justifyContentCenter
+      alignItemsCenter
       {...props}>
-      <Item row size='full' minHeight={56}>
-        <Item justifyContentCenter size='sm'>
-          <Pressable
-            testID='header-left-pressable-test-id'
-            width={40}
-            height={40}
-            justifyContentCenter
-            alignItemsFlexStart={!leftIcon?.alignItemsCenter}
-            alignItemsCenter={!!leftIcon?.alignItemsCenter}
-            backgroundColor={leftIcon?.backgroundColor}
-            borderRadius={leftIcon?.borderRadius}
-            onPress={(event) => {
-              !!leftIcon?.onPress && leftIcon?.onPress(event)
-              goBackFunction && goBackFunction()
-              back && goBack()
-            }}>
-            {!leftElement && (leftIcon || back) && (
+      <Item row height={height}>
+        {/* Left Side */}
+        <Item relative flexShrink={1} height={height} minWidth={height} justifyContentCenter>
+          {!leftElement && !isValidElement(leftElement) && (
+            <Pressable
+              {...(typeof leftIcon === 'object' ? {...leftIcon} : null)}
+              testID='header-left-pressable-test-id'
+              width={height}
+              height={height}
+              minWidth={height}
+              alignItemsFlexStart={!leftIcon?.alignItemsCenter}
+              alignItemsCenter={!!leftIcon?.alignItemsCenter}
+              backgroundColor={leftIcon?.backgroundColor}
+              borderRadius={leftIcon?.rounded ? height : leftIcon?.borderRadius}
+              justifyContentCenter
+              onPress={(event) => {
+                !!leftIcon?.onPress && leftIcon?.onPress(event)
+                back && !!goBackFunction && goBackFunction()
+              }}>
               <Icon
-                testID={leftIcon?.testID ?? 'header-left-icon-test-id'}
-                mode={leftIcon?.mode}
-                name={back ? 'CHEVRON_LEFT' : leftIcon?.name!}
+                testID='header-left-icon-test-id'
                 width={24}
                 height={24}
-                noStroke={leftIcon?.noStroke}
                 strokeWidth={back ? 2 : leftIcon?.strokeWidth}
+                variant={(leftIcon as IconProps)?.variant}
+                mode={(leftIcon as IconProps)?.mode ?? 'stroke'}
+                noStroke={
+                  (leftIcon as IconProps)?.noStroke ?? (leftIcon as IconProps)?.mode === 'fill'
+                }
+                {...(typeof leftIcon === 'object' ? (leftIcon as IconProps) : {})}
+                name={back ? 'CHEVRON_LEFT' : (leftIcon as IconProps)?.name ?? leftIcon}
               />
-            )}
+            </Pressable>
+          )}
 
-            {leftElement}
-          </Pressable>
+          {leftElement && isValidElement(leftElement) && leftElement}
         </Item>
+        {/* Left Side */}
 
-        <Item alignItemsCenter size='md' paddingTop={16}>
+        {/* Middle */}
+        <Item
+          relative
+          flex={1}
+          height={height}
+          minWidth={height}
+          // backgroundColor='red'
+          justifyContentCenter
+          alignItemsCenter>
           {logo && <Image testID='header-logo-test-id' width={127} height={24} name={logo} />}
 
           {!logo && title && (
             <Label
               testID='header-title-test-id'
               textCenter
-              fontSize='xl'
+              fontSize='lg'
               fontFamily='Markpro-Bold'
               justifyContentCenter
               variant='white'
               numberOfLines={1}
-              marginTop={subTitle && -15}>
-              {title}
+              {...(typeof title === 'object' ? {...title} : null)}>
+              {typeof title === 'string' ? title : title.text}
             </Label>
           )}
-
           {!logo && subTitle && (
             <Label
+              testID='header-subtitle-test-id'
               textCenter
-              fontSize='lg'
+              fontSize='md'
               justifyContentCenter
-              fontFamily='Markpro-Light'
+              fontFamily='Markpro-Bold'
               variant='white'
               numberOfLines={1}
-              marginTop={10}
-              testID='header-subtitle-test-id'>
-              {subTitle}
+              {...(typeof subTitle === 'object' ? {...subTitle} : null)}>
+              {typeof subTitle === 'string' ? subTitle : subTitle.text}
             </Label>
           )}
         </Item>
+        {/* Middle */}
 
-        <Item alignItemsFlexEnd justifyContentCenter size='sm'>
-          {!rightElement && rightIcon && (
-            <Pressable
-              testID='header-right-pressable-test-id'
-              width={40}
-              height={40}
-              justifyContentCenter
-              alignItemsCenter
-              backgroundColor={leftIcon?.backgroundColor}
-              borderRadius={leftIcon?.borderRadius}
-              onPress={(event) => !!rightIcon?.onPress && rightIcon.onPress(event)}>
+        {/* Right Side */}
+        <Item
+          relative
+          flexShrink={1}
+          height={height}
+          minWidth={height}
+          justifyContentCenter
+          alignItemsFlexEnd>
+          <Pressable
+            {...(typeof rightIcon === 'object' ? {...rightIcon} : null)}
+            testID='header-right-pressable-test-id'
+            height={height}
+            minWidth={height}
+            alignItemsFlexStart={!rightIcon?.alignItemsCenter}
+            alignItemsCenter={!!rightIcon?.alignItemsCenter}
+            backgroundColor={rightIcon?.backgroundColor}
+            borderRadius={leftIcon?.rounded ? height : leftIcon?.borderRadius}
+            justifyContentCenter
+            alignItemsFlexEnd
+            onPress={(event) => !!rightIcon?.onPress && rightIcon?.onPress(event)}>
+            {!rightElement && !isValidElement(rightElement) && (
               <Icon
-                mode={rightIcon.mode}
-                testID={rightIcon?.testID ?? 'header-right-icon-test-id'}
-                name={rightIcon?.name}
+                testID='header-right-icon-test-id'
                 width={24}
                 height={24}
-                strokeWidth={rightIcon?.strokeWidth ?? 2}
-                variant='white'
+                strokeWidth={back ? 2 : rightIcon?.strokeWidth}
+                variant={(rightIcon as IconProps)?.variant}
+                mode={(rightIcon as IconProps)?.mode ?? 'stroke'}
+                noStroke={
+                  (rightIcon as IconProps)?.noStroke ?? (rightIcon as IconProps)?.mode === 'fill'
+                }
+                {...(typeof rightIcon === 'object' ? (rightIcon as IconProps) : {})}
+                name={(rightIcon as IconProps)?.name ?? rightIcon}
               />
-            </Pressable>
-          )}
+            )}
+          </Pressable>
 
-          {rightElement}
+          {rightElement && isValidElement(rightElement) && rightElement}
         </Item>
+        {/* Right Side */}
       </Item>
 
       {children}

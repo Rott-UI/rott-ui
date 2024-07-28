@@ -1,17 +1,19 @@
 // React Imports
 import React, {FC} from 'react'
 
-// Component Imports
-import {AlertDialog, Item, Label, ModalProps, Pressable, Separator} from '../..'
-import {AlertDialogButtonProps} from '../models'
+// React Native Imports
+import {ActivityIndicator} from 'react-native'
+
+// Feature Imports
 import {AlertDialogStyles} from '../styles'
+import {AlertDialogButtonProps} from '../models'
+import {AlertDialog, Item, Label, ModalProps, Pressable, Separator} from '../..'
 
 // Constant Imports
-import {COLOURS} from '../../../constants'
 
 // Util and Lib Imports
-import {display, formatMessage} from '../../../utils'
-import {ActivityIndicator} from 'react-native'
+import display from '../../../utils/display'
+import {themeConfig} from '../../../providers'
 
 interface AlertDialogProps
   extends Omit<
@@ -59,11 +61,11 @@ export const AlertDialogComponent: FC<AlertDialogProps> = ({
       justifyContentCenter
       width={display.setWidth(80)}
       borderRadius={16}
-      backgroundColor={COLOURS.GREY100}
+      backgroundColor={themeConfig.colors['grey-100']}
       style={AlertDialogStyles(props).InformationModalView}>
       {showActivityIndicator && (
         <Item marginTop={24}>
-          <ActivityIndicator size='large' color={COLOURS.PRIMARY} />
+          <ActivityIndicator size='large' color={themeConfig.colors['primary']} />
         </Item>
       )}
 
@@ -88,7 +90,7 @@ export const AlertDialogComponent: FC<AlertDialogProps> = ({
       <Item
         row
         size='full'
-        backgroundColor={COLOURS.GREY100}
+        backgroundColor={themeConfig.colors['grey-100']}
         height={50}
         borderBottomStartRadius={16}
         borderBottomEndRadius={16}>
@@ -107,7 +109,7 @@ export const AlertDialogComponent: FC<AlertDialogProps> = ({
                 variant={buttons?.cancelButton?.variant || 'danger'}
                 fontWeight={500}
                 textCenter>
-                {formatMessage(buttons.cancelButton.text)}
+                Cancel
               </Label>
             </Item>
           </Pressable>
@@ -128,7 +130,7 @@ export const AlertDialogComponent: FC<AlertDialogProps> = ({
               variant={buttons.confirmButton.variant || 'grey-100'}
               fontWeight={500}
               textCenter>
-              {formatMessage(buttons.confirmButton.text)}
+              Confirm
             </Label>
           </Pressable>
         )}

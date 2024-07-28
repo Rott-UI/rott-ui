@@ -2,9 +2,10 @@
 import {FlexAlignType} from 'react-native'
 
 // Util and Lib Imports
+import display from '../../utils/display'
+import {sizeToPercentage} from '../../utils'
 import {alignItemsConvert} from '../../utils/alignItemsConverter'
 import {justifyContentConvert} from '../../utils/justifyContentConverter'
-import {display, sizeToPercentage} from '../../utils'
 
 /* eslint-disable indent */
 export const commonUiStyleProperties = (props?: any) => {
@@ -13,8 +14,8 @@ export const commonUiStyleProperties = (props?: any) => {
       typeof props?.width === 'number'
         ? display.normalize(props?.width)
         : props?.size
-          ? sizeToPercentage(props?.size)
-          : undefined,
+        ? sizeToPercentage(props?.size)
+        : undefined,
     height:
       typeof props?.height === 'number'
         ? display.normalize(props?.height, props.heightNormalizeBased ? 'height' : 'width')
@@ -70,10 +71,10 @@ export const commonUiStyleProperties = (props?: any) => {
     position: props?.position
       ? props?.position
       : props?.absolute
-        ? 'absolute'
-        : props?.relative
-          ? 'relative'
-          : undefined,
+      ? 'absolute'
+      : props?.relative
+      ? 'relative'
+      : undefined,
     zIndex: props?.zIndex,
     left: Number(props?.left)
       ? display.normalize(props?.left, props.heightNormalizeBased ? 'height' : 'width')

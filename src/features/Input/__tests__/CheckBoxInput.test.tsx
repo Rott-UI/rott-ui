@@ -32,17 +32,15 @@ describe('CheckBox Input -> Custom Input', () => {
 
   it('checkbox render olduğunda description string olarak verilmişse ekranda default label ile renderlanmalı', () => {
     const {checkboxDefaultLabelTestId} = testId
-    const {getByText} = render(<CheckBoxInput description={translator('TEST')} />)
+    const {getByText} = render(<CheckBoxInput description={'Test'} />)
 
-    const checkboxLabel = getByText(translator('TEST'))
+    const checkboxLabel = getByText('Test')
     expect(checkboxLabel).toHaveProp('testID', checkboxDefaultLabelTestId)
   })
 
   it('checkbox render olduğunda description React element olarak verilmişse default label ile renderlanmamalı', () => {
     const {checkboxDefaultLabelTestId} = testId
-    const {queryByTestId} = render(
-      <CheckBoxInput description={<Label>{translator('TEST')}</Label>} />
-    )
+    const {queryByTestId} = render(<CheckBoxInput description={<Label>{'Test'}</Label>} />)
 
     const checkboxLabel = queryByTestId(checkboxDefaultLabelTestId)
     expect(checkboxLabel).not.toBeOnTheScreen()

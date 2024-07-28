@@ -1,13 +1,11 @@
-// Component Imports
-import {Skeleton} from '../components/Skeleton'
-import {Item} from '../../../components/Item'
-import {Label} from '../../../components/Label'
+// Feature Imports
+import {Item} from '../../Item'
+import {Label} from '../../Label'
+import {Skeleton} from '../components'
+import {SkeletonStyleProps} from '../models'
 
 // Util and Lib Imports
 import {render} from '../../../utils'
-
-// Model Imports
-import {SkeletonStyleProps} from '../models'
 
 const testId = {
   itemTestId: 'item-test-id',

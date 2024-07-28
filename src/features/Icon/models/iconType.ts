@@ -1,4 +1,4 @@
-// Constant Imports
-import {Icons} from '../../../constants'
+// Provider Imports
+import {themeConfig} from '../../../providers'
 
-export type IconTypes = Keyof<typeof Icons>
+export type IconTypes = Keyof<typeof themeConfig.icons>

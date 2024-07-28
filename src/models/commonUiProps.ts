@@ -1,5 +1,5 @@
-import {FontFamily} from '../features/Label/models'
-import {Size} from './sizePropType'
+import {FontFamily, FontWeight} from '../features/Label/models'
+import {Size} from './size'
 import {Variant} from './variant'
 
 export interface CommonUiProps {
@@ -10,12 +10,19 @@ export interface CommonUiProps {
   height?: number | string
   maxWidth?: number | string
   maxHeight?: number | string
+  minWidth?: number | string
+  minHeight?: number | string
 
-  fontSize?: Omit<Size, 'full'> | 'xxxl' | number
+  fontSize?: Omit<Size, 'full'> | number
   fontFamily?: FontFamily
+  fontWeight?: FontWeight
   color?: string
   variant?: Variant
+
   flex?: number
+  flexGrow?: number
+  flexShrink?: number
+
   alignItemsCenter?: boolean
   alignItemsFlexStart?: boolean
   alignItemsFlexEnd?: boolean
@@ -61,6 +68,5 @@ export interface CommonUiProps {
 
   letterSpacing?: string | number
 
-  flexGrow?: number
   gap?: number
 }

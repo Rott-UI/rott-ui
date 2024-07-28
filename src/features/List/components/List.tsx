@@ -5,16 +5,18 @@ import {FC, ReactNode, forwardRef, isValidElement} from 'react'
 // React Native Imports
 import {StyleSheet} from 'react-native'
 
-// Component Imports
+// Feature Imports Imports
 import {Item} from '../../Item'
 import {ListStyles} from '../styles'
 import {Separator} from '../../Separator'
-import {CommonUiProps, Variant} from '../../models'
 import {EmptyState, EmptyStateProps} from '../../EmptyState'
 import {ListSkeletonItem} from './ListSkeletonItem'
 
 // Package Components
 import {FlashList, FlashListProps} from '@shopify/flash-list'
+
+// Model Imports
+import {CommonUiProps, Variant} from '../../../models'
 
 interface ListProps<T> extends CommonUiProps, FlashListProps<T> {
   renderSeparator?: boolean

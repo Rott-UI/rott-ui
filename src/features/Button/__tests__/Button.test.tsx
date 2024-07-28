@@ -2,7 +2,7 @@
 import {Button} from '../components'
 
 // Util and Lib Imports
-import {colourFromVariant, fireEvent, render} from '../../../utils'
+import {colorFromVariant, fireEvent, render} from '../../../utils'
 import {commonUiTestExtension} from '../../utils/commonUiTestExtension'
 
 const testId = {
@@ -123,7 +123,7 @@ describe('Button -> Custom Component', () => {
     expect(buttonElement).toBeOnTheScreen()
     expect(buttonElement).toHaveStyle({
       backgroundColor: 'transparent',
-      borderColor: colourFromVariant('primary'),
+      borderColor: colorFromVariant('primary'),
     })
   })
 

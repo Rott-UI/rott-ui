@@ -4,23 +4,22 @@ import {FC, PropsWithChildren} from 'react'
 // React Native Imports
 import {TouchableOpacity, TouchableOpacityProps, StyleSheet, ActivityIndicator} from 'react-native'
 
-// Component Imports
+// Feature Imports
 import {Image} from '../../Image'
 import {Label} from '../../Label'
-import {CommonUiProps, Size} from '../../models'
 import {Icon, IconTypes} from '../../Icon'
-
-// Constant Imports
-import {COLOURS} from '../../../constants'
+import {ButtonIconProps, ButtonImageProps} from '../models'
 
 // Model Imports
-import {ButtonIconProps, ButtonImageProps} from '../models'
+import {CommonUiProps, Size} from '../../../models'
 
 // Style Imports
 import {ButtonStyles} from '../styles/Button.style'
 
 // Util and Lib Imports
-import {buttonSizeNormalizer, display} from '../../../utils'
+import {buttonSizeNormalizer} from '../../../utils'
+import display from '../../../utils/display'
+import {themeConfig} from '../../../providers'
 
 interface ButtonProps
   extends TouchableOpacityProps,
@@ -171,7 +170,10 @@ export const Button: FC<ButtonProps> = ({
       )}
 
       {isLoading && (
-        <ActivityIndicator color={COLOURS.WHITE} testID='button-loading-indicator-test-id' />
+        <ActivityIndicator
+          color={themeConfig.colors['white']}
+          testID='button-loading-indicator-test-id'
+        />
       )}
 
       {isLoading && loadingText && (

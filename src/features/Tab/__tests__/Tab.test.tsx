@@ -1,5 +1,6 @@
-// Component Imports
-import {Label, Tab} from '../../../components'
+// Feature Imports
+import {Label} from '../../Label'
+import {Tab} from '../Tab'
 
 // Util and Lib Imports
 import {act, fireEvent, render} from '../../../utils'

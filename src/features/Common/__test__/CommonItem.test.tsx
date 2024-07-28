@@ -8,28 +8,28 @@ import {CommonItemProps} from '../models'
 import {Pressable} from '../../Pressable/components'
 import {CommonItem} from '../components' // Import the CommonItem component
 
-// Constants Imports
-import {COLOURS} from '../../../constants'
-
 // Util and Lib Imports
-import {formatMessage, render} from '../../../utils'
+import {render} from '../../../utils'
+
+// Provider Imports
+import {themeConfig} from '../../../providers'
 
 describe('List Item -> Custom Component', () => {
   const dummyData: CommonItemProps = {
-    title: formatMessage('TEST.WITH.PARAM', {testText: 'TITLE'}),
-    subTitle: formatMessage('TEST.WITH.PARAM', {testText: 'SUBTITLE'}),
-    description: formatMessage('TEST.WITH.PARAM', {testText: 'DESCRIPTION'}),
+    title: 'Title',
+    subTitle: 'SubTitle',
+    description: 'Description',
     leftIcon: {
       name: 'STAR',
       width: 24,
       height: 24,
-      color: COLOURS.PRIMARY,
+      color: themeConfig.colors['primary'],
     },
     rightIcon: {
       name: 'ADD',
       width: 24,
       height: 24,
-      color: COLOURS.PRIMARY,
+      color: themeConfig.colors['primary'],
     },
   }
 
@@ -177,10 +177,10 @@ describe('List Item -> Custom Component', () => {
           <Pressable
             alignItemsCenter
             justifyContentCenter
-            backgroundColor={COLOURS.SECONDARY}
+            backgroundColor={themeConfig.colors['secondary']}
             testID={rightElementTestId}>
             <Icon name='STAR' width={24} height={24} />
-            <Label>{formatMessage('LIST.ITEM.FAVORITE.ADD')}</Label>
+            <Label>Add to Favorites</Label>
           </Pressable>
         )}
       />
@@ -190,7 +190,7 @@ describe('List Item -> Custom Component', () => {
 
     expect(rightElement).toBeOnTheScreen() // Right Element Ekranda Olmali
     expect(rightElement.children[0]).toHaveProp('name', 'STAR') // Icon Ekranda Olmali
-    expect(rightElement).toHaveTextContent(formatMessage('LIST.ITEM.FAVORITE.ADD')) // Right Element Text Ekranda Olmali
+    expect(rightElement).toHaveTextContent('Add to Favorites') // Right Element Text Ekranda Olmali
   })
 
   it('swipe ozelliginde sol eleman var ise ekranda renderlanmali', () => {
@@ -204,10 +204,10 @@ describe('List Item -> Custom Component', () => {
           <Pressable
             alignItemsCenter
             justifyContentCenter
-            backgroundColor={COLOURS.SECONDARY}
+            backgroundColor={themeConfig.colors['secondary']}
             testID={leftElementTestId}>
             <Icon name='STAR' width={10} height={10} />
-            <Label>{formatMessage('LIST.ITEM.FAVORITE.ADD')}</Label>
+            <Label>Add to Favorites</Label>
           </Pressable>
         )}
       />
@@ -217,6 +217,6 @@ describe('List Item -> Custom Component', () => {
 
     expect(leftElement).toBeOnTheScreen() // Right Element Ekranda Olmali
     expect(leftElement.children[0]).toHaveProp('name', 'STAR') // Icon Ekranda Olmali
-    expect(leftElement).toHaveTextContent(formatMessage('LIST.ITEM.FAVORITE.ADD')) // Right Element Text Ekranda Olmali
+    expect(leftElement).toHaveTextContent('Add to Favorites') // Right Element Text Ekranda Olmali
   })
 })

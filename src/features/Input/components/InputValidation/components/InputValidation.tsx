@@ -11,7 +11,7 @@ import {Label} from '../../../../Label'
 import {CommonUiProps, Variant} from '../../../../models'
 
 // Utils Imports
-import {colourFromVariant} from '../../../../../utils'
+import {colorFromVariant} from '../../../../../utils'
 
 export interface InputValidationProps extends CommonUiProps {
   name: string
@@ -28,7 +28,7 @@ export const InputValidation: FC<InputValidationProps> = ({
   return (
     <Item
       row
-      backgroundColor={colourFromVariant(variant)}
+      backgroundColor={colorFromVariant(variant)}
       paddingVertical={8}
       paddingHorizontal={16}
       alignItemsCenter

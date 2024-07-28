@@ -1,22 +1,26 @@
 // React Native Imports
 import {ViewProps} from 'react-native'
 
-// Component Imports
-import {CommonUiProps} from '../../models'
+// Feature Imports Imports
+
 import {ImageTypes} from '../../Image'
 import {IconTypes} from '../../Icon'
 import {HeaderIconProps} from '../models'
 import {PropsWithChildren} from 'react'
+import {LabelProps} from '../../Label'
+
+// Model Imports
+import {CommonUiProps} from '../../../models'
 
 export interface HeaderProps extends ViewProps, CommonUiProps, PropsWithChildren {
   back?: boolean
-  title?: string
-  subTitle?: string
+  title?: string | LabelProps
+  subTitle?: string | LabelProps
   logo?: ImageTypes | IconTypes
   leftElement?: React.ReactElement | React.ReactNode
-  leftIcon?: HeaderIconProps
+  leftIcon?: HeaderIconProps & {rounded?: boolean}
   rightElement?: React.ReactElement | React.ReactNode
-  rightIcon?: HeaderIconProps
+  rightIcon?: HeaderIconProps & {rounded?: boolean}
   defaultBackgroundColor?: boolean
   paddingHorizontal?: number
   paddingVertical?: number

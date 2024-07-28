@@ -1,3 +1,4 @@
-export * from './themeContextModel'
 export * from './commonUiProps'
-export * from './sizePropType'
+export * from './size'
+export * from './themeContextModel'
+export * from './variant'
