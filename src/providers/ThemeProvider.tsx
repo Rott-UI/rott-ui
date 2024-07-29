@@ -43,7 +43,9 @@ export let themeConfig = {
   },
   texts: {},
   images: {},
-  icons: {},
+  icons: {
+    ARROW_DOWN: require('../assets/icons/arrow-down.png'),
+  },
   fontSizes: {
     xs: 10,
     sm: 12,

@@ -6,7 +6,7 @@ import {EmptyState} from '../components'
 import {Label} from '../../Label'
 
 // Util and Lib Imports
-import {formatMessage, render} from '../../../utils'
+import {render} from '../../../utils'
 
 describe('EmptyState -> Custom Component', () => {
   const testId = {
@@ -14,7 +14,7 @@ describe('EmptyState -> Custom Component', () => {
     emptyStateDescTestId: 'empty-state-desc-test-id',
   }
   const testTexts = {
-    description: formatMessage('TEST'),
+    description: 'Test',
   }
 
   it('ilk render anında snapshot ile eşleşmeli', () => {
