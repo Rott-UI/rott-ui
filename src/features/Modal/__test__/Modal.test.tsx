@@ -27,7 +27,7 @@ describe('Modal -> Custom Component', () => {
     testID: testId.modalTestId,
     header: {
       title: 'Test',
-      logo: 'PTTBANK_BLACK_COLORED',
+      logo: 'ARROW_DOWN',
     },
     slideToClose: true,
     visible: true,
@@ -40,7 +40,7 @@ describe('Modal -> Custom Component', () => {
     testID: testId.modalTestId,
     header: {
       title: 'Test',
-      logo: 'PTTBANK_BLACK_COLORED',
+      logo: 'ARROW_DOWN',
     },
     visible: true,
     height: 50,
@@ -126,7 +126,7 @@ describe('Modal -> Custom Component', () => {
         {...dummyData}
         header={{
           title: 'Test',
-          logo: 'PTTBANK_BLACK_COLORED',
+          logo: 'ARROW_DOWN',
           children: <Label testID={'header-children-test-id'}>{'Test'}</Label>,
         }}>
         <Item>

@@ -4,11 +4,11 @@ import React from 'react'
 // Component Imports
 import {Toggle} from '../components'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
 // Util and Lib Imports
 import {act, fireEvent, render, waitFor} from './../../../utils'
+
+// Provider Imports
+import {themeConfig} from '../../../providers'
 
 describe('Toggle -> Custom Component', () => {
   const toggleContainerTestId = 'toggle-container-test-id'
@@ -60,7 +60,7 @@ describe('Toggle -> Custom Component', () => {
         const toggleContainer = getByTestId(toggleTestId)
 
         expect(toggleContainer).toHaveStyle({
-          backgroundColor: COLOURS.GREY200,
+          backgroundColor: themeConfig?.colors?.['grey-200'],
         })
       })
     })
@@ -71,7 +71,7 @@ describe('Toggle -> Custom Component', () => {
         const toggleContainer = getByTestId(toggleTestId)
 
         expect(toggleContainer).toHaveStyle({
-          backgroundColor: COLOURS.PRIMARY,
+          backgroundColor: themeConfig?.colors?.primary,
         })
       })
     })

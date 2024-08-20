@@ -1,23 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="18" failures="0" errors="0" time="5.376">
-  <testsuite name="Separator -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-07-28T20:54:54" time="3.279" tests="15">
-    <testcase classname="Separator -&gt; Custom Component separator component render olmalı ve snapshot eşleşmeli" name="Separator -&gt; Custom Component separator component render olmalı ve snapshot eşleşmeli" time="0.304">
+<testsuites name="jest tests" tests="104" failures="10" errors="0" time="4.763">
+  <testsuite name="Content -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="2.405" tests="3">
+    <testcase classname="Content -&gt; Custom Component ilk render anında snapshot ile eşleşmeli" name="Content -&gt; Custom Component ilk render anında snapshot ile eşleşmeli" time="0.206">
     </testcase>
-    <testcase classname="Separator -&gt; Custom Component separator component default style ile render olmalı" name="Separator -&gt; Custom Component separator component default style ile render olmalı" time="0.03">
+    <testcase classname="Content -&gt; Custom Component keyboard avoiding view varsayilan ekranda olmamali" name="Content -&gt; Custom Component keyboard avoiding view varsayilan ekranda olmamali" time="0.001">
     </testcase>
-    <testcase classname="Separator -&gt; Custom Component separator component horizontal render olmalı" name="Separator -&gt; Custom Component separator component horizontal render olmalı" time="0.002">
+    <testcase classname="Content -&gt; Custom Component keyboardAvoidingView verildiginde renderlanmali" name="Content -&gt; Custom Component keyboardAvoidingView verildiginde renderlanmali" time="0.005">
     </testcase>
-    <testcase classname="Separator -&gt; Custom Component separator component vertical render olmalı" name="Separator -&gt; Custom Component separator component vertical render olmalı" time="0.003">
+  </testsuite>
+  <testsuite name="Component -&gt; BottomMenu" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="2.444" tests="3">
+    <testcase classname="Component -&gt; BottomMenu bottom menu componenti snapshotı ile eşleşmeli" name="Component -&gt; BottomMenu bottom menu componenti snapshotı ile eşleşmeli" time="0.168">
     </testcase>
-    <testcase classname="Separator -&gt; Custom Component seperator verilen opacity ile render olmali" name="Separator -&gt; Custom Component seperator verilen opacity ile render olmali" time="0.002">
+    <testcase classname="Component -&gt; BottomMenu ekranda görülmeli" name="Component -&gt; BottomMenu ekranda görülmeli" time="0.002">
     </testcase>
-    <testcase classname="Separator -&gt; Common UI Test Separator marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" time="0.002">
+    <testcase classname="Component -&gt; BottomMenu bottom menu componenti ekranda gözükmeli" name="Component -&gt; BottomMenu bottom menu componenti ekranda gözükmeli" time="0.002">
     </testcase>
-    <testcase classname="Separator -&gt; Common UI Test Separator marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" time="0.001">
+  </testsuite>
+  <testsuite name="Timer -&gt; Custom Component" errors="0" failures="10" skipped="0" timestamp="2024-08-20T20:30:52" time="2.446" tests="11">
+    <testcase classname="Timer -&gt; Custom Component timer ilk render anında snapshot ile eşleşmeli" name="Timer -&gt; Custom Component timer ilk render anında snapshot ile eşleşmeli" time="0.19">
     </testcase>
-    <testcase classname="Separator -&gt; Common UI Test Separator marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" time="0.002">
+    <testcase classname="Timer -&gt; Custom Component initial time doğru render olmalı" name="Timer -&gt; Custom Component initial time doğru render olmalı" time="0.005">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:36:19)</failure>
     </testcase>
-    <testcase classname="Separator -&gt; Common UI Test Separator marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" time="0.002">
+    <testcase classname="Timer -&gt; Custom Component countdown timer azalan sekilde calismali" name="Timer -&gt; Custom Component countdown timer azalan sekilde calismali" time="0.003">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:46:19)</failure>
+    </testcase>
+    <testcase classname="Timer -&gt; Custom Component countdown timer tamamlandığında 0:00 olmalı" name="Timer -&gt; Custom Component countdown timer tamamlandığında 0:00 olmalı" time="0.001">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:60:19)</failure>
+    </testcase>
+    <testcase classname="Timer -&gt; Custom Component countdown timer calisirken stop olabilmeli" name="Timer -&gt; Custom Component countdown timer calisirken stop olabilmeli" time="0.003">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:72:19)</failure>
+    </testcase>
+    <testcase classname="Timer -&gt; Custom Component countdown timer calisirken reset olabilmeli" name="Timer -&gt; Custom Component countdown timer calisirken reset olabilmeli" time="0.003">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:86:19)</failure>
+    </testcase>
+    <testcase classname="Timer -&gt; Custom Component circle timer 0:00 olabilmeli" name="Timer -&gt; Custom Component circle timer 0:00 olabilmeli" time="0.003">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:100:19)</failure>
+    </testcase>
+    <testcase classname="Timer -&gt; Custom Component circle timer 0:00 oldugunda yeniden baslamali" name="Timer -&gt; Custom Component circle timer 0:00 oldugunda yeniden baslamali" time="0.005">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:112:19)</failure>
+    </testcase>
+    <testcase classname="Timer -&gt; Custom Component circle timer calisirken stop olabilmeli" name="Timer -&gt; Custom Component circle timer calisirken stop olabilmeli" time="0.003">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:128:19)</failure>
+    </testcase>
+    <testcase classname="Timer -&gt; Custom Component circle timer calisirken stop olmuşken tekrar start olabilmeli" name="Timer -&gt; Custom Component circle timer calisirken stop olmuşken tekrar start olabilmeli" time="0.003">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:142:19)</failure>
+    </testcase>
+    <testcase classname="Timer -&gt; Custom Component circle timer calisirken reset olabilmeli" name="Timer -&gt; Custom Component circle timer calisirken reset olabilmeli" time="0.004">
+      <failure>Error: expect(element).toHaveProp(&quot;children&quot;, &quot;3:00&quot;) // element.getAttribute(children) === &quot;3:00&quot;
+
+Expected the element to have prop:
+  children=&quot;3:00&quot;
+Received:
+  children=&quot;0:00&quot;
+    at Object.&lt;anonymous&gt; (/Users/pttmobil/Desktop/Projects/rott-ui/src/features/Timer/__test__/Timer.test.tsx:160:19)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Button -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="2.512" tests="21">
+    <testcase classname="Button -&gt; Custom Component butonun snapshotı ile eşleşmeli" name="Button -&gt; Custom Component butonun snapshotı ile eşleşmeli" time="0.184">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component buton ekranda olmalı ancak loading iconu görünmemeli" name="Button -&gt; Custom Component buton ekranda olmalı ancak loading iconu görünmemeli" time="0.002">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component loading text ve loading icon ile buton render olmalı" name="Button -&gt; Custom Component loading text ve loading icon ile buton render olmalı" time="0.006">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component buton disableken tıklanamamlı" name="Button -&gt; Custom Component buton disableken tıklanamamlı" time="0.002">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component left icon propertysi verildiğinde ekranda doğru icon ile renderlanmalı" name="Button -&gt; Custom Component left icon propertysi verildiğinde ekranda doğru icon ile renderlanmalı" time="0.005">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component left image propertysi verildiğinde ekranda doğru image ile renderlanmalı" name="Button -&gt; Custom Component left image propertysi verildiğinde ekranda doğru image ile renderlanmalı" time="0.012">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component button loading durumundayken verilen left icon görünmemeli" name="Button -&gt; Custom Component button loading durumundayken verilen left icon görünmemeli" time="0.003">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component buton ekranda olmalı ve outline variantı ile renderlanmalı" name="Button -&gt; Custom Component buton ekranda olmalı ve outline variantı ile renderlanmalı" time="0.003">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component right icon propertysi verildiğinde ekranda doğru icon ile renderlanmalı" name="Button -&gt; Custom Component right icon propertysi verildiğinde ekranda doğru icon ile renderlanmalı" time="0.002">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component right image propertysi verildiğinde ekranda doğru image ile renderlanmalı" name="Button -&gt; Custom Component right image propertysi verildiğinde ekranda doğru image ile renderlanmalı" time="0.001">
+    </testcase>
+    <testcase classname="Button -&gt; Custom Component button loading durumundayken verilen right icon görünmemeli" name="Button -&gt; Custom Component button loading durumundayken verilen right icon görünmemeli" time="0.002">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" time="0.003">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button paddingTop propertysi aldığında styleları arasında paddingTop ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button paddingTop propertysi aldığında styleları arasında paddingTop ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button paddingBottom propertysi aldığında styleları arasında paddingBottom ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button paddingBottom propertysi aldığında styleları arasında paddingBottom ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button paddingLeft propertysi aldığında styleları arasında paddingLeft ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button paddingLeft propertysi aldığında styleları arasında paddingLeft ve verilen değer olmalıdır" time="0.002">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" time="0.003">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Button -&gt; Common UI Test Button paddingHorizontal propertysi aldığında styleları arasında paddingHorizontal ve verilen değer olmalıdır" name="Button -&gt; Common UI Test Button paddingHorizontal propertysi aldığında styleları arasında paddingHorizontal ve verilen değer olmalıdır" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="Pressable -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="4.375" tests="15">
+    <testcase classname="Pressable -&gt; Custom Component pressable component render olmalı ve snapshot eşleşmeli" name="Pressable -&gt; Custom Component pressable component render olmalı ve snapshot eşleşmeli" time="0.195">
+    </testcase>
+    <testcase classname="Pressable -&gt; Custom Component pressable componenti label ile render olmalı" name="Pressable -&gt; Custom Component pressable componenti label ile render olmalı" time="0.003">
+    </testcase>
+    <testcase classname="Pressable -&gt; Custom Component pressable tıklanabilir olmalı" name="Pressable -&gt; Custom Component pressable tıklanabilir olmalı" time="0.002">
+    </testcase>
+    <testcase classname="Pressable -&gt; Custom Component pressable disableken tıklanmamalı" name="Pressable -&gt; Custom Component pressable disableken tıklanmamalı" time="0.002">
+    </testcase>
+    <testcase classname="Pressable -&gt; Custom Component pressable componenti style ile render olmalı" name="Pressable -&gt; Custom Component pressable componenti style ile render olmalı" time="0.002">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable paddingTop propertysi aldığında styleları arasında paddingTop ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable paddingTop propertysi aldığında styleları arasında paddingTop ve verilen değer olmalıdır" time="0">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable paddingBottom propertysi aldığında styleları arasında paddingBottom ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable paddingBottom propertysi aldığında styleları arasında paddingBottom ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable paddingLeft propertysi aldığında styleları arasında paddingLeft ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable paddingLeft propertysi aldığında styleları arasında paddingLeft ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" time="0">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Pressable -&gt; Common UI Test Pressable paddingHorizontal propertysi aldığında styleları arasında paddingHorizontal ve verilen değer olmalıdır" name="Pressable -&gt; Common UI Test Pressable paddingHorizontal propertysi aldığında styleları arasında paddingHorizontal ve verilen değer olmalıdır" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Separator -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="4.451" tests="15">
+    <testcase classname="Separator -&gt; Custom Component separator component render olmalı ve snapshot eşleşmeli" name="Separator -&gt; Custom Component separator component render olmalı ve snapshot eşleşmeli" time="0.2">
+    </testcase>
+    <testcase classname="Separator -&gt; Custom Component separator component default style ile render olmalı" name="Separator -&gt; Custom Component separator component default style ile render olmalı" time="0.003">
+    </testcase>
+    <testcase classname="Separator -&gt; Custom Component separator component horizontal render olmalı" name="Separator -&gt; Custom Component separator component horizontal render olmalı" time="0">
+    </testcase>
+    <testcase classname="Separator -&gt; Custom Component separator component vertical render olmalı" name="Separator -&gt; Custom Component separator component vertical render olmalı" time="0.002">
+    </testcase>
+    <testcase classname="Separator -&gt; Custom Component seperator verilen opacity ile render olmali" name="Separator -&gt; Custom Component seperator verilen opacity ile render olmali" time="0.001">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginTop propertysi aldığında styleları arasında marginTop ve verilen değer olmalıdır" time="0">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginBottom propertysi aldığında styleları arasında marginBottom ve verilen değer olmalıdır" time="0">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginLeft propertysi aldığında styleları arasında marginLeft ve verilen değer olmalıdır" time="0.001">
+    </testcase>
+    <testcase classname="Separator -&gt; Common UI Test Separator marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator marginRight propertysi aldığında styleları arasında marginRight ve verilen değer olmalıdır" time="0.001">
     </testcase>
     <testcase classname="Separator -&gt; Common UI Test Separator paddingTop propertysi aldığında styleları arasında paddingTop ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingTop propertysi aldığında styleları arasında paddingTop ve verilen değer olmalıdır" time="0">
     </testcase>
@@ -25,19 +211,93 @@
     </testcase>
     <testcase classname="Separator -&gt; Common UI Test Separator paddingLeft propertysi aldığında styleları arasında paddingLeft ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingLeft propertysi aldığında styleları arasında paddingLeft ve verilen değer olmalıdır" time="0">
     </testcase>
-    <testcase classname="Separator -&gt; Common UI Test Separator paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" time="0.001">
+    <testcase classname="Separator -&gt; Common UI Test Separator paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingRight propertysi aldığında styleları arasında paddingRight ve verilen değer olmalıdır" time="0">
     </testcase>
-    <testcase classname="Separator -&gt; Common UI Test Separator paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" time="0.001">
+    <testcase classname="Separator -&gt; Common UI Test Separator paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingVertical propertysi aldığında styleları arasında paddingVertical ve verilen değer olmalıdır" time="0.002">
     </testcase>
     <testcase classname="Separator -&gt; Common UI Test Separator paddingHorizontal propertysi aldığında styleları arasında paddingHorizontal ve verilen değer olmalıdır" name="Separator -&gt; Common UI Test Separator paddingHorizontal propertysi aldığında styleları arasında paddingHorizontal ve verilen değer olmalıdır" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Content -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-07-28T20:54:54" time="3.377" tests="3">
-    <testcase classname="Content -&gt; Custom Component ilk render anında snapshot ile eşleşmeli" name="Content -&gt; Custom Component ilk render anında snapshot ile eşleşmeli" time="0.303">
+  <testsuite name="Image -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="4.465" tests="4">
+    <testcase classname="Image -&gt; Custom Component image elementi snapshot ile eşleşmeli" name="Image -&gt; Custom Component image elementi snapshot ile eşleşmeli" time="0.211">
     </testcase>
-    <testcase classname="Content -&gt; Custom Component keyboard avoiding view varsayilan ekranda olmamali" name="Content -&gt; Custom Component keyboard avoiding view varsayilan ekranda olmamali" time="0.004">
+    <testcase classname="Image -&gt; Custom Component image elementi renderlandığında gerçekten ekranda olmalı" name="Image -&gt; Custom Component image elementi renderlandığında gerçekten ekranda olmalı" time="0.001">
     </testcase>
-    <testcase classname="Content -&gt; Custom Component keyboardAvoidingView verildiginde renderlanmali" name="Content -&gt; Custom Component keyboardAvoidingView verildiginde renderlanmali" time="0.006">
+    <testcase classname="Image -&gt; Custom Component image elementi verilen width ile renderlanmalı" name="Image -&gt; Custom Component image elementi verilen width ile renderlanmalı" time="0.001">
+    </testcase>
+    <testcase classname="Image -&gt; Custom Component image elementi verilen height ile renderlanmalı" name="Image -&gt; Custom Component image elementi verilen height ile renderlanmalı" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Header -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="4.517" tests="14">
+    <testcase classname="Header -&gt; Custom Component yalnızca başlık çalışmalı ve snapshot eşleşmeli" name="Header -&gt; Custom Component yalnızca başlık çalışmalı ve snapshot eşleşmeli" time="0.204">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component verilen testId ekranda olmalı" name="Header -&gt; Custom Component verilen testId ekranda olmalı" time="0.004">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component yalnızca logo çalışmalı ve snapshot eşleşmeli" name="Header -&gt; Custom Component yalnızca logo çalışmalı ve snapshot eşleşmeli" time="0.014">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component başlık ve icon var ise sadece icon gorunmeli" name="Header -&gt; Custom Component başlık ve icon var ise sadece icon gorunmeli" time="0.003">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component leftIcon görüntülenmeli ve onPress Methodu Çalışmalı" name="Header -&gt; Custom Component leftIcon görüntülenmeli ve onPress Methodu Çalışmalı" time="0.003">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component leftIcon verilmediğinde ekranda gözükmemeli" name="Header -&gt; Custom Component leftIcon verilmediğinde ekranda gözükmemeli" time="0.002">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component leftIcon rounded özelliği verildiğinde border radius height ile aynı olmalı" name="Header -&gt; Custom Component leftIcon rounded özelliği verildiğinde border radius height ile aynı olmalı" time="0.001">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component leftElement görüntülenmeli" name="Header -&gt; Custom Component leftElement görüntülenmeli" time="0.002">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component rightIcon görüntülenmeli ve onPress Methodu Çalışmalı" name="Header -&gt; Custom Component rightIcon görüntülenmeli ve onPress Methodu Çalışmalı" time="0.003">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component rightIcon verilmediğinde ekranda gözükmemeli" name="Header -&gt; Custom Component rightIcon verilmediğinde ekranda gözükmemeli" time="0.001">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component right rounded özelliği verildiğinde border radius height ile aynı olmalı" name="Header -&gt; Custom Component right rounded özelliği verildiğinde border radius height ile aynı olmalı" time="0.001">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component rightElement görüntülenmeli" name="Header -&gt; Custom Component rightElement görüntülenmeli" time="0.001">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component rightIcon ve leftIcon verildiğinde, ekranda gözükmeli" name="Header -&gt; Custom Component rightIcon ve leftIcon verildiğinde, ekranda gözükmeli" time="0.002">
+    </testcase>
+    <testcase classname="Header -&gt; Custom Component children verildiğinde, ekranda gözükmeli" name="Header -&gt; Custom Component children verildiğinde, ekranda gözükmeli" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Skeleton -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="4.521" tests="6">
+    <testcase classname="Skeleton -&gt; Custom Component skeleton snapshotı ile eşleşmeli" name="Skeleton -&gt; Custom Component skeleton snapshotı ile eşleşmeli" time="0.189">
+    </testcase>
+    <testcase classname="Skeleton -&gt; Custom Component item icerisinde cagirilan skeleton icin snapshot eslesmeli" name="Skeleton -&gt; Custom Component item icerisinde cagirilan skeleton icin snapshot eslesmeli" time="0.002">
+    </testcase>
+    <testcase classname="Skeleton -&gt; Custom Component skeleton skeletonShow true ise skeleton ekranda olmali" name="Skeleton -&gt; Custom Component skeleton skeletonShow true ise skeleton ekranda olmali" time="0.022">
+    </testcase>
+    <testcase classname="Skeleton -&gt; Custom Component skeleton skeletonShow true ise content ekranda olmamali" name="Skeleton -&gt; Custom Component skeleton skeletonShow true ise content ekranda olmamali" time="0.002">
+    </testcase>
+    <testcase classname="Skeleton -&gt; Custom Component skeleton skeletonShow false ise skeleton ekranda olmamali" name="Skeleton -&gt; Custom Component skeleton skeletonShow false ise skeleton ekranda olmamali" time="0.001">
+    </testcase>
+    <testcase classname="Skeleton -&gt; Custom Component skeleton skeletonShow false ise content ekranda olmali" name="Skeleton -&gt; Custom Component skeleton skeletonShow false ise content ekranda olmali" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="EmptyState -&gt; Custom Component" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="4.542" tests="5">
+    <testcase classname="EmptyState -&gt; Custom Component ilk render anında snapshot ile eşleşmeli" name="EmptyState -&gt; Custom Component ilk render anında snapshot ile eşleşmeli" time="0.179">
+    </testcase>
+    <testcase classname="EmptyState -&gt; Custom Component name propertysi EMPTY ile başlamalı" name="EmptyState -&gt; Custom Component name propertysi EMPTY ile başlamalı" time="0.002">
+    </testcase>
+    <testcase classname="EmptyState -&gt; Custom Component description verilen değerler ile ekranda gözükmeli" name="EmptyState -&gt; Custom Component description verilen değerler ile ekranda gözükmeli" time="0.002">
+    </testcase>
+    <testcase classname="EmptyState -&gt; Custom Component description verilmediği zaman ekranda gözükmemeli" name="EmptyState -&gt; Custom Component description verilmediği zaman ekranda gözükmemeli" time="0.001">
+    </testcase>
+    <testcase classname="EmptyState -&gt; Custom Component description yerine ReactNode olarak verildiğindede ekranda gösterilmeli" name="EmptyState -&gt; Custom Component description yerine ReactNode olarak verildiğindede ekranda gösterilmeli" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Alert component" errors="0" failures="0" skipped="0" timestamp="2024-08-20T20:30:52" time="4.55" tests="7">
+    <testcase classname="Alert component renderlandığında snapshot ile eşleşmeli" name="Alert component renderlandığında snapshot ile eşleşmeli" time="0.156">
+    </testcase>
+    <testcase classname="Alert component renderlandığında ekranda olmalı" name="Alert component renderlandığında ekranda olmalı" time="0.003">
+    </testcase>
+    <testcase classname="Alert component left icon ve text alanı olmalı" name="Alert component left icon ve text alanı olmalı" time="0.001">
+    </testcase>
+    <testcase classname="Alert component left icon ekranda olmamalı" name="Alert component left icon ekranda olmamalı" time="0.002">
+    </testcase>
+    <testcase classname="Alert component right icon ve text alanı olmalı" name="Alert component right icon ve text alanı olmalı" time="0.001">
+    </testcase>
+    <testcase classname="Alert component right icon ekranda olmamalı" name="Alert component right icon ekranda olmamalı" time="0.001">
+    </testcase>
+    <testcase classname="Alert component left ve right icon alanları olmalı" name="Alert component left ve right icon alanları olmalı" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>

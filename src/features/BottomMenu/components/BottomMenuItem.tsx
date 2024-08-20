@@ -5,7 +5,6 @@ import {FC} from 'react'
 import {Linking} from 'react-native'
 
 // Constant Imports
-import {COLOURS} from '../../../constants'
 
 // Component Imports
 import {Icon} from '../../Icon'
@@ -14,6 +13,7 @@ import {Image} from '../../Image'
 import {Pressable} from '../../Pressable'
 import {BottomMenuStyles} from '../styles'
 import {BottomMenuItemModel} from '../models'
+import {themeConfig} from '../../../providers'
 
 export const BottomMenuItem: FC<BottomMenuItemModel> = ({
   title,
@@ -52,7 +52,7 @@ export const BottomMenuItem: FC<BottomMenuItemModel> = ({
         <Image
           width={options?.width ? options.width : 24}
           height={options?.height ? options.height : 24}
-          tintColor={options?.width && options?.height ? undefined : COLOURS.GREY900}
+          tintColor={options?.width && options?.height ? undefined : themeConfig.colors['grey-900']}
           marginBottom={8}
           resizeMode='contain'
           name={imageName}

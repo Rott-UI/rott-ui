@@ -5,6 +5,7 @@ import {Platform, StyleSheet} from 'react-native'
 import {colorFromVariant} from '../../../utils'
 import {commonUiStyleProperties} from '../../utils'
 import {themeConfig} from '../../../providers'
+import {fontFamilyNormalizer} from '../utils'
 
 export const LabelStyles = (props?: any) =>
   StyleSheet.create({

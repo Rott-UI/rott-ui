@@ -1,107 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image -> Custom Component image elementi snapshot ile eşleşmeli 1`] = `
-[
-  <Image
-    height={50}
-    style={
-      {
-        "backgroundColor": undefined,
-        "borderRadius": 50,
-        "bottom": undefined,
-        "flexGrow": undefined,
-        "gap": undefined,
-        "height": 96,
-        "left": undefined,
-        "marginBottom": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginTop": undefined,
-        "maxHeight": 96,
-        "maxWidth": undefined,
-        "minHeight": undefined,
-        "minWidth": undefined,
-        "overflow": undefined,
-        "paddingBottom": undefined,
-        "paddingHorizontal": undefined,
-        "paddingLeft": undefined,
-        "paddingRight": undefined,
-        "paddingTop": undefined,
-        "paddingVertical": undefined,
-        "position": undefined,
-        "resizeMode": "contain",
-        "right": undefined,
-        "top": undefined,
-        "width": 96,
-        "zIndex": undefined,
-      }
+<Image
+  height={50}
+  style={
+    {
+      "backgroundColor": undefined,
+      "borderRadius": 50,
+      "bottom": undefined,
+      "flexGrow": undefined,
+      "gap": undefined,
+      "height": 96,
+      "left": undefined,
+      "marginBottom": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginTop": undefined,
+      "maxHeight": 96,
+      "maxWidth": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
+      "overflow": undefined,
+      "paddingBottom": undefined,
+      "paddingHorizontal": undefined,
+      "paddingLeft": undefined,
+      "paddingRight": undefined,
+      "paddingTop": undefined,
+      "paddingVertical": undefined,
+      "position": undefined,
+      "resizeMode": "contain",
+      "right": undefined,
+      "top": undefined,
+      "width": 96,
+      "zIndex": undefined,
     }
-    testID="image-test-id"
-    width={50}
-  />,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "flexDirection": "column-reverse",
-          "justifyContent": "flex-start",
-          "top": 30,
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "bottom": 40,
-          "flexDirection": "column",
-          "justifyContent": "flex-end",
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-]
+  }
+  testID="image-test-id"
+  width={50}
+/>
 `;

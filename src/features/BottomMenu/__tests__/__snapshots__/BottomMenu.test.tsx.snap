@@ -1,100 +1,138 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşmeli 1`] = `
-[
+<View
+  absolute={true}
+  borderTopEndRadius={24}
+  borderTopStartRadius={24}
+  bottom={0}
+  height={88}
+  paddingTop={11}
+  style={
+    {
+      "alignItems": undefined,
+      "backgroundColor": "rgba(255, 199, 44, 1)",
+      "borderBottomEndRadius": undefined,
+      "borderBottomStartRadius": undefined,
+      "borderRadius": undefined,
+      "borderTopEndRadius": 24,
+      "borderTopStartRadius": 24,
+      "bottom": 0,
+      "flex": undefined,
+      "flexDirection": "row",
+      "flexGrow": undefined,
+      "gap": undefined,
+      "height": 169,
+      "justifyContent": "space-around",
+      "left": undefined,
+      "marginBottom": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginTop": undefined,
+      "maxHeight": 169,
+      "maxWidth": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
+      "overflow": undefined,
+      "paddingBottom": undefined,
+      "paddingHorizontal": 16,
+      "paddingLeft": undefined,
+      "paddingRight": undefined,
+      "paddingTop": 21,
+      "paddingVertical": undefined,
+      "position": "absolute",
+      "right": undefined,
+      "top": undefined,
+      "width": "100%",
+      "zIndex": undefined,
+    }
+  }
+  testID="bottom-menu-container"
+>
   <View
-    absolute={true}
-    borderTopEndRadius={24}
-    borderTopStartRadius={24}
-    bottom={0}
-    height={64}
-    paddingTop={11}
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    alignItemsCenter={true}
+    animated={false}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       {
-        "alignItems": undefined,
-        "backgroundColor": "rgba(255, 199, 44, 1)",
-        "borderBottomEndRadius": undefined,
-        "borderBottomStartRadius": undefined,
-        "borderRadius": undefined,
-        "borderTopEndRadius": 24,
-        "borderTopStartRadius": 24,
-        "bottom": 0,
-        "flex": undefined,
-        "flexDirection": "row",
+        "alignItems": "center",
+        "backgroundColor": undefined,
+        "bottom": undefined,
+        "flex": 1,
+        "flexDirection": "column",
         "flexGrow": undefined,
         "gap": undefined,
-        "height": 123,
-        "justifyContent": "space-around",
+        "height": undefined,
+        "justifyContent": undefined,
         "left": undefined,
         "marginBottom": undefined,
         "marginLeft": undefined,
         "marginRight": undefined,
         "marginTop": undefined,
-        "maxHeight": 123,
+        "maxHeight": undefined,
         "maxWidth": undefined,
         "minHeight": undefined,
         "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
-        "paddingHorizontal": 16,
+        "paddingHorizontal": undefined,
         "paddingLeft": undefined,
         "paddingRight": undefined,
-        "paddingTop": 21,
+        "paddingTop": undefined,
         "paddingVertical": undefined,
-        "position": "absolute",
+        "position": undefined,
         "right": undefined,
         "top": undefined,
-        "width": "100%",
+        "width": 108,
         "zIndex": undefined,
       }
     }
-    testID="bottom-menu-container"
+    testID="pressable-test-id"
+    width={56}
   >
     <View
-      accessibilityState={
-        {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": undefined,
-          "expanded": undefined,
-          "selected": undefined,
-        }
-      }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
-      }
-      accessible={true}
-      alignItemsCenter={true}
-      animated={false}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      marginBottom={8}
       style={
         {
-          "alignItems": "center",
+          "alignItems": undefined,
           "backgroundColor": undefined,
           "bottom": undefined,
-          "flex": 1,
+          "flex": undefined,
           "flexDirection": "column",
           "flexGrow": undefined,
           "gap": undefined,
           "height": undefined,
           "justifyContent": undefined,
           "left": undefined,
-          "marginBottom": undefined,
+          "marginBottom": 16,
           "marginLeft": undefined,
           "marginRight": undefined,
           "marginTop": undefined,
@@ -112,146 +150,36 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
           "position": undefined,
           "right": undefined,
           "top": undefined,
-          "width": 108,
+          "width": undefined,
           "zIndex": undefined,
         }
       }
-      testID="pressable-test-id"
-      width={56}
     >
-      <View
-        marginBottom={8}
-        style={
-          {
-            "alignItems": undefined,
-            "backgroundColor": undefined,
-            "bottom": undefined,
-            "flex": undefined,
-            "flexDirection": "column",
-            "flexGrow": undefined,
-            "gap": undefined,
-            "height": undefined,
-            "justifyContent": undefined,
-            "left": undefined,
-            "marginBottom": 16,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginTop": undefined,
-            "maxHeight": undefined,
-            "maxWidth": undefined,
-            "minHeight": undefined,
-            "minWidth": undefined,
-            "overflow": undefined,
-            "paddingBottom": undefined,
-            "paddingHorizontal": undefined,
-            "paddingLeft": undefined,
-            "paddingRight": undefined,
-            "paddingTop": undefined,
-            "paddingVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "top": undefined,
-            "width": undefined,
-            "zIndex": undefined,
-          }
-        }
-      >
-        <SvgMock
-          fill="transparent"
-          height={46}
-          stroke="rgba(34, 63, 70, 1)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          width={46}
-        />
-      </View>
-      <Text
-        numberOfLines={1}
-        style={
-          {
-            "backgroundColor": undefined,
-            "bottom": undefined,
-            "color": "rgba(34, 63, 70, 1)",
-            "flexGrow": undefined,
-            "fontFamily": "Markpro-Bold",
-            "fontSize": 10,
-            "fontWeight": "bold",
-            "gap": undefined,
-            "height": undefined,
-            "left": undefined,
-            "letterSpacing": undefined,
-            "marginBottom": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginTop": undefined,
-            "maxHeight": undefined,
-            "maxWidth": undefined,
-            "minHeight": undefined,
-            "minWidth": undefined,
-            "overflow": undefined,
-            "paddingBottom": undefined,
-            "paddingHorizontal": undefined,
-            "paddingLeft": undefined,
-            "paddingRight": undefined,
-            "paddingTop": undefined,
-            "paddingVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "textAlign": "center",
-            "top": undefined,
-            "width": undefined,
-            "zIndex": undefined,
-          }
-        }
-      >
-        Menu 1
-      </Text>
+      <SvgMock
+        fill="transparent"
+        height={46}
+        stroke="rgba(34, 63, 70, 1)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        width={46}
+      />
     </View>
-    <View
-      accessibilityState={
-        {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": undefined,
-          "expanded": undefined,
-          "selected": undefined,
-        }
-      }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
-      }
-      accessible={true}
-      alignItemsCenter={true}
-      animated={false}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+    <Text
+      numberOfLines={1}
       style={
         {
-          "alignItems": "center",
           "backgroundColor": undefined,
           "bottom": undefined,
-          "flex": 1,
-          "flexDirection": "column",
+          "color": "rgba(34, 63, 70, 1)",
           "flexGrow": undefined,
+          "fontFamily": "Markpro-Bold",
+          "fontSize": 10,
+          "fontWeight": "bold",
           "gap": undefined,
           "height": undefined,
-          "justifyContent": undefined,
           "left": undefined,
+          "letterSpacing": undefined,
           "marginBottom": undefined,
           "marginLeft": undefined,
           "marginRight": undefined,
@@ -269,167 +197,173 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
           "paddingVertical": undefined,
           "position": undefined,
           "right": undefined,
+          "textAlign": "center",
           "top": undefined,
-          "width": 108,
+          "width": undefined,
           "zIndex": undefined,
         }
       }
-      testID="pressable-test-id"
-      width={56}
     >
-      <View
-        marginBottom={8}
-        style={
-          {
-            "alignItems": undefined,
-            "backgroundColor": undefined,
-            "bottom": undefined,
-            "flex": undefined,
-            "flexDirection": "column",
-            "flexGrow": undefined,
-            "gap": undefined,
-            "height": undefined,
-            "justifyContent": undefined,
-            "left": undefined,
-            "marginBottom": 16,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginTop": undefined,
-            "maxHeight": undefined,
-            "maxWidth": undefined,
-            "minHeight": undefined,
-            "minWidth": undefined,
-            "overflow": undefined,
-            "paddingBottom": undefined,
-            "paddingHorizontal": undefined,
-            "paddingLeft": undefined,
-            "paddingRight": undefined,
-            "paddingTop": undefined,
-            "paddingVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "top": undefined,
-            "width": undefined,
-            "zIndex": undefined,
-          }
-        }
-      >
-        <SvgMock
-          fill="transparent"
-          height={46}
-          stroke="rgba(34, 63, 70, 1)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          width={46}
-        />
-      </View>
-      <Text
-        numberOfLines={1}
-        style={
-          {
-            "backgroundColor": undefined,
-            "bottom": undefined,
-            "color": "rgba(34, 63, 70, 1)",
-            "flexGrow": undefined,
-            "fontFamily": "Markpro-Bold",
-            "fontSize": 10,
-            "fontWeight": "bold",
-            "gap": undefined,
-            "height": undefined,
-            "left": undefined,
-            "letterSpacing": undefined,
-            "marginBottom": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginTop": undefined,
-            "maxHeight": undefined,
-            "maxWidth": undefined,
-            "minHeight": undefined,
-            "minWidth": undefined,
-            "overflow": undefined,
-            "paddingBottom": undefined,
-            "paddingHorizontal": undefined,
-            "paddingLeft": undefined,
-            "paddingRight": undefined,
-            "paddingTop": undefined,
-            "paddingVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "textAlign": "center",
-            "top": undefined,
-            "width": undefined,
-            "zIndex": undefined,
-          }
-        }
-      >
-        Menu 2
-      </Text>
-    </View>
-  </View>,
+      Menu 1
+    </Text>
+  </View>
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "flexDirection": "column-reverse",
-          "justifyContent": "flex-start",
-          "top": 30,
-          "width": 750,
-        },
-      ]
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
     }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    alignItemsCenter={true}
+    animated={false}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": undefined,
+        "bottom": undefined,
+        "flex": 1,
+        "flexDirection": "column",
+        "flexGrow": undefined,
+        "gap": undefined,
+        "height": undefined,
+        "justifyContent": undefined,
+        "left": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "maxHeight": undefined,
+        "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
+        "overflow": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "paddingVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "top": undefined,
+        "width": 108,
+        "zIndex": undefined,
+      }
+    }
+    testID="pressable-test-id"
+    width={56}
   >
     <View
+      marginBottom={8}
       style={
         {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "bottom": 40,
+          "alignItems": undefined,
+          "backgroundColor": undefined,
+          "bottom": undefined,
+          "flex": undefined,
           "flexDirection": "column",
-          "justifyContent": "flex-end",
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
+          "flexGrow": undefined,
+          "gap": undefined,
+          "height": undefined,
+          "justifyContent": undefined,
+          "left": undefined,
+          "marginBottom": 16,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "maxHeight": undefined,
+          "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
+          "overflow": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
+          "paddingLeft": undefined,
+          "paddingRight": undefined,
+          "paddingTop": undefined,
+          "paddingVertical": undefined,
+          "position": undefined,
+          "right": undefined,
+          "top": undefined,
+          "width": undefined,
+          "zIndex": undefined,
         }
       }
     >
-      <RCTSafeAreaView />
+      <SvgMock
+        fill="transparent"
+        height={46}
+        stroke="rgba(34, 63, 70, 1)"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        width={46}
+      />
     </View>
-  </View>,
-]
+    <Text
+      numberOfLines={1}
+      style={
+        {
+          "backgroundColor": undefined,
+          "bottom": undefined,
+          "color": "rgba(34, 63, 70, 1)",
+          "flexGrow": undefined,
+          "fontFamily": "Markpro-Bold",
+          "fontSize": 10,
+          "fontWeight": "bold",
+          "gap": undefined,
+          "height": undefined,
+          "left": undefined,
+          "letterSpacing": undefined,
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "maxHeight": undefined,
+          "maxWidth": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
+          "overflow": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
+          "paddingLeft": undefined,
+          "paddingRight": undefined,
+          "paddingTop": undefined,
+          "paddingVertical": undefined,
+          "position": undefined,
+          "right": undefined,
+          "textAlign": "center",
+          "top": undefined,
+          "width": undefined,
+          "zIndex": undefined,
+        }
+      }
+    >
+      Menu 2
+    </Text>
+  </View>
+</View>
 `;

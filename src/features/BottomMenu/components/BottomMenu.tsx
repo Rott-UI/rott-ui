@@ -6,20 +6,19 @@ import {Content} from '../../Content'
 import {BottomMenuItem} from './BottomMenuItem'
 
 // Feature Imports
-import {getHasDynamicIslandState, getHasNotchState} from '../../../features/app/appSelector'
 import {BottomMenuItemModel} from '../models'
+import {themeConfig} from '../../../providers'
 
 // Hook Imports
-import {useAppSelector} from '../../../hooks'
-import {COLOURS} from '../../../constants'
 
 interface BottomMenuProps {
   menuItems: BottomMenuItemModel[]
 }
 
 export const BottomMenu: FC<BottomMenuProps> = ({menuItems}) => {
-  const hasDynamicIsland = useAppSelector(getHasDynamicIslandState)
-  const hasNotch = useAppSelector(getHasNotchState)
+  // TODO: Dynamic Island ve Notch kontrolü yapılacak
+  const hasDynamicIsland = true
+  const hasNotch = true
 
   return (
     <Content
@@ -34,7 +33,7 @@ export const BottomMenu: FC<BottomMenuProps> = ({menuItems}) => {
       borderTopStartRadius={24}
       borderTopEndRadius={24}
       justifyContentSpaceAround
-      backgroundColor={COLOURS.SECONDARY}
+      backgroundColor={themeConfig.colors.secondary}
       height={hasDynamicIsland || hasNotch ? 88 : 64}>
       {menuItems.map((props) => (
         <BottomMenuItem key={`${props?.title ?? 'Main_'}`} {...props} />

@@ -2,12 +2,12 @@
 import {StyleSheet} from 'react-native'
 
 // Constant Imports
-import {COLOURS, Fonts} from '../../../constants'
 
 // Util Imports
-import {fontSizeNormalizer} from '../../../utils'
+
 import {commonUiStyleProperties} from '../../utils'
 import {InputStyleNormalizer} from '../utils/inputNormalizer'
+import {themeConfig} from '../../../providers'
 
 export const InputStyles = (props?: any) =>
   StyleSheet.create({
@@ -20,9 +20,9 @@ export const InputStyles = (props?: any) =>
       width: '100%',
       height: InputStyleNormalizer({size: props?.size}).height,
       fontSize: props?.fontSize
-        ? fontSizeNormalizer(props?.fontSize)
+        ? themeConfig.fontSizes[props?.fontSize as keyof typeof themeConfig.fontSizes]
         : fontSizeNormalizer(InputStyleNormalizer({size: props?.size}).placeholderSize),
-      color: props?.theme === 'light' ? COLOURS.GREY900 : COLOURS.WHITE,
+      color: props?.theme === 'light' ? themeConfig.colors['grey-900'] : themeConfig.colors.white,
 
       // TODO: Android sorunu çözüldükten sonra bakılması gerekiyor.
       letterSpacing: props?.letterSpacing ?? 0.5,

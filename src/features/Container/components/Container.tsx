@@ -5,21 +5,18 @@ import {FC, PropsWithChildren} from 'react'
 import {ViewProps, StyleSheet, StatusBar, ScrollView, SafeAreaView} from 'react-native'
 
 // Constant Imports
-import {COLOURS} from '../../../constants'
 
 // Component Imports
 import {Pressable} from '../../Pressable'
 import {ContainerStyles} from '../styles'
-import {CommonUiProps} from '../../models'
 
 // Feature Improts
-import {getHasDynamicIslandState, getHasNotchState} from '../../../features/app/appSelector'
 
-// Hook Imports
-import {useAppSelector} from '../../../hooks'
+// Model Imports
+import {CommonUiProps} from '../../../models'
+import {themeConfig} from '../../../providers'
 
 // Util and Lib Imports
-import {goBack} from '../../../utils'
 
 interface ContainerProps extends ViewProps, CommonUiProps, PropsWithChildren {
   center?: boolean
@@ -46,8 +43,9 @@ export const Container: FC<ContainerProps> = ({
   style,
   ...props
 }) => {
-  const hasDynamicIsland = useAppSelector(getHasDynamicIslandState)
-  const hasNotch = useAppSelector(getHasNotchState)
+  // TODO: Bu değişkenlerin default değerleri ve kullanımı gözden geçirilmelidir.
+  const hasDynamicIsland = true
+  const hasNotch = true
 
   return (
     <ScrollView
@@ -77,14 +75,17 @@ export const Container: FC<ContainerProps> = ({
 
       {/* TODO: SafeareaView özelliği ImageBackground içindede kullanıldığı için buranın daha sonra gözden geçirilmesi gerekmektedir. */}
       {!disableSafeAreaView && (hasDynamicIsland || hasNotch) && (
-        <SafeAreaView style={{backgroundColor: safeAreaViewColor ?? COLOURS.GREY800}} />
+        <SafeAreaView
+          style={{backgroundColor: safeAreaViewColor ?? themeConfig.colors['grey-800']}}
+        />
       )}
 
       {closeOnClick && (
         <Pressable
-          backgroundColor={COLOURS.NEUTRAL_ALPHA900}
+          backgroundColor={themeConfig.colors['neutral-alpha-900']}
           style={[StyleSheet.absoluteFill]}
-          onPress={goBack}
+          // TODO: Route işlemi için bu press'in zorunlu prop'u olmalı
+          onPress={() => {}}
         />
       )}
 

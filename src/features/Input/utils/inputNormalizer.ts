@@ -1,6 +1,13 @@
 /* eslint-disable indent */
-import {display, fontSizeNormalizer} from '../../../utils'
-import {Size} from '../../models'
+
+// Model Imports
+import {Size} from '../../../models'
+
+// Provider Imports
+import {themeConfig} from '../../../providers'
+
+// Util and Lib Imports
+import display from '../../../utils/display'
 
 interface InputStyleProps {
   height: number
@@ -16,7 +23,7 @@ interface InputStyleProps {
 
 interface InputStyleNormalizerProps {
   size?: Size
-  placeholderSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | number
+  placeholderSize?: Keyof<typeof themeConfig.fontSizes> | number
 }
 
 export function InputStyleNormalizer({
@@ -29,7 +36,8 @@ export function InputStyleNormalizer({
       return {
         height: display.normalize(40, 'height'),
         paddingHorizontal: display.normalize(16, 'height'),
-        placeholderSize: fontSizeNormalizer(placeholderSize ?? 'md'),
+        placeholderSize:
+          typeof placeholderSize === 'number' ? placeholderSize : themeConfig.fontSizes.sm,
         bottomElementPadding: display.normalize(6, 'height'),
         icon: {
           height: 18,
@@ -44,7 +52,8 @@ export function InputStyleNormalizer({
       return {
         height: display.normalize(56, 'height'),
         paddingHorizontal: display.normalize(16, 'height'),
-        placeholderSize: fontSizeNormalizer(placeholderSize ?? 'xl'),
+        placeholderSize:
+          typeof placeholderSize === 'number' ? placeholderSize : themeConfig.fontSizes.xl,
         bottomElementPadding: display.normalize(12, 'height'),
         icon: {
           height: 24,
@@ -58,7 +67,8 @@ export function InputStyleNormalizer({
       return {
         height: display.normalize(48, 'height'),
         paddingHorizontal: display.normalize(16, 'height'),
-        placeholderSize: fontSizeNormalizer(placeholderSize ?? 'lg'),
+        placeholderSize:
+          typeof placeholderSize === 'number' ? placeholderSize : themeConfig.fontSizes.lg,
         bottomElementPadding: display.normalize(8, 'height'),
         icon: {
           height: 24,

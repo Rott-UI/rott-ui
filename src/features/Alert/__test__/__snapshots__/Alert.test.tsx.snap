@@ -1,155 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert component renderlandığında snapshot ile eşleşmeli 1`] = `
-[
-  <View
-    alignItemsCenter={true}
-    backgroundColor="rgba(255, 117, 24, 1)"
-    paddingHorizontal={16}
-    paddingVertical={8}
+<View
+  alignItemsCenter={true}
+  backgroundColor="rgba(255, 117, 24, 1)"
+  paddingHorizontal={16}
+  paddingVertical={8}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "rgba(255, 117, 24, 1)",
+      "bottom": undefined,
+      "flex": undefined,
+      "flexDirection": "row",
+      "flexGrow": undefined,
+      "gap": undefined,
+      "height": undefined,
+      "justifyContent": undefined,
+      "left": undefined,
+      "marginBottom": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginTop": undefined,
+      "maxHeight": undefined,
+      "maxWidth": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
+      "overflow": undefined,
+      "paddingBottom": undefined,
+      "paddingHorizontal": 31,
+      "paddingLeft": undefined,
+      "paddingRight": undefined,
+      "paddingTop": undefined,
+      "paddingVertical": 16,
+      "position": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": "100%",
+      "zIndex": undefined,
+    }
+  }
+  testID="alert-test-id"
+>
+  <Text
+    height={16}
+    size="sm"
     style={
       {
-        "alignItems": "center",
-        "backgroundColor": "rgba(255, 117, 24, 1)",
+        "backgroundColor": undefined,
         "bottom": undefined,
-        "flex": undefined,
-        "flexDirection": "row",
+        "color": "rgba(255, 255, 255, 1)",
         "flexGrow": undefined,
+        "fontFamily": "Markpro-Medium",
+        "fontSize": 14,
+        "fontWeight": undefined,
         "gap": undefined,
-        "height": undefined,
-        "justifyContent": undefined,
+        "height": 31,
         "left": undefined,
+        "letterSpacing": undefined,
         "marginBottom": undefined,
         "marginLeft": undefined,
         "marginRight": undefined,
         "marginTop": undefined,
-        "maxHeight": undefined,
+        "maxHeight": 31,
         "maxWidth": undefined,
         "minHeight": undefined,
         "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
-        "paddingHorizontal": 31,
+        "paddingHorizontal": undefined,
         "paddingLeft": undefined,
         "paddingRight": undefined,
         "paddingTop": undefined,
-        "paddingVertical": 16,
+        "paddingVertical": undefined,
         "position": undefined,
         "right": undefined,
+        "textAlign": "auto",
         "top": undefined,
-        "width": "100%",
+        "width": 635,
         "zIndex": undefined,
       }
     }
-    testID="alert-test-id"
+    width={330}
   >
-    <Text
-      height={16}
-      size="sm"
-      style={
-        {
-          "backgroundColor": undefined,
-          "bottom": undefined,
-          "color": "rgba(255, 255, 255, 1)",
-          "flexGrow": undefined,
-          "fontFamily": "Markpro-Medium",
-          "fontSize": 14,
-          "fontWeight": undefined,
-          "gap": undefined,
-          "height": 31,
-          "left": undefined,
-          "letterSpacing": undefined,
-          "marginBottom": undefined,
-          "marginLeft": undefined,
-          "marginRight": undefined,
-          "marginTop": undefined,
-          "maxHeight": 31,
-          "maxWidth": undefined,
-          "minHeight": undefined,
-          "minWidth": undefined,
-          "overflow": undefined,
-          "paddingBottom": undefined,
-          "paddingHorizontal": undefined,
-          "paddingLeft": undefined,
-          "paddingRight": undefined,
-          "paddingTop": undefined,
-          "paddingVertical": undefined,
-          "position": undefined,
-          "right": undefined,
-          "textAlign": "auto",
-          "top": undefined,
-          "width": 635,
-          "zIndex": undefined,
-        }
-      }
-      width={330}
-    >
-      Test Alert
-    </Text>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "flexDirection": "column-reverse",
-          "justifyContent": "flex-start",
-          "top": 30,
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "bottom": 40,
-          "flexDirection": "column",
-          "justifyContent": "flex-end",
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-]
+    Test Alert
+  </Text>
+</View>
 `;

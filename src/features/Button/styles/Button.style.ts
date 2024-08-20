@@ -73,7 +73,7 @@ export const ButtonStyles = (props?: any) => {
       backgroundColor: colorFromVariant(props?.variant),
     },
     buttonTextStyle: {
-      color: textcolorFromVariant(props?.variant),
+      color: colorFromVariant(props?.variant),
       textAlignVertical: 'center',
       flexShrink: 1,
     },

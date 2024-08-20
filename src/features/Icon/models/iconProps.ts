@@ -1,5 +1,5 @@
 // Component Imports
-import {CommonUiProps, Variant} from '../../models'
+import {CommonUiProps, Variant} from '../../../models'
 import {IconTypes} from './iconType'
 
 // Package Imports

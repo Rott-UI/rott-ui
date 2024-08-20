@@ -4,11 +4,12 @@ import React, {FC} from 'react'
 // Feature Imports
 import {Item} from '../../Item'
 import {IconProps} from '../models'
-import * as Icons from '../../../constants/Icons'
 
 // Package Imports
 import display from '../../../utils/display'
 import {colorFromVariant} from '../../../utils'
+
+import {themeConfig} from '../../../providers'
 
 export const Icon: FC<IconProps> = ({
   name,
@@ -21,7 +22,7 @@ export const Icon: FC<IconProps> = ({
   color,
   ...props
 }) => {
-  const IconComponent = Icons[name]
+  const IconComponent = themeConfig.icons[name]
 
   if (!IconComponent) return null
 
