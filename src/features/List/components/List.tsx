@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 // React Imports
-import {FC, ReactNode, forwardRef, isValidElement} from 'react'
+import {FC, LegacyRef, ReactNode, forwardRef, isValidElement} from 'react'
 
 // React Native Imports
 import {StyleSheet} from 'react-native'
@@ -25,7 +25,7 @@ interface ListProps<T> extends CommonUiProps, FlashListProps<T> {
   separatorVariant?: Variant
   headerSeparator?: boolean
   footerSeparator?: boolean
-  ref?: any
+  ref?: LegacyRef<T> | undefined
 
   emptyState?: EmptyStateProps | ReactNode
   isLoading?: boolean

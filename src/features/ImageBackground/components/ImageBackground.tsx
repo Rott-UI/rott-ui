@@ -11,14 +11,12 @@ import {
 // Component Imports
 import {ImageBackgroundStyles} from '../styles'
 
-// Feature Imports
-import {getHasDynamicIslandState, getHasNotchState} from '../../../features/app/appSelector'
-
 // Hook Imports
 import {useAppSelector} from '../../../hooks'
 
 // Package Imports
 import {SafeAreaView} from 'react-native-safe-area-context'
+import {themeConfig} from '../../../providers'
 
 interface ImageBackgroundProps extends RNImageBackgroundProps {
   disableSafeAreaView?: boolean
@@ -31,8 +29,8 @@ export const ImageBackground: FC<ImageBackgroundProps> = ({
   children,
   ...props
 }) => {
-  const hasDynamicIsland = useAppSelector(getHasDynamicIslandState)
-  const hasNotch = useAppSelector(getHasNotchState)
+  const hasDynamicIsland = themeConfig.options.hasDynamicIsland
+  const hasNotch = themeConfig.options.hasNotch
 
   return (
     <RNImageBackground

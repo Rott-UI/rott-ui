@@ -14,7 +14,7 @@ import {CommonUiProps} from '../../../models'
 import {themeConfig} from '../../../providers'
 
 // Util and Lib Imports
-import display from '../../../utils/display'
+import {display} from '../../../utils'
 
 interface ContentProps extends PropsWithChildren, CommonUiProps, ViewProps {
   row?: boolean

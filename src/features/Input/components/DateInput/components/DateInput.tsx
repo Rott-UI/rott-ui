@@ -17,20 +17,12 @@ import {ModalIdEnum} from '../../../../models'
 import {Label} from '../../../../Label'
 import {Separator} from '../../../../Separator'
 
-// Constant Imports
-import {COLOURS} from '../../../../../constants'
-
-// Feature Imports
-import {getLanguageState} from '../../../../../features/app'
-
 // Util and Lib Imports
 import {display, formatMessage} from '../../../../../utils'
 
 // Package Imports
 import DatePicker from 'react-native-date-picker'
-
-// Hook Imports
-import {useAppSelector} from '../../../../../hooks'
+import {themeConfig} from '../../../../../providers'
 
 interface DateInputProps extends Omit<InputProps, 'label' | 'name' | 'mode'> {
   mode?: 'date' | 'time' | 'datetime' | 'modal-date' | 'modal-time' | 'modal-datetime'
@@ -85,7 +77,7 @@ export const DateInput: FC<DateInputProps> = ({
   size,
   ...props
 }) => {
-  const appLanguage = useAppSelector(getLanguageState)
+  const appLanguage = themeConfig.options.appLanguage
 
   const handleConfirmPress = (date?: Date) => {
     let validDate: Date
@@ -132,7 +124,7 @@ export const DateInput: FC<DateInputProps> = ({
       header: (
         <Item
           justifyContentCenter
-          backgroundColor={COLOURS.GREY900}
+          backgroundColor={themeConfig.colors['grey-900']}
           height={50}
           style={DateInputStyles().dateInputHeaderStyle}>
           <Pressable
@@ -164,11 +156,11 @@ export const DateInput: FC<DateInputProps> = ({
             testID={testID}
             mode={mode?.replace('modal-', '') as any}
             date={value ? new Date(value) : new Date()}
-            textColor={COLOURS.GREY900}
+            textColor={themeConfig.colors['grey-900']}
             locale={appLanguage?.name}
             minimumDate={minimumDate}
             maximumDate={maximumDate}
-            onDateChange={(date) => (externalDate = date)}
+            onDateChange={(date: Date) => (externalDate = date)}
             {...props}
           />
         </Item>
@@ -197,8 +189,8 @@ export const DateInput: FC<DateInputProps> = ({
           width: 40,
           height: 40,
           strokeWidth: 2,
-          backgroundColor: COLOURS.GREY800,
-          borderColor: COLOURS.PRIMARY,
+          backgroundColor: themeConfig.colors['grey-800'],
+          borderColor: themeConfig.colors['primary'],
           borderRadius: 24,
           alignItemsCenter: true,
           onPress: () => hideModal(ModalIdEnum.DatePickerModal),
@@ -206,8 +198,12 @@ export const DateInput: FC<DateInputProps> = ({
         title: 'İşlem Tarihi',
       },
       children: (
-        <Item paddingTop={16} flex={1} backgroundColor={COLOURS.GREY900}>
-          <Separator width='full' height={1} backgroundColor={COLOURS.NEUTRAL_GREYALPHA200} />
+        <Item paddingTop={16} flex={1} backgroundColor={themeConfig.colors['grey-900']}>
+          <Separator
+            width='full'
+            height={1}
+            backgroundColor={themeConfig.colors['neutral-grey-alpha-200']}
+          />
           <List
             height={display.setHeight(modalHeightCalculator(data?.length))}
             data={
@@ -228,8 +224,8 @@ export const DateInput: FC<DateInputProps> = ({
               const selected = item.value
                 ? isSameDay(item.value, new Date(value!))
                 : item.value
-                  ? true
-                  : false
+                ? true
+                : false
 
               return (
                 <>
@@ -255,7 +251,9 @@ export const DateInput: FC<DateInputProps> = ({
                         height={24}
                         borderRadius={24}
                         borderWidth={2}
-                        borderColor={selected ? COLOURS.PRIMARY : COLOURS.GREY200}
+                        borderColor={
+                          selected ? themeConfig.colors['primary'] : themeConfig.colors['grey-200']
+                        }
                         justifyContentCenter
                         alignItemsCenter
                         absolute
@@ -265,10 +263,10 @@ export const DateInput: FC<DateInputProps> = ({
                             width={16}
                             height={16}
                             borderRadius={16}
-                            backgroundColor={COLOURS.PRIMARY}
+                            backgroundColor={themeConfig.colors['primary']}
                             // eslint-disable-next-line react-native/no-inline-styles
                             style={{
-                              shadowColor: COLOURS.NEUTRAL_BLUESOFT,
+                              shadowColor: themeConfig.colors['neutral-blue-soft'],
                               shadowOffset: {
                                 width: 0,
                                 height: 0,
@@ -276,7 +274,7 @@ export const DateInput: FC<DateInputProps> = ({
                               shadowOpacity: 1,
                               shadowRadius: 1,
                               borderWidth: 2,
-                              borderColor: COLOURS.NEUTRAL_BLUESOFT,
+                              borderColor: themeConfig.colors['neutral-blue-soft'],
                             }}
                           />
                         )}
@@ -286,7 +284,7 @@ export const DateInput: FC<DateInputProps> = ({
                   <Separator
                     width='full'
                     height={1}
-                    backgroundColor={COLOURS.NEUTRAL_GREYALPHA200}
+                    backgroundColor={themeConfig.colors['neutral-grey-alpha-200']}
                   />
                 </>
               )
@@ -322,8 +320,8 @@ export const DateInput: FC<DateInputProps> = ({
               })?.label ??
               formatByDateMode(mode.replace('modal-', '') as 'date' | 'time' | 'datetime', value)
             : value
-              ? formatByDateMode(mode, value)
-              : placeholder
+            ? formatByDateMode(mode, value)
+            : placeholder
         }
         textStyle={DateInputStyles().pressableTextStyle}
         textVariant={theme === 'dark' ? 'white' : value ? 'grey-900' : 'grey-200'}
@@ -337,7 +335,7 @@ export const DateInput: FC<DateInputProps> = ({
           name='CALENDAR'
           width={InputStyleNormalizer({size}).icon.width}
           height={InputStyleNormalizer({size}).icon.height}
-          color={COLOURS.GREY200}
+          color={themeConfig.colors['grey-200']}
           mode='stroke'
         />
       </Item>

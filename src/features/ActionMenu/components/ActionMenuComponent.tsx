@@ -9,8 +9,8 @@ import {ActionMenuProps, ActionModel} from '../models'
 // Constant Imports
 
 // Util and Lib Imports
-import display from '../../../utils/display'
 import {themeConfig} from '../../../providers'
+import {display} from '../../../utils'
 
 /**
  * Action Menu

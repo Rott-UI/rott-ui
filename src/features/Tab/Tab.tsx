@@ -13,7 +13,7 @@ import {
 
 // Component Imports
 import {TabStyle} from './styles'
-import {CommonUiProps} from '../models'
+import {CommonUiProps} from '../../models'
 
 interface TabProps extends TouchableOpacityProps, CommonUiProps {
   title?: string

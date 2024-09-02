@@ -11,8 +11,8 @@ import {Item} from '../../Item'
 import {Icon} from '../../Icon'
 import {Pressable} from '../../Pressable'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
+// Util and Lib Imports
+import {themeConfig} from '../../../providers'
 
 //Package Imports
 import {MaskedTextInput} from 'react-native-mask-text'
@@ -77,7 +77,7 @@ export const IbanInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>> =
             name='QR_TRANSFER'
             width={InputStyleNormalizer({size}).icon.width}
             height={InputStyleNormalizer({size}).icon.height}
-            color={COLOURS.GREY200}
+            color={themeConfig.colors['grey-200']}
             mode='stroke'
           />
         </Item>

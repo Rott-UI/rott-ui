@@ -5,6 +5,17 @@ interface String {
   toSeoFriendly: () => string
 }
 
+
+interface Array<T> {
+  /**
+   * Diziyi belirtilen anahtar değere göre sıralar.
+   * @param key Sıralama yapılacak anahtar
+   * @param orderBy Sıralama türü (asc | desc) - Varsayilan `asc` (Alfabetik Siralama)
+   */
+  sortByKey(key: string, orderBy?: 'asc' | 'desc'): T[]
+}
+
+
 /**
  * İstenilen tipi **typeof** olarak verirseniz objenin içinde ki tüm keyleri alacak şekilde nesne türetir.
  *

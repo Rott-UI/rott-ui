@@ -7,7 +7,7 @@ import {StyleSheet} from 'react-native'
 import {commonUiStyleProperties} from '../../utils'
 import {colorFromVariant} from '../../../utils'
 import {buttonSizeNormalizer} from '../../../utils/buttonSizeNormalizer'
-import display from '../../../utils/display'
+import {display} from '../../../utils'
 
 export const ButtonStyles = (props?: any) => {
   return StyleSheet.create({

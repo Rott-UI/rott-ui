@@ -9,8 +9,8 @@ import {InputProps} from '../models'
 import {InputStyles} from '../styles'
 import {Icon} from '../../Icon'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
+// Util and Lib Imports
+import {themeConfig} from '../../../providers'
 
 //Package Imports
 import {MaskedTextInput} from 'react-native-mask-text'
@@ -47,7 +47,7 @@ export const PhoneInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>> 
           name='PHONE_BOOK'
           width={InputStyleNormalizer({size}).icon.width}
           height={InputStyleNormalizer({size}).icon.height}
-          color={COLOURS.GREY200}
+          color={themeConfig.colors['grey-200']}
           mode='stroke'
         />
       </Item>

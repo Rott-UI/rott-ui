@@ -13,6 +13,7 @@ import {Label, LabelProps} from '../../Label'
 
 // Util and Lib Imports
 import {colorFromVariant} from '../../../utils'
+import {themeConfig} from '../../../providers'
 
 // Package Imports
 import Swipeable from 'react-native-gesture-handler/Swipeable'
@@ -190,7 +191,7 @@ export const CommonItem: FC<CommonItemProps> = memo(
               marginLeft={8}
               borderRadius={24}
               borderWidth={2}
-              borderColor={selected ? COLOURS.PRIMARY : COLOURS.GREY200}
+              borderColor={selected ? themeConfig.colors.primary : themeConfig.colors['grey-200']}
               justifyContentCenter
               alignItemsCenter>
               {selected && (
@@ -198,10 +199,10 @@ export const CommonItem: FC<CommonItemProps> = memo(
                   width={16}
                   height={16}
                   borderRadius={13}
-                  backgroundColor={COLOURS.PRIMARY}
+                  backgroundColor={themeConfig.colors.primary}
                   // eslint-disable-next-line react-native/no-inline-styles
                   style={{
-                    shadowColor: COLOURS.NEUTRAL_BLUESOFT,
+                    shadowColor: themeConfig.colors['neutral-blue-soft'],
                     shadowOffset: {
                       width: 0,
                       height: 0,
@@ -209,7 +210,7 @@ export const CommonItem: FC<CommonItemProps> = memo(
                     shadowOpacity: 1,
                     shadowRadius: 1,
                     borderWidth: 2,
-                    borderColor: COLOURS.NEUTRAL_BLUESOFT,
+                    borderColor: themeConfig.colors['neutral-blue-soft'],
                   }}
                 />
               )}

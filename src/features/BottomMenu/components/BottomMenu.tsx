@@ -16,9 +16,8 @@ interface BottomMenuProps {
 }
 
 export const BottomMenu: FC<BottomMenuProps> = ({menuItems}) => {
-  // TODO: Dynamic Island ve Notch kontrolü yapılacak
-  const hasDynamicIsland = true
-  const hasNotch = true
+  const hasDynamicIsland = themeConfig.options.hasDynamicIsland
+  const hasNotch = themeConfig.options.hasNotch
 
   return (
     <Content

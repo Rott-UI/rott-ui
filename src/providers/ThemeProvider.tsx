@@ -51,6 +51,9 @@ export let themeConfig = {
   options: {
     hasNotch: false,
     hasDynamicIsland: false,
+    appLanguage: {
+      name: 'en-US',
+    },
   },
   texts: {},
   images: {

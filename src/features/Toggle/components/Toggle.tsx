@@ -10,8 +10,11 @@ import {Item} from '../../Item'
 
 // Style Imports
 import {ToggleStyles} from '../style/Toggle.style'
-import {COLOURS} from '../../../constants'
 import {display} from '../../../utils'
+
+// Util and Lib Imports
+import {themeConfig} from '../../../providers'
+
 interface ToggleProps {
   testID?: string
   isOn?: boolean
@@ -27,7 +30,7 @@ export const Toggle: FC<ToggleProps> = ({testID, isOn, onToggleChange, disabled}
   })
   const moveToggleBackgroundColor = animatedValue.interpolate({
     inputRange: [0, 1],
-    outputRange: [COLOURS.GREY200, COLOURS.PRIMARY],
+    outputRange: [themeConfig.colors['grey-200'], themeConfig.colors['primary']],
   })
 
   const handleToggle = (isChecked: boolean) => {

@@ -1,16 +1,14 @@
 // React Native Imports
 import {Platform, StyleSheet} from 'react-native'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
 // Util and Lib Imports
 import {display} from '../../../utils'
+import {themeConfig} from '../../../providers'
 
 export const NotificationStyle = (props?: any) =>
   StyleSheet.create({
     linearGradient: {
-      backgroundColor: COLOURS.GREY900,
+      backgroundColor: themeConfig.colors['grey-900'], //COLOURS.GREY900,
       width: display.px(343),
       borderBottomEndRadius: display.px(12),
       borderBottomStartRadius: display.px(12),

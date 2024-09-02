@@ -43,9 +43,8 @@ export const Container: FC<ContainerProps> = ({
   style,
   ...props
 }) => {
-  // TODO: Bu değişkenlerin default değerleri ve kullanımı gözden geçirilmelidir.
-  const hasDynamicIsland = true
-  const hasNotch = true
+  const hasDynamicIsland = themeConfig.options.hasDynamicIsland
+  const hasNotch = themeConfig.options.hasNotch
 
   return (
     <ScrollView

@@ -2,7 +2,7 @@
 import {Animated} from 'react-native'
 
 // Component Imports
-import {CommonUiProps, Variant} from '../../models'
+import {CommonUiProps, Variant} from '../../../models'
 import {IconProps, IconTypes} from '../..'
 import {LabelProps} from '../../Label/models'
 

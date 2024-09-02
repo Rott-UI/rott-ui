@@ -4,9 +4,6 @@ import React, {FC, isValidElement, useCallback} from 'react'
 // React Native Imports
 import {Animated, Modal as RNModal} from 'react-native'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
 // Component Imports
 import {Pressable} from '../../Pressable'
 import {Header, HeaderProps} from '../../Header'
@@ -18,14 +15,10 @@ import {ModalContentContainer} from './ModalContainer'
 import {Modal} from '../../Modal'
 import {PanResponderAnimation} from '../utils'
 
-// Feature Imports
-import {getHasDynamicIslandState, getHasNotchState} from '../../../features/app'
-
-// Hook Imports
-import {useAppSelector} from '../../../hooks'
-
 // Util and Lib Imports
-import {colorFromVariant, display} from '../../../utils'
+import {colorFromVariant} from '../../../utils'
+import {themeConfig} from '../../../providers'
+import {display} from '../../../utils'
 
 export const ModalComponent: FC<ModalProps> = ({
   id,
@@ -39,7 +32,7 @@ export const ModalComponent: FC<ModalProps> = ({
   disableOutsideClick,
 
   height = fullScreen ? 100 : 0,
-  backgroundColor = fullScreen ? COLOURS.GREY900 : COLOURS.WHITE,
+  backgroundColor = fullScreen ? themeConfig.colors['grey-900'] : themeConfig.colors['white'],
   panResponderBackgroundColor = 'grey-800',
   /**
    * Custom Header element verildiği zaman tasarımda renk bozulması yaşamamak için bu değerin tanımlanması gerekir.
@@ -65,8 +58,9 @@ export const ModalComponent: FC<ModalProps> = ({
     slideToCloseTestId: 'slide-to-close-button-test-id',
   }
 
-  const hasNotch = useAppSelector(getHasNotchState)
-  const hasDynamicIsland = useAppSelector(getHasDynamicIslandState)
+  const hasDynamicIsland = themeConfig.options.hasDynamicIsland
+  const hasNotch = themeConfig.options.hasNotch
+
   const modalHeightByPercentage =
     !fullScreen && height
       ? display.setHeight(height > 100 || height < 0 ? 100 : height)
@@ -118,7 +112,7 @@ export const ModalComponent: FC<ModalProps> = ({
         />
       )}
 
-      <Item backgroundColor={COLOURS.NEUTRAL_ALPHA700} row>
+      <Item backgroundColor={themeConfig.colors['neutral-alpha-800']} row>
         <Animated.View style={ModalStyles({translateY}).animatedViewStyles}>
           <ModalContentContainer
             height={modalHeightByPercentage}
@@ -134,8 +128,8 @@ export const ModalComponent: FC<ModalProps> = ({
                   headerBackgroundColor
                     ? colorFromVariant(headerBackgroundColor)
                     : fullScreen
-                      ? COLOURS.GREY800
-                      : COLOURS.GREY900
+                    ? themeConfig.colors['grey-800']
+                    : themeConfig.colors['grey-900']
                 }
                 borderTopStartRadius={fullScreen ? 0 : 24}
                 borderTopEndRadius={fullScreen ? 0 : 24}
@@ -178,8 +172,8 @@ export const ModalComponent: FC<ModalProps> = ({
                       closeButton
                         ? {name: 'REMOVE_BIG', onPress: () => closeModalAnimation!()}
                         : (header as HeaderProps)?.rightIcon
-                          ? (header as HeaderProps)?.rightIcon
-                          : undefined
+                        ? (header as HeaderProps)?.rightIcon
+                        : undefined
                     }
                     leftIcon={(header as HeaderProps)?.leftIcon}
                     {...(header as HeaderProps)}

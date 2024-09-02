@@ -1,11 +1,9 @@
 // React Native Imports
 import {StyleSheet} from 'react-native'
 
-// Constant Imports
-import {COLOURS} from '../../../../../constants'
-
 // Util and Lib Imports
 import {display, fontSizeNormalizer} from '../../../../../utils'
+import { themeConfig } from '../../../../../providers'
 
 export const SelectInputStyles = (props?: any) =>
   StyleSheet.create({
@@ -23,7 +21,7 @@ export const SelectInputStyles = (props?: any) =>
       alignItems: 'center',
     },
     searchInputStyle: {
-      backgroundColor: COLOURS.WHITE,
+      backgroundColor: themeConfig.colors['white'],
       height: 50,
       width: '100%',
       padding: display.pixelSizeHorizontal(2),
@@ -49,6 +47,6 @@ export const SelectInputStyles = (props?: any) =>
     },
     defaultSeparator: {
       height: 1,
-      backgroundColor: COLOURS.GREY200,
+      backgroundColor: themeConfig.colors['grey-200'],
     },
   })

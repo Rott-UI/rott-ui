@@ -4,10 +4,10 @@ import {StyleSheet} from 'react-native'
 // Constant Imports
 
 // Util Imports
-
 import {commonUiStyleProperties} from '../../utils'
 import {InputStyleNormalizer} from '../utils/inputNormalizer'
 import {themeConfig} from '../../../providers'
+import {fontSizeNormalizer} from '../../../utils'
 
 export const InputStyles = (props?: any) =>
   StyleSheet.create({
@@ -26,6 +26,7 @@ export const InputStyles = (props?: any) =>
 
       // TODO: Android sorunu çözüldükten sonra bakılması gerekiyor.
       letterSpacing: props?.letterSpacing ?? 0.5,
-      fontFamily: Fonts.MARKPRO_MEDIUM,
+      // TODO: Font eklendikten sonra aktif edilecek.
+      //fontFamily: Fonts.MARKPRO_MEDIUM,
     } as any,
   })

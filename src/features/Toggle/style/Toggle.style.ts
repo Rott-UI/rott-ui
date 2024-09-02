@@ -1,11 +1,9 @@
 // React Native Imports
 import {StyleSheet} from 'react-native'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
 // Util and Lib Imports
 import {display} from '../../../utils'
+import {themeConfig} from '../../../providers'
 
 export const ToggleStyles = () =>
   StyleSheet.create({
@@ -18,10 +16,10 @@ export const ToggleStyles = () =>
     toggleWheelStyle: {
       width: display.px(23),
       height: display.px(23),
-      backgroundColor: COLOURS.WHITE,
+      backgroundColor: themeConfig.colors['white'],
       borderRadius: display.px(12.5),
       borderWidth: display.px(2),
-      borderColor: COLOURS.NEUTRAL_ALPHA200,
+      borderColor: themeConfig.colors['neutral-alpha-200'],
       // shadowColor: COLOURS.BLACK,
       // shadowOffset: {
       //   width: 0,

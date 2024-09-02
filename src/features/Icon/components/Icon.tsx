@@ -1,12 +1,14 @@
 // React Imports
 import React, {FC} from 'react'
 
-// Feature Imports
+// Component Imports
 import {Item} from '../../Item'
+
+// Feature Imports
 import {IconProps} from '../models'
 
 // Package Imports
-import display from '../../../utils/display'
+import {display} from '../../../utils'
 import {colorFromVariant} from '../../../utils'
 
 import {themeConfig} from '../../../providers'
@@ -27,7 +29,7 @@ export const Icon: FC<IconProps> = ({
   if (!IconComponent) return null
 
   return (
-    <Item {...props}>
+    <Item {...props} hitSlop={undefined}>
       <IconComponent
         fill={mode === 'fill' ? color ?? colorFromVariant(variant) : 'transparent'}
         stroke={

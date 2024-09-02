@@ -1,11 +1,9 @@
 // React Imports
 import React, {FC} from 'react'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
 // Util and Lib Imports
 import {Item, Label} from '../..'
+import {themeConfig} from '../../../providers'
 
 interface ActionMenuHeaderProps {
   title?: Nullable<string>
@@ -21,7 +19,7 @@ export const ActionMenuHeaderComponent: FC<ActionMenuHeaderProps> = ({title, sub
             justifyContentCenter
             alignItemsCenter
             size='full'
-            backgroundColor={COLOURS.GREY100}
+            backgroundColor={themeConfig.colors['grey-100']}
             borderTopStartRadius={12}
             borderTopEndRadius={12}
             height={54}>

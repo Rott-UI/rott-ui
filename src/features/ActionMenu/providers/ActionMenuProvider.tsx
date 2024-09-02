@@ -1,14 +1,8 @@
 // React Imports
 import {FC, PropsWithChildren, useCallback, useMemo} from 'react'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
 // Component Imports
 import {Modal} from '../../Modal'
-
-// Feature Imports
-import {getHasDynamicIslandState, getHasNotchState} from '../../../features/app'
 
 // Action Menu Imports
 import {ActionMenuProps} from '../models'
@@ -19,13 +13,11 @@ import {modalHeightNormalizer} from '../utils'
 
 // Util and Lib Imports
 import {display} from '../../../utils'
-
-// Hook Imports
-import {useAppSelector} from '../../../hooks'
+import {themeConfig} from '../../../providers'
 
 export const ActionMenuProvider: FC<PropsWithChildren> = ({children}) => {
-  const hasDynamicIsland = useAppSelector(getHasDynamicIslandState)
-  const hasNotch = useAppSelector(getHasNotchState)
+  const hasDynamicIsland = themeConfig.options.hasDynamicIsland
+  const hasNotch = themeConfig.options.hasNotch
 
   const showActionMenu = (actionMenuProps: ActionMenuProps) => {
     const ITEM_HEIGHT = actionMenuProps.itemHeight === undefined ? 56 : actionMenuProps.itemHeight
@@ -56,7 +48,7 @@ export const ActionMenuProvider: FC<PropsWithChildren> = ({children}) => {
       onClose: () => Modal.hideModal(),
       headerBackgroundColor: 'transparent',
       panResponderBackgroundColor: 'transparent',
-      backgroundColor: COLOURS.TRANSPARENT,
+      backgroundColor: themeConfig.colors.transparent,
       modalContainerMarginBottom: display.normalize(21, 'height'),
       header: (actionMenuProps.title || actionMenuProps.subTitle) && (
         <ActionMenuHeaderComponent

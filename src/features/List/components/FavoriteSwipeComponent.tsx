@@ -2,13 +2,11 @@
 import {FC} from 'react'
 
 // Component Imports
-import {Icon, Item, Label, Pressable} from '../../../components'
-
-// Constant Imports
-import {COLOURS} from '../../../constants'
+import {Icon, Item, Label, Pressable} from '../../../features'
 
 // Util and Lib Imports
 import {formatMessage} from '../../../utils'
+import {themeConfig} from '../../../providers'
 
 interface FavoriteSwipeComponentProps {
   index: number
@@ -25,7 +23,7 @@ export const FavoriteSwipeComponent: FC<FavoriteSwipeComponentProps> = ({
     <Pressable
       alignItemsCenter
       justifyContentCenter
-      backgroundColor={favorite ? COLOURS.SEMANTIC_DANGER : COLOURS.SECONDARY}
+      backgroundColor={favorite ? themeConfig.colors['danger'] : themeConfig.colors['secondary']}
       onPress={() => handleFavoriteChange && handleFavoriteChange!(index, !favorite)}>
       <Icon
         width={16}
@@ -34,7 +32,11 @@ export const FavoriteSwipeComponent: FC<FavoriteSwipeComponentProps> = ({
         variant={favorite ? 'secondary' : 'info'}
       />
 
-      <Label textCenter color={favorite ? COLOURS.WHITE : COLOURS.BLACK} fontSize={8} marginTop={4}>
+      <Label
+        textCenter
+        color={favorite ? themeConfig.colors['white'] : themeConfig.colors['black']}
+        fontSize={8}
+        marginTop={4}>
         {formatMessage(favorite ? 'LIST.ITEM.FAVORITE.REMOVE' : 'LIST.ITEM.FAVORITE.ADD')}
       </Label>
     </Pressable>

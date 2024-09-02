@@ -11,8 +11,8 @@ import {Pressable} from '../../Pressable'
 
 // Util and Lib Imports
 import {InputStyles} from '../styles'
-import {COLOURS} from '../../../constants'
 import {InputStyleNormalizer} from '../utils/inputNormalizer'
+import {themeConfig} from '../../../providers'
 
 interface CheckBoxProps extends Omit<InputProps, 'placeholder' | 'name' | 'label'> {
   description?: ReactNode
@@ -52,9 +52,9 @@ export const CheckBoxInput: FC<CheckBoxProps> = ({
             <Item
               testID='checkbox-checked-test-id'
               borderWidth={2}
-              borderColor={COLOURS.NEUTRAL_BLUESOFT}
+              borderColor={themeConfig.colors['neutral-blue-alpha']}
               borderRadius={4}
-              backgroundColor={COLOURS.PRIMARY}
+              backgroundColor={themeConfig.colors['primary']}
               width={15}
               height={15}
             />

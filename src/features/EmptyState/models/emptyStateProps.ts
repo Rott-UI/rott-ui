@@ -3,7 +3,7 @@ import {ReactNode} from 'react'
 
 // Component Imports
 import {ImageTypes} from '../../Image'
-import {Size, Variant} from '../../models'
+import {Size, Variant} from '../../../models'
 import {FontFamily, FontWeight} from '../../Label/models'
 
 interface EmptyStateLabelProps {

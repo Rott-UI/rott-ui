@@ -18,7 +18,7 @@ import {ButtonStyles} from '../styles/Button.style'
 
 // Util and Lib Imports
 import {buttonSizeNormalizer} from '../../../utils'
-import display from '../../../utils/display'
+import {display} from '../../../utils'
 import {themeConfig} from '../../../providers'
 
 interface ButtonProps

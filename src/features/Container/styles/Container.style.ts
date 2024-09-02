@@ -1,11 +1,9 @@
 // React Native Imports
 import {StyleSheet} from 'react-native'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
 // Util and Lib Imports
 import {commonUiStyleProperties} from '../../utils'
+import {themeConfig} from '../../../providers'
 
 export const ContainerStyles = ({flex, noPadding, ...props}: any) =>
   StyleSheet.create({
@@ -17,7 +15,7 @@ export const ContainerStyles = ({flex, noPadding, ...props}: any) =>
 
       backgroundColor:
         !props?.hasDynmicIsland && !props.hasNotch && props?.isModalScreen
-          ? COLOURS.GREY900
+          ? themeConfig.colors['grey-900']
           : undefined,
     } as any,
   })

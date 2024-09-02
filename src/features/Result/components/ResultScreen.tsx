@@ -13,11 +13,9 @@ import {ResultActionModel, ResultScreenParamModel} from '../models'
 import {Header} from '../../Header'
 import {Container} from '../../Container'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
-
 // Util and Lib Imports
 import {display} from '../../../utils'
+import {themeConfig} from '../../../providers'
 
 /**
  * Result - Islem Sonucu Ekrani
@@ -55,7 +53,7 @@ export const ResultScreen: FC<ResultScreenProps> = ({route: {params}}) => {
       marginBottom={15}
       paddingHorizontal={15}
       onPress={() => action && action()}>
-      <Label fontSize='xl' color={COLOURS.WHITE} fontWeight={600}>
+      <Label fontSize='xl' color={themeConfig.colors['white']} fontWeight={600}>
         {renderItemTitle}
       </Label>
     </Button>
@@ -65,7 +63,7 @@ export const ResultScreen: FC<ResultScreenProps> = ({route: {params}}) => {
     <Container noPadding testID='result-container-test-id'>
       <Header defaultBackgroundColor title={header} />
 
-      <Content flex={1} size='full' backgroundColor={COLOURS.GREY900}>
+      <Content flex={1} size='full' backgroundColor={themeConfig.colors['grey-900']}>
         <Item
           flex={1}
           alignItemsCenter

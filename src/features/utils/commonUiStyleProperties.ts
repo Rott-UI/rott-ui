@@ -2,7 +2,7 @@
 import {FlexAlignType} from 'react-native'
 
 // Util and Lib Imports
-import display from '../../utils/display'
+import {display} from '../../utils'
 import {sizeToPercentage} from '../../utils'
 import {alignItemsConvert} from '../../utils/alignItemsConverter'
 import {justifyContentConvert} from '../../utils/justifyContentConverter'

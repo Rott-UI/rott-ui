@@ -1,5 +1,5 @@
 // React Imports
-import {FC, useEffect, useRef, useState} from 'react'
+import {FC, useCallback, useEffect, useRef, useState} from 'react'
 
 // React Native Imports
 import {StyleSheet, TextInput} from 'react-native'
@@ -11,11 +11,10 @@ import {Item} from '../../Item'
 import {Label} from '../../Label'
 import {Icon} from '../../Icon'
 
-// Constant Imports
-import {COLOURS} from '../../../constants'
+// Util and Lib Imports
+import {themeConfig} from '../../../providers'
 
 // Package Imports
-import {MaskedTextInput} from 'react-native-mask-text'
 import {AmountInputStyles} from '../styles/AmountInput.style'
 import {InputStyleNormalizer} from '../utils/inputNormalizer'
 
@@ -32,19 +31,25 @@ export const AmountInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>>
   const [amount, setAmount] = useState('')
   const [currency, setCurrency] = useState('')
 
-  useEffect(() => {
-    const initialAmount = value?.split(',')[0]
-    const initialCurrency = value?.split(',')[1]
-
-    setAmount(initialAmount ?? '')
-    setCurrency(initialCurrency ?? '')
+  const resetInternalStates = useCallback(() => {
+    setAmount('')
+    setCurrency('')
+    onChangeText!('0.00')
   }, [])
 
-  useEffect(() => {
-    handleTextChange(amount, currency)
-  }, [amount, currency])
+  const replaceTextWithNumberOrEmpty = (text: string) =>
+    text.replace(/[^0-9]/g, '').replace(/^0+/, '')
 
-  const replaceTextWithNumberOrEmpty = (text: string) => text.replace(/[^0-9]/g, '')
+  const amountNormalizer = (text: string) => {
+    if (!text) return resetInternalStates()
+
+    const replacedAmount = replaceTextWithNumberOrEmpty(text)
+    const reversedText = replacedAmount.split('').reverse().join('') ?? ''
+    const dottedText = reversedText?.match(/.{1,3}/g)?.join('.')
+    const normalizedText = dottedText?.split('').reverse().join('')
+
+    setAmount(normalizedText ?? '')
+  }
 
   const handleTextChange = (inputTextAmount: string, inputTextCurrency: string) => {
     if (!inputTextAmount && !inputTextCurrency) return
@@ -62,33 +67,41 @@ export const AmountInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>>
 
   const placeholderColorNormalizer =
     theme === 'dark'
-      ? COLOURS.WHITE
-      : !amount || (amount === '0' && (!currency || currency === '' || currency === '00'))
-        ? COLOURS.GREY200
-        : COLOURS.GREY900
+      ? themeConfig.colors['white']
+      : (!amount && !currency) ||
+        ((amount === '0' || amount === '') && (!currency || currency === '' || currency === '00'))
+      ? themeConfig.colors['grey-200']
+      : themeConfig.colors['grey-900']
+
+  useEffect(() => {
+    const initialAmount = value?.split(',')[0]
+    const initialCurrency = value?.split(',')[1]
+
+    setAmount(initialAmount ?? '')
+    setCurrency(initialCurrency ?? '')
+  }, [])
+
+  useEffect(() => {
+    if (value === '' || !value || value === '0') resetInternalStates()
+  }, [value])
+
+  useEffect(() => {
+    handleTextChange(amount, currency)
+  }, [amount, currency])
 
   return (
     <Item relative onTouchStart={() => amountRef.current?.focus()}>
       <Item row {...props}>
-        <MaskedTextInput
+        <TextInput
           ref={amountRef}
           nativeID='amount-native-id'
           testID='amount-test-id'
           editable={!disabled}
-          type={
-            !amount || (amount === '0' && (!currency || currency === '' || currency === '00'))
-              ? undefined
-              : 'currency'
-          }
           placeholder='0'
           maxLength={11}
-          options={{
-            groupSeparator: '.',
-            precision: 0,
-          }}
           value={amount}
           keyboardType='number-pad'
-          onChangeText={(text, rawText) => setAmount(replaceTextWithNumberOrEmpty(rawText))}
+          onChangeText={(text) => amountNormalizer(text)}
           style={StyleSheet.flatten([
             InputStyles({fontSize, theme, size}).defaultTextInputStyle,
             AmountInputStyles().amountInputStyle,
@@ -115,14 +128,13 @@ export const AmountInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>>
           </Label>
         </Item>
 
-        <MaskedTextInput
+        <TextInput
           testID='currency-test-id'
-          mask='99'
           maxLength={2}
           placeholder='00'
           value={currency}
           keyboardType='number-pad'
-          onChangeText={(text, rawText) => setCurrency(replaceTextWithNumberOrEmpty(rawText))}
+          onChangeText={(text) => setCurrency(replaceTextWithNumberOrEmpty(text).substring(0, 2))}
           onFocus={() => (currency === '00' ? setCurrency('') : undefined)}
           onBlur={() => (currency.isEmpty() || currency === '0' ? setCurrency('00') : undefined)}
           style={StyleSheet.flatten([
@@ -141,7 +153,7 @@ export const AmountInput: FC<Omit<InputProps, 'placeholder' | 'label' | 'name'>>
           name='TL'
           width={InputStyleNormalizer({size}).icon.width}
           height={InputStyleNormalizer({size}).icon.height}
-          color={COLOURS.GREY200}
+          color={themeConfig.colors['grey-200']}
           mode='fill'
           noStroke
         />

@@ -7,7 +7,7 @@ import {Size} from '../../../models'
 import {themeConfig} from '../../../providers'
 
 // Util and Lib Imports
-import display from '../../../utils/display'
+import {display} from '../../../utils'
 
 interface InputStyleProps {
   height: number
@@ -47,7 +47,7 @@ export function InputStyleNormalizer({
       }
     case 'lg':
     case 'xl':
-    case 'xxl':
+    case '2xl':
     case 'full':
       return {
         height: display.normalize(56, 'height'),

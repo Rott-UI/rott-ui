@@ -12,7 +12,7 @@ import {AlertDialog, Item, Label, ModalProps, Pressable, Separator} from '../..'
 // Constant Imports
 
 // Util and Lib Imports
-import display from '../../../utils/display'
+import {display} from '../../../utils'
 import {themeConfig} from '../../../providers'
 
 interface AlertDialogProps

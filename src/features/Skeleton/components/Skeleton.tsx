@@ -7,8 +7,8 @@ import {Animated, Easing, StyleSheet} from 'react-native'
 // Feature Imports
 import {Item} from '../../Item'
 
-import display from '../../../utils/display'
 // Util and Lib Imports
+import {display} from '../../../utils'
 
 // Model Imports
 import {SkeletonStyleProps} from '../models'

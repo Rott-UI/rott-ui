@@ -4,7 +4,9 @@ import {FC, PropsWithChildren} from 'react'
 // Component Imports
 import {Item} from '../../Item'
 import {Theme} from '../../../models'
-import {COLOURS} from '../../../constants'
+
+// Util and Lib Imports
+import {themeConfig} from '../../../providers'
 
 interface FormContainerProps extends PropsWithChildren {
   hasError?: boolean
@@ -23,7 +25,9 @@ export const FormContainer: FC<FormContainerProps> = ({
   return (
     <Item
       overflowHidden
-      backgroundColor={theme === 'light' ? COLOURS.WHITE : COLOURS.GREY800}
+      backgroundColor={
+        theme === 'light' ? themeConfig.colors['white'] : themeConfig.colors['grey-800']
+      }
       borderRadius={8}
       paddingTop={4}
       paddingBottom={hasError ? 0 : 4}
