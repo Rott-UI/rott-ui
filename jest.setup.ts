@@ -1,5 +1,6 @@
 import '@testing-library/jest-native/extend-expect'
 import '@shopify/flash-list/jestSetup'
+import {en} from './src/libs/i18n'
 
 // include this line for mocking react-native-gesture-handler
 import 'react-native-gesture-handler/jestSetup'
@@ -13,3 +14,16 @@ beforeEach(() => {
 })
 
 jest.mock('react-native-safe-area-context', () => mockSafeAreaContext)
+
+jest.mock('react-intl', () => {
+  const reactIntl = jest.requireActual('react-intl')
+  const intl = reactIntl.createIntl({
+    locale: 'en-US',
+    messages: en,
+  })
+
+  return {
+    ...reactIntl,
+    useIntl: () => intl,
+  }
+})

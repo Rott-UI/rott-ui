@@ -2,7 +2,6 @@
   "TEST": "TEST",
   "TEST.WITH.PARAM": "TEST WITH {testText}",
 
-  "COMMON.PTTBANK": "PTTBank",
   "COMMON.OK": "Tamam",
   "COMMON.CANCEL": "İptal",
   "COMMON.CONTINUE": "Devam",
@@ -112,19 +111,6 @@
   "VALIDATION.INVALID": "Geçersiz {name}.",
   "VALIDATION.INVALID.FORMAT": "Geçersiz {name} formatı.",
   "VALIDATION.INVALID.AMOUNT_NOT_MULTIPLE_OF_10": "Tutar 10'un katları olmalıdır.",
-
-  "VERIFY.CARD.INFORMATION.TITLE": "Kart Bilgilerini Doğrula",
-  "VERIFY.CARD.INFORMATION.PTT.CARD.NUMBER": "PTTKart Numarası",
-  "VERIFY.CARD.INFORMATION.PTT.CARD.PASSWORD": "PTTKart Şifresi",
-  "VERIFY.CARD.INFORMATION.VERIFY": "Doğrula",
-  "VERIFY.CARD.INFORMATION.AGREEMENT.LINK": "İnternet Bankacılığı Sözleşmesini",
-  "VERIFY.CARD.INFORMATION.AGREEMENT": "{link} okudum, onaylıyorum",
-  "VERIFY.CARD.INFORMATION.AGREEMENT.TITLE": "İnternet Bankacılığı Sözleşmesi",
-  "VERIFY.CARD.INFORMATION.AGREEMENT.CONTENTS": "İnternet Bankacılığı İçerik",
-  "VERIFY.CARD.INFORMATION.REQUIRED.CARD.NUMBER": "Kart Numarası Zorunlu",
-  "VERIFY.CARD.INFORMATION.REQUIRED.EXPIRE.DATE": "Son Kullanım Tarihi Zorunlu",
-  "VERIFY.CARD.INFORMATION.REQUIRED.CVC": "CVC Kodu Zorunlu",
-  "VERIFY.CARD.INFORMATION.REQUIRED.PIN.PASSWORD": "PTTKart Şifresi Zorunlu",
 
   "SELECT.MONTH": "{month} Ay",
   "NEW.PASSWORD.SCREEN.TITLE": "Yeni Şifre Oluştur",
