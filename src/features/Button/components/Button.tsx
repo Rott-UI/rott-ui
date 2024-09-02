@@ -32,8 +32,8 @@ interface ButtonProps
   size?:
     | Size
     | {
-        width?: Omit<Size, 'xl' | 'xxl'> | number
-        height?: Omit<Size, 'xl' | 'xxl'> | number
+        width?: Omit<Size, 'xl' | '2xl'> | number
+        height?: Omit<Size, 'xl' | '2xl'> | number
       }
 
   leftImage?: ButtonImageProps

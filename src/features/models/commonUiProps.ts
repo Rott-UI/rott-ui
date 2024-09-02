@@ -13,7 +13,7 @@ export interface CommonUiProps {
   minWidth?: number | string
   minHeight?: number | string
 
-  fontSize?: Omit<Size, 'full'> | 'xxxl' | number
+  fontSize?: Omit<Size, 'full'> | '3xl' | number
   fontFamily?: FontFamily
   fontWeight?: FontWeight
   color?: string

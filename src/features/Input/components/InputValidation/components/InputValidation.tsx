@@ -28,7 +28,7 @@ export const InputValidation: FC<InputValidationProps> = ({
   return (
     <Item
       row
-      backgroundColor={colorFromVariant(variant)}
+      backgroundColor={colorFromVariant(variant as any)}
       paddingVertical={8}
       paddingHorizontal={16}
       alignItemsCenter

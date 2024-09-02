@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 
 export const fontSizeNormalizer = (
-  fontSize: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | number
+  fontSize: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | number
 ) => {
   switch (fontSize) {
     case 'xs':
@@ -14,9 +14,9 @@ export const fontSizeNormalizer = (
       return 16
     case 'xl':
       return 18
-    case 'xxl':
+    case '2xl':
       return 24
-    case 'xxxl':
+    case '3xl':
       return 36
     default:
       return fontSize
