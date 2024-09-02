@@ -1,14 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşmeli 1`] = `
-[
+<View
+  alignItemsCenter={true}
+  style={
+    {
+      "alignItems": "center",
+      "alignSelf": "center",
+      "backgroundColor": undefined,
+      "bottom": undefined,
+      "flex": undefined,
+      "flexDirection": "column",
+      "flexGrow": undefined,
+      "gap": undefined,
+      "height": undefined,
+      "justifyContent": undefined,
+      "left": undefined,
+      "marginBottom": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginTop": undefined,
+      "maxHeight": undefined,
+      "maxWidth": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
+      "overflow": undefined,
+      "paddingBottom": undefined,
+      "paddingHorizontal": undefined,
+      "paddingLeft": undefined,
+      "paddingRight": undefined,
+      "paddingTop": undefined,
+      "paddingVertical": undefined,
+      "position": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": "100%",
+      "zIndex": undefined,
+    }
+  }
+>
   <View
-    alignItemsCenter={true}
+    backgroundColor="rgba(234, 239, 240, 1)"
+    borderBottomEndRadius={12}
+    borderBottomStartRadius={12}
+    borderTopEndRadius={0}
+    borderTopStartRadius={0}
+    marginBottom={16}
     style={
       {
-        "alignItems": "center",
-        "alignSelf": "center",
-        "backgroundColor": undefined,
+        "alignItems": undefined,
+        "backgroundColor": "rgba(234, 239, 240, 1)",
         "bottom": undefined,
         "flex": undefined,
         "flexDirection": "column",
@@ -17,7 +58,7 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
         "height": undefined,
         "justifyContent": undefined,
         "left": undefined,
-        "marginBottom": undefined,
+        "marginBottom": 31,
         "marginLeft": undefined,
         "marginRight": undefined,
         "marginTop": undefined,
@@ -35,37 +76,32 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
         "position": undefined,
         "right": undefined,
         "top": undefined,
-        "width": "100%",
+        "width": 658,
         "zIndex": undefined,
       }
     }
+    width={342}
   >
     <View
-      backgroundColor="rgba(234, 239, 240, 1)"
-      borderBottomEndRadius={12}
-      borderBottomStartRadius={12}
-      borderTopEndRadius={0}
-      borderTopStartRadius={0}
-      marginBottom={16}
       style={
         {
           "alignItems": undefined,
-          "backgroundColor": "rgba(234, 239, 240, 1)",
+          "backgroundColor": undefined,
           "bottom": undefined,
           "flex": undefined,
           "flexDirection": "column",
           "flexGrow": undefined,
           "gap": undefined,
-          "height": undefined,
+          "height": NaN,
           "justifyContent": undefined,
           "left": undefined,
-          "marginBottom": 31,
+          "marginBottom": undefined,
           "marginLeft": undefined,
           "marginRight": undefined,
           "marginTop": undefined,
-          "maxHeight": undefined,
+          "maxHeight": NaN,
           "maxWidth": undefined,
-          "minHeight": undefined,
+          "minHeight": 2,
           "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
@@ -81,72 +117,60 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
           "zIndex": undefined,
         }
       }
-      width={342}
     >
       <View
         style={
           {
-            "alignItems": undefined,
-            "backgroundColor": undefined,
-            "bottom": undefined,
-            "flex": undefined,
-            "flexDirection": "column",
-            "flexGrow": undefined,
-            "gap": undefined,
-            "height": NaN,
-            "justifyContent": undefined,
-            "left": undefined,
-            "marginBottom": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginTop": undefined,
-            "maxHeight": NaN,
-            "maxWidth": undefined,
-            "minHeight": 2,
-            "minWidth": undefined,
-            "overflow": undefined,
-            "paddingBottom": undefined,
-            "paddingHorizontal": undefined,
-            "paddingLeft": undefined,
-            "paddingRight": undefined,
-            "paddingTop": undefined,
-            "paddingVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "top": undefined,
-            "width": 658,
-            "zIndex": undefined,
+            "flex": 1,
+            "overflow": "hidden",
           }
         }
       >
-        <View
-          style={
+        <RCTScrollView
+          ItemSeparatorComponent={[Function]}
+          ListEmptyComponent={[Function]}
+          ListFooterComponent={[Function]}
+          ListHeaderComponent={[Function]}
+          applyWindowCorrection={[Function]}
+          canChangeSize={true}
+          contentContainerStyle={
             {
-              "flex": 1,
-              "overflow": "hidden",
+              "backgroundColor": undefined,
+              "minHeight": 1,
+              "minWidth": 1,
+              "paddingLeft": 0,
+              "paddingRight": 0,
             }
           }
-        >
-          <RCTScrollView
-            ItemSeparatorComponent={[Function]}
-            ListEmptyComponent={[Function]}
-            ListFooterComponent={[Function]}
-            ListHeaderComponent={[Function]}
-            applyWindowCorrection={[Function]}
-            canChangeSize={true}
-            contentContainerStyle={
+          contentHeight={16}
+          contentWidth={400}
+          data={
+            [
               {
-                "backgroundColor": undefined,
-                "minHeight": 1,
-                "minWidth": 1,
-                "paddingLeft": 0,
-                "paddingRight": 0,
-              }
-            }
-            contentHeight={16}
-            contentWidth={400}
-            data={
-              [
+                "action": [Function],
+                "name": "para-gonder",
+                "title": "Para Gonder",
+              },
+              {
+                "action": [Function],
+                "name": "hesap-hareketleri-incele",
+                "title": "Hesap Hareketleri Incele",
+              },
+              {
+                "action": [Function],
+                "name": "fatura-ode",
+                "title": "Fatura Öde",
+              },
+              {
+                "action": [Function],
+                "name": "hesap-bilgilerini-paylas",
+                "title": "Hesap Bilgilerini Paylaş",
+              },
+            ]
+          }
+          dataProvider={
+            DataProvider {
+              "_data": [
                 {
                   "action": [Function],
                   "name": "para-gonder",
@@ -167,11 +191,560 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
                   "name": "hesap-bilgilerini-paylas",
                   "title": "Hesap Bilgilerini Paylaş",
                 },
-              ]
+              ],
+              "_firstIndexToProcess": 0,
+              "_hasStableIds": false,
+              "_requiresDataChangeHandling": false,
+              "_size": 4,
+              "getStableId": [Function],
+              "rowHasChanged": [Function],
             }
-            dataProvider={
-              DataProvider {
-                "_data": [
+          }
+          disableRecycling={false}
+          estimatedItemSize={4}
+          extendedState={{}}
+          externalScrollView={[Function]}
+          finalRenderAheadOffset={250}
+          forceNonDeterministicRendering={true}
+          height={NaN}
+          horizontal={false}
+          initialOffset={0}
+          initialRenderIndex={0}
+          isHorizontal={false}
+          layoutProvider={
+            GridLayoutProviderWithProps {
+              "_acceptableRelayoutDelta": 1,
+              "_getHeightOrWidth": [Function],
+              "_getLayoutTypeForIndex": [Function],
+              "_getSpan": [Function],
+              "_hasExpired": false,
+              "_isHorizontal": false,
+              "_lastLayoutManager": GridLayoutManager {
+                "_acceptableRelayoutDelta": 1,
+                "_getSpan": [Function],
+                "_isGridHorizontal": false,
+                "_isHorizontal": false,
+                "_layoutProvider": [Circular],
+                "_layouts": [
+                  {
+                    "height": 4,
+                    "type": 0,
+                    "width": 400,
+                    "x": 0,
+                    "y": 0,
+                  },
+                  {
+                    "height": 4,
+                    "type": 0,
+                    "width": 400,
+                    "x": 0,
+                    "y": 4,
+                  },
+                  {
+                    "height": 4,
+                    "type": 0,
+                    "width": 400,
+                    "x": 0,
+                    "y": 8,
+                  },
+                  {
+                    "height": 4,
+                    "type": 0,
+                    "width": 400,
+                    "x": 0,
+                    "y": 12,
+                  },
+                ],
+                "_maxSpan": 1,
+                "_renderWindowSize": {
+                  "height": 900,
+                  "width": 400,
+                },
+                "_totalHeight": 16,
+                "_totalWidth": 400,
+                "_window": {
+                  "height": 900,
+                  "width": 400,
+                },
+              },
+              "_maxSpan": 1,
+              "_renderWindowSize": {
+                "height": 900,
+                "width": 400,
+              },
+              "_setLayoutForType": [Function],
+              "_tempDim": {
+                "height": 0,
+                "width": 0,
+              },
+              "averageWindow": AverageWindow {
+                "currentAverage": 4,
+                "currentCount": 1,
+                "inputValues": [
+                  4,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                  ,
+                ],
+                "nextIndex": 1,
+              },
+              "defaultEstimatedItemSize": 100,
+              "layoutObject": {
+                "size": undefined,
+                "span": undefined,
+              },
+              "props": {
+                "ItemSeparatorComponent": [Function],
+                "ListEmptyComponent": [Function],
+                "ListFooterComponent": [Function],
+                "ListHeaderComponent": [Function],
+                "data": [
                   {
                     "action": [Function],
                     "name": "para-gonder",
@@ -193,880 +766,230 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
                     "title": "Hesap Bilgilerini Paylaş",
                   },
                 ],
-                "_firstIndexToProcess": 0,
-                "_hasStableIds": false,
-                "_requiresDataChangeHandling": false,
-                "_size": 4,
-                "getStableId": [Function],
-                "rowHasChanged": [Function],
-              }
+                "estimatedItemSize": 4,
+                "height": NaN,
+                "horizontal": false,
+                "numColumns": 1,
+                "renderItem": [Function],
+                "scrollEnabled": false,
+                "showsVerticalScrollIndicator": false,
+                "testID": "action-menu-test-id",
+              },
+              "renderWindowInsets": {
+                "height": 0,
+                "width": 0,
+              },
+              "shouldRefreshWithAnchoring": true,
             }
-            disableRecycling={false}
-            estimatedItemSize={4}
-            extendedState={{}}
-            externalScrollView={[Function]}
-            finalRenderAheadOffset={250}
-            forceNonDeterministicRendering={true}
-            height={NaN}
-            horizontal={false}
-            initialOffset={0}
-            initialRenderIndex={0}
-            isHorizontal={false}
-            layoutProvider={
-              GridLayoutProviderWithProps {
-                "_acceptableRelayoutDelta": 1,
-                "_getHeightOrWidth": [Function],
-                "_getLayoutTypeForIndex": [Function],
-                "_getSpan": [Function],
-                "_hasExpired": false,
-                "_isHorizontal": false,
-                "_lastLayoutManager": GridLayoutManager {
-                  "_acceptableRelayoutDelta": 1,
-                  "_getSpan": [Function],
-                  "_isGridHorizontal": false,
-                  "_isHorizontal": false,
-                  "_layoutProvider": [Circular],
-                  "_layouts": [
-                    {
-                      "height": 4,
-                      "type": 0,
-                      "width": 400,
-                      "x": 0,
-                      "y": 0,
-                    },
-                    {
-                      "height": 4,
-                      "type": 0,
-                      "width": 400,
-                      "x": 0,
-                      "y": 4,
-                    },
-                    {
-                      "height": 4,
-                      "type": 0,
-                      "width": 400,
-                      "x": 0,
-                      "y": 8,
-                    },
-                    {
-                      "height": 4,
-                      "type": 0,
-                      "width": 400,
-                      "x": 0,
-                      "y": 12,
-                    },
-                  ],
-                  "_maxSpan": 1,
-                  "_renderWindowSize": {
-                    "height": 900,
-                    "width": 400,
-                  },
-                  "_totalHeight": 16,
-                  "_totalWidth": 400,
-                  "_window": {
-                    "height": 900,
-                    "width": 400,
-                  },
-                },
-                "_maxSpan": 1,
-                "_renderWindowSize": {
-                  "height": 900,
-                  "width": 400,
-                },
-                "_setLayoutForType": [Function],
-                "_tempDim": {
-                  "height": 0,
-                  "width": 0,
-                },
-                "averageWindow": AverageWindow {
-                  "currentAverage": 4,
-                  "currentCount": 1,
-                  "inputValues": [
-                    4,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                    ,
-                  ],
-                  "nextIndex": 1,
-                },
-                "defaultEstimatedItemSize": 100,
-                "layoutObject": {
-                  "size": undefined,
-                  "span": undefined,
-                },
-                "props": {
-                  "ItemSeparatorComponent": [Function],
-                  "ListEmptyComponent": [Function],
-                  "ListFooterComponent": [Function],
-                  "ListHeaderComponent": [Function],
-                  "data": [
-                    {
-                      "action": [Function],
-                      "name": "para-gonder",
-                      "title": "Para Gonder",
-                    },
-                    {
-                      "action": [Function],
-                      "name": "hesap-hareketleri-incele",
-                      "title": "Hesap Hareketleri Incele",
-                    },
-                    {
-                      "action": [Function],
-                      "name": "fatura-ode",
-                      "title": "Fatura Öde",
-                    },
-                    {
-                      "action": [Function],
-                      "name": "hesap-bilgilerini-paylas",
-                      "title": "Hesap Bilgilerini Paylaş",
-                    },
-                  ],
-                  "estimatedItemSize": 4,
-                  "height": NaN,
-                  "horizontal": false,
-                  "numColumns": 1,
-                  "renderItem": [Function],
-                  "scrollEnabled": false,
-                  "showsVerticalScrollIndicator": false,
-                  "testID": "action-menu-test-id",
-                },
-                "renderWindowInsets": {
-                  "height": 0,
-                  "width": 0,
-                },
-                "shouldRefreshWithAnchoring": true,
-              }
-            }
-            maxRenderAhead={750}
-            numColumns={1}
-            onEndReached={[Function]}
-            onEndReachedThreshold={0}
-            onEndReachedThresholdRelative={0}
-            onItemLayout={[Function]}
-            onLayout={[Function]}
-            onScroll={[Function]}
-            onScrollBeginDrag={[Function]}
-            onSizeChanged={[Function]}
-            onVisibleIndicesChanged={[Function]}
-            removeClippedSubviews={false}
-            renderAheadOffset={0}
-            renderAheadStep={250}
-            renderContentContainer={[Function]}
-            renderItem={[Function]}
-            renderItemContainer={[Function]}
-            rowRenderer={[Function]}
-            scrollEnabled={false}
-            scrollEventThrottle={16}
-            scrollThrottle={16}
-            scrollViewProps={
-              {
-                "contentContainerStyle": {
-                  "backgroundColor": undefined,
-                  "minHeight": 1,
-                  "minWidth": 1,
-                  "paddingLeft": 0,
-                  "paddingRight": 0,
-                },
-                "onLayout": [Function],
-                "onScrollBeginDrag": [Function],
-                "refreshControl": undefined,
-                "style": {
-                  "minHeight": 1,
-                  "minWidth": 1,
-                },
-              }
-            }
-            showsVerticalScrollIndicator={false}
-            style={
-              {
+          }
+          maxRenderAhead={750}
+          numColumns={1}
+          onEndReached={[Function]}
+          onEndReachedThreshold={0}
+          onEndReachedThresholdRelative={0}
+          onItemLayout={[Function]}
+          onLayout={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onSizeChanged={[Function]}
+          onVisibleIndicesChanged={[Function]}
+          removeClippedSubviews={false}
+          renderAheadOffset={0}
+          renderAheadStep={250}
+          renderContentContainer={[Function]}
+          renderItem={[Function]}
+          renderItemContainer={[Function]}
+          rowRenderer={[Function]}
+          scrollEnabled={false}
+          scrollEventThrottle={16}
+          scrollThrottle={16}
+          scrollViewProps={
+            {
+              "contentContainerStyle": {
+                "backgroundColor": undefined,
                 "minHeight": 1,
                 "minWidth": 1,
-              }
+                "paddingLeft": 0,
+                "paddingRight": 0,
+              },
+              "onLayout": [Function],
+              "onScrollBeginDrag": [Function],
+              "refreshControl": undefined,
+              "style": {
+                "minHeight": 1,
+                "minWidth": 1,
+              },
             }
-            suppressBoundedSizeException={true}
-            testID="action-menu-test-id"
-            windowCorrectionConfig={
-              {
-                "applyToInitialOffset": true,
-                "applyToItemScroll": true,
-                "value": {
-                  "endCorrection": 0,
-                  "startCorrection": 0,
-                  "windowShift": -1,
-                },
-              }
+          }
+          showsVerticalScrollIndicator={false}
+          style={
+            {
+              "minHeight": 1,
+              "minWidth": 1,
             }
-          >
-            <View>
+          }
+          suppressBoundedSizeException={true}
+          testID="action-menu-test-id"
+          windowCorrectionConfig={
+            {
+              "applyToInitialOffset": true,
+              "applyToItemScroll": true,
+              "value": {
+                "endCorrection": 0,
+                "startCorrection": 0,
+                "windowShift": -1,
+              },
+            }
+          }
+        >
+          <View>
+            <View
+              style={
+                {
+                  "flexDirection": "column",
+                }
+              }
+            >
               <View
                 style={
                   {
-                    "flexDirection": "column",
+                    "paddingLeft": 0,
+                    "paddingTop": 0,
                   }
+                }
+              />
+              <View
+                style={
+                  [
+                    undefined,
+                    undefined,
+                  ]
                 }
               >
                 <View
                   style={
                     {
-                      "paddingLeft": 0,
-                      "paddingTop": 0,
+                      "backgroundColor": "rgba(34, 63, 70, 0.15)",
+                      "bottom": undefined,
+                      "flexGrow": undefined,
+                      "gap": undefined,
+                      "height": 2,
+                      "left": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "maxHeight": 2,
+                      "maxWidth": undefined,
+                      "minHeight": undefined,
+                      "minWidth": undefined,
+                      "opacity": 1,
+                      "overflow": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "paddingVertical": undefined,
+                      "position": undefined,
+                      "right": undefined,
+                      "top": undefined,
+                      "width": "100%",
+                      "zIndex": undefined,
                     }
                   }
+                  variant="neutral-alpha-200"
                 />
-                <View
+              </View>
+              <AutoLayoutView
+                enableInstrumentation={false}
+                horizontal={false}
+                onBlankAreaEvent={[Function]}
+                onLayout={[Function]}
+                renderAheadOffset={0}
+                scrollOffset={0}
+                style={
+                  {
+                    "height": 16,
+                    "width": 400,
+                  }
+                }
+                windowSize={900}
+              >
+                <CellContainer
+                  index={0}
+                  onLayout={[Function]}
                   style={
-                    [
-                      undefined,
-                      undefined,
-                    ]
+                    {
+                      "alignItems": "stretch",
+                      "flexDirection": "column",
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "width": 400,
+                    }
                   }
                 >
                   <View
                     style={
                       {
-                        "backgroundColor": "rgba(34, 63, 70, 0.15)",
-                        "bottom": undefined,
-                        "flexGrow": undefined,
-                        "gap": undefined,
-                        "height": 2,
-                        "left": undefined,
-                        "marginBottom": undefined,
-                        "marginLeft": undefined,
-                        "marginRight": undefined,
-                        "marginTop": undefined,
-                        "maxHeight": 2,
-                        "maxWidth": undefined,
-                        "minHeight": undefined,
-                        "minWidth": undefined,
-                        "opacity": 1,
-                        "overflow": undefined,
-                        "paddingBottom": undefined,
-                        "paddingHorizontal": undefined,
-                        "paddingLeft": undefined,
-                        "paddingRight": undefined,
-                        "paddingTop": undefined,
-                        "paddingVertical": undefined,
-                        "position": undefined,
-                        "right": undefined,
-                        "top": undefined,
-                        "width": "100%",
-                        "zIndex": undefined,
-                      }
-                    }
-                    variant="neutral-alpha-200"
-                  />
-                </View>
-                <AutoLayoutView
-                  enableInstrumentation={false}
-                  horizontal={false}
-                  onBlankAreaEvent={[Function]}
-                  onLayout={[Function]}
-                  renderAheadOffset={0}
-                  scrollOffset={0}
-                  style={
-                    {
-                      "height": 16,
-                      "width": 400,
-                    }
-                  }
-                  windowSize={900}
-                >
-                  <CellContainer
-                    index={0}
-                    onLayout={[Function]}
-                    style={
-                      {
-                        "alignItems": "stretch",
                         "flexDirection": "column",
-                        "left": 0,
-                        "position": "absolute",
-                        "top": 0,
-                        "width": 400,
                       }
                     }
                   >
                     <View
-                      style={
+                      accessibilityState={
                         {
-                          "flexDirection": "column",
+                          "busy": undefined,
+                          "checked": undefined,
+                          "disabled": undefined,
+                          "expanded": undefined,
+                          "selected": undefined,
                         }
                       }
-                    >
-                      <View
-                        accessibilityState={
-                          {
-                            "busy": undefined,
-                            "checked": undefined,
-                            "disabled": undefined,
-                            "expanded": undefined,
-                            "selected": undefined,
-                          }
+                      accessibilityValue={
+                        {
+                          "max": undefined,
+                          "min": undefined,
+                          "now": undefined,
+                          "text": undefined,
                         }
-                        accessibilityValue={
-                          {
-                            "max": undefined,
-                            "min": undefined,
-                            "now": undefined,
-                            "text": undefined,
-                          }
-                        }
-                        accessible={true}
-                        alignItemsCenter={true}
-                        animated={false}
-                        collapsable={false}
-                        focusable={true}
-                        justifyContentCenter={true}
-                        onBlur={[Function]}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          {
-                            "alignItems": "center",
-                            "backgroundColor": undefined,
-                            "bottom": undefined,
-                            "flex": 1,
-                            "flexDirection": "column",
-                            "flexGrow": undefined,
-                            "gap": undefined,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "left": undefined,
-                            "marginBottom": undefined,
-                            "marginLeft": undefined,
-                            "marginRight": undefined,
-                            "marginTop": undefined,
-                            "maxHeight": undefined,
-                            "maxWidth": undefined,
-                            "minHeight": undefined,
-                            "minWidth": undefined,
-                            "overflow": undefined,
-                            "paddingBottom": undefined,
-                            "paddingHorizontal": undefined,
-                            "paddingLeft": undefined,
-                            "paddingRight": undefined,
-                            "paddingTop": undefined,
-                            "paddingVertical": undefined,
-                            "position": undefined,
-                            "right": undefined,
-                            "top": undefined,
-                            "width": undefined,
-                            "zIndex": undefined,
-                          }
-                        }
-                        testID="action-menu-data-para-gonder-test-id"
-                      >
-                        <Text
-                          style={
-                            {
-                              "backgroundColor": undefined,
-                              "bottom": undefined,
-                              "color": "rgba(34, 63, 70, 1)",
-                              "flexGrow": undefined,
-                              "fontFamily": "Markpro-Book",
-                              "fontSize": 16,
-                              "fontWeight": 500,
-                              "gap": undefined,
-                              "height": undefined,
-                              "left": undefined,
-                              "letterSpacing": undefined,
-                              "marginBottom": undefined,
-                              "marginLeft": undefined,
-                              "marginRight": undefined,
-                              "marginTop": undefined,
-                              "maxHeight": undefined,
-                              "maxWidth": undefined,
-                              "minHeight": undefined,
-                              "minWidth": undefined,
-                              "overflow": undefined,
-                              "paddingBottom": undefined,
-                              "paddingHorizontal": undefined,
-                              "paddingLeft": undefined,
-                              "paddingRight": undefined,
-                              "paddingTop": undefined,
-                              "paddingVertical": undefined,
-                              "position": undefined,
-                              "right": undefined,
-                              "textAlign": "auto",
-                              "top": undefined,
-                              "width": undefined,
-                              "zIndex": undefined,
-                            }
-                          }
-                        >
-                          Para Gonder
-                        </Text>
-                      </View>
-                    </View>
-                    <View
+                      }
+                      accessible={true}
+                      alignItemsCenter={true}
+                      animated={false}
+                      collapsable={false}
+                      focusable={true}
+                      justifyContentCenter={true}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
                       style={
                         {
-                          "backgroundColor": "rgba(34, 63, 70, 0.15)",
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
                           "bottom": undefined,
+                          "flex": 1,
+                          "flexDirection": "column",
                           "flexGrow": undefined,
                           "gap": undefined,
-                          "height": 2,
+                          "height": undefined,
+                          "justifyContent": "center",
                           "left": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
-                          "maxHeight": 2,
+                          "maxHeight": undefined,
                           "maxWidth": undefined,
                           "minHeight": undefined,
                           "minWidth": undefined,
-                          "opacity": 1,
                           "overflow": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -1077,79 +1000,26 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
                           "position": undefined,
                           "right": undefined,
                           "top": undefined,
-                          "width": "100%",
+                          "width": undefined,
                           "zIndex": undefined,
                         }
                       }
-                      variant="neutral-alpha-200"
-                    />
-                  </CellContainer>
-                  <CellContainer
-                    index={1}
-                    onLayout={[Function]}
-                    style={
-                      {
-                        "alignItems": "stretch",
-                        "flexDirection": "column",
-                        "left": 0,
-                        "position": "absolute",
-                        "top": 4,
-                        "width": 400,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        {
-                          "flexDirection": "column",
-                        }
-                      }
+                      testID="action-menu-data-para-gonder-test-id"
                     >
-                      <View
-                        accessibilityState={
-                          {
-                            "busy": undefined,
-                            "checked": undefined,
-                            "disabled": undefined,
-                            "expanded": undefined,
-                            "selected": undefined,
-                          }
-                        }
-                        accessibilityValue={
-                          {
-                            "max": undefined,
-                            "min": undefined,
-                            "now": undefined,
-                            "text": undefined,
-                          }
-                        }
-                        accessible={true}
-                        alignItemsCenter={true}
-                        animated={false}
-                        collapsable={false}
-                        focusable={true}
-                        justifyContentCenter={true}
-                        onBlur={[Function]}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
+                      <Text
                         style={
                           {
-                            "alignItems": "center",
                             "backgroundColor": undefined,
                             "bottom": undefined,
-                            "flex": 1,
-                            "flexDirection": "column",
+                            "color": "rgba(34, 63, 70, 1)",
                             "flexGrow": undefined,
+                            "fontFamily": "Markpro-Book",
+                            "fontSize": 16,
+                            "fontWeight": 500,
                             "gap": undefined,
                             "height": undefined,
-                            "justifyContent": "center",
                             "left": undefined,
+                            "letterSpacing": undefined,
                             "marginBottom": undefined,
                             "marginLeft": undefined,
                             "marginRight": undefined,
@@ -1167,400 +1037,17 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
                             "paddingVertical": undefined,
                             "position": undefined,
                             "right": undefined,
+                            "textAlign": "auto",
                             "top": undefined,
                             "width": undefined,
                             "zIndex": undefined,
                           }
                         }
-                        testID="action-menu-data-hesap-hareketleri-incele-test-id"
                       >
-                        <Text
-                          style={
-                            {
-                              "backgroundColor": undefined,
-                              "bottom": undefined,
-                              "color": "rgba(34, 63, 70, 1)",
-                              "flexGrow": undefined,
-                              "fontFamily": "Markpro-Book",
-                              "fontSize": 16,
-                              "fontWeight": 500,
-                              "gap": undefined,
-                              "height": undefined,
-                              "left": undefined,
-                              "letterSpacing": undefined,
-                              "marginBottom": undefined,
-                              "marginLeft": undefined,
-                              "marginRight": undefined,
-                              "marginTop": undefined,
-                              "maxHeight": undefined,
-                              "maxWidth": undefined,
-                              "minHeight": undefined,
-                              "minWidth": undefined,
-                              "overflow": undefined,
-                              "paddingBottom": undefined,
-                              "paddingHorizontal": undefined,
-                              "paddingLeft": undefined,
-                              "paddingRight": undefined,
-                              "paddingTop": undefined,
-                              "paddingVertical": undefined,
-                              "position": undefined,
-                              "right": undefined,
-                              "textAlign": "auto",
-                              "top": undefined,
-                              "width": undefined,
-                              "zIndex": undefined,
-                            }
-                          }
-                        >
-                          Hesap Hareketleri Incele
-                        </Text>
-                      </View>
+                        Para Gonder
+                      </Text>
                     </View>
-                    <View
-                      style={
-                        {
-                          "backgroundColor": "rgba(34, 63, 70, 0.15)",
-                          "bottom": undefined,
-                          "flexGrow": undefined,
-                          "gap": undefined,
-                          "height": 2,
-                          "left": undefined,
-                          "marginBottom": undefined,
-                          "marginLeft": undefined,
-                          "marginRight": undefined,
-                          "marginTop": undefined,
-                          "maxHeight": 2,
-                          "maxWidth": undefined,
-                          "minHeight": undefined,
-                          "minWidth": undefined,
-                          "opacity": 1,
-                          "overflow": undefined,
-                          "paddingBottom": undefined,
-                          "paddingHorizontal": undefined,
-                          "paddingLeft": undefined,
-                          "paddingRight": undefined,
-                          "paddingTop": undefined,
-                          "paddingVertical": undefined,
-                          "position": undefined,
-                          "right": undefined,
-                          "top": undefined,
-                          "width": "100%",
-                          "zIndex": undefined,
-                        }
-                      }
-                      variant="neutral-alpha-200"
-                    />
-                  </CellContainer>
-                  <CellContainer
-                    index={2}
-                    onLayout={[Function]}
-                    style={
-                      {
-                        "alignItems": "stretch",
-                        "flexDirection": "column",
-                        "left": 0,
-                        "position": "absolute",
-                        "top": 8,
-                        "width": 400,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        {
-                          "flexDirection": "column",
-                        }
-                      }
-                    >
-                      <View
-                        accessibilityState={
-                          {
-                            "busy": undefined,
-                            "checked": undefined,
-                            "disabled": undefined,
-                            "expanded": undefined,
-                            "selected": undefined,
-                          }
-                        }
-                        accessibilityValue={
-                          {
-                            "max": undefined,
-                            "min": undefined,
-                            "now": undefined,
-                            "text": undefined,
-                          }
-                        }
-                        accessible={true}
-                        alignItemsCenter={true}
-                        animated={false}
-                        collapsable={false}
-                        focusable={true}
-                        justifyContentCenter={true}
-                        onBlur={[Function]}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          {
-                            "alignItems": "center",
-                            "backgroundColor": undefined,
-                            "bottom": undefined,
-                            "flex": 1,
-                            "flexDirection": "column",
-                            "flexGrow": undefined,
-                            "gap": undefined,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "left": undefined,
-                            "marginBottom": undefined,
-                            "marginLeft": undefined,
-                            "marginRight": undefined,
-                            "marginTop": undefined,
-                            "maxHeight": undefined,
-                            "maxWidth": undefined,
-                            "minHeight": undefined,
-                            "minWidth": undefined,
-                            "overflow": undefined,
-                            "paddingBottom": undefined,
-                            "paddingHorizontal": undefined,
-                            "paddingLeft": undefined,
-                            "paddingRight": undefined,
-                            "paddingTop": undefined,
-                            "paddingVertical": undefined,
-                            "position": undefined,
-                            "right": undefined,
-                            "top": undefined,
-                            "width": undefined,
-                            "zIndex": undefined,
-                          }
-                        }
-                        testID="action-menu-data-fatura-ode-test-id"
-                      >
-                        <Text
-                          style={
-                            {
-                              "backgroundColor": undefined,
-                              "bottom": undefined,
-                              "color": "rgba(34, 63, 70, 1)",
-                              "flexGrow": undefined,
-                              "fontFamily": "Markpro-Book",
-                              "fontSize": 16,
-                              "fontWeight": 500,
-                              "gap": undefined,
-                              "height": undefined,
-                              "left": undefined,
-                              "letterSpacing": undefined,
-                              "marginBottom": undefined,
-                              "marginLeft": undefined,
-                              "marginRight": undefined,
-                              "marginTop": undefined,
-                              "maxHeight": undefined,
-                              "maxWidth": undefined,
-                              "minHeight": undefined,
-                              "minWidth": undefined,
-                              "overflow": undefined,
-                              "paddingBottom": undefined,
-                              "paddingHorizontal": undefined,
-                              "paddingLeft": undefined,
-                              "paddingRight": undefined,
-                              "paddingTop": undefined,
-                              "paddingVertical": undefined,
-                              "position": undefined,
-                              "right": undefined,
-                              "textAlign": "auto",
-                              "top": undefined,
-                              "width": undefined,
-                              "zIndex": undefined,
-                            }
-                          }
-                        >
-                          Fatura Öde
-                        </Text>
-                      </View>
-                    </View>
-                    <View
-                      style={
-                        {
-                          "backgroundColor": "rgba(34, 63, 70, 0.15)",
-                          "bottom": undefined,
-                          "flexGrow": undefined,
-                          "gap": undefined,
-                          "height": 2,
-                          "left": undefined,
-                          "marginBottom": undefined,
-                          "marginLeft": undefined,
-                          "marginRight": undefined,
-                          "marginTop": undefined,
-                          "maxHeight": 2,
-                          "maxWidth": undefined,
-                          "minHeight": undefined,
-                          "minWidth": undefined,
-                          "opacity": 1,
-                          "overflow": undefined,
-                          "paddingBottom": undefined,
-                          "paddingHorizontal": undefined,
-                          "paddingLeft": undefined,
-                          "paddingRight": undefined,
-                          "paddingTop": undefined,
-                          "paddingVertical": undefined,
-                          "position": undefined,
-                          "right": undefined,
-                          "top": undefined,
-                          "width": "100%",
-                          "zIndex": undefined,
-                        }
-                      }
-                      variant="neutral-alpha-200"
-                    />
-                  </CellContainer>
-                  <CellContainer
-                    index={3}
-                    onLayout={[Function]}
-                    style={
-                      {
-                        "alignItems": "stretch",
-                        "flexDirection": "column",
-                        "left": 0,
-                        "position": "absolute",
-                        "top": 12,
-                        "width": 400,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        {
-                          "flexDirection": "column",
-                        }
-                      }
-                    >
-                      <View
-                        accessibilityState={
-                          {
-                            "busy": undefined,
-                            "checked": undefined,
-                            "disabled": undefined,
-                            "expanded": undefined,
-                            "selected": undefined,
-                          }
-                        }
-                        accessibilityValue={
-                          {
-                            "max": undefined,
-                            "min": undefined,
-                            "now": undefined,
-                            "text": undefined,
-                          }
-                        }
-                        accessible={true}
-                        alignItemsCenter={true}
-                        animated={false}
-                        collapsable={false}
-                        focusable={true}
-                        justifyContentCenter={true}
-                        onBlur={[Function]}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          {
-                            "alignItems": "center",
-                            "backgroundColor": undefined,
-                            "bottom": undefined,
-                            "flex": 1,
-                            "flexDirection": "column",
-                            "flexGrow": undefined,
-                            "gap": undefined,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "left": undefined,
-                            "marginBottom": undefined,
-                            "marginLeft": undefined,
-                            "marginRight": undefined,
-                            "marginTop": undefined,
-                            "maxHeight": undefined,
-                            "maxWidth": undefined,
-                            "minHeight": undefined,
-                            "minWidth": undefined,
-                            "overflow": undefined,
-                            "paddingBottom": undefined,
-                            "paddingHorizontal": undefined,
-                            "paddingLeft": undefined,
-                            "paddingRight": undefined,
-                            "paddingTop": undefined,
-                            "paddingVertical": undefined,
-                            "position": undefined,
-                            "right": undefined,
-                            "top": undefined,
-                            "width": undefined,
-                            "zIndex": undefined,
-                          }
-                        }
-                        testID="action-menu-data-hesap-bilgilerini-paylas-test-id"
-                      >
-                        <Text
-                          style={
-                            {
-                              "backgroundColor": undefined,
-                              "bottom": undefined,
-                              "color": "rgba(34, 63, 70, 1)",
-                              "flexGrow": undefined,
-                              "fontFamily": "Markpro-Book",
-                              "fontSize": 16,
-                              "fontWeight": 500,
-                              "gap": undefined,
-                              "height": undefined,
-                              "left": undefined,
-                              "letterSpacing": undefined,
-                              "marginBottom": undefined,
-                              "marginLeft": undefined,
-                              "marginRight": undefined,
-                              "marginTop": undefined,
-                              "maxHeight": undefined,
-                              "maxWidth": undefined,
-                              "minHeight": undefined,
-                              "minWidth": undefined,
-                              "overflow": undefined,
-                              "paddingBottom": undefined,
-                              "paddingHorizontal": undefined,
-                              "paddingLeft": undefined,
-                              "paddingRight": undefined,
-                              "paddingTop": undefined,
-                              "paddingVertical": undefined,
-                              "position": undefined,
-                              "right": undefined,
-                              "textAlign": "auto",
-                              "top": undefined,
-                              "width": undefined,
-                              "zIndex": undefined,
-                            }
-                          }
-                        >
-                          Hesap Bilgilerini Paylaş
-                        </Text>
-                      </View>
-                    </View>
-                  </CellContainer>
-                </AutoLayoutView>
-                <CellContainer
-                  index={-1}
-                  style={
-                    [
-                      undefined,
-                      undefined,
-                    ]
-                  }
-                >
+                  </View>
                   <View
                     style={
                       {
@@ -1596,65 +1083,618 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
                     variant="neutral-alpha-200"
                   />
                 </CellContainer>
+                <CellContainer
+                  index={1}
+                  onLayout={[Function]}
+                  style={
+                    {
+                      "alignItems": "stretch",
+                      "flexDirection": "column",
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 4,
+                      "width": 400,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      {
+                        "flexDirection": "column",
+                      }
+                    }
+                  >
+                    <View
+                      accessibilityState={
+                        {
+                          "busy": undefined,
+                          "checked": undefined,
+                          "disabled": undefined,
+                          "expanded": undefined,
+                          "selected": undefined,
+                        }
+                      }
+                      accessibilityValue={
+                        {
+                          "max": undefined,
+                          "min": undefined,
+                          "now": undefined,
+                          "text": undefined,
+                        }
+                      }
+                      accessible={true}
+                      alignItemsCenter={true}
+                      animated={false}
+                      collapsable={false}
+                      focusable={true}
+                      justifyContentCenter={true}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "bottom": undefined,
+                          "flex": 1,
+                          "flexDirection": "column",
+                          "flexGrow": undefined,
+                          "gap": undefined,
+                          "height": undefined,
+                          "justifyContent": "center",
+                          "left": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "maxHeight": undefined,
+                          "maxWidth": undefined,
+                          "minHeight": undefined,
+                          "minWidth": undefined,
+                          "overflow": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "paddingVertical": undefined,
+                          "position": undefined,
+                          "right": undefined,
+                          "top": undefined,
+                          "width": undefined,
+                          "zIndex": undefined,
+                        }
+                      }
+                      testID="action-menu-data-hesap-hareketleri-incele-test-id"
+                    >
+                      <Text
+                        style={
+                          {
+                            "backgroundColor": undefined,
+                            "bottom": undefined,
+                            "color": "rgba(34, 63, 70, 1)",
+                            "flexGrow": undefined,
+                            "fontFamily": "Markpro-Book",
+                            "fontSize": 16,
+                            "fontWeight": 500,
+                            "gap": undefined,
+                            "height": undefined,
+                            "left": undefined,
+                            "letterSpacing": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": undefined,
+                            "marginRight": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "overflow": undefined,
+                            "paddingBottom": undefined,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": undefined,
+                            "paddingVertical": undefined,
+                            "position": undefined,
+                            "right": undefined,
+                            "textAlign": "auto",
+                            "top": undefined,
+                            "width": undefined,
+                            "zIndex": undefined,
+                          }
+                        }
+                      >
+                        Hesap Hareketleri Incele
+                      </Text>
+                    </View>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "backgroundColor": "rgba(34, 63, 70, 0.15)",
+                        "bottom": undefined,
+                        "flexGrow": undefined,
+                        "gap": undefined,
+                        "height": 2,
+                        "left": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": undefined,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "maxHeight": 2,
+                        "maxWidth": undefined,
+                        "minHeight": undefined,
+                        "minWidth": undefined,
+                        "opacity": 1,
+                        "overflow": undefined,
+                        "paddingBottom": undefined,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": undefined,
+                        "paddingTop": undefined,
+                        "paddingVertical": undefined,
+                        "position": undefined,
+                        "right": undefined,
+                        "top": undefined,
+                        "width": "100%",
+                        "zIndex": undefined,
+                      }
+                    }
+                    variant="neutral-alpha-200"
+                  />
+                </CellContainer>
+                <CellContainer
+                  index={2}
+                  onLayout={[Function]}
+                  style={
+                    {
+                      "alignItems": "stretch",
+                      "flexDirection": "column",
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 8,
+                      "width": 400,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      {
+                        "flexDirection": "column",
+                      }
+                    }
+                  >
+                    <View
+                      accessibilityState={
+                        {
+                          "busy": undefined,
+                          "checked": undefined,
+                          "disabled": undefined,
+                          "expanded": undefined,
+                          "selected": undefined,
+                        }
+                      }
+                      accessibilityValue={
+                        {
+                          "max": undefined,
+                          "min": undefined,
+                          "now": undefined,
+                          "text": undefined,
+                        }
+                      }
+                      accessible={true}
+                      alignItemsCenter={true}
+                      animated={false}
+                      collapsable={false}
+                      focusable={true}
+                      justifyContentCenter={true}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "bottom": undefined,
+                          "flex": 1,
+                          "flexDirection": "column",
+                          "flexGrow": undefined,
+                          "gap": undefined,
+                          "height": undefined,
+                          "justifyContent": "center",
+                          "left": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "maxHeight": undefined,
+                          "maxWidth": undefined,
+                          "minHeight": undefined,
+                          "minWidth": undefined,
+                          "overflow": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "paddingVertical": undefined,
+                          "position": undefined,
+                          "right": undefined,
+                          "top": undefined,
+                          "width": undefined,
+                          "zIndex": undefined,
+                        }
+                      }
+                      testID="action-menu-data-fatura-ode-test-id"
+                    >
+                      <Text
+                        style={
+                          {
+                            "backgroundColor": undefined,
+                            "bottom": undefined,
+                            "color": "rgba(34, 63, 70, 1)",
+                            "flexGrow": undefined,
+                            "fontFamily": "Markpro-Book",
+                            "fontSize": 16,
+                            "fontWeight": 500,
+                            "gap": undefined,
+                            "height": undefined,
+                            "left": undefined,
+                            "letterSpacing": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": undefined,
+                            "marginRight": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "overflow": undefined,
+                            "paddingBottom": undefined,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": undefined,
+                            "paddingVertical": undefined,
+                            "position": undefined,
+                            "right": undefined,
+                            "textAlign": "auto",
+                            "top": undefined,
+                            "width": undefined,
+                            "zIndex": undefined,
+                          }
+                        }
+                      >
+                        Fatura Öde
+                      </Text>
+                    </View>
+                  </View>
+                  <View
+                    style={
+                      {
+                        "backgroundColor": "rgba(34, 63, 70, 0.15)",
+                        "bottom": undefined,
+                        "flexGrow": undefined,
+                        "gap": undefined,
+                        "height": 2,
+                        "left": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": undefined,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "maxHeight": 2,
+                        "maxWidth": undefined,
+                        "minHeight": undefined,
+                        "minWidth": undefined,
+                        "opacity": 1,
+                        "overflow": undefined,
+                        "paddingBottom": undefined,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": undefined,
+                        "paddingTop": undefined,
+                        "paddingVertical": undefined,
+                        "position": undefined,
+                        "right": undefined,
+                        "top": undefined,
+                        "width": "100%",
+                        "zIndex": undefined,
+                      }
+                    }
+                    variant="neutral-alpha-200"
+                  />
+                </CellContainer>
+                <CellContainer
+                  index={3}
+                  onLayout={[Function]}
+                  style={
+                    {
+                      "alignItems": "stretch",
+                      "flexDirection": "column",
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 12,
+                      "width": 400,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      {
+                        "flexDirection": "column",
+                      }
+                    }
+                  >
+                    <View
+                      accessibilityState={
+                        {
+                          "busy": undefined,
+                          "checked": undefined,
+                          "disabled": undefined,
+                          "expanded": undefined,
+                          "selected": undefined,
+                        }
+                      }
+                      accessibilityValue={
+                        {
+                          "max": undefined,
+                          "min": undefined,
+                          "now": undefined,
+                          "text": undefined,
+                        }
+                      }
+                      accessible={true}
+                      alignItemsCenter={true}
+                      animated={false}
+                      collapsable={false}
+                      focusable={true}
+                      justifyContentCenter={true}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "bottom": undefined,
+                          "flex": 1,
+                          "flexDirection": "column",
+                          "flexGrow": undefined,
+                          "gap": undefined,
+                          "height": undefined,
+                          "justifyContent": "center",
+                          "left": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "maxHeight": undefined,
+                          "maxWidth": undefined,
+                          "minHeight": undefined,
+                          "minWidth": undefined,
+                          "overflow": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "paddingVertical": undefined,
+                          "position": undefined,
+                          "right": undefined,
+                          "top": undefined,
+                          "width": undefined,
+                          "zIndex": undefined,
+                        }
+                      }
+                      testID="action-menu-data-hesap-bilgilerini-paylas-test-id"
+                    >
+                      <Text
+                        style={
+                          {
+                            "backgroundColor": undefined,
+                            "bottom": undefined,
+                            "color": "rgba(34, 63, 70, 1)",
+                            "flexGrow": undefined,
+                            "fontFamily": "Markpro-Book",
+                            "fontSize": 16,
+                            "fontWeight": 500,
+                            "gap": undefined,
+                            "height": undefined,
+                            "left": undefined,
+                            "letterSpacing": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": undefined,
+                            "marginRight": undefined,
+                            "marginTop": undefined,
+                            "maxHeight": undefined,
+                            "maxWidth": undefined,
+                            "minHeight": undefined,
+                            "minWidth": undefined,
+                            "overflow": undefined,
+                            "paddingBottom": undefined,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": undefined,
+                            "paddingVertical": undefined,
+                            "position": undefined,
+                            "right": undefined,
+                            "textAlign": "auto",
+                            "top": undefined,
+                            "width": undefined,
+                            "zIndex": undefined,
+                          }
+                        }
+                      >
+                        Hesap Bilgilerini Paylaş
+                      </Text>
+                    </View>
+                  </View>
+                </CellContainer>
+              </AutoLayoutView>
+              <CellContainer
+                index={-1}
+                style={
+                  [
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
                 <View
                   style={
                     {
-                      "paddingBottom": 0,
-                      "paddingRight": 0,
+                      "backgroundColor": "rgba(34, 63, 70, 0.15)",
+                      "bottom": undefined,
+                      "flexGrow": undefined,
+                      "gap": undefined,
+                      "height": 2,
+                      "left": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "maxHeight": 2,
+                      "maxWidth": undefined,
+                      "minHeight": undefined,
+                      "minWidth": undefined,
+                      "opacity": 1,
+                      "overflow": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "paddingVertical": undefined,
+                      "position": undefined,
+                      "right": undefined,
+                      "top": undefined,
+                      "width": "100%",
+                      "zIndex": undefined,
                     }
                   }
+                  variant="neutral-alpha-200"
                 />
-              </View>
+              </CellContainer>
+              <View
+                style={
+                  {
+                    "paddingBottom": 0,
+                    "paddingRight": 0,
+                  }
+                }
+              />
             </View>
-          </RCTScrollView>
-        </View>
+          </View>
+        </RCTScrollView>
       </View>
     </View>
-    <View
-      accessibilityState={
-        {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": undefined,
-          "expanded": undefined,
-          "selected": undefined,
-        }
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
       }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
       }
-      accessible={true}
-      collapsable={false}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "rgba(63, 182, 210, 1)",
+        "borderColor": "white",
+        "borderRadius": 8,
+        "borderWidth": undefined,
+        "bottom": undefined,
+        "color": undefined,
+        "flex": undefined,
+        "flexDirection": "row",
+        "flexGrow": undefined,
+        "gap": undefined,
+        "height": 108,
+        "justifyContent": "center",
+        "left": undefined,
+        "marginBottom": 41,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "maxHeight": undefined,
+        "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
+        "opacity": 1,
+        "overflow": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "paddingVertical": undefined,
+        "position": "relative",
+        "right": undefined,
+        "top": undefined,
+        "width": 658,
+        "zIndex": undefined,
+      }
+    }
+    testID="action-menu-cancel-test-id"
+  >
+    <Text
+      numberOfLines={1}
       style={
         {
-          "alignItems": "center",
-          "backgroundColor": "rgba(63, 182, 210, 1)",
-          "borderColor": "white",
-          "borderRadius": 8,
-          "borderWidth": undefined,
+          "backgroundColor": undefined,
           "bottom": undefined,
-          "color": undefined,
-          "flex": undefined,
-          "flexDirection": "row",
+          "color": "rgba(63, 182, 210, 1)",
           "flexGrow": undefined,
+          "flexShrink": 1,
+          "fontFamily": "Markpro-Bold",
+          "fontSize": 16,
+          "fontWeight": undefined,
           "gap": undefined,
-          "height": 108,
-          "justifyContent": "center",
+          "height": undefined,
           "left": undefined,
-          "marginBottom": 41,
+          "letterSpacing": undefined,
+          "marginBottom": undefined,
           "marginLeft": undefined,
           "marginRight": undefined,
           "marginTop": undefined,
@@ -1662,7 +1702,6 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
           "maxWidth": undefined,
           "minHeight": undefined,
           "minWidth": undefined,
-          "opacity": 1,
           "overflow": undefined,
           "paddingBottom": undefined,
           "paddingHorizontal": undefined,
@@ -1670,123 +1709,18 @@ exports[`ActionMenu -> Custom Component ilk render anında snapshot ile eşleşm
           "paddingRight": undefined,
           "paddingTop": undefined,
           "paddingVertical": undefined,
-          "position": "relative",
+          "position": undefined,
           "right": undefined,
+          "textAlign": "center",
+          "textAlignVertical": "center",
           "top": undefined,
-          "width": 658,
+          "width": undefined,
           "zIndex": undefined,
         }
       }
-      testID="action-menu-cancel-test-id"
     >
-      <Text
-        numberOfLines={1}
-        style={
-          {
-            "backgroundColor": undefined,
-            "bottom": undefined,
-            "color": "rgba(255, 255, 255, 1)",
-            "flexGrow": undefined,
-            "flexShrink": 1,
-            "fontFamily": "Markpro-Bold",
-            "fontSize": 26,
-            "fontWeight": undefined,
-            "gap": undefined,
-            "height": undefined,
-            "left": undefined,
-            "letterSpacing": undefined,
-            "marginBottom": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginTop": undefined,
-            "maxHeight": undefined,
-            "maxWidth": undefined,
-            "minHeight": undefined,
-            "minWidth": undefined,
-            "overflow": undefined,
-            "paddingBottom": undefined,
-            "paddingHorizontal": undefined,
-            "paddingLeft": undefined,
-            "paddingRight": undefined,
-            "paddingTop": undefined,
-            "paddingVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "top": undefined,
-            "width": undefined,
-            "zIndex": undefined,
-          }
-        }
-      >
-        Cancel
-      </Text>
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "flexDirection": "column-reverse",
-          "justifyContent": "flex-start",
-          "top": 30,
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "bottom": 40,
-          "flexDirection": "column",
-          "justifyContent": "flex-end",
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-]
+      Cancel
+    </Text>
+  </View>
+</View>
 `;

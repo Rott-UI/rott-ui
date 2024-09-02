@@ -1,112 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Plate Number Input -> Custom Input plate number input ilk render anında snapshot ile eşleşmeli 1`] = `
-[
-  <TextInput
-    editable={true}
-    keyboardType="default"
-    maxLength={9}
-    onChangeText={[Function]}
-    placeholder="_________"
-    style={
-      {
-        "backgroundColor": undefined,
-        "bottom": undefined,
-        "color": "rgba(255, 255, 255, 1)",
-        "flexGrow": undefined,
-        "fontFamily": "Markpro-Medium",
-        "fontSize": 18,
-        "gap": undefined,
-        "height": 89,
-        "left": undefined,
-        "letterSpacing": 0.5,
-        "marginBottom": undefined,
-        "marginLeft": undefined,
-        "marginRight": undefined,
-        "marginTop": undefined,
-        "maxHeight": undefined,
-        "maxWidth": undefined,
-        "minHeight": undefined,
-        "minWidth": undefined,
-        "overflow": undefined,
-        "paddingBottom": undefined,
-        "paddingHorizontal": undefined,
-        "paddingLeft": undefined,
-        "paddingRight": undefined,
-        "paddingTop": undefined,
-        "paddingVertical": undefined,
-        "position": undefined,
-        "right": undefined,
-        "top": undefined,
-        "width": "100%",
-        "zIndex": undefined,
-      }
+<TextInput
+  editable={true}
+  keyboardType="default"
+  maxLength={9}
+  onChangeText={[Function]}
+  placeholder="_________"
+  style={
+    {
+      "backgroundColor": undefined,
+      "bottom": undefined,
+      "color": "rgba(255, 255, 255, 1)",
+      "flexGrow": undefined,
+      "fontSize": 18,
+      "gap": undefined,
+      "height": 89,
+      "left": undefined,
+      "letterSpacing": 0.5,
+      "marginBottom": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginTop": undefined,
+      "maxHeight": undefined,
+      "maxWidth": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
+      "overflow": undefined,
+      "paddingBottom": undefined,
+      "paddingHorizontal": undefined,
+      "paddingLeft": undefined,
+      "paddingRight": undefined,
+      "paddingTop": undefined,
+      "paddingVertical": undefined,
+      "position": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": "100%",
+      "zIndex": undefined,
     }
-    testID="input-test-id"
-  />,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "flexDirection": "column-reverse",
-          "justifyContent": "flex-start",
-          "top": 30,
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "bottom": 40,
-          "flexDirection": "column",
-          "justifyContent": "flex-end",
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-]
+  }
+  testID="input-test-id"
+/>
 `;

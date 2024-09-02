@@ -49,7 +49,7 @@ export const ResultScreen: FC<ResultScreenProps> = ({route: {params}}) => {
     <Button
       testID={testID}
       size='full'
-      variant={variant ?? 'primary'}
+      variant={(variant as any) ?? 'primary'}
       marginBottom={15}
       paddingHorizontal={15}
       onPress={() => action && action()}>

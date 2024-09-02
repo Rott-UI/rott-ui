@@ -1,51 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckBox Input -> Custom Input checkbox input ilk render anında snapshot ile eşleşmeli 1`] = `
-[
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  animated={false}
+  collapsable={false}
+  flex={0}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": undefined,
+      "backgroundColor": undefined,
+      "bottom": undefined,
+      "flex": 0,
+      "flexDirection": "column",
+      "flexGrow": undefined,
+      "gap": undefined,
+      "height": undefined,
+      "justifyContent": undefined,
+      "left": undefined,
+      "marginBottom": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginTop": undefined,
+      "maxHeight": undefined,
+      "maxWidth": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
+      "overflow": undefined,
+      "paddingBottom": undefined,
+      "paddingHorizontal": undefined,
+      "paddingLeft": undefined,
+      "paddingRight": undefined,
+      "paddingTop": undefined,
+      "paddingVertical": undefined,
+      "position": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": undefined,
+      "zIndex": undefined,
+    }
+  }
+  testID="checkbox-input-test-id"
+>
   <View
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": undefined,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    animated={false}
-    collapsable={false}
-    flex={0}
-    focusable={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    alignItemsCenter={true}
     style={
       {
-        "alignItems": undefined,
+        "alignItems": "center",
         "backgroundColor": undefined,
         "bottom": undefined,
-        "flex": 0,
-        "flexDirection": "column",
+        "color": "rgba(255, 255, 255, 1)",
+        "flex": undefined,
+        "flexDirection": "row",
         "flexGrow": undefined,
+        "fontSize": 18,
         "gap": undefined,
-        "height": undefined,
+        "height": 89,
         "justifyContent": undefined,
         "left": undefined,
+        "letterSpacing": 0.5,
         "marginBottom": undefined,
         "marginLeft": undefined,
         "marginRight": undefined,
@@ -64,35 +104,37 @@ exports[`CheckBox Input -> Custom Input checkbox input ilk render anında snapsh
         "position": undefined,
         "right": undefined,
         "top": undefined,
-        "width": undefined,
+        "width": "100%",
         "zIndex": undefined,
       }
     }
-    testID="checkbox-input-test-id"
+    testID="checkbox-container-test-id"
   >
     <View
       alignItemsCenter={true}
+      backgroundColor="white"
+      borderColor="rgba(161, 173, 175, 1)"
+      borderRadius={8}
+      borderWidth={2}
+      height={24}
+      justifyContentCenter={true}
       style={
         {
           "alignItems": "center",
-          "backgroundColor": undefined,
+          "backgroundColor": "white",
           "bottom": undefined,
-          "color": "rgba(255, 255, 255, 1)",
           "flex": undefined,
-          "flexDirection": "row",
+          "flexDirection": "column",
           "flexGrow": undefined,
-          "fontFamily": "Markpro-Medium",
-          "fontSize": 18,
           "gap": undefined,
-          "height": 89,
-          "justifyContent": undefined,
+          "height": 46,
+          "justifyContent": "center",
           "left": undefined,
-          "letterSpacing": 0.5,
           "marginBottom": undefined,
           "marginLeft": undefined,
           "marginRight": undefined,
           "marginTop": undefined,
-          "maxHeight": undefined,
+          "maxHeight": 46,
           "maxWidth": undefined,
           "minHeight": undefined,
           "minWidth": undefined,
@@ -106,121 +148,12 @@ exports[`CheckBox Input -> Custom Input checkbox input ilk render anında snapsh
           "position": undefined,
           "right": undefined,
           "top": undefined,
-          "width": "100%",
+          "width": 46,
           "zIndex": undefined,
         }
       }
-      testID="checkbox-container-test-id"
-    >
-      <View
-        alignItemsCenter={true}
-        backgroundColor="white"
-        borderColor="rgba(161, 173, 175, 1)"
-        borderRadius={8}
-        borderWidth={2}
-        height={24}
-        justifyContentCenter={true}
-        style={
-          {
-            "alignItems": "center",
-            "backgroundColor": "white",
-            "bottom": undefined,
-            "flex": undefined,
-            "flexDirection": "column",
-            "flexGrow": undefined,
-            "gap": undefined,
-            "height": 46,
-            "justifyContent": "center",
-            "left": undefined,
-            "marginBottom": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginTop": undefined,
-            "maxHeight": 46,
-            "maxWidth": undefined,
-            "minHeight": undefined,
-            "minWidth": undefined,
-            "overflow": undefined,
-            "paddingBottom": undefined,
-            "paddingHorizontal": undefined,
-            "paddingLeft": undefined,
-            "paddingRight": undefined,
-            "paddingTop": undefined,
-            "paddingVertical": undefined,
-            "position": undefined,
-            "right": undefined,
-            "top": undefined,
-            "width": 46,
-            "zIndex": undefined,
-          }
-        }
-        width={24}
-      />
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "flexDirection": "column-reverse",
-          "justifyContent": "flex-start",
-          "top": 30,
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "bottom": 40,
-          "flexDirection": "column",
-          "justifyContent": "flex-end",
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-]
+      width={24}
+    />
+  </View>
+</View>
 `;

@@ -106,7 +106,7 @@ export const AlertDialogComponent: FC<AlertDialogProps> = ({
             }}>
             <Item>
               <Label
-                variant={buttons?.cancelButton?.variant || 'danger'}
+                variant={(buttons?.cancelButton?.variant as any) || 'danger'}
                 fontWeight={500}
                 textCenter>
                 Cancel
@@ -127,7 +127,7 @@ export const AlertDialogComponent: FC<AlertDialogProps> = ({
             alignItemsCenter
             onPress={() => !!buttons?.confirmButton?.onPress && buttons?.confirmButton?.onPress()}>
             <Label
-              variant={buttons.confirmButton.variant || 'grey-100'}
+              variant={(buttons.confirmButton.variant as any) || 'grey-100'}
               fontWeight={500}
               textCenter>
               Confirm
