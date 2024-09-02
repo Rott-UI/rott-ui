@@ -1,233 +1,286 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşleşmeli 1`] = `
-[
-  <Modal
-    animationType="fade"
-    hardwareAccelerated={false}
-    onRequestClose={[Function]}
-    statusBarTranslucent={true}
-    style={
+<Modal
+  animationType="fade"
+  hardwareAccelerated={false}
+  onRequestClose={[Function]}
+  statusBarTranslucent={true}
+  style={
+    {
+      "height": 422,
+    }
+  }
+  testID="modal-test-id"
+  transparent={true}
+  visible={true}
+>
+  <View
+    accessibilityState={
       {
-        "height": 422,
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
       }
     }
-    testID="modal-test-id"
-    transparent={true}
-    visible={true}
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    animated={false}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignContent": "center",
+        "alignItems": undefined,
+        "backgroundColor": "rgba(34, 63, 70, 0.75)",
+        "bottom": undefined,
+        "flex": 1,
+        "flexDirection": "column",
+        "flexGrow": undefined,
+        "gap": undefined,
+        "height": undefined,
+        "justifyContent": "center",
+        "left": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "maxHeight": undefined,
+        "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
+        "overflow": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "paddingVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "top": undefined,
+        "width": undefined,
+        "zIndex": undefined,
+      }
+    }
+    testID="outside-tap-area-test-id"
+  />
+  <View
+    backgroundColor="rgba(34, 63, 70, 0.75)"
+    style={
+      {
+        "alignItems": undefined,
+        "backgroundColor": "rgba(34, 63, 70, 0.75)",
+        "bottom": undefined,
+        "flex": undefined,
+        "flexDirection": "row",
+        "flexGrow": undefined,
+        "gap": undefined,
+        "height": undefined,
+        "justifyContent": undefined,
+        "left": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "maxHeight": undefined,
+        "maxWidth": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
+        "overflow": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "paddingVertical": undefined,
+        "position": undefined,
+        "right": undefined,
+        "top": undefined,
+        "width": undefined,
+        "zIndex": undefined,
+      }
+    }
   >
     <View
-      accessibilityState={
-        {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": undefined,
-          "expanded": undefined,
-          "selected": undefined,
-        }
-      }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
-      }
-      accessible={true}
-      animated={false}
       collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         {
-          "alignContent": "center",
-          "alignItems": undefined,
-          "backgroundColor": "rgba(34, 63, 70, 0.75)",
-          "bottom": undefined,
+          "elevation": 5,
           "flex": 1,
-          "flexDirection": "column",
-          "flexGrow": undefined,
-          "gap": undefined,
-          "height": undefined,
-          "justifyContent": "center",
-          "left": undefined,
-          "marginBottom": undefined,
-          "marginLeft": undefined,
-          "marginRight": undefined,
-          "marginTop": undefined,
-          "maxHeight": undefined,
-          "maxWidth": undefined,
-          "minHeight": undefined,
-          "minWidth": undefined,
-          "overflow": undefined,
-          "paddingBottom": undefined,
-          "paddingHorizontal": undefined,
-          "paddingLeft": undefined,
-          "paddingRight": undefined,
-          "paddingTop": undefined,
-          "paddingVertical": undefined,
-          "position": undefined,
-          "right": undefined,
-          "top": undefined,
-          "width": undefined,
-          "zIndex": undefined,
-        }
-      }
-      testID="outside-tap-area-test-id"
-    />
-    <View
-      backgroundColor="rgba(34, 63, 70, 0.75)"
-      style={
-        {
-          "alignItems": undefined,
-          "backgroundColor": "rgba(34, 63, 70, 0.75)",
-          "bottom": undefined,
-          "flex": undefined,
           "flexDirection": "row",
-          "flexGrow": undefined,
-          "gap": undefined,
-          "height": undefined,
-          "justifyContent": undefined,
-          "left": undefined,
-          "marginBottom": undefined,
-          "marginLeft": undefined,
-          "marginRight": undefined,
-          "marginTop": undefined,
-          "maxHeight": undefined,
-          "maxWidth": undefined,
-          "minHeight": undefined,
-          "minWidth": undefined,
-          "overflow": undefined,
-          "paddingBottom": undefined,
-          "paddingHorizontal": undefined,
-          "paddingLeft": undefined,
-          "paddingRight": undefined,
-          "paddingTop": undefined,
-          "paddingVertical": undefined,
-          "position": undefined,
-          "right": undefined,
-          "top": undefined,
-          "width": undefined,
-          "zIndex": undefined,
+          "shadowColor": "rgba(6, 14, 16, 0.30)",
+          "shadowOffset": {
+            "height": -8,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 35,
+          "transform": [
+            {
+              "translateY": 0,
+            },
+          ],
         }
       }
     >
       <View
-        collapsable={false}
-        style={
+        accessibilityState={
           {
-            "elevation": 5,
-            "flex": 1,
-            "flexDirection": "row",
-            "shadowColor": "rgba(6, 14, 16, 0.30)",
-            "shadowOffset": {
-              "height": -8,
-              "width": 0,
-            },
-            "shadowOpacity": 1,
-            "shadowRadius": 35,
-            "transform": [
-              {
-                "translateY": 0,
-              },
-            ],
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
           }
         }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        animated={false}
+        backgroundColor="rgba(255, 255, 255, 1)"
+        borderTopEndRadius={24}
+        borderTopStartRadius={24}
+        collapsable={false}
+        focusable={true}
+        height={422}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": undefined,
+            "backgroundColor": "rgba(255, 255, 255, 1)",
+            "bottom": undefined,
+            "flex": 1,
+            "flexDirection": "column",
+            "flexGrow": undefined,
+            "gap": undefined,
+            "height": 812,
+            "justifyContent": undefined,
+            "left": undefined,
+            "marginBottom": undefined,
+            "marginLeft": undefined,
+            "marginRight": undefined,
+            "marginTop": undefined,
+            "maxHeight": 812,
+            "maxWidth": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
+            "overflow": undefined,
+            "paddingBottom": undefined,
+            "paddingHorizontal": undefined,
+            "paddingLeft": undefined,
+            "paddingRight": undefined,
+            "paddingTop": undefined,
+            "paddingVertical": undefined,
+            "position": undefined,
+            "right": undefined,
+            "top": undefined,
+            "width": undefined,
+            "zIndex": undefined,
+          }
+        }
+        testID="pressable-test-id"
       >
-        <View
-          accessibilityState={
-            {
-              "busy": undefined,
-              "checked": undefined,
-              "disabled": undefined,
-              "expanded": undefined,
-              "selected": undefined,
-            }
-          }
-          accessibilityValue={
-            {
-              "max": undefined,
-              "min": undefined,
-              "now": undefined,
-              "text": undefined,
-            }
-          }
-          accessible={true}
-          animated={false}
-          backgroundColor="rgba(255, 255, 255, 1)"
-          borderTopEndRadius={24}
-          borderTopStartRadius={24}
-          collapsable={false}
-          focusable={true}
-          height={422}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onFocus={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
+        <RCTScrollView
+          contentContainerStyle={
             {
               "alignItems": undefined,
-              "backgroundColor": "rgba(255, 255, 255, 1)",
-              "bottom": undefined,
               "flex": 1,
-              "flexDirection": "column",
-              "flexGrow": undefined,
-              "gap": undefined,
-              "height": 812,
               "justifyContent": undefined,
-              "left": undefined,
-              "marginBottom": undefined,
-              "marginLeft": undefined,
-              "marginRight": undefined,
-              "marginTop": undefined,
-              "maxHeight": 812,
-              "maxWidth": undefined,
-              "minHeight": undefined,
-              "minWidth": undefined,
-              "overflow": undefined,
-              "paddingBottom": undefined,
-              "paddingHorizontal": undefined,
-              "paddingLeft": undefined,
-              "paddingRight": undefined,
-              "paddingTop": undefined,
-              "paddingVertical": undefined,
-              "position": undefined,
-              "right": undefined,
-              "top": undefined,
-              "width": undefined,
-              "zIndex": undefined,
             }
           }
-          testID="pressable-test-id"
+          keyboardShouldPersistTaps="handled"
+          scrollEnabled={false}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
         >
-          <RCTScrollView
-            contentContainerStyle={
-              {
-                "alignItems": undefined,
-                "flex": 1,
-                "justifyContent": undefined,
+          <View>
+            <View
+              alignItemsCenter={true}
+              backgroundColor="rgba(61, 88, 94, 1)"
+              borderTopEndRadius={24}
+              borderTopStartRadius={24}
+              justifyContentCenter={true}
+              onMoveShouldSetResponder={[Function]}
+              onMoveShouldSetResponderCapture={[Function]}
+              onResponderEnd={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderReject={[Function]}
+              onResponderRelease={[Function]}
+              onResponderStart={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              onStartShouldSetResponderCapture={[Function]}
+              paddingTop={8}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "rgba(61, 88, 94, 1)",
+                  "bottom": undefined,
+                  "flex": undefined,
+                  "flexDirection": "column",
+                  "flexGrow": undefined,
+                  "gap": undefined,
+                  "height": undefined,
+                  "justifyContent": "center",
+                  "left": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "maxHeight": undefined,
+                  "maxWidth": undefined,
+                  "minHeight": undefined,
+                  "minWidth": undefined,
+                  "overflow": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": undefined,
+                  "paddingRight": undefined,
+                  "paddingTop": 16,
+                  "paddingVertical": undefined,
+                  "position": undefined,
+                  "right": undefined,
+                  "top": undefined,
+                  "width": "100%",
+                  "zIndex": undefined,
+                }
               }
-            }
-            keyboardShouldPersistTaps="handled"
-            scrollEnabled={false}
-            showsHorizontalScrollIndicator={false}
-            showsVerticalScrollIndicator={false}
-          >
-            <View>
+            >
               <View
                 alignItemsCenter={true}
                 backgroundColor="rgba(61, 88, 94, 1)"
@@ -246,7 +299,6 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 onStartShouldSetResponderCapture={[Function]}
-                paddingTop={8}
                 style={
                   {
                     "alignItems": "center",
@@ -272,7 +324,7 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                     "paddingHorizontal": undefined,
                     "paddingLeft": undefined,
                     "paddingRight": undefined,
-                    "paddingTop": 16,
+                    "paddingTop": undefined,
                     "paddingVertical": undefined,
                     "position": undefined,
                     "right": undefined,
@@ -283,34 +335,17 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                 }
               >
                 <View
-                  alignItemsCenter={true}
-                  backgroundColor="rgba(61, 88, 94, 1)"
-                  borderTopEndRadius={24}
-                  borderTopStartRadius={24}
-                  justifyContentCenter={true}
-                  onMoveShouldSetResponder={[Function]}
-                  onMoveShouldSetResponderCapture={[Function]}
-                  onResponderEnd={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderReject={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderStart={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  onStartShouldSetResponderCapture={[Function]}
                   style={
                     {
-                      "alignItems": "center",
-                      "backgroundColor": "rgba(61, 88, 94, 1)",
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
                       "bottom": undefined,
                       "flex": undefined,
                       "flexDirection": "column",
                       "flexGrow": undefined,
                       "gap": undefined,
                       "height": undefined,
-                      "justifyContent": "center",
+                      "justifyContent": undefined,
                       "left": undefined,
                       "marginBottom": undefined,
                       "marginLeft": undefined,
@@ -330,12 +365,110 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                       "position": undefined,
                       "right": undefined,
                       "top": undefined,
-                      "width": "100%",
+                      "width": undefined,
+                      "zIndex": undefined,
+                    }
+                  }
+                  testID="slide-to-close-button-test-id"
+                >
+                  <SvgMock
+                    fill="transparent"
+                    height={77}
+                    stroke="rgba(234, 239, 240, 0.15)"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1}
+                    width={77}
+                  />
+                </View>
+              </View>
+              <View
+                minHeight={56}
+                paddingVertical={0}
+                style={
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": undefined,
+                    "borderBottomEndRadius": undefined,
+                    "borderBottomStartRadius": undefined,
+                    "borderRadius": undefined,
+                    "borderTopEndRadius": undefined,
+                    "borderTopStartRadius": undefined,
+                    "bottom": undefined,
+                    "flex": undefined,
+                    "flexDirection": "column",
+                    "flexGrow": undefined,
+                    "gap": undefined,
+                    "height": undefined,
+                    "justifyContent": "center",
+                    "left": undefined,
+                    "marginBottom": undefined,
+                    "marginLeft": undefined,
+                    "marginRight": undefined,
+                    "marginTop": undefined,
+                    "maxHeight": undefined,
+                    "maxWidth": undefined,
+                    "minHeight": 108,
+                    "minWidth": undefined,
+                    "overflow": undefined,
+                    "paddingBottom": undefined,
+                    "paddingHorizontal": 46,
+                    "paddingLeft": undefined,
+                    "paddingRight": undefined,
+                    "paddingTop": undefined,
+                    "paddingVertical": 0,
+                    "position": undefined,
+                    "right": undefined,
+                    "top": undefined,
+                    "width": undefined,
+                    "zIndex": undefined,
+                  }
+                }
+                testID="modal-header-test-id"
+              >
+                <View
+                  height={56}
+                  style={
+                    {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "bottom": undefined,
+                      "flex": undefined,
+                      "flexDirection": "row",
+                      "flexGrow": undefined,
+                      "gap": undefined,
+                      "height": 108,
+                      "justifyContent": undefined,
+                      "left": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "maxHeight": 108,
+                      "maxWidth": undefined,
+                      "minHeight": undefined,
+                      "minWidth": undefined,
+                      "overflow": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "paddingVertical": undefined,
+                      "position": undefined,
+                      "right": undefined,
+                      "top": undefined,
+                      "width": undefined,
                       "zIndex": undefined,
                     }
                   }
                 >
                   <View
+                    flexShrink={1}
+                    height={56}
+                    justifyContentCenter={true}
+                    minWidth={56}
+                    relative={true}
                     style={
                       {
                         "alignItems": undefined,
@@ -345,17 +478,17 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                         "flexDirection": "column",
                         "flexGrow": undefined,
                         "gap": undefined,
-                        "height": undefined,
-                        "justifyContent": undefined,
+                        "height": 108,
+                        "justifyContent": "center",
                         "left": undefined,
                         "marginBottom": undefined,
                         "marginLeft": undefined,
                         "marginRight": undefined,
                         "marginTop": undefined,
-                        "maxHeight": undefined,
+                        "maxHeight": 108,
                         "maxWidth": undefined,
                         "minHeight": undefined,
-                        "minWidth": undefined,
+                        "minWidth": 108,
                         "overflow": undefined,
                         "paddingBottom": undefined,
                         "paddingHorizontal": undefined,
@@ -363,92 +496,115 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                         "paddingRight": undefined,
                         "paddingTop": undefined,
                         "paddingVertical": undefined,
-                        "position": undefined,
+                        "position": "relative",
                         "right": undefined,
                         "top": undefined,
                         "width": undefined,
                         "zIndex": undefined,
                       }
                     }
-                    testID="slide-to-close-button-test-id"
                   >
-                    <SvgMock
-                      fill="transparent"
-                      height={77}
-                      stroke="rgba(234, 239, 240, 0.15)"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1}
-                      width={77}
+                    <View
+                      accessibilityState={
+                        {
+                          "busy": undefined,
+                          "checked": undefined,
+                          "disabled": undefined,
+                          "expanded": undefined,
+                          "selected": undefined,
+                        }
+                      }
+                      accessibilityValue={
+                        {
+                          "max": undefined,
+                          "min": undefined,
+                          "now": undefined,
+                          "text": undefined,
+                        }
+                      }
+                      accessible={true}
+                      alignItemsCenter={false}
+                      alignItemsFlexStart={true}
+                      animated={false}
+                      collapsable={false}
+                      focusable={true}
+                      height={56}
+                      justifyContentCenter={true}
+                      minWidth={56}
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        {
+                          "alignItems": "flex-start",
+                          "backgroundColor": undefined,
+                          "bottom": undefined,
+                          "flex": 1,
+                          "flexDirection": "column",
+                          "flexGrow": undefined,
+                          "gap": undefined,
+                          "height": 108,
+                          "justifyContent": "center",
+                          "left": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "maxHeight": 108,
+                          "maxWidth": undefined,
+                          "minHeight": undefined,
+                          "minWidth": 108,
+                          "overflow": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "paddingVertical": undefined,
+                          "position": undefined,
+                          "right": undefined,
+                          "top": undefined,
+                          "width": 108,
+                          "zIndex": undefined,
+                        }
+                      }
+                      testID="header-left-pressable-test-id"
+                      width={56}
                     />
                   </View>
-                </View>
-                <View
-                  minHeight={56}
-                  paddingVertical={0}
-                  style={
-                    {
-                      "alignItems": undefined,
-                      "backgroundColor": undefined,
-                      "borderBottomEndRadius": undefined,
-                      "borderBottomStartRadius": undefined,
-                      "borderRadius": undefined,
-                      "borderTopEndRadius": undefined,
-                      "borderTopStartRadius": undefined,
-                      "bottom": undefined,
-                      "flex": undefined,
-                      "flexDirection": "column",
-                      "flexGrow": undefined,
-                      "gap": undefined,
-                      "height": undefined,
-                      "justifyContent": undefined,
-                      "left": undefined,
-                      "marginBottom": undefined,
-                      "marginLeft": undefined,
-                      "marginRight": undefined,
-                      "marginTop": undefined,
-                      "maxHeight": undefined,
-                      "maxWidth": undefined,
-                      "minHeight": 108,
-                      "minWidth": undefined,
-                      "overflow": undefined,
-                      "paddingBottom": undefined,
-                      "paddingHorizontal": 46,
-                      "paddingLeft": undefined,
-                      "paddingRight": undefined,
-                      "paddingTop": undefined,
-                      "paddingVertical": 0,
-                      "position": undefined,
-                      "right": undefined,
-                      "top": undefined,
-                      "width": undefined,
-                      "zIndex": undefined,
-                    }
-                  }
-                  testID="modal-header-test-id"
-                >
                   <View
-                    minHeight={56}
+                    alignItemsCenter={true}
+                    flex={1}
+                    height={56}
+                    justifyContentCenter={true}
+                    minWidth={56}
+                    relative={true}
                     style={
                       {
-                        "alignItems": undefined,
+                        "alignItems": "center",
                         "backgroundColor": undefined,
                         "bottom": undefined,
-                        "flex": undefined,
-                        "flexDirection": "row",
+                        "flex": 1,
+                        "flexDirection": "column",
                         "flexGrow": undefined,
                         "gap": undefined,
-                        "height": undefined,
-                        "justifyContent": undefined,
+                        "height": 108,
+                        "justifyContent": "center",
                         "left": undefined,
                         "marginBottom": undefined,
                         "marginLeft": undefined,
                         "marginRight": undefined,
                         "marginTop": undefined,
-                        "maxHeight": undefined,
+                        "maxHeight": 108,
                         "maxWidth": undefined,
-                        "minHeight": 108,
-                        "minWidth": undefined,
+                        "minHeight": undefined,
+                        "minWidth": 108,
                         "overflow": undefined,
                         "paddingBottom": undefined,
                         "paddingHorizontal": undefined,
@@ -456,228 +612,152 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                         "paddingRight": undefined,
                         "paddingTop": undefined,
                         "paddingVertical": undefined,
-                        "position": undefined,
+                        "position": "relative",
                         "right": undefined,
                         "top": undefined,
-                        "width": "100%",
+                        "width": undefined,
+                        "zIndex": undefined,
+                      }
+                    }
+                  >
+                    <Image
+                      height={24}
+                      style={
+                        {
+                          "backgroundColor": undefined,
+                          "borderRadius": 50,
+                          "bottom": undefined,
+                          "flexGrow": undefined,
+                          "gap": undefined,
+                          "height": 46,
+                          "left": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "maxHeight": 46,
+                          "maxWidth": undefined,
+                          "minHeight": undefined,
+                          "minWidth": undefined,
+                          "overflow": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "paddingVertical": undefined,
+                          "position": undefined,
+                          "resizeMode": "contain",
+                          "right": undefined,
+                          "top": undefined,
+                          "width": 244,
+                          "zIndex": undefined,
+                        }
+                      }
+                      testID="header-logo-test-id"
+                      width={127}
+                    />
+                  </View>
+                  <View
+                    alignItemsFlexEnd={true}
+                    flexShrink={1}
+                    height={56}
+                    justifyContentCenter={true}
+                    minWidth={56}
+                    relative={true}
+                    style={
+                      {
+                        "alignItems": "flex-end",
+                        "backgroundColor": undefined,
+                        "bottom": undefined,
+                        "flex": undefined,
+                        "flexDirection": "column",
+                        "flexGrow": undefined,
+                        "gap": undefined,
+                        "height": 108,
+                        "justifyContent": "center",
+                        "left": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": undefined,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "maxHeight": 108,
+                        "maxWidth": undefined,
+                        "minHeight": undefined,
+                        "minWidth": 108,
+                        "overflow": undefined,
+                        "paddingBottom": undefined,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": undefined,
+                        "paddingTop": undefined,
+                        "paddingVertical": undefined,
+                        "position": "relative",
+                        "right": undefined,
+                        "top": undefined,
+                        "width": undefined,
                         "zIndex": undefined,
                       }
                     }
                   >
                     <View
-                      justifyContentCenter={true}
-                      style={
+                      accessibilityState={
                         {
-                          "alignItems": undefined,
-                          "backgroundColor": undefined,
-                          "bottom": undefined,
-                          "flex": undefined,
-                          "flexDirection": "column",
-                          "flexGrow": undefined,
-                          "gap": undefined,
-                          "height": undefined,
-                          "justifyContent": "center",
-                          "left": undefined,
-                          "marginBottom": undefined,
-                          "marginLeft": undefined,
-                          "marginRight": undefined,
-                          "marginTop": undefined,
-                          "maxHeight": undefined,
-                          "maxWidth": undefined,
-                          "minHeight": undefined,
-                          "minWidth": undefined,
-                          "overflow": undefined,
-                          "paddingBottom": undefined,
-                          "paddingHorizontal": undefined,
-                          "paddingLeft": undefined,
-                          "paddingRight": undefined,
-                          "paddingTop": undefined,
-                          "paddingVertical": undefined,
-                          "position": undefined,
-                          "right": undefined,
-                          "top": undefined,
-                          "width": "25%",
-                          "zIndex": undefined,
+                          "busy": undefined,
+                          "checked": undefined,
+                          "disabled": undefined,
+                          "expanded": undefined,
+                          "selected": undefined,
                         }
                       }
-                    >
-                      <View
-                        accessibilityState={
-                          {
-                            "busy": undefined,
-                            "checked": undefined,
-                            "disabled": undefined,
-                            "expanded": undefined,
-                            "selected": undefined,
-                          }
-                        }
-                        accessibilityValue={
-                          {
-                            "max": undefined,
-                            "min": undefined,
-                            "now": undefined,
-                            "text": undefined,
-                          }
-                        }
-                        accessible={true}
-                        alignItemsCenter={false}
-                        alignItemsFlexStart={true}
-                        animated={false}
-                        collapsable={false}
-                        focusable={true}
-                        height={40}
-                        justifyContentCenter={true}
-                        onBlur={[Function]}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          {
-                            "alignItems": "flex-start",
-                            "backgroundColor": undefined,
-                            "bottom": undefined,
-                            "flex": 1,
-                            "flexDirection": "column",
-                            "flexGrow": undefined,
-                            "gap": undefined,
-                            "height": 77,
-                            "justifyContent": "center",
-                            "left": undefined,
-                            "marginBottom": undefined,
-                            "marginLeft": undefined,
-                            "marginRight": undefined,
-                            "marginTop": undefined,
-                            "maxHeight": 77,
-                            "maxWidth": undefined,
-                            "minHeight": undefined,
-                            "minWidth": undefined,
-                            "overflow": undefined,
-                            "paddingBottom": undefined,
-                            "paddingHorizontal": undefined,
-                            "paddingLeft": undefined,
-                            "paddingRight": undefined,
-                            "paddingTop": undefined,
-                            "paddingVertical": undefined,
-                            "position": undefined,
-                            "right": undefined,
-                            "top": undefined,
-                            "width": 77,
-                            "zIndex": undefined,
-                          }
-                        }
-                        testID="header-left-pressable-test-id"
-                        width={40}
-                      />
-                    </View>
-                    <View
-                      alignItemsCenter={true}
-                      paddingTop={16}
-                      style={
+                      accessibilityValue={
                         {
-                          "alignItems": "center",
-                          "backgroundColor": undefined,
-                          "bottom": undefined,
-                          "flex": undefined,
-                          "flexDirection": "column",
-                          "flexGrow": undefined,
-                          "gap": undefined,
-                          "height": undefined,
-                          "justifyContent": undefined,
-                          "left": undefined,
-                          "marginBottom": undefined,
-                          "marginLeft": undefined,
-                          "marginRight": undefined,
-                          "marginTop": undefined,
-                          "maxHeight": undefined,
-                          "maxWidth": undefined,
-                          "minHeight": undefined,
-                          "minWidth": undefined,
-                          "overflow": undefined,
-                          "paddingBottom": undefined,
-                          "paddingHorizontal": undefined,
-                          "paddingLeft": undefined,
-                          "paddingRight": undefined,
-                          "paddingTop": 31,
-                          "paddingVertical": undefined,
-                          "position": undefined,
-                          "right": undefined,
-                          "top": undefined,
-                          "width": "50%",
-                          "zIndex": undefined,
+                          "max": undefined,
+                          "min": undefined,
+                          "now": undefined,
+                          "text": undefined,
                         }
                       }
-                    >
-                      <Image
-                        height={24}
-                        source={
-                          {
-                            "testUri": "../../../src/assets/images/logo/pttbank-BlackColored.png",
-                          }
-                        }
-                        style={
-                          {
-                            "backgroundColor": undefined,
-                            "borderRadius": 50,
-                            "bottom": undefined,
-                            "flexGrow": undefined,
-                            "gap": undefined,
-                            "height": 46,
-                            "left": undefined,
-                            "marginBottom": undefined,
-                            "marginLeft": undefined,
-                            "marginRight": undefined,
-                            "marginTop": undefined,
-                            "maxHeight": 46,
-                            "maxWidth": undefined,
-                            "minHeight": undefined,
-                            "minWidth": undefined,
-                            "overflow": undefined,
-                            "paddingBottom": undefined,
-                            "paddingHorizontal": undefined,
-                            "paddingLeft": undefined,
-                            "paddingRight": undefined,
-                            "paddingTop": undefined,
-                            "paddingVertical": undefined,
-                            "position": undefined,
-                            "resizeMode": "contain",
-                            "right": undefined,
-                            "top": undefined,
-                            "width": 244,
-                            "zIndex": undefined,
-                          }
-                        }
-                        testID="header-logo-test-id"
-                        width={127}
-                      />
-                    </View>
-                    <View
+                      accessible={true}
+                      alignItemsCenter={false}
                       alignItemsFlexEnd={true}
+                      alignItemsFlexStart={true}
+                      animated={false}
+                      collapsable={false}
+                      focusable={true}
+                      height={56}
                       justifyContentCenter={true}
+                      minWidth={56}
+                      name="REMOVE_BIG"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
                       style={
                         {
                           "alignItems": "flex-end",
                           "backgroundColor": undefined,
                           "bottom": undefined,
-                          "flex": undefined,
+                          "flex": 1,
                           "flexDirection": "column",
                           "flexGrow": undefined,
                           "gap": undefined,
-                          "height": undefined,
+                          "height": 108,
                           "justifyContent": "center",
                           "left": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
-                          "maxHeight": undefined,
+                          "maxHeight": 108,
                           "maxWidth": undefined,
                           "minHeight": undefined,
-                          "minWidth": undefined,
+                          "minWidth": 108,
                           "overflow": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -688,62 +768,31 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                           "position": undefined,
                           "right": undefined,
                           "top": undefined,
-                          "width": "25%",
+                          "width": undefined,
                           "zIndex": undefined,
                         }
                       }
+                      testID="header-right-pressable-test-id"
                     >
                       <View
-                        accessibilityState={
-                          {
-                            "busy": undefined,
-                            "checked": undefined,
-                            "disabled": undefined,
-                            "expanded": undefined,
-                            "selected": undefined,
-                          }
-                        }
-                        accessibilityValue={
-                          {
-                            "max": undefined,
-                            "min": undefined,
-                            "now": undefined,
-                            "text": undefined,
-                          }
-                        }
-                        accessible={true}
-                        alignItemsCenter={true}
-                        animated={false}
-                        collapsable={false}
-                        focusable={true}
-                        height={40}
-                        justifyContentCenter={true}
-                        onBlur={[Function]}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
+                        onPress={[Function]}
                         style={
                           {
-                            "alignItems": "center",
+                            "alignItems": undefined,
                             "backgroundColor": undefined,
                             "bottom": undefined,
-                            "flex": 1,
+                            "flex": undefined,
                             "flexDirection": "column",
                             "flexGrow": undefined,
                             "gap": undefined,
-                            "height": 77,
-                            "justifyContent": "center",
+                            "height": undefined,
+                            "justifyContent": undefined,
                             "left": undefined,
                             "marginBottom": undefined,
                             "marginLeft": undefined,
                             "marginRight": undefined,
                             "marginTop": undefined,
-                            "maxHeight": 77,
+                            "maxHeight": undefined,
                             "maxWidth": undefined,
                             "minHeight": undefined,
                             "minWidth": undefined,
@@ -757,78 +806,77 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                             "position": undefined,
                             "right": undefined,
                             "top": undefined,
-                            "width": 77,
+                            "width": undefined,
                             "zIndex": undefined,
                           }
                         }
-                        testID="header-right-pressable-test-id"
-                        width={40}
+                        testID="header-right-icon-test-id"
                       >
-                        <View
-                          style={
-                            {
-                              "alignItems": undefined,
-                              "backgroundColor": undefined,
-                              "bottom": undefined,
-                              "flex": undefined,
-                              "flexDirection": "column",
-                              "flexGrow": undefined,
-                              "gap": undefined,
-                              "height": undefined,
-                              "justifyContent": undefined,
-                              "left": undefined,
-                              "marginBottom": undefined,
-                              "marginLeft": undefined,
-                              "marginRight": undefined,
-                              "marginTop": undefined,
-                              "maxHeight": undefined,
-                              "maxWidth": undefined,
-                              "minHeight": undefined,
-                              "minWidth": undefined,
-                              "overflow": undefined,
-                              "paddingBottom": undefined,
-                              "paddingHorizontal": undefined,
-                              "paddingLeft": undefined,
-                              "paddingRight": undefined,
-                              "paddingTop": undefined,
-                              "paddingVertical": undefined,
-                              "position": undefined,
-                              "right": undefined,
-                              "top": undefined,
-                              "width": undefined,
-                              "zIndex": undefined,
-                            }
-                          }
-                          testID="header-right-icon-test-id"
-                        >
-                          <SvgMock
-                            fill="transparent"
-                            height={46}
-                            stroke="rgba(255, 255, 255, 1)"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            width={46}
-                          />
-                        </View>
+                        <SvgMock
+                          fill="transparent"
+                          height={46}
+                          stroke="rgba(255, 255, 255, 1)"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1}
+                          width={46}
+                        />
                       </View>
                     </View>
                   </View>
                 </View>
               </View>
-              <View
+            </View>
+            <View
+              style={
+                {
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "bottom": undefined,
+                  "flex": undefined,
+                  "flexDirection": "column",
+                  "flexGrow": undefined,
+                  "gap": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "left": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "maxHeight": undefined,
+                  "maxWidth": undefined,
+                  "minHeight": undefined,
+                  "minWidth": undefined,
+                  "overflow": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": undefined,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "paddingVertical": undefined,
+                  "position": undefined,
+                  "right": undefined,
+                  "top": undefined,
+                  "width": undefined,
+                  "zIndex": undefined,
+                }
+              }
+            >
+              <Text
                 style={
                   {
-                    "alignItems": undefined,
                     "backgroundColor": undefined,
                     "bottom": undefined,
-                    "flex": undefined,
-                    "flexDirection": "column",
+                    "color": "rgba(17, 17, 17, 1)",
                     "flexGrow": undefined,
+                    "fontFamily": "Markpro-Medium",
+                    "fontSize": 14,
+                    "fontWeight": undefined,
                     "gap": undefined,
                     "height": undefined,
-                    "justifyContent": undefined,
                     "left": undefined,
+                    "letterSpacing": undefined,
                     "marginBottom": undefined,
                     "marginLeft": undefined,
                     "marginRight": undefined,
@@ -846,122 +894,20 @@ exports[`Modal -> Custom Component modal ilk renderlandiginda snapshot ile eşle
                     "paddingVertical": undefined,
                     "position": undefined,
                     "right": undefined,
+                    "textAlign": "auto",
                     "top": undefined,
                     "width": undefined,
                     "zIndex": undefined,
                   }
                 }
               >
-                <Text
-                  style={
-                    {
-                      "backgroundColor": undefined,
-                      "bottom": undefined,
-                      "color": "rgba(17, 17, 17, 1)",
-                      "flexGrow": undefined,
-                      "fontFamily": "Markpro-Medium",
-                      "fontSize": 14,
-                      "fontWeight": undefined,
-                      "gap": undefined,
-                      "height": undefined,
-                      "left": undefined,
-                      "letterSpacing": undefined,
-                      "marginBottom": undefined,
-                      "marginLeft": undefined,
-                      "marginRight": undefined,
-                      "marginTop": undefined,
-                      "maxHeight": undefined,
-                      "maxWidth": undefined,
-                      "minHeight": undefined,
-                      "minWidth": undefined,
-                      "overflow": undefined,
-                      "paddingBottom": undefined,
-                      "paddingHorizontal": undefined,
-                      "paddingLeft": undefined,
-                      "paddingRight": undefined,
-                      "paddingTop": undefined,
-                      "paddingVertical": undefined,
-                      "position": undefined,
-                      "right": undefined,
-                      "textAlign": "auto",
-                      "top": undefined,
-                      "width": undefined,
-                      "zIndex": undefined,
-                    }
-                  }
-                >
-                  TEST
-                </Text>
-              </View>
+                Test
+              </Text>
             </View>
-          </RCTScrollView>
-        </View>
+          </View>
+        </RCTScrollView>
       </View>
     </View>
-  </Modal>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "flexDirection": "column-reverse",
-          "justifyContent": "flex-start",
-          "top": 30,
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "bottom": 40,
-          "flexDirection": "column",
-          "justifyContent": "flex-end",
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-]
+  </View>
+</Modal>
 `;

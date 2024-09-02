@@ -5,7 +5,7 @@ import {PropsWithChildren, ReactNode} from 'react'
 import {ModalProps as RNModalProps} from 'react-native'
 
 // Component Imports
-import {Variant} from '../../models'
+import {Variant} from '../../../models'
 import {HeaderProps} from '../../Header'
 
 export interface ModalProps

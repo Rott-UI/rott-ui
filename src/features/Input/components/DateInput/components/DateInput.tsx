@@ -156,7 +156,8 @@ export const DateInput: FC<DateInputProps> = ({
             testID={testID}
             mode={mode?.replace('modal-', '') as any}
             date={value ? new Date(value) : new Date()}
-            textColor={themeConfig.colors['grey-900']}
+            // TODO: textColor kontrol edilecek
+            // textColor={themeConfig.colors['grey-900']}
             locale={appLanguage?.name}
             minimumDate={minimumDate}
             maximumDate={maximumDate}

@@ -32,6 +32,7 @@ import {colorFromVariant} from '../../../utils'
 
 // Provider Imports
 import {themeConfig} from '../../../providers'
+import {Variant} from '../../models'
 
 export const Input: FC<InputProps> = ({
   label,
@@ -243,7 +244,7 @@ export const Input: FC<InputProps> = ({
               fontFamily={isLabelObject && label.fontFamily ? label.fontFamily : 'Markpro-Medium'}
               variant={
                 isLabelObject
-                  ? label.variant ?? (label.theme === 'dark' ? 'grey-900' : 'grey-200')
+                  ? (label.variant as any) ?? (label.theme === 'dark' ? 'grey-900' : 'grey-200')
                   : theme === 'dark'
                   ? 'grey-200'
                   : 'grey-900'
@@ -256,7 +257,7 @@ export const Input: FC<InputProps> = ({
                 testID='input-label-description-test-id'
                 fontSize={label.descriptionSize ?? 'xs'}
                 fontFamily={label.fontFamily ?? 'Markpro-Medium'}
-                variant={label.descriptionVariant ?? 'grey-200'}
+                variant={(label.descriptionVariant as any) ?? 'grey-200'}
                 marginLeft={4}>
                 {`(${label.description?.toUpperCase()})`}
               </Label>

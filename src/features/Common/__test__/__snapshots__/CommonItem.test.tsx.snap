@@ -1,14 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List Item -> Custom Component common item ilk renderlandığında snapshot ile eşleşmeli 1`] = `
-[
+<View
+  style={
+    {
+      "alignItems": undefined,
+      "backgroundColor": undefined,
+      "bottom": undefined,
+      "flex": undefined,
+      "flexDirection": "column",
+      "flexGrow": undefined,
+      "gap": undefined,
+      "height": undefined,
+      "justifyContent": undefined,
+      "left": undefined,
+      "marginBottom": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginTop": undefined,
+      "maxHeight": undefined,
+      "maxWidth": undefined,
+      "minHeight": undefined,
+      "minWidth": undefined,
+      "overflow": undefined,
+      "paddingBottom": undefined,
+      "paddingHorizontal": undefined,
+      "paddingLeft": undefined,
+      "paddingRight": undefined,
+      "paddingTop": undefined,
+      "paddingVertical": undefined,
+      "position": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": undefined,
+      "zIndex": undefined,
+    }
+  }
+>
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    animated={false}
+    backgroundColor="rgba(161, 173, 175, 1)"
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    paddingHorizontal={24}
+    paddingVertical={16}
     style={
       {
         "alignItems": undefined,
-        "backgroundColor": undefined,
+        "backgroundColor": "rgba(161, 173, 175, 1)",
         "bottom": undefined,
-        "flex": undefined,
+        "flex": 1,
         "flexDirection": "column",
         "flexGrow": undefined,
         "gap": undefined,
@@ -25,11 +93,11 @@ exports[`List Item -> Custom Component common item ilk renderlandığında snaps
         "minWidth": undefined,
         "overflow": undefined,
         "paddingBottom": undefined,
-        "paddingHorizontal": undefined,
+        "paddingHorizontal": 46,
         "paddingLeft": undefined,
         "paddingRight": undefined,
         "paddingTop": undefined,
-        "paddingVertical": undefined,
+        "paddingVertical": 31,
         "position": undefined,
         "right": undefined,
         "top": undefined,
@@ -39,50 +107,19 @@ exports[`List Item -> Custom Component common item ilk renderlandığında snaps
     }
   >
     <View
-      accessibilityState={
-        {
-          "busy": undefined,
-          "checked": undefined,
-          "disabled": undefined,
-          "expanded": undefined,
-          "selected": undefined,
-        }
-      }
-      accessibilityValue={
-        {
-          "max": undefined,
-          "min": undefined,
-          "now": undefined,
-          "text": undefined,
-        }
-      }
-      accessible={true}
-      animated={false}
-      backgroundColor="rgba(161, 173, 175, 1)"
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      paddingHorizontal={24}
-      paddingVertical={16}
+      alignItemsCenter={true}
+      justifyContentCenter={true}
       style={
         {
-          "alignItems": undefined,
-          "backgroundColor": "rgba(161, 173, 175, 1)",
+          "alignItems": "center",
+          "backgroundColor": undefined,
           "bottom": undefined,
-          "flex": 1,
-          "flexDirection": "column",
+          "flex": undefined,
+          "flexDirection": "row",
           "flexGrow": undefined,
           "gap": undefined,
           "height": undefined,
-          "justifyContent": undefined,
+          "justifyContent": "center",
           "left": undefined,
           "marginBottom": undefined,
           "marginLeft": undefined,
@@ -94,11 +131,11 @@ exports[`List Item -> Custom Component common item ilk renderlandığında snaps
           "minWidth": undefined,
           "overflow": undefined,
           "paddingBottom": undefined,
-          "paddingHorizontal": 46,
+          "paddingHorizontal": undefined,
           "paddingLeft": undefined,
           "paddingRight": undefined,
           "paddingTop": undefined,
-          "paddingVertical": 31,
+          "paddingVertical": undefined,
           "position": undefined,
           "right": undefined,
           "top": undefined,
@@ -108,19 +145,18 @@ exports[`List Item -> Custom Component common item ilk renderlandığında snaps
       }
     >
       <View
-        alignItemsCenter={true}
-        justifyContentCenter={true}
+        flex={1}
         style={
           {
-            "alignItems": "center",
+            "alignItems": undefined,
             "backgroundColor": undefined,
             "bottom": undefined,
-            "flex": undefined,
-            "flexDirection": "row",
+            "flex": 1,
+            "flexDirection": "column",
             "flexGrow": undefined,
             "gap": undefined,
             "height": undefined,
-            "justifyContent": "center",
+            "justifyContent": undefined,
             "left": undefined,
             "marginBottom": undefined,
             "marginLeft": undefined,
@@ -145,20 +181,20 @@ exports[`List Item -> Custom Component common item ilk renderlandığında snaps
           }
         }
       >
-        <View
-          flex={1}
+        <Text
           style={
             {
-              "alignItems": undefined,
               "backgroundColor": undefined,
               "bottom": undefined,
-              "flex": 1,
-              "flexDirection": "column",
+              "color": "rgba(34, 63, 70, 1)",
               "flexGrow": undefined,
+              "fontFamily": "Markpro-Medium",
+              "fontSize": 16,
+              "fontWeight": undefined,
               "gap": undefined,
               "height": undefined,
-              "justifyContent": undefined,
               "left": undefined,
+              "letterSpacing": undefined,
               "marginBottom": undefined,
               "marginLeft": undefined,
               "marginRight": undefined,
@@ -176,120 +212,18 @@ exports[`List Item -> Custom Component common item ilk renderlandığında snaps
               "paddingVertical": undefined,
               "position": undefined,
               "right": undefined,
+              "textAlign": "auto",
               "top": undefined,
               "width": undefined,
               "zIndex": undefined,
             }
           }
+          testID="title-test-id"
         >
-          <Text
-            style={
-              {
-                "backgroundColor": undefined,
-                "bottom": undefined,
-                "color": "rgba(34, 63, 70, 1)",
-                "flexGrow": undefined,
-                "fontFamily": "Markpro-Medium",
-                "fontSize": 16,
-                "fontWeight": undefined,
-                "gap": undefined,
-                "height": undefined,
-                "left": undefined,
-                "letterSpacing": undefined,
-                "marginBottom": undefined,
-                "marginLeft": undefined,
-                "marginRight": undefined,
-                "marginTop": undefined,
-                "maxHeight": undefined,
-                "maxWidth": undefined,
-                "minHeight": undefined,
-                "minWidth": undefined,
-                "overflow": undefined,
-                "paddingBottom": undefined,
-                "paddingHorizontal": undefined,
-                "paddingLeft": undefined,
-                "paddingRight": undefined,
-                "paddingTop": undefined,
-                "paddingVertical": undefined,
-                "position": undefined,
-                "right": undefined,
-                "textAlign": "auto",
-                "top": undefined,
-                "width": undefined,
-                "zIndex": undefined,
-              }
-            }
-            testID="title-test-id"
-          >
-            TEST WITH TITLE
-          </Text>
-        </View>
+          Title
+        </Text>
       </View>
     </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "flexDirection": "column-reverse",
-          "justifyContent": "flex-start",
-          "top": 30,
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-  <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
-    style={
-      [
-        {
-          "alignSelf": "center",
-          "elevation": 999999,
-          "flex": 0,
-          "maxWidth": "100%",
-          "position": "absolute",
-          "zIndex": 999999,
-        },
-        {
-          "bottom": 40,
-          "flexDirection": "column",
-          "justifyContent": "flex-end",
-          "width": 750,
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        {
-          "bottom": 0,
-        }
-      }
-    >
-      <RCTSafeAreaView />
-    </View>
-  </View>,
-]
+  </View>
+</View>
 `;

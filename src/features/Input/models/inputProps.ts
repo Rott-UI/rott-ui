@@ -6,7 +6,7 @@ import {TextInputProps} from 'react-native'
 
 // Component Imports
 import {InputType} from './inputType'
-import {CommonUiProps, Size, Variant} from '../../models'
+import {CommonUiProps, Size, Variant} from '../../../models'
 import {SelectProps} from './selectProps'
 import {InputLabelProps} from './inputLabelProps'
 import {Theme} from '../../../models'

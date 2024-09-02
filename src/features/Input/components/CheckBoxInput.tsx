@@ -41,7 +41,7 @@ export const CheckBoxInput: FC<CheckBoxProps> = ({
         testID='checkbox-container-test-id'>
         <Item
           borderRadius={8}
-          borderColor={checked ? COLOURS.PRIMARY : COLOURS.GREY200}
+          borderColor={checked ? themeConfig.colors['primary'] : themeConfig.colors['grey-200']}
           borderWidth={2}
           backgroundColor='white'
           width={24}

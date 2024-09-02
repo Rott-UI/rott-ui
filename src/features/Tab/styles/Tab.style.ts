@@ -1,12 +1,10 @@
 // React Native Imports
 import {StyleSheet} from 'react-native'
 
-// Constant Imports
-import {COLOURS, Fonts} from '../../../constants'
-
 // Util and Lib Imports
 import {display} from '../../../utils'
 import {commonUiStyleProperties} from '../../utils'
+import {themeConfig} from '../../../providers'
 
 export const TabStyle = (props?: any) =>
   StyleSheet.create({
@@ -18,8 +16,9 @@ export const TabStyle = (props?: any) =>
       justifyContent: 'center',
     },
     textStyle: {
-      fontFamily: Fonts.MARKPRO_BOLD,
+      // TODO: font eklendikten sonra duzenlenecek
+      // fontFamily: Fonts.MARKPRO_BOLD,
       fontSize: 14,
-      color: props?.isSelected ? COLOURS.GREY900 : COLOURS.GREY100,
+      color: props?.isSelected ? themeConfig.colors['grey-900'] : themeConfig.colors['grey-100'],
     },
   })

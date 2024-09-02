@@ -11,9 +11,6 @@ import {
 // Component Imports
 import {ImageBackgroundStyles} from '../styles'
 
-// Hook Imports
-import {useAppSelector} from '../../../hooks'
-
 // Package Imports
 import {SafeAreaView} from 'react-native-safe-area-context'
 import {themeConfig} from '../../../providers'

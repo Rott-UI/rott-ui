@@ -6,7 +6,7 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
   borderTopEndRadius={24}
   borderTopStartRadius={24}
   bottom={0}
-  height={88}
+  height={64}
   paddingTop={11}
   style={
     {
@@ -22,14 +22,14 @@ exports[`Component -> BottomMenu bottom menu componenti snapshotı ile eşleşme
       "flexDirection": "row",
       "flexGrow": undefined,
       "gap": undefined,
-      "height": 169,
+      "height": 123,
       "justifyContent": "space-around",
       "left": undefined,
       "marginBottom": undefined,
       "marginLeft": undefined,
       "marginRight": undefined,
       "marginTop": undefined,
-      "maxHeight": 169,
+      "maxHeight": 123,
       "maxWidth": undefined,
       "minHeight": undefined,
       "minWidth": undefined,

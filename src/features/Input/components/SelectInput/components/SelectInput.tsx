@@ -24,6 +24,8 @@ import {listHeightNormalizer, modalHeightPercentageNormalizer} from '../utils'
 // Util and Lib Imports
 
 import {CommonItem} from '../../../../Common/components/CommonItem'
+import {display, formatMessage} from '../../../../../utils'
+import {themeConfig} from '../../../../../providers'
 
 interface SelectInputProps {
   emptyState?: EmptyStateProps
@@ -100,7 +102,7 @@ export const SelectInput: FC<Omit<InputProps, 'name' | 'onChangeText'> & SelectI
   const showSelectInputModal = () =>
     showModal({
       id: ModalIdEnum.SelectInput,
-      backgroundColor: COLOURS.GREY900,
+      backgroundColor: themeConfig.colors['grey-900'],
       testID: 'select-modal-test-id',
       visible: true,
       slideToClose: true,
@@ -125,7 +127,7 @@ export const SelectInput: FC<Omit<InputProps, 'name' | 'onChangeText'> & SelectI
           width: 40,
           height: 40,
           strokeWidth: 2,
-          backgroundColor: COLOURS.GREY800,
+          backgroundColor: themeConfig.colors['grey-800'],
           alignItemsCenter: true,
           justifyContentCenter: true,
           borderRadius: 99,
@@ -204,7 +206,7 @@ export const SelectInput: FC<Omit<InputProps, 'name' | 'onChangeText'> & SelectI
             scrollEnabled={(filteredListData?.length ?? 0) > LIST_MAX_ITEM_COUNT ? true : false}
             emptyState={{
               name: emptyState?.name ?? 'EMPTY_LIST_ERROR',
-              background: emptyState?.background ?? COLOURS.TRANSPARENT,
+              background: emptyState?.background ?? themeConfig.colors['transparent'],
               title: emptyState?.title,
               description: emptyState?.title,
               height: emptyState.height,
